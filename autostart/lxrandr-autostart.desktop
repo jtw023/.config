@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=LXRandR autostart
+Comment=Start xrandr with settings done in LXRandR
+Exec=bash /home/jordan/Scripts/set_screens.sh
+OnlyShowIn=LXDE

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=System;Monitor;
+Comment=Does the initial user setup
+Exec=systemctl --user enable --now psd pulseaudio-bluetooth-autoconnect;libinput-gestures-setup autostart;libinput-gestures-setup start;rm ~/.config/autostart/initial-user-setup.desktop
+Icon=setup
+Name=Initial user setup
+StartupNotify=false
+Terminal=false
+Type=Application
