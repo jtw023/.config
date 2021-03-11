@@ -46,7 +46,7 @@ keys = [
     Key([mod], "s", lazy.spawn("slack")),
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
-    Key([mod], "KP_Enter", lazy.spawn("alacritty")),
+    #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
     Key([mod], "w", lazy.spawn(home + "/.config/qtile/scripts/pywal-colors.py")),
     Key([mod], "x", lazy.shutdown()),
 
@@ -54,9 +54,11 @@ keys = [
 # SUPER + SHIFT KEYS
 
     Key([mod, "shift"], "Return", lazy.spawn("pcmanfm")),
+    Key([mod, "shift"], "s", lazy.spawn("superproductivity")),
     Key([mod, "shift"], "p", lazy.spawn("sxiv -t " + home + "/Pictures/")),
-    #Key([mod, "shift"], "d", lazy.spawn("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")),
-    Key([mod, "shift"], "d", lazy.spawn(home + "/.config/qtile/scripts/dmenu.sh")),
+    Key([mod, "shift"], "d", lazy.spawn("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")),
+    #Key([mod, "shift"], "d", lazy.spawn(home + "/.config/qtile/scripts/dmenu.sh")),
+    Key([mod, "shift"], "m", lazy.spawn("pragha")),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "control"], "r", lazy.restart()),
@@ -213,14 +215,14 @@ keys = [
 groups = []
 
 # FOR QWERTY KEYBOARDS
-group_names = [("1", {"layout": "monadtall"}), ("2", {"layout": "monadtall"}), ("3", {"layout": "monadtall"}), ("4", {"layout": "monadtall"}), ("5", {"layout": "monadtall"}), ("6", {"layout": "monadtall"}), ("7", {"layout": "max"}), ("8", {"layout": "mondatall"}),]
+group_names = [("1", {'layout': 'monadtall'}), ("2", {'layout': 'monadtall'}), ("3", {'layout': 'monadtall'}), ("4", {'layout': 'monadtall'}), ("5", {'layout': 'monadtall'}), ("6", {'layout': 'monadtall'}), ("7", {'layout': 'max'}), ("8", {'layout': 'monadtall'}), ("9", {'layout': 'monadtall'}),]
 
 # FOR AZERTY KEYBOARDS
 #group_names = ["ampersand", "eacute", "quotedbl", "apostrophe", "parenleft", "section", "egrave", "exclam", "ccedilla", "agrave",]
 
 #group_labels = ["1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "0",]
 #group_labels = ["", "", "", "", "", "",]
-group_labels = ["", "", "", "", "", "", "", "",]
+group_labels = ["", "", "", "", "", "", "", "", "",]
 #group_labels = ["DEV", "WEB", "TXT", "COM", "SYS", "VID", "MUS",]
 
 #group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "treetab", "floating",]
