@@ -203,7 +203,7 @@ alias clear='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; ec
 alias backup='doas rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/jordan/Downloads/*","/home/jordan/.cache/*","/lost+found"} /run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924/'
 
 # YouTube-DL
-alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o '%(title)s.%(ext)s''
+alias song="youtube-dl -x --audio-format mp3 --audio-quality 320k -o '%(title)s.%(ext)s'"
 
 # Take a new timeshift snapshot
 alias snapshot='doas timeshift --create && doas update-grub'
@@ -221,7 +221,7 @@ alias generate='pass generate -ic'
 alias insert='pass insert -m'
 
 # Update system
-alias upd='yay -Syu --devel'
+alias upd='yay -Syu'
 
 # Download alias
 alias wget='wget -c'

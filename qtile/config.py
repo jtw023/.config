@@ -3,7 +3,7 @@ import os
 import re
 import socket
 import subprocess
-from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule
+from libqtile.config import Drag, Key, Match, Screen, Group, Drag, Click, Rule
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.widget import Spacer
@@ -44,6 +44,8 @@ keys = [
     Key([mod], "t", lazy.spawn("tutanota-desktop")),
     Key([mod], "m", lazy.spawn("jgmenu_run")),
     Key([mod], "s", lazy.spawn("slack")),
+    Key([mod], "c", lazy.spawn("signal-desktop")),
+    Key([mod], "r", lazy.spawn("alacritty -e ranger")),
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
     #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
@@ -104,10 +106,10 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -q set Master 5%-")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -q set Master 5%+")),
 
-    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
-    Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
-    Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
-    Key([], "XF86AudioStop", lazy.spawn("playerctl stop")),
+    Key([mod2, mod], "p", lazy.spawn("playerctl play-pause")),
+    Key([mod2, mod], "s", lazy.spawn("playerctl next")),
+    Key([mod2, mod], "b", lazy.spawn("playerctl previous")),
+    Key([mod2, mod], "q", lazy.spawn("playerctl stop")),
 
 #    Key([], "XF86AudioPlay", lazy.spawn("mpc toggle")),
 #    Key([], "XF86AudioNext", lazy.spawn("mpc next")),
@@ -215,7 +217,7 @@ keys = [
 groups = []
 
 # FOR QWERTY KEYBOARDS
-group_names = [("1", {'layout': 'monadtall'}), ("2", {'layout': 'monadtall'}), ("3", {'layout': 'monadtall'}), ("4", {'layout': 'monadtall'}), ("5", {'layout': 'monadtall'}), ("6", {'layout': 'monadtall'}), ("7", {'layout': 'max'}), ("8", {'layout': 'monadtall'}), ("9", {'layout': 'monadtall'}),]
+group_names = [("1", 'monadtall'), ("2", 'monadtall'), ("3", 'monadtall'), ("4", 'monadtall'), ("5", 'monadtall'), ("6", 'monadtall'), ("7", 'max'), ("8", 'monadtall'), ("9", 'monadtall'),]
 
 # FOR AZERTY KEYBOARDS
 #group_names = ["ampersand", "eacute", "quotedbl", "apostrophe", "parenleft", "section", "egrave", "exclam", "ccedilla", "agrave",]
@@ -603,41 +605,33 @@ dgroups_app_rules = []
 # ASSIGN APPLICATIONS TO A SPECIFIC GROUPNAME
 # BEGIN
 
-# @hook.subscribe.client_new
-# def assign_app_group(client):
-#     d = {}
-#     #########################################################
-#     ################ assgin apps to groups ##################
-#     #########################################################
-#     d["1"] = ["Navigator", "Firefox", "Vivaldi-stable", "Vivaldi-snapshot", "Chromium", "Google-chrome", "Brave", "Brave-browser",
-#               "navigator", "firefox", "vivaldi-stable", "vivaldi-snapshot", "chromium", "google-chrome", "brave", "brave-browser", ]
-#     d["2"] = [ "Atom", "Subl3", "Geany", "Brackets", "Code-oss", "Code", "TelegramDesktop", "Discord",
-#                "atom", "subl3", "geany", "brackets", "code-oss", "code", "telegramDesktop", "discord", ]
-#     d["3"] = ["Inkscape", "Nomacs", "Ristretto", "Nitrogen", "Feh",
-#               "inkscape", "nomacs", "ristretto", "nitrogen", "feh", ]
-#     d["4"] = ["Gimp", "gimp" ]
-#     d["5"] = ["Meld", "meld", "org.gnome.meld" "org.gnome.Meld" ]
-#     d["6"] = ["Vlc","vlc", "Mpv", "mpv" ]
-#     d["7"] = ["VirtualBox Manager", "VirtualBox Machine", "Vmplayer",
-#               "virtualbox manager", "virtualbox machine", "vmplayer", ]
-#     d["8"] = ["pcmanfm", "Nemo", "Caja", "Nautilus", "org.gnome.Nautilus", "Pcmanfm", "Pcmanfm-qt",
-#               "pcmanfm", "nemo", "caja", "nautilus", "org.gnome.nautilus", "pcmanfm", "pcmanfm-qt", ]
-#     d["9"] = ["Evolution", "Geary", "Mail", "Thunderbird",
-#               "evolution", "geary", "mail", "thunderbird" ]
-#     d["0"] = ["Spotify", "Pragha", "Clementine", "Deadbeef", "Audacious",
-#               "spotify", "pragha", "clementine", "deadbeef", "audacious" ]
-#     ##########################################################
-#     wm_class = client.window.get_wm_class()[0]
-#
-#     for i in range(len(d)):
-#         if wm_class in list(d.values())[i]:
-#             group = list(d.keys())[i]
-#             client.togroup(group)
-#             client.group.cmd_toscreen()
+@hook.subscribe.client_new
+def assign_app_group(client):
+    d = {}
+    #########################################################
+    ################ assgin apps to groups ##################
+    #########################################################
+    d["1"] = [ "alacritty" ]
+    d["2"] = [ "librewolf" ]
+    d["3"] = [ "slack" ]
+    d["4"] = [ "tutanota-desktop" ]
+    d["5"] = [ "pcmanfm" ]
+    d["6"] = [ "sxiv" ]
+    d["7"] = [ "virt-manager" ]
+    d["8"] = [ "superproductivity" ]
+    d["9"] = [ "pragha" ]
+    ##########################################################
+    wm_class = client.window.get_wm_class()[0]
+
+
+    for i in range(len(d)):
+        if wm_class in list(d.values())[i]:
+            group = list(d.keys())[i]
+            client.togroup(group)
+            client.group.cmd_toscreen()
 
 # END
 # ASSIGN APPLICATIONS TO A SPECIFIC GROUPNAME
-
 
 
 main = None
@@ -665,28 +659,28 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
-    {'wmclass': 'confirm'},
-    {'wmclass': 'dialog'},
-    {'wmclass': 'download'},
-    {'wmclass': 'error'},
-    {'wmclass': 'file_progress'},
-    {'wmclass': 'notification'},
-    {'wmclass': 'splash'},
-    {'wmclass': 'toolbar'},
-    {'wmclass': 'confirmreset'},
-    {'wmclass': 'makebranch'},
-    {'wmclass': 'maketag'},
-    {'wmclass': 'Arandr'},
-    {'wmclass': 'feh'},
-    {'wmclass': 'Galculator'},
-    {'wname': 'branchdialog'},
-    {'wname': 'Open File'},
-    {'wname': 'pinentry'},
-    {'wmclass': 'ssh-askpass'},
-    {'wmclass': 'lxpolkit'},
-    {'wmclass': 'Lxpolkit'},
-    {'wmclass': 'yad'},
-    {'wmclass': 'Yad'},
+    Match(wm_class='confirm'),
+    Match(wm_class='dialog'),
+    Match(wm_class='download'),
+    Match(wm_class='error'),
+    Match(wm_class='file_progress'),
+    Match(wm_class='notification'),
+    Match(wm_class='splash'),
+    Match(wm_class='toolbar'),
+    Match(wm_class='confirmreset'),
+    Match(wm_class='makebranch'),
+    Match(wm_class='maketag'),
+    Match(wm_class='Arandr'),
+    Match(wm_class='feh'),
+    Match(wm_class='Galculator'),
+    Match(title='branchdialog'),
+    Match(title='Open File'),
+    Match(title='pinentry'),
+    Match(wm_class='ssh-askpass'),
+    Match(wm_class='lxpolkit'),
+    Match(wm_class='Lxpolkit'),
+    Match(wm_class='yad'),
+    Match(wm_class='Yad'),
 
 
 ],  fullscreen_border_width = 0, border_width = 0)
