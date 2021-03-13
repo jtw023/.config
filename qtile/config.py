@@ -5,7 +5,7 @@ import socket
 import subprocess
 from libqtile.config import Drag, Key, Match, Screen, Group, Drag, Click, Rule
 from libqtile.command import lazy
-from libqtile import layout, bar, widget, hook
+from libqtile import qtile, layout, bar, widget, hook
 from libqtile.widget import Spacer
 import albattery
 
@@ -337,7 +337,7 @@ def init_widgets_list():
                        filename = "~/.config/qtile/icons/garuda-red.png",
                        iconsize = 9,
                        background = colors[1],
-                       mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn('jgmenu_run')}
+                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('jgmenu_run')}
                        ),
                 widget.Sep(
                         linewidth = 1,
