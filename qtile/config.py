@@ -45,7 +45,7 @@ keys = [
     Key([mod], "m", lazy.spawn("jgmenu_run")),
     Key([mod], "s", lazy.spawn("slack")),
     Key([mod], "c", lazy.spawn("signal-desktop")),
-    Key([mod], "r", lazy.spawn("alacritty -e ranger")),
+    Key([mod], "r", lazy.spawn("urxvt -e ranger")),
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
     #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
@@ -611,11 +611,11 @@ def assign_app_group(client):
     #########################################################
     ################ assgin apps to groups ##################
     #########################################################
-    d["1"] = [ "alacritty" ]
-    d["2"] = [ "librewolf" ]
-    d["3"] = [ "slack" ]
+    d["1"] = [ "Alacritty" ]
+    d["2"] = [ "Navigator", "brave-browser" ]
+    d["3"] = [ "slack", "signal" ]
     d["4"] = [ "tutanota-desktop" ]
-    d["5"] = [ "pcmanfm" ]
+    d["5"] = [ "pcmanfm", "urxvt" ]
     d["6"] = [ "sxiv" ]
     d["7"] = [ "virt-manager" ]
     d["8"] = [ "superproductivity" ]

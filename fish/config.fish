@@ -223,6 +223,9 @@ alias insert='pass insert -m'
 # Update system
 alias upd='yay -Syu'
 
+# Git Status
+alias tracked='git status -u no'
+
 # Download alias
 alias wget='wget -c'
 
