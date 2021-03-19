@@ -58,7 +58,7 @@ keys = [
     Key([mod, "shift"], "Return", lazy.spawn("pcmanfm")),
     Key([mod, "shift"], "s", lazy.spawn("superproductivity")),
     Key([mod, "shift"], "p", lazy.spawn("sxiv -t " + home + "/Pictures/")),
-    Key([mod, "shift"], "d", lazy.spawn("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")),
+    Key([mod, "shift"], "d", lazy.spawn("rofi -show drun")),
     #Key([mod, "shift"], "d", lazy.spawn(home + "/.config/qtile/scripts/dmenu.sh")),
     Key([mod, "shift"], "m", lazy.spawn("pragha")),
     Key([mod, "shift"], "q", lazy.window.kill()),
