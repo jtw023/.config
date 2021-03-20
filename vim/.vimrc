@@ -318,15 +318,19 @@ map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 
 " Unconditionally quit file
-nmap <S-q><S-q> :q!<cr>
-imap <S-q><S-q> <Esc><Esc>:q!<cr>
+nmap <S-Q><S-Q> :q!<cr>
+imap <S-Q><S-Q> <Esc><Esc>:q!<cr>
 
 " Save and quit file
-nmap <S-w><S-w> :wq<cr>
-imap <S-w><S-w> <Esc><Esc>:wq<cr>
+nmap <S-W><S-W> :x<cr>
+imap <S-W><S-W> <Esc><Esc>:x<cr>
 
 " Escape out of insert mode
 imap jj <Esc>
+
+" Disable internal save and quit shortcuts
+map <S-z><S-z> <Nop>
+map <S-z><S-q> <Nop>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

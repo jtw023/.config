@@ -36,7 +36,7 @@ keys = [
 
 # SUPER + FUNCTION KEYS
 
-    Key([mod], "f", lazy.window.toggle_fullscreen()),
+    Key([mod], "f", lazy.spawn(home + "/Scripts/display_font.fish")),
     Key([mod], "i", lazy.spawn("librewolf")),
     Key([mod], "p", lazy.spawn(home + "/Scripts/passmenu.sh")),
     Key([mod], "q", lazy.window.kill()),
@@ -69,7 +69,7 @@ keys = [
 # CONTROL + ALT KEYS
 
     #Key(["mod1", "control"], "c", lazy.spawn('catfish')),
-    #Key(["mod1", "control"], "i", lazy.spawn('nitrogen')),
+    #Key([mod, "control"], "f", lazy.spawn(home + "/Scripts/display_font.sh")),
     Key(["mod1", "control"], "o", lazy.spawn(home + "/.config/qtile/scripts/picom-toggle.sh")),
     #Key(["mod1", "control"], "t", lazy.spawn('termite')),
     #Key(["mod1", "control"], "u", lazy.spawn('pavucontrol')),
