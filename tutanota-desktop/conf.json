@@ -1,0 +1,23 @@
+{
+  "heartbeatTimeoutInSeconds": 30,
+  "defaultDownloadPath": null,
+  "enableAutoUpdate": true,
+  "runAsTrayApp": true,
+  "desktopConfigVersion": 2,
+  "showAutoUpdateOption": false,
+  "lastBounds": {
+    "fullscreen": false,
+    "rect": {
+      "x": 18,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "scale": 1
+  },
+  "isMailtoHandler": false,
+  "runOnStartup": false,
+  "isIntegrated": true,
+  "updateInfo": null,
+  "mailExportMode": "eml"
+}

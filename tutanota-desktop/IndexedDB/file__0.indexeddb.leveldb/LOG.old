@@ -1,0 +1,15 @@
+2021/03/19-08:50:50.553 1bf3 Reusing MANIFEST /home/jordan/.config/tutanota-desktop/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2021/03/19-08:50:50.553 1bf3 Recovering log #72
+2021/03/19-08:50:50.553 1bf3 Reusing old log /home/jordan/.config/tutanota-desktop/IndexedDB/file__0.indexeddb.leveldb/000072.log 
+2021/03/19-09:58:17.852 1bf3 Level-0 table #77: started
+2021/03/19-09:58:17.854 1bf3 Level-0 table #77: 76079 bytes OK
+2021/03/19-09:58:17.857 1bf3 Delete type=0 #72
+2021/03/19-09:58:17.857 1bf3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/19-09:58:17.857 1bf3 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x05\x02\x01\x0c\x00L\x00y\x00H\x00v\x00o\x00X\x00X\x00-\x000\x00k\x00-\x002' @ 8780 : 1
+2021/03/19-09:58:17.857 1bf3 Compacting 1@1 + 1@2 files
+2021/03/19-09:58:17.859 1bf3 Generated table #78@1: 418 keys, 23215 bytes
+2021/03/19-09:58:17.859 1bf3 Compacted 1@1 + 1@2 files => 23215 bytes
+2021/03/19-09:58:17.860 1bf3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/19-09:58:17.860 1bf3 Delete type=2 #74
+2021/03/19-09:58:17.860 1bf3 Delete type=2 #77
+2021/03/19-09:58:17.861 1bf3 Manual compaction at level-1 from '\x00\x02\x05\x02\x01\x0c\x00L\x00y\x00H\x00v\x00o\x00X\x00X\x00-\x000\x00k\x00-\x002' @ 8780 : 1 .. (end); will stop at (end)
