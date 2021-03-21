@@ -252,4 +252,5 @@ end
 if status --is-interactive
    colorscript random
    fish ~/Scripts/helpful_cat.fish
+   fish ~/Scripts/set_screens.fish
 end

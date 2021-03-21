@@ -45,7 +45,7 @@ keys = [
     Key([mod], "m", lazy.spawn("jgmenu_run")),
     Key([mod], "s", lazy.spawn("slack")),
     Key([mod], "c", lazy.spawn("signal-desktop")),
-    Key([mod], "r", lazy.spawn("urxvt -e ranger")),
+    Key(["mod1", "shift"], "Return", lazy.spawn("urxvt -e ranger")),
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
     #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
@@ -62,9 +62,9 @@ keys = [
     Key(["mod1", "shift"], "p", lazy.spawn("flameshot gui")),
     Key([mod, "shift"], "m", lazy.spawn("pragha")),
     Key([mod, "shift"], "q", lazy.window.kill()),
-    Key([mod, "shift"], "r", lazy.restart()),
-    Key([mod, "control"], "r", lazy.restart()),
-    Key([mod, "shift"], "x", lazy.shutdown()),
+    Key([mod], "r", lazy.restart()),
+    Key([mod, "shift"], "r", lazy.spawn(home + "/Scripts/reboot.sh")),
+    Key([mod, "shift"], "x", lazy.spawn(home + "/Scripts/poweroff.sh")),
 
 # CONTROL + ALT KEYS
 
