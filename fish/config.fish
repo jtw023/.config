@@ -196,7 +196,7 @@ alias ls='exa -al --color=always --group-directories-first'
 alias lt='exa -lTR --color=always --group-directories-first'
 
 ## Custom clear command
-alias clear='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
+alias cl='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 
 ## General Useful Aliases
 # Backup Computer
