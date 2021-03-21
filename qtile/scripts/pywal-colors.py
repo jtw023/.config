@@ -21,5 +21,6 @@ wallpaper = random.choice(wallpaper_list)
 
 
 os.system("wal -i " + wallpaper)
+os.system("notify-send 'Changed Wallpaper'")
 
 #print(wallpaper_list)
