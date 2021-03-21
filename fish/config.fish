@@ -1,5 +1,5 @@
 ## Set environment
-set TERM "alactritty"
+set TERM "xterm-256color"
 set EDITOR "vim"
 set VISUAL "gedit"
 set fish_greeting
