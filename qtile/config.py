@@ -59,7 +59,7 @@ keys = [
     Key([mod, "shift"], "s", lazy.spawn("superproductivity")),
     Key([mod, "shift"], "p", lazy.spawn("sxiv -t " + home + "/Pictures/")),
     Key([mod, "shift"], "d", lazy.spawn("rofi -show drun")),
-    #Key([mod, "shift"], "d", lazy.spawn(home + "/.config/qtile/scripts/dmenu.sh")),
+    Key(["mod1", "shift"], "p", lazy.spawn("flameshot gui")),
     Key([mod, "shift"], "m", lazy.spawn("pragha")),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
@@ -68,7 +68,7 @@ keys = [
 
 # CONTROL + ALT KEYS
 
-    #Key(["mod1", "control"], "c", lazy.spawn('catfish')),
+    Key(["mod1", "control"], "k", lazy.spawn(home + "/Scripts/kill.fish")),
     #Key([mod, "control"], "f", lazy.spawn(home + "/Scripts/display_font.sh")),
     Key(["mod1", "control"], "o", lazy.spawn(home + "/.config/qtile/scripts/picom-toggle.sh")),
     #Key(["mod1", "control"], "t", lazy.spawn('termite')),
@@ -309,7 +309,7 @@ colors = init_colors()
 # WIDGETS FOR THE BAR
 
 def init_widgets_defaults():
-    return dict(font="Noto Sans",
+    return dict(font="Fantasque Sans Mono",
                 fontsize = 9,
                 padding = 2,
                 background=colors[1])
@@ -389,8 +389,8 @@ def init_widgets_list():
                        scale = 0.7
                        ),
                widget.CurrentLayout(
-                      font = "Noto Sans Bold",
-                      fontsize = 12,
+                      font = "Fantasque Sans Mono",
+                      fontsize = 16,
                       foreground = colors[0],
                       background = colors[2]
                         ),
@@ -450,10 +450,10 @@ def init_widgets_list():
                #        fontsize = 37
                #        ),
                 widget.CPU(
-                        font="Noto Sans",
+                        font="Fantasque Sans Mono",
                         #format = '{MemUsed}M/{MemTotal}M',
                         update_interval = 1,
-                        fontsize = 12,
+                        fontsize = 16,
                         foreground = colors[5],
                         background = colors[0],
                         mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e htop')},
@@ -495,10 +495,10 @@ def init_widgets_list():
                         fontsize=16
                         ),
                widget.Memory(
-                        font="Noto Sans",
+                        font="Fantasque Sans Mono",
                         format = '{MemUsed}M/{MemTotal}M',
                         update_interval = 1,
-                        fontsize = 12,
+                        fontsize = 16,
                         foreground = colors[0],
                         background = colors[2],
                         mouse_callbacks = {'Button1': lambda qtile: qtile.cmd_spawn(myTerm + ' -e htop')},
@@ -521,7 +521,7 @@ def init_widgets_list():
                widget.Clock(
                         foreground = colors[5],
                         background = colors[0],
-                        fontsize = 12,
+                        fontsize = 16,
                         format="%b %d, %Y"
                         ),
                 widget.TextBox(
@@ -543,7 +543,7 @@ def init_widgets_list():
                 widget.Clock(
                         foreground = colors[0],
                         background = colors[2],
-                        fontsize = 12,
+                        fontsize = 16,
                         format="%I:%M %p"
                         ),
                 widget.TextBox(

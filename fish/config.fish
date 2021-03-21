@@ -1,7 +1,7 @@
 ## Set environment
-set TERM "xterm-256color"             
-set EDITOR "micro"
-set VISUAL "kate"
+set TERM "alactritty"
+set EDITOR "vim"
+set VISUAL "gedit"
 set fish_greeting
 
 ## Source .profile to apply its values

@@ -1,0 +1,15 @@
+2021/03/17-17:55:29.467 591b Reusing MANIFEST /home/jordan/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_hipekcciheckooncpjeljhnekcoolahp_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/17-17:55:29.467 591b Recovering log #59
+2021/03/17-17:55:29.467 591b Reusing old log /home/jordan/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_hipekcciheckooncpjeljhnekcoolahp_0.indexeddb.leveldb/000059.log 
+2021/03/17-17:55:38.816 5966 Level-0 table #64: started
+2021/03/17-17:55:38.817 5966 Level-0 table #64: 1258 bytes OK
+2021/03/17-17:55:38.819 5966 Delete type=0 #59
+2021/03/17-17:55:38.819 5966 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/17-17:55:38.819 5966 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01\x0d\x00p\x00e\x00r\x00s\x00i\x00s\x00t\x00:\x00c\x00a\x00c\x00h\x00e' @ 1031 : 0
+2021/03/17-17:55:38.819 5966 Compacting 1@1 + 1@2 files
+2021/03/17-17:55:38.820 5966 Generated table #65@1: 40 keys, 1219 bytes
+2021/03/17-17:55:38.820 5966 Compacted 1@1 + 1@2 files => 1219 bytes
+2021/03/17-17:55:38.822 5966 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/17-17:55:38.822 5966 Delete type=2 #61
+2021/03/17-17:55:38.822 5966 Delete type=2 #64
+2021/03/17-17:55:38.823 5966 Manual compaction at level-1 from '\x00\x01\x01\x03\x01\x0d\x00p\x00e\x00r\x00s\x00i\x00s\x00t\x00:\x00c\x00a\x00c\x00h\x00e' @ 1031 : 0 .. (end); will stop at (end)

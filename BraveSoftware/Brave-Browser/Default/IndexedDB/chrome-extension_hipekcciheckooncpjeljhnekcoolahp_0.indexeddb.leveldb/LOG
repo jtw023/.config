@@ -1,0 +1,15 @@
+2021/03/19-09:20:21.199 bef2 Reusing MANIFEST /home/jordan/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_hipekcciheckooncpjeljhnekcoolahp_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/19-09:20:21.199 bef2 Recovering log #63
+2021/03/19-09:20:21.199 bef2 Reusing old log /home/jordan/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_hipekcciheckooncpjeljhnekcoolahp_0.indexeddb.leveldb/000063.log 
+2021/03/19-09:20:26.931 bef2 Level-0 table #68: started
+2021/03/19-09:20:26.932 bef2 Level-0 table #68: 1256 bytes OK
+2021/03/19-09:20:26.953 bef2 Delete type=0 #63
+2021/03/19-09:20:26.954 bef2 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/19-09:20:26.954 bef2 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x03\x01\x0d\x00p\x00e\x00r\x00s\x00i\x00s\x00t\x00:\x00c\x00a\x00c\x00h\x00e' @ 1066 : 0
+2021/03/19-09:20:26.954 bef2 Compacting 1@1 + 1@2 files
+2021/03/19-09:20:26.954 bef2 Generated table #69@1: 40 keys, 1276 bytes
+2021/03/19-09:20:26.954 bef2 Compacted 1@1 + 1@2 files => 1276 bytes
+2021/03/19-09:20:26.955 bef2 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/19-09:20:26.955 bef2 Delete type=2 #65
+2021/03/19-09:20:26.955 bef2 Delete type=2 #68
+2021/03/19-09:20:26.956 bef2 Manual compaction at level-1 from '\x00\x01\x01\x03\x01\x0d\x00p\x00e\x00r\x00s\x00i\x00s\x00t\x00:\x00c\x00a\x00c\x00h\x00e' @ 1066 : 0 .. (end); will stop at (end)
