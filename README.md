@@ -1,6 +1,4 @@
-# .config
-
-## This is a collection of config files.
+# This is a collection of config files.
 
 run command:
 ```
