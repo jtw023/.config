@@ -334,7 +334,7 @@ def init_widgets_list():
                         background = colors[1]
                         ),              #
                widget.Image(
-                       filename = "~/.config/qtile/icons/garuda-red.png",
+                       filename = "~/.config/qtile/icons/garuda-white.png",
                        iconsize = 9,
                        background = colors[1],
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('jgmenu_run')}

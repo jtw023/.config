@@ -2,5 +2,5 @@
 Type=Application
 Name=LXRandR autostart
 Comment=Start xrandr with settings done in LXRandR
-Exec=fish /home/jordan/Scripts/set_screens.fish
+Exec=/home/jordan/Scripts/set_screens.sh
 OnlyShowIn=LXDE
