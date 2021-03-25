@@ -553,19 +553,35 @@ def init_widgets_list():
                        padding = 0,
                        fontsize = 37
                        ),
-
-               widget.Systray(
-                       background=colors[0],
-                       icon_size=20,
-                       padding = 4
-                       ),
-              widget.TextBox(
-                        text = '',
-                        background = colors[0],
-                        foreground = colors[1],
-                        padding = 0,
-                        fontsize = 37
+#                widget.TextBox(
+#                        text = "⟳",
+#                        foreground = colors[2],
+#                        background = colors[0],
+#                        padding = 0,
+#                        fontsize = 21
+#                        ),
+                widget.CheckUpdates(
+                        update_interval = 1800,
+                        display_format = "{updates} Updates",
+                        distro = "Arch_checkupdates",
+                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e yay -Syu')},
+                        font = "Fantasque Sans Mono",
+                        fontsize = 16,
+                        foreground = colors[2],
+                        background = colors[0]
                         ),
+#               widget.Systray(
+#                       background=colors[0],
+#                       icon_size=20,
+#                       padding = 4
+#                       ),
+#              widget.TextBox(
+#                        text = '',
+#                        background = colors[0],
+#                        foreground = colors[1],
+#                        padding = 0,
+#                        fontsize = 37
+#                        ),
 
               ]
     return widgets_list

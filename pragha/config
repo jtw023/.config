@@ -1,6 +1,6 @@
 [Window]
 window_size=1884;1024;
-window_position=16;1116;
+window_position=16;36;
 sidebar=true
 sidebar_size=200
 secondary_sidebar=false
@@ -24,7 +24,7 @@ playlist_column_widths=310;310;310;715;
 shuffle=true
 repeat=true
 save_playlist=true
-current_ref=1
+current_ref=0
 
 [General]
 installed_version=1.3.4
