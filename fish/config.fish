@@ -202,8 +202,14 @@ alias cl='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo;
 # Backup Computer
 alias backup='doas rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/jordan/Downloads/*","/home/jordan/.cache/*","/lost+found"} /run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924/'
 
+# Vim Wiki
+alias vimwiki='vim vimwiki/index.wiki'
+
+# Tidal-DL
+alias tidal-dl='cd /home/jordan/.local/lib/python3.9/site-packages/tidal_dl/; and python __init__.py'
+
 # YouTube-DL
-alias song="youtube-dl -x --audio-format mp3 --audio-quality 320k -o '%(title)s.%(ext)s'"
+alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o "%(title)s.%(ext)s"'
 
 # Take a new timeshift snapshot
 alias snapshot='doas timeshift --create && doas update-grub'

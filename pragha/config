@@ -1,6 +1,6 @@
 [Window]
 window_size=1884;1024;
-window_position=16;36;
+window_position=16;1116;
 sidebar=true
 sidebar_size=200
 secondary_sidebar=false
@@ -22,9 +22,9 @@ Activated=song-info;notify;mpris2;
 playlist_columns=Title;Artist;Album;Length;
 playlist_column_widths=310;310;310;715;
 shuffle=true
-repeat=true
+repeat=false
 save_playlist=true
-current_ref=0
+current_ref=70
 
 [General]
 installed_version=1.3.4
@@ -41,7 +41,7 @@ library_view_order=0
 library_sort_by_year=true
 library_fuse_folders=true
 library_dir=/home/jordan/Music;
-library_last_scanned=2021-03-16T22:32:29.120464Z
+library_last_scanned=2021-03-26T21:12:07.046643Z
 library_scanned=/home/jordan/Music;
 
 [Audio]
