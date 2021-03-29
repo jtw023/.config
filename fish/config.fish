@@ -192,8 +192,8 @@ end
 alias sudo='doas'
 
 ## Ls aliases
-alias ls='exa -al --color=always --group-directories-first'
-alias lt='exa -lTR --color=always --group-directories-first'
+alias ls='lsd -al'
+alias lt='lsd -l --tree'
 
 ## Custom clear command
 alias cl='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
@@ -203,7 +203,8 @@ alias cl='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo;
 alias backup='doas rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/jordan/Downloads/*","/home/jordan/.cache/*","/lost+found"} /run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924/'
 
 # Vim Wiki
-alias vimwiki='vim vimwiki/index.wiki'
+alias vimwiki='vim ~/vimwiki/index.wiki'
+alias vm='vim ~/vimwiki/index.wiki'
 
 # Tidal-DL
 alias tidal-dl='cd /home/jordan/.local/lib/python3.9/site-packages/tidal_dl/; and python __init__.py'

@@ -544,7 +544,7 @@ def init_widgets_list():
                         foreground = colors[0],
                         background = colors[2],
                         fontsize = 16,
-                        format="%I:%M %p"
+                        format="%-I:%M %p"
                         ),
                 widget.TextBox(
                        text = '',
@@ -553,13 +553,14 @@ def init_widgets_list():
                        padding = 0,
                        fontsize = 37
                        ),
-#                widget.TextBox(
-#                        text = "⟳",
-#                        foreground = colors[2],
-#                        background = colors[0],
-#                        padding = 0,
-#                        fontsize = 21
-#                        ),
+                widget.TextBox(
+                        font="FontAwesome",
+                        text = "  ",
+                        foreground = colors[2],
+                        background = colors[0],
+                        padding = 0,
+                        fontsize = 16
+                        ),
                 widget.CheckUpdates(
                         update_interval = 1800,
                         display_format = "Updates: {updates}",
@@ -629,7 +630,7 @@ def assign_app_group(client):
     #########################################################
     d["1"] = [ "Alacritty" ]
     d["2"] = [ "Navigator", "brave-browser" ]
-    d["3"] = [ "slack", "signal" ]
+    d["3"] = [ "slack", "signal", "authy desktop" ]
     d["4"] = [ "tutanota-desktop" ]
     d["5"] = [ "pcmanfm", "urxvt" ]
     d["6"] = [ "sxiv" ]
