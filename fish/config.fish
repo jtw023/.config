@@ -221,17 +221,22 @@ alias srm='srm -v'
 # Secure remove directory
 alias srmd='srm -rv'
 
-# Pass generate alias
+## Pass Aliases
+# Generate Password
 alias generate='pass generate -ic'
 
-# Pass insert alias
+# Create New Password
 alias insert='pass insert -m'
 
 # Update system
 alias upd='yay -Syu'
 
+## Git Aliases
 # Git Status
-alias tracked='git status -u no'
+alias gs='git ls-files --modified'
+alias ga='git add -u'
+alias gc='git commit -m'
+alias gp='git push'
 
 # Download alias
 alias wget='wget -c'
