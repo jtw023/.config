@@ -1,3 +1,8 @@
+## Set Environment
+TERM="xterm-256color"
+EDITOR="vim"
+VISUAL="gedit"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -67,107 +72,58 @@ HISTFILE=~/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
 
-# Keys.
-# Use emacs key bindings
-bindkey -e
-
-# [PageUp] - Up a line of history
-if [[ -n "${terminfo[kpp]}" ]]; then
-  bindkey -M emacs "${terminfo[kpp]}" up-line-or-history
-  bindkey -M viins "${terminfo[kpp]}" up-line-or-history
-  bindkey -M vicmd "${terminfo[kpp]}" up-line-or-history
-fi
-# [PageDown] - Down a line of history
-if [[ -n "${terminfo[knp]}" ]]; then
-  bindkey -M emacs "${terminfo[knp]}" down-line-or-history
-  bindkey -M viins "${terminfo[knp]}" down-line-or-history
-  bindkey -M vicmd "${terminfo[knp]}" down-line-or-history
-fi
-
-# Start typing + [Up-Arrow] - fuzzy find history forward
-if [[ -n "${terminfo[kcuu1]}" ]]; then
-  autoload -U up-line-or-beginning-search
-  zle -N up-line-or-beginning-search
-
-  bindkey -M emacs "${terminfo[kcuu1]}" up-line-or-beginning-search
-  bindkey -M viins "${terminfo[kcuu1]}" up-line-or-beginning-search
-  bindkey -M vicmd "${terminfo[kcuu1]}" up-line-or-beginning-search
-fi
-# Start typing + [Down-Arrow] - fuzzy find history backward
-if [[ -n "${terminfo[kcud1]}" ]]; then
-  autoload -U down-line-or-beginning-search
-  zle -N down-line-or-beginning-search
-
-  bindkey -M emacs "${terminfo[kcud1]}" down-line-or-beginning-search
-  bindkey -M viins "${terminfo[kcud1]}" down-line-or-beginning-search
-  bindkey -M vicmd "${terminfo[kcud1]}" down-line-or-beginning-search
-fi
-
-# [Home] - Go to beginning of line
-if [[ -n "${terminfo[khome]}" ]]; then
-  bindkey -M emacs "${terminfo[khome]}" beginning-of-line
-  bindkey -M viins "${terminfo[khome]}" beginning-of-line
-  bindkey -M vicmd "${terminfo[khome]}" beginning-of-line
-fi
-# [End] - Go to end of line
-if [[ -n "${terminfo[kend]}" ]]; then
-  bindkey -M emacs "${terminfo[kend]}"  end-of-line
-  bindkey -M viins "${terminfo[kend]}"  end-of-line
-  bindkey -M vicmd "${terminfo[kend]}"  end-of-line
-fi
-
-# [Shift-Tab] - move through the completion menu backwards
-if [[ -n "${terminfo[kcbt]}" ]]; then
-  bindkey -M emacs "${terminfo[kcbt]}" reverse-menu-complete
-  bindkey -M viins "${terminfo[kcbt]}" reverse-menu-complete
-  bindkey -M vicmd "${terminfo[kcbt]}" reverse-menu-complete
-fi
-
-# [Backspace] - delete backward
-bindkey -M emacs '^?' backward-delete-char
-bindkey -M viins '^?' backward-delete-char
-bindkey -M vicmd '^?' backward-delete-char
-# [Delete] - delete forward
-if [[ -n "${terminfo[kdch1]}" ]]; then
-  bindkey -M emacs "${terminfo[kdch1]}" delete-char
-  bindkey -M viins "${terminfo[kdch1]}" delete-char
-  bindkey -M vicmd "${terminfo[kdch1]}" delete-char
-else
-  bindkey -M emacs "^[[3~" delete-char
-  bindkey -M viins "^[[3~" delete-char
-  bindkey -M vicmd "^[[3~" delete-char
-
-  bindkey -M emacs "^[3;5~" delete-char
-  bindkey -M viins "^[3;5~" delete-char
-  bindkey -M vicmd "^[3;5~" delete-char
-fi
-
-
-
 # Add useful aliases 
-alias aup="pamac upgrade --aur"
-alias grubup="sudo update-grub"
-alias orphaned="sudo pacman -Rns $(pacman -Qtdq)"
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-alias untar='tar -zxvf '
+alias sudo='doas'
+alias ls='lsd -al'
+alias lt='lsd -l --tree'
+alias cl='clear; bash /home/jordan/Scripts/generate_random.sh | xargs spark | lolcat'
+alias rmorphan="doas pacman -Rns $(pacman -Qtdq)"
+alias orphans='pacman -Qtdq'
+alias fixpacman="doas rm /var/lib/pacman/db.lck"
 alias wget='wget -c '
-alias speed='speedtest-cli --server 2406 --simple'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias path='echo -e ${PATH//:/\\n}'
-# Set your countries like --country France --country Germany -- or more.
-alias upd='sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist && sudo pacman -Syu'
+alias upd='yay -Syu'
+alias backup='doas rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/jordan/Downloads/*","/home/jordan/.cache/*","/lost+found"} /run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924/'
+alias vimwiki='vim ~/vimwiki/index.wiki'
+alias vw='vim ~/vimwiki/index.wiki'
+alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o "%(title)s.%(ext)s"'
+alias snapshot='doas timeshift --create && doas update-grub'
+alias srm='srm -v'
+alias srmd='srm -rv'
+alias insert='pass insert -m'
+alias generate='pass generate -ic'
+alias gs='git ls-files --modified'
+alias ga='git add -u'
+alias gc='git commit -m'
+alias gp='git push'
 
-#paleofetch
+# Function Alias
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+colorscript random
+fish ~/Scripts/helpful_cat.fish
