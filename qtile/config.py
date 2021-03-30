@@ -60,7 +60,7 @@ keys = [
     Key([mod, "shift"], "p", lazy.spawn("sxiv -t " + home + "/Pictures/")),
     Key([mod, "shift"], "d", lazy.spawn("rofi -show drun")),
     Key(["mod1", "shift"], "p", lazy.spawn("flameshot gui")),
-    Key([mod, "shift"], "m", lazy.spawn("pragha")),
+    Key([mod, "shift"], "m", lazy.spawn("clementine")),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod], "r", lazy.restart()),
     Key([mod, "shift"], "r", lazy.spawn(home + "/Scripts/reboot.sh")),
@@ -636,7 +636,7 @@ def assign_app_group(client):
     d["6"] = [ "sxiv" ]
     d["7"] = [ "virt-manager" ]
     d["8"] = [ "superproductivity" ]
-    d["9"] = [ "pragha" ]
+    d["9"] = [ "clementine" ]
     ##########################################################
     wm_class = client.window.get_wm_class()[0]
 
