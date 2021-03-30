@@ -386,9 +386,9 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-" vim-plug section
-call plug#begin('~/.vim/plugged')
+"" vim-plug section
+"call plug#begin('~/.vim/plugged')
 
-Plug 'vimwiki/vimwiki'
+"Plug 'vimwiki/vimwiki'
 
-call plug#end()
+"call plug#end()
