@@ -9,7 +9,9 @@ function run {
 
 
 #Special python script for auto wallpaper and colorscheme change
-~/.config/qtile/scripts/pywal-colors.py
+nitrogen --random --set-scaled &
+redshift -l 36.17497:-115.13722 -P -O 1900 &
+gksu -S nmcli d connect wlo1 &
 
 #starting utility applications at boot time
 lxsession &
