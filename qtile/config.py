@@ -36,9 +36,9 @@ keys = [
 
 # SUPER + FUNCTION KEYS
 
-    Key([mod], "f", lazy.spawn(home + "/Scripts/display_font.fish")),
+    Key([mod], "f", lazy.spawn(home + "/Random-Scripts/display_font.sh")),
     Key([mod], "i", lazy.spawn("librewolf")),
-    Key([mod], "p", lazy.spawn(home + "/Scripts/passmenu.sh")),
+    Key([mod], "p", lazy.spawn(home + "/Random-Scripts/passmenu.sh")),
     Key([mod], "q", lazy.window.kill()),
     Key([mod], "b", lazy.spawn("brave")),
     Key([mod], "t", lazy.spawn("tutanota-desktop")),
@@ -59,16 +59,16 @@ keys = [
     Key([mod, "shift"], "s", lazy.spawn("superproductivity")),
     Key([mod, "shift"], "p", lazy.spawn("sxiv -t " + home + "/Pictures/")),
     Key([mod, "shift"], "d", lazy.spawn("rofi -show drun")),
-    Key(["mod1", "shift"], "p", lazy.spawn("flameshot gui")),
+    Key(["mod1", "shift"], "p", lazy.spawn(home + "/Random-Scripts/screenshot.sh")),
     Key([mod, "shift"], "m", lazy.spawn("clementine")),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod], "r", lazy.restart()),
-    Key([mod, "shift"], "r", lazy.spawn(home + "/Scripts/reboot.sh")),
-    Key([mod, "shift"], "x", lazy.spawn(home + "/Scripts/poweroff.sh")),
+    Key([mod, "shift"], "r", lazy.spawn(home + "/Random-Scripts/reboot.sh")),
+    Key([mod, "shift"], "x", lazy.spawn(home + "/Random-Scripts/poweroff.sh")),
 
 # CONTROL + ALT KEYS
 
-    Key(["mod1", "control"], "k", lazy.spawn(home + "/Scripts/kill.fish")),
+    Key(["mod1", "control"], "k", lazy.spawn(home + "/Random-Scripts/kill.sh")),
     #Key([mod, "control"], "f", lazy.spawn(home + "/Scripts/display_font.sh")),
     Key(["mod1", "control"], "o", lazy.spawn(home + "/.config/qtile/scripts/picom-toggle.sh")),
     #Key(["mod1", "control"], "t", lazy.spawn('termite')),
