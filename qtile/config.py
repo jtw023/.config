@@ -3,7 +3,8 @@ import os
 import re
 import socket
 import subprocess
-from libqtile.config import Drag, Key, Match, Screen, Group, Drag, Click, Rule
+#from libqtile.manager import Drag, Key, Match, Screen, Group, Click, Rule
+from libqtile.config import Drag, Key, Match, Screen, Group, Click, Rule
 from libqtile.command import lazy
 from libqtile import qtile, layout, bar, widget, hook
 from libqtile.widget import Spacer
@@ -49,7 +50,7 @@ keys = [
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
     #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
-    Key([mod], "w", lazy.spawn(home + "/.config/qtile/scripts/pywal-colors.py")),
+    Key([mod], "w", lazy.spawn("qutebrowser")),
     Key([mod], "x", lazy.shutdown()),
 
 
@@ -629,7 +630,7 @@ def assign_app_group(client):
     ################ assgin apps to groups ##################
     #########################################################
     d["1"] = [ "Alacritty" ]
-    d["2"] = [ "Navigator", "brave-browser" ]
+    d["2"] = [ "Navigator", "brave-browser", "qutebrowser" ]
     d["3"] = [ "slack", "signal", "authy desktop" ]
     d["4"] = [ "tutanota-desktop" ]
     d["5"] = [ "pcmanfm", "urxvt" ]

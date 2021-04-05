@@ -9,9 +9,9 @@ function run {
 
 
 #Special python script for auto wallpaper and colorscheme change
-nitrogen --random --set-scaled &
+nitrogen /usr/share/backgrounds/ --random --set-scaled &
 redshift -l 36.17497:-115.13722 -P -O 1900 &
-gksu -S nmcli d connect wlo1 &
+# gksu -S nmcli d connect wlo1 &
 
 #starting utility applications at boot time
 lxsession &
