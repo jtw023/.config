@@ -3,7 +3,7 @@ import os
 import random
 wallpaper_list = []
 
-d = "/usr/share/wallpapers/garuda-wallpapers"
+d = "/usr/share/backgrounds/archlinux/"
 for path in os.listdir(d):
     full_path = os.path.join(d, path)
     if os.path.isfile(full_path):
@@ -20,7 +20,6 @@ for path in os.listdir(d):
 wallpaper = random.choice(wallpaper_list)
 
 
-os.system("wal -i " + wallpaper)
-os.system("notify-send 'Changed Wallpaper'")
+print(wallpaper)
 
 #print(wallpaper_list)

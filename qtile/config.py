@@ -61,7 +61,7 @@ keys = [
     Key([mod, "shift"], "p", lazy.spawn("sxiv -t " + home + "/Pictures/")),
     Key([mod, "shift"], "d", lazy.spawn("rofi -show drun")),
     Key(["mod1", "shift"], "p", lazy.spawn(home + "/Random-Scripts/screenshot.sh")),
-    Key([mod, "shift"], "m", lazy.spawn("clementine")),
+    Key([mod, "shift"], "m", lazy.spawn("kitty -e /home/jordan/Random-Scripts/music_player.sh")),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod], "r", lazy.restart()),
     Key([mod, "shift"], "r", lazy.spawn(home + "/Random-Scripts/reboot.sh")),
@@ -225,7 +225,7 @@ group_names = [("1", 'monadtall'), ("2", 'monadtall'), ("3", 'monadtall'), ("4",
 
 #group_labels = ["1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "0",]
 #group_labels = ["", "", "", "", "", "",]
-group_labels = ["", "", "", "", "", "", "", "", "",]
+group_labels = ["", "", "", "", "", "", "", "", "",]
 #group_labels = ["DEV", "WEB", "TXT", "COM", "SYS", "VID", "MUS",]
 
 #group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "treetab", "floating",]
@@ -637,7 +637,7 @@ def assign_app_group(client):
     d["6"] = [ "sxiv" ]
     d["7"] = [ "virt-manager" ]
     d["8"] = [ "superproductivity" ]
-    d["9"] = [ "clementine" ]
+    d["9"] = [ "kitty" ]
     ##########################################################
     wm_class = client.window.get_wm_class()[0]
 

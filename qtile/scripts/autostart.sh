@@ -8,14 +8,12 @@ function run {
 }
 
 
-#Special python script for auto wallpaper and colorscheme change
-nitrogen /usr/share/backgrounds/ --random --set-scaled &
-redshift -l 36.17497:-115.13722 -P -O 1900 &
-# gksu -S nmcli d connect wlo1 &
+#Programs to autostart
 
-#starting utility applications at boot time
+redshift -l 36.17497:-115.13722 -P -O 1900 &
 lxsession &
-run nm-applet &
 picom --config $HOME/.config/picom/picom.conf &
 dunst &
 run volumeicon &
+nitrogen /usr/share/backgrounds/ --random --set-scaled --head=0
+nitrogen /usr/share/backgrounds/ --random --set-scaled --head=1
