@@ -46,7 +46,7 @@ keys = [
     Key([mod], "m", lazy.spawn("jgmenu_run")),
     Key([mod], "s", lazy.spawn("slack")),
     Key([mod], "c", lazy.spawn("signal-desktop")),
-    Key(["mod1", "shift"], "Return", lazy.spawn("urxvt -e ranger")),
+    Key(["mod1", "shift"], "Return", lazy.spawn("kitty -e ranger")),
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
     #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
@@ -93,7 +93,7 @@ keys = [
 # SCREENSHOTS
 
     #Key([mod], "p", lazy.spawn('flameshot full -p ' + home + '/Pictures')),
-    Key([mod2], "p", lazy.spawn("flameshot full -p " + home + "/Pictures")),
+    Key([mod2], "p", lazy.spawn(home + "/Random-Scripts/          screenshot.sh")),
 #    Key([mod2, "shift"], "Print", lazy.spawn('gnome-screenshot -i')),
 
 # MULTIMEDIA KEYS
@@ -633,11 +633,11 @@ def assign_app_group(client):
     d["2"] = [ "Navigator", "brave-browser", "qutebrowser" ]
     d["3"] = [ "slack", "signal", "authy desktop" ]
     d["4"] = [ "tutanota-desktop" ]
-    d["5"] = [ "pcmanfm", "urxvt" ]
+    d["5"] = [ "pcmanfm", "kitty" ]
     d["6"] = [ "sxiv" ]
     d["7"] = [ "virt-manager" ]
     d["8"] = [ "superproductivity" ]
-    d["9"] = [ "kitty" ]
+    d["9"] = [ "gl" ]
     ##########################################################
     wm_class = client.window.get_wm_class()[0]
 
