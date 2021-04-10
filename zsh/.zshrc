@@ -1,22 +1,19 @@
 ## Set Environment
-TERM="xterm-256color"
 EDITOR="vim"
 VISUAL="gedit"
 
-### "vim" as manpager
+## "vim" as manpager
 export MANPAGER='/bin/zsh -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set $PATH if ~/.local/bin exist
+## Set $PATH if ~/.local/bin exist
 if [ -d "$HOME/.local/bin" ]; then
     export PATH=$HOME/.local/bin:$PATH
 fi
 
-autoload -U colors && colors
-
-# Arch Linux command-not-found support, you must have package pkgfile installed
+## Arch Linux command-not-found support, you must have package pkgfile installed
 # https://wiki.archlinux.org/index.php/Pkgfile#.22Command_not_found.22_hook
 [[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
 
@@ -63,7 +60,9 @@ SAVEHIST=1000
 alias sudo='doas'
 alias ls='lsd -al'
 alias lt='lsd -l --tree'
-alias cl='clear; bash /home/jordan/Random-Scripts/generate_random.sh | spark | lolcat'
+alias cl='clear; bash /home/jordan/Random-Scripts/generate_random.sh | lolcat'
+alias v='vim'
+alias cat='bat'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -v'
@@ -85,8 +84,8 @@ alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o "%(title)s.
 alias snapshot='doas timeshift --create && doas update-grub'
 alias insert='pass insert -m'
 alias generate='pass generate -ic'
-alias gs='git ls-files --modified'
-alias ga='git add -u'
+alias gs='git status'
+alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
 
@@ -114,24 +113,34 @@ ex ()
   fi
 }
 
-# Theme
+## Theme
 # source /usr/share/zsh/themes/bira.zsh-theme
 
 colorscript random # Command to run on launch
 
-# Plugins section: Enable fish style features
+## Plugins section: Enable fish style features
 # Use autosuggestion
- source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Use syntax highlighting
- source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-SPACESHIP_PROMPT_ADD_NEWLINE=false
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_CHAR_SYMBOL=❯
-SPACESHIP_CHAR_SYMBOL_ROOT=➜
+SPACESHIP_CHAR_SYMBOL="->"
+SPACESHIP_GIT_SYMBOL=""
+SPACESHIP_CHAR_SYMBOL_ROOT="#"
+SPACESHIP_GIT_PREFIX="on "
+SPACESHIP_GIT_BRANCH_COLOR="red"
+SPACESHIP_GIT_BRANCH_SUFFIX=""
+SPACESHIP_DIR_SUFFIX=" "
+SPACESHIP_DIR_TRUNC_PREFIX="../"
+SPACESHIP_DIR_LOCK_SYMBOL=" READ ONLY"
 SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_EXEC_TIME_PREFIX=""
+SPACESHIP_EXEC_TIME_SUFFIX=" "
 SPACESHIP_HG_SHOW=false
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_NODE_SHOW=false
@@ -158,6 +167,6 @@ SPACESHIP_TERRAFORM_SHOW=false
 SPACESHIP_VI_MODE_SHOW=false
 SPACESHIP_JOBS_SHOW=false
 
-# Spaceship Prompt
+## Spaceship Prompt
 autoload -U promptinit; promptinit
 prompt spaceship

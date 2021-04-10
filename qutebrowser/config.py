@@ -156,7 +156,7 @@ c.tabs.indicator.width = 1
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
 # Type: List of QtColor, or QtColor
-c.colors.completion.fg = '#f8f8f2'
+c.colors.completion.fg = '#6272a4'
 
 # Background color of the completion widget for odd rows.
 # Type: QssColor
@@ -168,7 +168,7 @@ c.colors.completion.even.bg = '#282a36'
 
 # Foreground color of completion widget category headers.
 # Type: QtColor
-c.colors.completion.category.fg = '#f8f8f2'
+c.colors.completion.category.fg = '#6272a4'
 
 # Background color of the completion widget category headers.
 # Type: QssColor
@@ -184,7 +184,7 @@ c.colors.completion.category.border.bottom = '#282a36'
 
 # Foreground color of the selected completion item.
 # Type: QtColor
-c.colors.completion.item.selected.fg = '#f8f8f2'
+c.colors.completion.item.selected.fg = '#6272a4'
 
 # Background color of the selected completion item.
 # Type: QssColor
@@ -204,7 +204,7 @@ c.colors.completion.match.fg = '#ffb86c'
 
 # Color of the scrollbar handle in the completion view.
 # Type: QssColor
-c.colors.completion.scrollbar.fg = '#f8f8f2'
+c.colors.completion.scrollbar.fg = '#6272a4'
 
 # Color of the scrollbar in the completion view.
 # Type: QssColor
@@ -265,6 +265,7 @@ c.fonts.prompts = '16pt FantasqueSansMono'
 
 # Zoom Levels
 config.set('zoom.text_only', True)
+config.set('zoom.default', '150%')
 
 
 # Background color for hints. Note that you can use a `rgba(...)` value
@@ -274,7 +275,7 @@ c.colors.hints.bg = '#282a36'
 
 # Font color for the matched part of hints.
 # Type: QtColor
-c.colors.hints.match.fg = '#e0e0e0'
+c.colors.hints.match.fg = '#6272a4'
 
 # Text color for the keyhint widget.
 # Type: QssColor
@@ -342,7 +343,7 @@ c.colors.prompts.selected.bg = '#44475a'
 
 # Foreground color of the statusbar.
 # Type: QssColor
-c.colors.statusbar.normal.fg = '#f8f8f2'
+c.colors.statusbar.normal.fg = '#6272a4'
 
 # Background color of the statusbar.
 # Type: QssColor
@@ -350,7 +351,7 @@ c.colors.statusbar.normal.bg = '#282a36'
 
 # Foreground color of the statusbar in insert mode.
 # Type: QssColor
-c.colors.statusbar.insert.fg = '#ffffff'
+c.colors.statusbar.insert.fg = '#6272a4'
 
 # Background color of the statusbar in insert mode.
 # Type: QssColor
@@ -366,7 +367,7 @@ c.colors.statusbar.passthrough.bg = '#282a36'
 
 # Foreground color of the statusbar in private browsing mode.
 # Type: QssColor
-c.colors.statusbar.private.fg = '#e0e0e0'
+c.colors.statusbar.private.fg = '#6272a4'
 
 # Background color of the statusbar in private browsing mode.
 # Type: QssColor
@@ -382,7 +383,7 @@ c.colors.statusbar.command.bg = '#282a36'
 
 # Foreground color of the statusbar in private browsing + command mode.
 # Type: QssColor
-c.colors.statusbar.command.private.fg = '#e0e0e0'
+c.colors.statusbar.command.private.fg = '#6272a4'
 
 # Background color of the statusbar in private browsing + command mode.
 # Type: QssColor
@@ -410,7 +411,7 @@ c.colors.statusbar.progress.bg = '#282a36'
 
 # Default foreground color of the URL in the statusbar.
 # Type: QssColor
-c.colors.statusbar.url.fg = '#f8f8f2'
+c.colors.statusbar.url.fg = '#6272a4'
 
 # Foreground color of the URL in the statusbar on error.
 # Type: QssColor
@@ -432,7 +433,7 @@ c.colors.statusbar.url.success.https.fg = '#50fa7b'
 
 # Foreground color of the URL in the statusbar when there's a warning.
 # Type: QssColor
-c.colors.statusbar.url.warn.fg = '#f1fa8c'
+c.colors.statusbar.url.warn.fg = '#6272a4'
 
 # Background color of the tab bar.
 # Type: QssColor
@@ -461,7 +462,7 @@ c.colors.tabs.indicator.system = 'none'
 
 # Foreground color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.fg = '#f8f8f2'
+c.colors.tabs.odd.fg = '#6272a4'
 
 # Background color of unselected odd tabs.
 # Type: QtColor
@@ -469,7 +470,7 @@ c.colors.tabs.odd.bg = '#44475a'
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.fg = '#f8f8f2'
+c.colors.tabs.even.fg = '#6272a4'
 
 # Background color of unselected even tabs.
 # Type: QtColor
@@ -477,7 +478,7 @@ c.colors.tabs.even.bg = '#44475a'
 
 # Foreground color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.fg = '#f8f8f2'
+c.colors.tabs.selected.odd.fg = '#6272a4'
 
 # Background color of selected odd tabs.
 # Type: QtColor
@@ -485,7 +486,7 @@ c.colors.tabs.selected.odd.bg = '#282a36'
 
 # Foreground color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.fg = '#f8f8f2'
+c.colors.tabs.selected.even.fg = '#6272a4'
 
 # Background color of selected even tabs.
 # Type: QtColor
@@ -503,20 +504,10 @@ c.colors.tabs.selected.even.bg = '#282a36'
 # Type: Bool
 c.colors.webpage.darkmode.enabled = True
 
-import dracula.draw
-
-# Load existing settings made via :set
-config.load_autoconfig()
-
-dracula.draw.blood(c, {
-'spacing': {
-'vertical': 6,
-'horizontal': 8
-}
-})
-
+# Load Statusbar and Tabs to never show on start
 config.set('statusbar.show', 'never')
 config.set('tabs.show', 'never')
+config.set('content.user_stylesheets', '~/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css')
 
 # Keybindings
 
@@ -525,3 +516,13 @@ config.bind('sd', 'hint links spawn alacritty -e youtube-dl -x --audio-format mp
 config.bind('ss', 'config-cycle statusbar.show never always')
 config.bind('st', 'config-cycle tabs.show always never')
 config.bind('sb', 'config-cycle statusbar.show never always;; config-cycle tabs.show always never')
+
+c.url.searchengines = {
+        'DEFAULT': 'https://searx.bar/search?q={}',
+        'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
+        'al': 'https://archlinux.org/packages/?q={}',
+        'aw': 'https://wiki.archlinux.org/?search={}',
+        'yt': 'https://youtube.com/results?search_query={}',
+        'etym': 'http://etymonline.com/index.php?search={}',
+        }
+

@@ -390,5 +390,13 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'vimwiki/vimwiki'
+Plug 'ap/vim-css-color'
+Plug 'rafaqz/ranger.vim'
 
 call plug#end()
+
+" Plugin Shortcuts
+
+" ranger
+map <S-o> :RangerEdit<CR>
+map <S-n><S-o> :RangerVSplit<CR>
