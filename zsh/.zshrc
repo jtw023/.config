@@ -17,6 +17,7 @@ fi
 # https://wiki.archlinux.org/index.php/Pkgfile#.22Command_not_found.22_hook
 [[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
 
+autoload -U colors && colors
 
 ## Options section
 #setopt correct             # Auto correct mistakes
@@ -113,10 +114,14 @@ ex ()
   fi
 }
 
-## Theme
-# source /usr/share/zsh/themes/bira.zsh-theme
-
 colorscript random # Command to run on launch
+
+## Theme
+source /usr/share/zsh/themes/bira.zsh-theme
+
+#PS1="╭─ %~
+#╰─>>> "
+
 
 ## Plugins section: Enable fish style features
 # Use autosuggestion
@@ -127,46 +132,46 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-SPACESHIP_PROMPT_ADD_NEWLINE=true
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_CHAR_SYMBOL="->"
-SPACESHIP_GIT_SYMBOL=""
-SPACESHIP_CHAR_SYMBOL_ROOT="#"
-SPACESHIP_GIT_PREFIX="on "
-SPACESHIP_GIT_BRANCH_COLOR="red"
-SPACESHIP_GIT_BRANCH_SUFFIX=""
-SPACESHIP_DIR_SUFFIX=" "
-SPACESHIP_DIR_TRUNC_PREFIX="../"
-SPACESHIP_DIR_LOCK_SYMBOL=" READ ONLY"
-SPACESHIP_CHAR_SUFFIX=" "
-SPACESHIP_EXEC_TIME_PREFIX=""
-SPACESHIP_EXEC_TIME_SUFFIX=" "
-SPACESHIP_HG_SHOW=false
-SPACESHIP_PACKAGE_SHOW=false
-SPACESHIP_NODE_SHOW=false
-SPACESHIP_RUBY_SHOW=false
-SPACESHIP_ELM_SHOW=false
-SPACESHIP_ELIXIR_SHOW=false
-SPACESHIP_XCODE_SHOW_LOCAL=false
-SPACESHIP_SWIFT_SHOW_LOCAL=false
-SPACESHIP_GOLANG_SHOW=false
-SPACESHIP_PHP_SHOW=false
-SPACESHIP_RUST_SHOW=false
-SPACESHIP_JULIA_SHOW=false
-SPACESHIP_DOCKER_SHOW=false
-SPACESHIP_DOCKER_CONTEXT_SHOW=false
-SPACESHIP_AWS_SHOW=false
-SPACESHIP_CONDA_SHOW=false
-SPACESHIP_VENV_SHOW=false
-SPACESHIP_PYENV_SHOW=false
-SPACESHIP_DOTNET_SHOW=false
-SPACESHIP_EMBER_SHOW=false
-SPACESHIP_KUBECONTEXT_SHOW=false
-SPACESHIP_TERRAFORM_SHOW=false
-SPACESHIP_TERRAFORM_SHOW=false
-SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_JOBS_SHOW=false
-
-## Spaceship Prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+# SPACESHIP_PROMPT_ADD_NEWLINE=true
+# SPACESHIP_PROMPT_SEPARATE_LINE=false
+# SPACESHIP_CHAR_SYMBOL="->"
+# SPACESHIP_GIT_SYMBOL=""
+# SPACESHIP_CHAR_SYMBOL_ROOT="#"
+# SPACESHIP_GIT_PREFIX="on "
+# SPACESHIP_GIT_BRANCH_COLOR="red"
+# SPACESHIP_GIT_BRANCH_SUFFIX=""
+# SPACESHIP_DIR_SUFFIX=" "
+# SPACESHIP_DIR_TRUNC_PREFIX="../"
+# SPACESHIP_DIR_LOCK_SYMBOL=" READ ONLY"
+# SPACESHIP_CHAR_SUFFIX=" "
+# SPACESHIP_EXEC_TIME_PREFIX=""
+# SPACESHIP_EXEC_TIME_SUFFIX=" "
+# SPACESHIP_HG_SHOW=false
+# SPACESHIP_PACKAGE_SHOW=false
+# SPACESHIP_NODE_SHOW=false
+# SPACESHIP_RUBY_SHOW=false
+# SPACESHIP_ELM_SHOW=false
+# SPACESHIP_ELIXIR_SHOW=false
+# SPACESHIP_XCODE_SHOW_LOCAL=false
+# SPACESHIP_SWIFT_SHOW_LOCAL=false
+# SPACESHIP_GOLANG_SHOW=false
+# SPACESHIP_PHP_SHOW=false
+# SPACESHIP_RUST_SHOW=false
+# SPACESHIP_JULIA_SHOW=false
+# SPACESHIP_DOCKER_SHOW=false
+# SPACESHIP_DOCKER_CONTEXT_SHOW=false
+# SPACESHIP_AWS_SHOW=false
+# SPACESHIP_CONDA_SHOW=false
+# SPACESHIP_VENV_SHOW=false
+# SPACESHIP_PYENV_SHOW=false
+# SPACESHIP_DOTNET_SHOW=false
+# SPACESHIP_EMBER_SHOW=false
+# SPACESHIP_KUBECONTEXT_SHOW=false
+# SPACESHIP_TERRAFORM_SHOW=false
+# SPACESHIP_TERRAFORM_SHOW=false
+# SPACESHIP_VI_MODE_SHOW=false
+# SPACESHIP_JOBS_SHOW=false
+# 
+# ## Spaceship Prompt
+# autoload -U promptinit; promptinit
+# prompt spaceship
