@@ -1,5 +1,5 @@
 configuration {
-	font: "NotoMonoRegular 18";
+	font: "FantasqueSansMono 18";
 	theme: "/usr/share/rofi/themes/arthur.rasi";
     modi: "window,run,ssh,drun";
 }
