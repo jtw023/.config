@@ -565,7 +565,8 @@ def init_widgets_list():
                 widget.CheckUpdates(
                         update_interval = 1800,
                         display_format = "Updates: {updates}",
-                        distro = "Arch_checkupdates",
+                        distro = "Arch",
+                        no_update_string = 'Updates: 0',
                         mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e yay -Syu')},
                         font = "Fantasque Sans Mono",
                         fontsize = 16,
