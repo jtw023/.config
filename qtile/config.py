@@ -51,7 +51,7 @@ keys = [
     Key([mod], "Return", lazy.spawn("alacritty")),
     #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
     Key([mod], "w", lazy.spawn("qutebrowser")),
-    Key([mod], "x", lazy.shutdown()),
+    Key([], "F12", lazy.shutdown()),
 
 
 # SUPER + SHIFT KEYS

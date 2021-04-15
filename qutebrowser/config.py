@@ -130,7 +130,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications', False, 'https://www.reddit.com')
+config.set('content.notifications.enabled', False, 'https://www.reddit.com')
 
 # CSS border value for hints.
 # Type: String
