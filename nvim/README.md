@@ -9,7 +9,7 @@
 
 
 <h1 align="center">This project was forked from <a href="https://github.com/ChristianChiarulli/LunarVim">Christian Chiarulli</a>.</h1>
-<h2 align="center">Please go star, fork, or contribute to his version.</h2>
+<h2 align="center">Please go star, fork, and contribute to his version.</h2>
 
 [![GitHub license](https://img.shields.io/github/license/ChristianChiarulli/LunarVim)](https://github.com/ChristianChiarulli/LunarVim/blob/master/LICENSE)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/ChristianChiarulli/lunarvim)
