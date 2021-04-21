@@ -47,14 +47,13 @@ vim.api.nvim_set_keymap('i', 'kj', '<ESC>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', {noremap = true, silent = true})
 
 -- Exit shortcuts
-vim.api.nvim_set_keymap('n', '<S-f><S-i>', ':q!<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '<S-f><S-i>', '<Esc>:q!<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<S-w><S-f>', ':x<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('i', '<S-w><S-f>', '<Esc>:x<CR>', {noremap = true, silent = true})
-vim.cmd([[
-	nnoremap <silent> <S-f>f :q!<CR>
-	inoremap <silent> <S-f>f <Esc><Esc>:q!<CR>
-]])
+vim.api.nvim_set_keymap('n', '<F8>', ':q!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<F8>', '<Esc>:q!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<F1>', ':x<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', '<F1>', '<Esc>:x<CR>', {noremap = true, silent = true})
+
+-- Tagbar
+vim.api.nvim_set_keymap('n', '<F2>', ':TagbarToggle<CR>', {noremap = true, silent = true})
 
 -- Tab switch buffer
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})

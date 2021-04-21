@@ -63,6 +63,12 @@ return require("packer").startup(
         -- Colorizer
         use "norcalli/nvim-colorizer.lua"
 
+        -- Vimwiki
+        use "vimwiki/vimwiki"
+
+        -- Tagbar
+        use "preservim/tagbar"
+
         -- TODO remove when open on dir is supported by nvimtree
         use "kevinhwang91/rnvimr"
 
@@ -92,6 +98,8 @@ return require("packer").startup(
         require_plugin("telescope.nvim")
         require_plugin("nvim-dap")
         require_plugin("norcalli/nvim-colorizer.lua")
+        require_plugin("vimwiki/vimwiki")
+        require_plugin("preservim/tagbar")
         require_plugin("nvim-compe")
         require_plugin("vim-vsnip")
         require_plugin("nvim-treesitter")

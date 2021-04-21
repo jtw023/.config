@@ -117,9 +117,8 @@ _G.packer_plugins = {
     path = "/home/jordan/.local/share/nvim/site/pack/packer/opt/nvim-bqf"
   },
   ["nvim-colorizer.lua"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/jordan/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua"
+    loaded = true,
+    path = "/home/jordan/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-comment"] = {
     loaded = false,
@@ -183,6 +182,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jordan/.local/share/nvim/site/pack/packer/start/rnvimr"
   },
+  tagbar = {
+    loaded = true,
+    path = "/home/jordan/.local/share/nvim/site/pack/packer/start/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -197,6 +200,10 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = true,
     path = "/home/jordan/.local/share/nvim/site/pack/packer/opt/vim-which-key"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/home/jordan/.local/share/nvim/site/pack/packer/start/vimwiki"
   }
 }
 

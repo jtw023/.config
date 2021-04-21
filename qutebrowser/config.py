@@ -507,7 +507,7 @@ c.colors.webpage.darkmode.enabled = True
 # Load Statusbar and Tabs to never show on start
 config.set('statusbar.show', 'never')
 config.set('tabs.show', 'never')
-config.set('content.user_stylesheets', '~/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css')
+# config.set('content.user_stylesheets', '~/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css')
 
 # Keybindings
 
@@ -516,6 +516,7 @@ config.bind('sd', 'hint links spawn alacritty -e youtube-dl -x --audio-format mp
 config.bind('ss', 'config-cycle statusbar.show never always')
 config.bind('st', 'config-cycle tabs.show always never')
 config.bind('sb', 'config-cycle statusbar.show never always;; config-cycle tabs.show always never')
+config.bind('sr', 'open -t https://www.naturalreaders.com/online/')
 
 c.url.searchengines = {
         'DEFAULT': 'https://searx.bar/search?q={}',

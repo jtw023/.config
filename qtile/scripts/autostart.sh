@@ -16,6 +16,4 @@ lxsession &
 picom --config $HOME/.config/picom/picom.conf &
 dunst &
 run volumeicon &
-nitrogen /usr/share/backgrounds/ --random --set-scaled --head=0
-nitrogen /usr/share/backgrounds/ --random --set-scaled --head=1
-nitrogen /usr/share/backgrounds/ --random --set-scaled --head=2
+nitrogen /usr/share/backgrounds/5760x1080/ --random --set-scaled
