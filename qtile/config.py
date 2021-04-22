@@ -295,7 +295,7 @@ def init_colors():
             ["#2F343F", "#2F343F"], # color 1
             ["#c0c5ce", "#c0c5ce"], # color 2
             ["#ff4500", "#ff4500"], # color 3
-            ["#3384d0", "#3384d0"], # color 4
+            ["#056608", "#056608"], # color 4
             ["#ffffff", "#ffffff"], # color 5
             ["#ff0000", "#ff0000"], # color 6
             ["#62FF00", "#62FF00"], # color 7
@@ -358,7 +358,8 @@ def init_widgets_list():
                         inactive = colors[5],
                         rounded = False,
                         highlight_method = "block",
-                        this_current_screen_border = colors[8],
+                        this_current_screen_border = colors[4],
+                        this_screen_border = colors[9],
                         foreground = colors[5],
                         background = colors[1]
                         ),
@@ -523,7 +524,7 @@ def init_widgets_list():
                         foreground = colors[5],
                         background = colors[0],
                         fontsize = 16,
-                        format="%b %d, %Y"
+            format="%a %b %d, %Y"
                         ),
                 widget.TextBox(
                        text = '',
@@ -565,7 +566,7 @@ def init_widgets_list():
                 widget.CheckUpdates(
                         update_interval = 1800,
                         display_format = "Updates: {updates}",
-                        distro = "Arch",
+                        distro = 'Arch',
                         no_update_string = 'Updates: 0',
                         mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e yay -Syu')},
                         font = "Fantasque Sans Mono",

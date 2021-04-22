@@ -55,6 +55,9 @@ vim.api.nvim_set_keymap('i', '<F1>', '<Esc>:x<CR>', {noremap = true, silent = tr
 -- Tagbar
 vim.api.nvim_set_keymap('n', '<F2>', ':TagbarToggle<CR>', {noremap = true, silent = true})
 
+-- Run file
+vim.api.nvim_set_keymap('n', '<F7>', ':w | :!python3 %<CR>', {noremap = true, silent = true}) -- Python
+
 -- Tab switch buffer
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', {noremap = true, silent = true})
