@@ -90,7 +90,7 @@ local markdownPandocFormat = {formatCommand = 'pandoc -f markdown -t gfm -sp --t
 
 require"lspconfig".efm.setup {
     -- init_options = {initializationOptions},
-    cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
+    cmd = {"/home/jordan/.local/share/nvim/lspinstall/efm/efm-langserver"},
     init_options = {documentFormatting = true, codeAction = false},
     filetypes = {"lua", "python", "javascriptreact", "javascript", "sh", "html", "css", "json", "yaml", "markdown"},
     settings = {

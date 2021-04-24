@@ -3,12 +3,13 @@ import os
 import re
 import socket
 import subprocess
-#from libqtile.manager import Drag, Key, Match, Screen, Group, Click, Rule
-from libqtile.config import Drag, Key, Match, Screen, Group, Click, Rule
-from libqtile.command import lazy
-from libqtile import qtile, layout, bar, widget, hook
-from libqtile.widget import Spacer
+
 import albattery
+from libqtile import bar, hook, layout, qtile, widget
+from libqtile.command import lazy
+#from libqtile.manager import Drag, Key, Match, Screen, Group, Click, Rule
+from libqtile.config import Click, Drag, Group, Key, Match, Rule, Screen
+from libqtile.widget import Spacer
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -566,7 +567,7 @@ def init_widgets_list():
                 widget.CheckUpdates(
                         update_interval = 1800,
                         display_format = "Updates: {updates}",
-                        distro = 'Arch',
+                        distro = 'Arch_checkupdates',
                         no_update_string = 'Updates: 0',
                         mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e yay -Syu')},
                         font = "Fantasque Sans Mono",
