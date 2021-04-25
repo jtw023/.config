@@ -53,6 +53,8 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.cache/zcache
 
+zmodload zsh/complist
+
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
