@@ -1,9 +1,9 @@
 ## Set Environment
-EDITOR="vim"
+EDITOR="nvim"
 VISUAL="gedit"
 
 ## "vim" as manpager
-export MANPAGER='/bin/zsh -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+export MANPAGER='/bin/zsh -c "nvim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -54,15 +54,57 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.cache/zcache
 
 HISTFILE=~/.zhistory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
+
+## use the vim keys for tab menu navigation
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+## vim mode on terminal line
+bindkey -v
+export KEYTIMEOUT=1
+
+## fix backspacing after changing vim modes on terminal line
+bindkey "^?" backward-delete-char
+
+## change cursor shape for different vim modes
+function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
+    fi
+}
+
+zle -N zle-keymap-select
+
+## initiate vim insert mode on startup
+zle-line-init() {
+    zle -K viins
+    echo -ne "\e[5 q"
+}
+
+zle -N zle-line-init
+
+## use beam cursor on startup
+echo -ne '\e[5 q'
+preexec() { echo -ne '\e[5 q' }
 
 ## Useful Aliases 
 alias sudo='doas'
 alias ls='lsd -al'
 alias lt='lsd -l --tree'
-alias cl='clear; bash /home/jordan/Random-Scripts/generate_random.sh | lolcat'
-alias v='vim'
+alias cl='clear; bash $HOME/Random-Scripts/generate_random.sh | lolcat'
+alias ref='source $HOME/.config/zsh/.zshrc'
+alias v='nvim'
+alias vim='nvim'
+alias vimwiki='v ~/vimwiki/index.wiki'
+alias vw='v ~/vimwiki/index.wiki'
+alias zshrc='v $HOME/.config/zsh/.zshrc'
+alias sound='pavucontrol'
 alias cat='bat'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -79,8 +121,6 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias upd='yay -Syu'
 alias backup='doas rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/jordan/Downloads/*","/home/jordan/.cache/*","/lost+found"} /run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924/'
-alias vimwiki='vim ~/vimwiki/index.wiki'
-alias vw='vim ~/vimwiki/index.wiki'
 alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o "%(title)s.%(ext)s"'
 alias snapshot='doas timeshift --create && doas update-grub'
 alias insert='pass insert -m'
@@ -114,13 +154,10 @@ ex ()
   fi
 }
 
-colorscript random # Command to run on launch
+bash $HOME/Random-Scripts/get_colorscript.sh # Command to run on launch
 
 ## Theme
 source /usr/share/zsh/themes/bira.zsh-theme
-
-#PS1="╭─ %~
-#╰─>>> "
 
 
 ## Plugins section: Enable fish style features
@@ -132,46 +169,3 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# SPACESHIP_PROMPT_ADD_NEWLINE=true
-# SPACESHIP_PROMPT_SEPARATE_LINE=false
-# SPACESHIP_CHAR_SYMBOL="->"
-# SPACESHIP_GIT_SYMBOL=""
-# SPACESHIP_CHAR_SYMBOL_ROOT="#"
-# SPACESHIP_GIT_PREFIX="on "
-# SPACESHIP_GIT_BRANCH_COLOR="red"
-# SPACESHIP_GIT_BRANCH_SUFFIX=""
-# SPACESHIP_DIR_SUFFIX=" "
-# SPACESHIP_DIR_TRUNC_PREFIX="../"
-# SPACESHIP_DIR_LOCK_SYMBOL=" READ ONLY"
-# SPACESHIP_CHAR_SUFFIX=" "
-# SPACESHIP_EXEC_TIME_PREFIX=""
-# SPACESHIP_EXEC_TIME_SUFFIX=" "
-# SPACESHIP_HG_SHOW=false
-# SPACESHIP_PACKAGE_SHOW=false
-# SPACESHIP_NODE_SHOW=false
-# SPACESHIP_RUBY_SHOW=false
-# SPACESHIP_ELM_SHOW=false
-# SPACESHIP_ELIXIR_SHOW=false
-# SPACESHIP_XCODE_SHOW_LOCAL=false
-# SPACESHIP_SWIFT_SHOW_LOCAL=false
-# SPACESHIP_GOLANG_SHOW=false
-# SPACESHIP_PHP_SHOW=false
-# SPACESHIP_RUST_SHOW=false
-# SPACESHIP_JULIA_SHOW=false
-# SPACESHIP_DOCKER_SHOW=false
-# SPACESHIP_DOCKER_CONTEXT_SHOW=false
-# SPACESHIP_AWS_SHOW=false
-# SPACESHIP_CONDA_SHOW=false
-# SPACESHIP_VENV_SHOW=false
-# SPACESHIP_PYENV_SHOW=false
-# SPACESHIP_DOTNET_SHOW=false
-# SPACESHIP_EMBER_SHOW=false
-# SPACESHIP_KUBECONTEXT_SHOW=false
-# SPACESHIP_TERRAFORM_SHOW=false
-# SPACESHIP_TERRAFORM_SHOW=false
-# SPACESHIP_VI_MODE_SHOW=false
-# SPACESHIP_JOBS_SHOW=false
-# 
-# ## Spaceship Prompt
-# autoload -U promptinit; promptinit
-# prompt spaceship
