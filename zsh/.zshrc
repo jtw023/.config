@@ -5,6 +5,9 @@ VISUAL="gedit"
 ## "vim" as manpager
 export MANPAGER='/bin/zsh -c "nvim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
+## "bat"  as manpager
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -128,8 +131,11 @@ alias snapshot='doas timeshift --create && doas update-grub'
 alias insert='pass insert -m'
 alias generate='pass generate -ic'
 alias gs='git status'
-alias ga='git add .'
-alias gc='git commit -m'
+alias gss='git status -s'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit'
+alias gcm='git commit -m'
 alias gp='git push'
 
 ## Function Alias
