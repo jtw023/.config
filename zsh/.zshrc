@@ -138,6 +138,8 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gl='git log'
+alias gd='git difftool'
+alias gds='git difftool --staged'
 
 ## Function Alias
 ex ()
