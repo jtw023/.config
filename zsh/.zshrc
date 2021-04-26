@@ -137,6 +137,7 @@ alias gaa='git add .'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gp='git push'
+alias gl='git log'
 
 ## Function Alias
 ex ()
