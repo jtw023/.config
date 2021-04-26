@@ -3,10 +3,10 @@ EDITOR="nvim"
 VISUAL="gedit"
 
 ## "vim" as manpager
-export MANPAGER='/bin/zsh -c "nvim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+# export MANPAGER='/bin/zsh -c "nvim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 ## "bat"  as manpager
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -138,6 +138,9 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gl='git log'
+alias glo='git log --oneline'
+alias glor='git log --oneline --reverse'
+alias glr='git log --reverse'
 alias gd='git difftool'
 alias gds='git difftool --staged'
 
