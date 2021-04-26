@@ -99,7 +99,7 @@ preexec() { echo -ne '\e[5 q' }
 alias sudo='doas'
 alias ls='lsd -al'
 alias lt='lsd -l --tree'
-alias cl='clear; bash /home/jordan/Random-Scripts/generate_random.sh | lolcat'
+alias cl='clear; bash ~$USER/Random-Scripts/generate_random.sh | lolcat'
 alias ref='source $HOME/.zshrc'
 alias v='nvim'
 alias vim='nvim'
@@ -154,7 +154,7 @@ ex ()
   fi
 }
 
-bash /home/jordan/Random-Scripts/get_colorscript.sh # Command to run on launch
+bash ~$USER/Random-Scripts/get_colorscript.sh # Command to run on launch
 
 ## Theme
 source /usr/share/zsh/themes/bira.zsh-theme
