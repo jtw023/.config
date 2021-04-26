@@ -57,13 +57,16 @@ vim.api.nvim_set_keymap('i', '<F1>', '<Esc>:x<CR>', {noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<F2>', ':TagbarToggle<CR>', {noremap = true, silent = true})
 
 -- Run file
-vim.api.nvim_set_keymap('n', '<F5>', ':w | :!python3 %<CR>', {noremap = true, silent = true}) -- Python
-vim.api.nvim_set_keymap('n', '<Leader><F5>', ':w | :!python3 %<CR>', {noremap = true, silent = true}) -- Python
-vim.api.nvim_set_keymap('n', '<F6>', ':w | :!Rscript %<CR>', {noremap = true, silent = true}) -- R
-vim.api.nvim_set_keymap('n', '<Leader><F6>', ':w | :!Rscript %<CR>', {noremap = true, silent = true}) -- R
-vim.api.nvim_set_keymap('n', '<F7>', ':w | :!bash %<CR>', {noremap = true, silent = true}) -- Bash
-vim.api.nvim_set_keymap('n', '<Leader><F7>', ':w | :!bash %<CR>', {noremap = true, silent = true}) -- Bash
+vim.api.nvim_set_keymap('n', '<F5>', ':w | :!python3 %<CR>', {noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<Leader><F5>', ':w | :!python3 %<CR>', {noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<F6>', ':w | :!Rscript %<CR>', {noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<Leader><F6>', ':w | :!Rscript %<CR>', {noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<F7>', ':w | :!bash %<CR>', {noremap = true, silent = true}) 
+vim.api.nvim_set_keymap('n', '<Leader><F7>', ':w | :!bash %<CR>', {noremap = true, silent = true}) 
 
+-- Toggle highlighting
+vim.api.nvim_set_keymap('n', '<F3>', ':set hlsearch!<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader><F3>', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 -- Tab switch buffer
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
