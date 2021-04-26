@@ -2,6 +2,9 @@
 EDITOR="nvim"
 VISUAL="gedit"
 
+## set grep color
+export GREP_COLORS="sl=01;90"
+
 ## "vim" as manpager
 # export MANPAGER='/bin/zsh -c "nvim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
@@ -108,7 +111,7 @@ alias v='nvim'
 alias vim='nvim'
 alias vimwiki='v ~/vimwiki/index.wiki'
 alias vw='v ~/vimwiki/index.wiki'
-alias zshrc='v $HOME/.config/zsh/.zshrc'
+alias zsh='v $HOME/.config/zsh/.zshrc'
 alias sound='pavucontrol'
 alias cat='bat'
 alias cp='cp -iv'
@@ -119,6 +122,8 @@ alias rmorphan="doas pacman -Rns $(pacman -Qtdq)"
 alias orphans='pacman -Qtdq'
 alias fixpacman="doas rm /var/lib/pacman/db.lck"
 alias wget='wget -c '
+alias grep='grep --color=auto --line-number'
+alias lynx='lynx -vikeys'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
