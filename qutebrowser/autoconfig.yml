@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  statusbar.show:
+  tabs.show:
     global: never
