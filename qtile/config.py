@@ -565,7 +565,7 @@ def init_widgets_list():
                         fontsize = 16
                         ),
                 widget.CheckUpdates(
-                        update_interval = 1800,
+                        update_interval = 900,
                         display_format = "Updates: {updates}",
                         distro = 'Arch_checkupdates',
                         no_update_string = 'Updates: 0',
