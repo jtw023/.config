@@ -61,6 +61,9 @@ vim.api.nvim_set_keymap('n', '<F5>', ':w | :!python3 %<CR>', {noremap = true, si
 vim.api.nvim_set_keymap('n', '<Leader><F5>', ':w | :!python3 %<CR>', {noremap = true, silent = true}) -- Python
 vim.api.nvim_set_keymap('n', '<F6>', ':w | :!Rscript %<CR>', {noremap = true, silent = true}) -- R
 vim.api.nvim_set_keymap('n', '<Leader><F6>', ':w | :!Rscript %<CR>', {noremap = true, silent = true}) -- R
+vim.api.nvim_set_keymap('n', '<F7>', ':w | :!bash %<CR>', {noremap = true, silent = true}) -- Bash
+vim.api.nvim_set_keymap('n', '<Leader><F7>', ':w | :!bash %<CR>', {noremap = true, silent = true}) -- Bash
+
 
 -- Tab switch buffer
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
