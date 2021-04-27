@@ -42,7 +42,7 @@ keys = [
     Key([mod], "i", lazy.spawn("librewolf")),
     Key([mod], "p", lazy.spawn(home + "/Random-Scripts/passmenu.sh")),
     Key([mod], "q", lazy.window.kill()),
-    Key([mod], "b", lazy.spawn("brave")),
+    Key([mod], "w", lazy.spawn("nitrogen /usr/share/backgrounds/5760x1080 --random --set-scaled")),
     Key([mod], "t", lazy.spawn("tutanota-desktop")),
     Key([mod], "m", lazy.spawn("jgmenu_run")),
     Key([mod], "s", lazy.spawn("slack")),
@@ -51,7 +51,7 @@ keys = [
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
     #Key([mod], "KP_Enter", lazy.spawn("alacritty")),
-    Key([mod], "w", lazy.spawn("qutebrowser")),
+    Key([mod], "b", lazy.spawn("qutebrowser")),
     Key([], "F12", lazy.shutdown()),
 
 
