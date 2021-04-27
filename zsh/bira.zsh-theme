@@ -28,11 +28,19 @@ function preexec() {
 function precmd() {
   if [ $timer ]; then
     now=$(($(date +%s%0N)/1000000000))
-#    elapsed=$(($now-$timer))
+
     if [[ $(($now-$timer)) > 60 ]]; then
+
         elapsed=$(($(($now-$timer))/60))m
+
+    elif [[ $(($now-$timer)) > 100 ]]; then
+
+        elapsed=$(($(($now-$timer))/60))m
+
     else
+
         elapsed=$(($now-$timer))s
+
     fi
 
     vcs_info
