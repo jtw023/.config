@@ -5,6 +5,9 @@ VISUAL="gedit"
 ## set grep color
 export GREP_COLORS="sl=01;90"
 
+## setup time command to only show the total time
+export TIMEFMT="%*E"
+
 ## "vim" as manpager
 # export MANPAGER='/bin/zsh -c "nvim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
@@ -135,10 +138,10 @@ alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o "%(title)s.
 alias snapshot='doas timeshift --create && doas update-grub'
 alias insert='pass insert -m'
 alias generate='pass generate -ic'
-alias grs='git reset --soft' # *choose hash of previous commit* undo commit but keep changes in staging area
-alias grm='git reset' # *choose hash of previous commit* undo commit but keep changes and remove from staging area
+alias grs='git reset --soft' # insert commit hash to undo commit but keep changes in staging area
+alias grm='git reset' # insert commit hash to undo commit but keep changes and remove from staging area
 alias grh='git reset --hard' # roll all tracked files back to state of hash you choose
-alias gcp='git cherry-pick' # insert commit hash of the previous commit to move that commit to a new branch
+alias gcp='git cherry-pick' # insert commit hash to move that commit to a new branch
 alias co='git checkout' # choose a file to unmodify or a different branch to switch to
 alias gsl='git status' # show the status of a git directory
 alias gs='git status -s' # show a shorter status of a git directory

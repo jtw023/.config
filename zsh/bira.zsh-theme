@@ -1,6 +1,6 @@
 # Based on bira theme
+
 autoload -Uz vcs_info
-precmd() {vcs_info}
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*:*' unstagedstr "[!]"
 zstyle ':vcs_info:*:*' stagedstr "[+]"
@@ -21,23 +21,43 @@ setopt prompt_subst
 
 () {
 
+function preexec() {
+  timer=$(($(date +%s%0N)/1000000000))
+}
+
+function precmd() {
+  if [ $timer ]; then
+    now=$(($(date +%s%0N)/1000000000))
+#    elapsed=$(($now-$timer))
+    if [[ $(($now-$timer)) > 60 ]]; then
+        elapsed=$(($(($now-$timer))/60))m
+    else
+        elapsed=$(($now-$timer))s
+    fi
+
+    vcs_info
+
+    unset timer
+  fi
+}
+
 local PR_PROMPT
 
 # Check the UID
 if [[ $UID -ne 0 ]]; then # normal user
  current_dir="%B%F{cyan}%~%f%b"
- PR_PROMPT='%B%{$fg[cyan]%}>>>'
+ PR_PROMPT='%B%{$fg[cyan]%} >'
 else # root
   current_dir="%B%F{red}%~%f%b"
-PR_PROMPT='%B%F{red}###'
+PR_PROMPT='%B%F{red} #'
 fi
 
-# local current_dir='%B%F{blue}${PWD/#$HOME/⌁}%F{white}'
 local git_branch='${vcs_info_msg_0_}'
+
+local TIME='%F{220}${elapsed}'
 
 PROMPT="
 ${current_dir} ${git_branch}
-$PR_PROMPT "
-
+${TIME}${PR_PROMPT} "
 
 }
