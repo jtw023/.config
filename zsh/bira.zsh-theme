@@ -56,8 +56,8 @@ if [[ $UID -ne 0 ]]; then # normal user
  current_dir="%B%F{cyan}%~%f%b"
  PR_PROMPT='%B%{$fg[cyan]%}%{❯%G%} '
 else # root
-  current_dir="%B%F{red}%~%f%b"
-PR_PROMPT='%B%F{red}%{%G%} '
+  current_dir="%B%F{008}%~%f%b"
+PR_PROMPT='%B%F{008}%{%G%} '
 fi
 
 local git_branch='${vcs_info_msg_0_}'
