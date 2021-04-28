@@ -29,11 +29,15 @@ function precmd() {
   if [ $timer ]; then
     now=$(($(date +%s%0N)/1000000000))
 
-    if [[ $(($now-$timer)) < 60 ]]; then
+    if [[ $(($now-$timer)) -lt 60 ]]; then
 
         elapsed=$(($now-$timer))s\ 
 
-    elif [[ $(($now-$timer)) > 100 ]]; then
+    elif [[ $(($now-$timer)) -ge 3600 ]]; then
+
+        elapsed=$(($(($now-$timer))/3600))h\ 
+
+    elif [[ $(($now-$timer)) -ge 60 ]]; then
 
         elapsed=$(($(($now-$timer))/60))m\ 
 
