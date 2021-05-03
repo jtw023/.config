@@ -108,7 +108,7 @@ preexec() { echo -ne '\e[5 q' }
 alias sudo='doas'
 alias ls='lsd -al'
 alias lt='lsd -l --tree'
-alias cl='clear; bash $HOME/Random-Scripts/generate_random.sh | lolcat'
+alias cl='clear; bash $HOME/Random-Scripts/generate_random.sh'
 alias ref='source $HOME/.config/zsh/.zshrc'
 alias v='nvim'
 alias vim='nvim'
@@ -125,7 +125,7 @@ alias rmorphan="doas pacman -Rns $(pacman -Qtdq)"
 alias orphans='pacman -Qtdq'
 alias fixpacman="doas rm /var/lib/pacman/db.lck"
 alias wget='cd Downloads; wget -c '
-alias grep='grep --color=auto --line-number'
+alias grep='grep --color=auto'
 alias lynx='lynx -vikeys'
 alias ..='cd ..'
 alias ...='cd ../..'
