@@ -85,6 +85,9 @@ keys = [
     #Key(["mod1"], "e", lazy.spawn('emacs')),
     #Key(["mod1"], "m", lazy.spawn('pcmanfm')),
     Key(["mod1"], "w", lazy.spawn("garuda-welcome")),
+    Key(["mod1"], "k", lazy.to_screen(0)),
+    Key(["mod1"], "l", lazy.to_screen(1)),
+    Key(["mod1"], "j", lazy.to_screen(2)),
 
 
 # CONTROL + SHIFT KEYS
