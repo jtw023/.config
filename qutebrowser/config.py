@@ -359,7 +359,7 @@ c.colors.statusbar.insert.bg = '#181920'
 
 # Foreground color of the statusbar in passthrough mode.
 # Type: QssColor
-c.colors.statusbar.passthrough.fg = '#ffb86c'
+c.colors.statusbar.passthrough.fg = '#ff0000'
 
 # Background color of the statusbar in passthrough mode.
 # Type: QssColor
@@ -375,7 +375,7 @@ c.colors.statusbar.private.bg = '#282a36'
 
 # Foreground color of the statusbar in command mode.
 # Type: QssColor
-c.colors.statusbar.command.fg = '#ff79c6'
+c.colors.statusbar.command.fg = '#ff0000'
 
 # Background color of the statusbar in command mode.
 # Type: QssColor
@@ -391,7 +391,7 @@ c.colors.statusbar.command.private.bg = '#282a36'
 
 # Foreground color of the statusbar in caret mode.
 # Type: QssColor
-c.colors.statusbar.caret.fg = '#ffb86c'
+c.colors.statusbar.caret.fg = '#ff0000'
 
 # Background color of the statusbar in caret mode.
 # Type: QssColor
@@ -399,7 +399,7 @@ c.colors.statusbar.caret.bg = '#282a36'
 
 # Foreground color of the statusbar in caret mode with a selection.
 # Type: QssColor
-c.colors.statusbar.caret.selection.fg = '#ffb86c'
+c.colors.statusbar.caret.selection.fg = '#ff0000'
 
 # Background color of the statusbar in caret mode with a selection.
 # Type: QssColor
@@ -441,7 +441,7 @@ c.colors.tabs.bar.bg = '#44475a'
 
 # Color gradient start for the tab indicator.
 # Type: QtColor
-c.colors.tabs.indicator.start = '#ffb86c'
+c.colors.tabs.indicator.start = '#ff0000'
 
 # Color gradient end for the tab indicator.
 # Type: QtColor
