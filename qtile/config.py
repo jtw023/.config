@@ -104,7 +104,7 @@ keys = [
     Key([], "F7", lazy.spawn("playerctl play-pause")),
     Key([], "F6", lazy.spawn("playerctl next")),
     Key([], "F5", lazy.spawn("playerctl previous")),
-    Key([], "F8", lazy.spawn("playerctl stop")),
+    Key(["mod1"], "F8", lazy.spawn("playerctl stop")),
 
     # QTILE LAYOUT KEYS
     Key([mod], "n", lazy.layout.normalize()),
