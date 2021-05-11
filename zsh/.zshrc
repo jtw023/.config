@@ -107,13 +107,15 @@ preexec() { echo -ne '\e[5 q' }
 ## Useful Aliases 
 alias sudo='doas'
 alias ls='lsd -al'
-alias lt='lsd -l --tree'
 alias cl='clear; bash $HOME/Random-Scripts/generate_random.sh'
 alias ref='source $HOME/.config/zsh/.zshrc'
 alias v='nvim'
 alias vim='nvim'
-alias vimwiki='v ~/vimwiki/index.wiki'
 alias vw='v ~/vimwiki/index.wiki'
+alias tra='transmission-remote -a --download-dir /home/jordan/kvmISOs/'
+alias trl='transmission-remote -l'
+alias trt='transmission-remote -t'
+alias trs='bash /home/jordan/Random-Scripts/tor.sh'
 alias zsh='v $HOME/.config/zsh/.zshrc'
 alias sound='pavucontrol'
 alias cat='bat'
@@ -123,7 +125,7 @@ alias rm='rm -v'
 alias mkd='mkdir -pv'
 alias orphans='pacman -Qtdq'
 alias fixpacman="su; rm /var/lib/pacman/db.lck; exit"
-alias wget='cd Downloads; wget -c '
+alias wget='cd ~$USER/Downloads/; wget -c '
 alias grep='grep --color=auto'
 alias lynx='lynx -vikeys'
 alias ..='cd ..'
@@ -141,7 +143,7 @@ alias grs='git reset --soft' # insert commit hash to undo commit but keep change
 alias grm='git reset' # insert commit hash to undo commit but keep changes and remove from staging area
 alias grh='git reset --hard' # roll all tracked files back to state of hash you choose
 alias gcp='git cherry-pick' # insert commit hash to move that commit to a new branch
-alias co='git checkout' # choose a file to unmodify or a different branch to switch to
+alias gco='git checkout' # choose a file to unmodify or a different branch to switch to
 alias gsl='git status' # show the status of a git directory
 alias gs='git status -s' # show a shorter status of a git directory
 alias ga='git add' # choose files to add to git staging area
