@@ -24,7 +24,7 @@ vim.g.dashboard_custom_header = {
 '              :  .      :  | |   _   _ _ __   __ _ _ _\\ \\   / (_)_ __ ___  ',
 '              :)    ()  :  | |  | | | | \'_ \\ / _` | \'__\\ \\ / /| | \'_ ` _ \\ ',
 '              `.   .   .\'  | |__| |_| | | | | (_| | |   \\ V / | | | | | | |',
-'                `-...-\'    |_____\\__,_|_| |_|\\__,_|_|    \\_/  |_|_| |_| |_|',
+'                `-...-\'    |_____\\____|_| |_|\\____|_|    \\_/  |_|_| |_| |_|',
 
 }
 
@@ -32,10 +32,10 @@ vim.g.dashboard_custom_header = {
 vim.g.dashboard_default_executive = 'telescope'
 
 vim.g.dashboard_custom_section = {
-    a = {description = {'  Find File          '}, command = 'Telescope find_files'},
+    a = {description = {'  Search For File    '}, command = 'Telescope find_files'},
     b = {description = {'  Recently Used Files'}, command = 'Telescope oldfiles'},
-    c = {description = {'  Load Last Session  '}, command = 'SessionLoad'},
-    d = {description = {'  Find Word          '}, command = 'Telescope live_grep'},
+    c = {description = {'  Which Key Extension'}, command = ':e ~/.config/nvim/vimscript/lv-whichkey/init.vim'},
+    d = {description = {'  Key Bindings       '}, command = ':e ~/.config/nvim/lua/keymappings.lua'},
     e = {description = {'  Settings           '}, command = ':e ~/.config/nvim/lv-settings.lua'}
     -- e = {description = {'  Marks              '}, command = 'Telescope marks'}
 }
@@ -52,4 +52,4 @@ vim.g.dashboard_custom_section = {
 -- find_history = 'SPC f h',
 
 -- vim.g.dashboard_session_directory = '~/.cache/nvim/session'
-vim.g.dashboard_custom_footer = {'chrisatmachine.com'}
+vim.g.dashboard_custom_footer = {''}
