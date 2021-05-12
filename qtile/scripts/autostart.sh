@@ -7,4 +7,4 @@ lxsession &
 picom --config $HOME/.config/picom/picom.conf &
 dunst &
 transmission-daemon &
-nitrogen /usr/share/backgrounds/5760x1080/ --random --set-scaled
+nitrogen /home/jordan/.config/wallpapers/ --random --set-scaled
