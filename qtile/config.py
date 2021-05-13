@@ -62,7 +62,6 @@ keys = [
     Key([mod, "shift"], "s", lazy.spawn("superproductivity")),
     Key([mod, "shift"], "p", lazy.spawn("sxiv -t " + home + "/Pictures/")),
     Key([mod, "shift"], "d", lazy.spawn("rofi -show drun")),
-    Key(["mod1", "shift"], "p", lazy.spawn(home + "/Random-Scripts/screenshot.sh")),
     Key([mod, "shift"], "m", lazy.spawn("kitty -e devour /home/jordan/Random-Scripts/music_player.sh")),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod], "r", lazy.restart()),
@@ -88,7 +87,8 @@ keys = [
 
     # SCREENSHOTS
 
-    Key([mod2], "p", lazy.spawn(home + "/Random-Scripts/screenshot.sh")),
+    # Key([mod2], "p", lazy.spawn(home + "/Random-Scripts/screenshot.sh")),
+    Key(["mod1", "shift"], "p", lazy.spawn(home + "/Random-Scripts/screenshot.sh")),
 
     # MULTIMEDIA KEYS
 
