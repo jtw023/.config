@@ -543,7 +543,7 @@ mouse:
 # at once.
 key_bindings:
     # (Windows, Linux, and BSD only)
-  - { key: P,        mods: Control, action: Paste            }
+  - { key: P,        mods: Alt, action: Paste            }
   - { key: C,        mods: Control|Shift, action: Copy             }
   - { key: Insert,   mods: Shift,         action: PasteSelection   }
   - { key: Key0,     mods: Control,       action: ResetFontSize    }
