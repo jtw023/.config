@@ -189,7 +189,6 @@ bash $HOME/Random-Scripts/get_colorscript.sh # Command to run on launch
 ## Theme
 source /usr/share/zsh/themes/bira.zsh-theme
 
-
 ## Plugins section: Enable fish style features
 # Use autosuggestion
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
