@@ -104,41 +104,94 @@ zle -N zle-line-init
 echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' }
 
-## Useful Aliases 
+## Useful Aliases
+
+# Bind 'sudo' to the 'doas' command
 alias sudo='doas'
+
+# Run 'lsd' whenever I 'ls'
 alias ls='lsd -al'
+
+# Run a special script to clear a page
 alias cl='clear; bash $HOME/Random-Scripts/generate_random.sh'
+
+# Refresh my zsh session
 alias ref='source $HOME/.config/zsh/.zshrc'
+
+# Modify the zshrc file
+alias zsh='v $HOME/.config/zsh/.zshrc'
+
+# Bind 'nvim' to 'v'
 alias v='nvim'
+
+# Bring up the vimwiki for notetaking
 alias vw='v ~/vimwiki/index.wiki'
-alias w='doas mount -t ecryptfs ~/Documents/Work ~/Documents/Work'
+
+# Mount the work directory
+alias work='sudo mount -t ecryptfs ~/Documents/Work ~/Documents/Work'
+
+# Convert a document to pdf
+alias convert='soffice --headless --convert-to pdf'
+
+# Transmission-Remote commands
 alias tra='transmission-remote -a --download-dir /home/jordan/kvmISOs/'
 alias trl='transmission-remote -l'
 alias trt='transmission-remote -t'
 alias trs='bash /home/jordan/Random-Scripts/tor.sh'
+
+# Trim a song with ffmpeg
 alias trim='/home/jordan/Random-Scripts/trim.sh'
-alias zsh='v $HOME/.config/zsh/.zshrc'
+
+# Pull up pavucontrol when my sound setup is acting up
 alias sound='pavucontrol'
+
+# Bind the 'cat' program to the 'bat' program
 alias cat='bat'
+
+# Always copy, move, and remove interactively and verbosely
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -v'
+
+# Always make a directory as well as any needed directories in the path
 alias mkd='mkdir -pv'
+
+# Fix pacman when broken
 alias fixpacman="su; rm /var/lib/pacman/db.lck; exit"
+
+# Automatically change to the download directory when using 'wget'
 alias wget='cd ~$USER/Downloads/; wget -c '
+
+# Always use color with the 'grep' command
 alias grep='grep --color=auto'
+
+# Always use lynx with the vim keys
 alias lynx='lynx -vikeys'
+
+# Change directory shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+
+# Update command
 alias upd='sudo updatedb -v; paru --skipreview -Syu'
+
+# Backup command
 alias backup='sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/jordan/Downloads/*","/home/jordan/.librewolf/*","/home/jordan/.cache/*","/lost+found"} /run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924/'
+
+# Youtube-dl command
 alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o "%(title)s.%(ext)s"'
-alias snapshot='sudo timeshift --create && sudo update-grub'
+
+# Timeshift snapshot command
+alias snapshot='sudo timeshift --create'
+
+# Pass - the standard unix password manager commands
 alias insert='pass insert -m'
 alias generate='pass generate -ic'
+
+# Git commands
 alias grs='git reset --soft' # insert commit hash to undo commit but keep changes in staging area
 alias grm='git reset' # insert commit hash to undo commit but keep changes and remove from staging area
 alias grh='git reset --hard' # roll all tracked files back to state of hash you choose
