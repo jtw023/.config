@@ -41,7 +41,6 @@ keys = [
     # SUPER + FUNCTION KEYS
 
     Key([mod], "f", lazy.spawn(home + "/Random-Scripts/display_font.sh")),
-    Key([mod], "i", lazy.spawn("librewolf")),
     Key([mod], "p", lazy.spawn(home + "/Random-Scripts/passmenu.sh")),
     Key([mod], "q", lazy.window.kill()),
     Key([mod], "w", lazy.spawn("nitrogen /home/jordan/.config/wallpapers/ --random --set-scaled")),
@@ -52,7 +51,7 @@ keys = [
     Key(["mod1", "shift"], "Return", lazy.spawn("kitty -e ranger")),
     Key([mod], "v", lazy.spawn("virt-manager")),
     Key([mod], "Return", lazy.spawn("alacritty")),
-    Key([mod], "b", lazy.spawn("qutebrowser")),
+    Key([mod], "b", lazy.spawn(home + "/Random-Scripts/browser.sh")),
     Key([], "F12", lazy.shutdown()),
 
 
