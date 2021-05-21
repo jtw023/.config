@@ -1,0 +1,40 @@
+{
+   "checksum": "b80b6697a6113c2921d48ad6ba14485d",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13266090967656364",
+            "guid": "af3ff86f-0414-451e-9435-b02e57a44573",
+            "id": "5",
+            "name": "Thundercats meeting",
+            "type": "url",
+            "url": "https://meet.google.com/cxh-nabm-myq"
+         } ],
+         "date_added": "13266090891190293",
+         "date_modified": "13266090967656364",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13266090891190295",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13266090891190296",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
