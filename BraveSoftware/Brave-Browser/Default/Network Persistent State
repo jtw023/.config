@@ -1,1 +1,1 @@
-{"net":{"http_server_properties":{"servers":[],"version":5},"network_qualities":{}}}
+{"net":{"http_server_properties":{"servers":[{"isolation":[],"network_stats":{"srtt":24000},"server":"https://accounts.google.com"},{"isolation":[],"network_stats":{"srtt":24302},"server":"https://fonts.googleapis.com"},{"isolation":[],"network_stats":{"srtt":21363},"server":"https://fonts.gstatic.com"}],"version":5},"network_qualities":{}}}
