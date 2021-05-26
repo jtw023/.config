@@ -4,97 +4,97 @@
 # Exceptions
 !.gitignore
 !alacritty/
-alacritty/*
+!alacritty/*
 !autostart/
-autostart/*
+!autostart/*
 !bash/
-bash/*
+!bash/*
 !colorscripts/
-colorscripts/*
+!colorscripts/*
 !dconf/
-dconf/*
+!dconf/*
 !dunst/
-dunst/*
+!dunst/*
 !dwm-6.2/
-dwm-6.2/*
+!dwm-6.2/*
 !efm-langserver/
-efm-langserver/*
+!efm-langserver/*
 !flameshot/
-flameshot/*
+!flameshot/*
 !gedit/
-gedit/*
+!gedit/*
 !gtk-3.0/
-gtk-3.0/*
+!gtk-3.0/*
 !htop/
-htop/*
+!htop/*
 !libfm/
-libfm/*
+!libfm/*
 !libreoffice/
-libreoffice/*
+!libreoffice/*
 !libvirt/
-libvirt/*
+!libvirt/*
 !lsd/
-lsd/*
+!lsd/*
 !lxtask.conf
 !mpv/
-mpv/*
+!mpv/*
 !nvim/
-nvim/*
+!nvim/*
 !paru/
-paru/*
+!paru/*
 !pavucontrol.ini
 !pcmanfm/
-pcmanfm/*
+!pcmanfm/*
 !picom/
-picom/*
+!picom/*
 !pulse/
-pulse/*
+!pulse/*
 !pulseaudio-ctl/
-pulseaudio-ctl/*
+!pulseaudio-ctl/*
 !qtile/
-qtile/*
+!qtile/*
 !qutebrowser/
-qutebrowser/*
+!qutebrowser/*
 !README.md
 !rofi/
-rofi/*
+!rofi/*
 !Slack/
-Slack/*
+!Slack/*
 !transmission-daemon/
-transmission-daemon/*
+!transmission-daemon/*
 !tutanota-desktop/
-tutanota-desktop/*
+!tutanota-desktop/*
 !vim/
-vim/*
+!vim/*
 !wallpapers/
-wallpapers/*
+!wallpapers/*
 !Xauthority/
-Xauthority/*
+!Xauthority/*
 !xinit/
-xinit/*
+!xinit/*
 !Xresources/
-Xresources/*
+!Xresources/*
 !yay/
-yay/*
+!yay/*
 !zsh/
-zsh/*
+!zsh/*
 !BraveSoftware/
 !BraveSoftware/Brave-Browser/
 !BraveSoftware/Brave-Browser/Default/
 !BraveSoftware/Brave-Browser/Default/Extension State/
-BraveSoftware/Brave-Browser/Default/Extension State/*
+!BraveSoftware/Brave-Browser/Default/Extension State/*
 !BraveSoftware/Brave-Browser/Default/Favicons
 !BraveSoftware/Brave-Browser/Default/Local Extension Settings/
-BraveSoftware/Brave-Browser/Default/Local Extension Settings/*
+!BraveSoftware/Brave-Browser/Default/Local Extension Settings/*
 !BraveSoftware/Brave-Browser/Default/Preferences
 !BraveSoftware/Brave-Browser/Default/Sync Extension Settings/
-BraveSoftware/Brave-Browser/Default/Sync Extension Settings/*
+!BraveSoftware/Brave-Browser/Default/Sync Extension Settings/*
 !BraveSoftware/Brave-Browser/Default/Bookmarks
 !BraveSoftware/Brave-Browser/Default/Bookmarks.bak
 !BraveSoftware/Brave-Browser/Default/Extensions/
-BraveSoftware/Brave-Browser/Default/Extensions/*
+!BraveSoftware/Brave-Browser/Default/Extensions/*
 !BraveSoftware/Brave-Browser/Default/Extension Rules/
-BraveSoftware/Brave-Browser/Default/Extension Rules/*
+!BraveSoftware/Brave-Browser/Default/Extension Rules/*
 !BraveSoftware/Brave-Browser/Default/Extension State/
-BraveSoftware/Brave-Browser/Default/Extension State/*
+!BraveSoftware/Brave-Browser/Default/Extension State/*
 !BraveSoftware/Brave-Browser/Default/Secure Preferences
