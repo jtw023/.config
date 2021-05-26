@@ -1,97 +1,14 @@
-# Ignore Everything
-*
-
-# Exceptions
-!.gitignore
-!alacritty/
-!alacritty/*
-!autostart/
-!autostart/*
-!bash/
-!bash/*
-!colorscripts/
-!colorscripts/*
-!dconf/
-!dconf/*
-!dunst/
-!dunst/*
-!dwm-6.2/
-!dwm-6.2/*
-!efm-langserver/
-!efm-langserver/*
-!flameshot/
-!flameshot/*
-!gedit/
-!gedit/*
-!gtk-3.0/
-!gtk-3.0/*
-!htop/
-!htop/*
-!libfm/
-!libfm/*
-!libreoffice/
-!libreoffice/*
-!libvirt/
-!libvirt/*
-!lsd/
-!lsd/*
-!lxtask.conf
-!mpv/
-!mpv/*
-!nvim/
-!nvim/*
-!paru/
-!paru/*
-!pavucontrol.ini
-!pcmanfm/
-!pcmanfm/*
-!picom/
-!picom/*
-!pulse/
-!pulse/*
-!pulseaudio-ctl/
-!pulseaudio-ctl/*
-!qtile/
-!qtile/*
-!qutebrowser/
-!qutebrowser/*
-!README.md
-!rofi/
-!rofi/*
-!Slack/
-!Slack/*
-!transmission-daemon/
-!transmission-daemon/*
-!tutanota-desktop/
-!tutanota-desktop/*
-!vim/
-!vim/*
-!wallpapers/
-!wallpapers/*
-!Xauthority/
-!Xauthority/*
-!xinit/
-!xinit/*
-!Xresources/
-!Xresources/*
-!yay/
-!yay/*
-!zsh/
-!zsh/*
-!BraveSoftware/
-!BraveSoftware/Brave-Browser/
+BraveSoftware/Brave-Browser/*
 !BraveSoftware/Brave-Browser/Default/
+BraveSoftware/Brave-Browser/Default/*
 !BraveSoftware/Brave-Browser/Default/Extension State/
+!BraveSoftware/Brave-Browser/Default/Extension State/*
 !BraveSoftware/Brave-Browser/Default/Local Extension Settings/
 !BraveSoftware/Brave-Browser/Default/Sync Extension Settings/
 !BraveSoftware/Brave-Browser/Default/Extensions/
 !BraveSoftware/Brave-Browser/Default/Extension Rules/
-!BraveSoftware/Brave-Browser/Default/Extension State/
-!BraveSoftware/Brave-Browser/Default/Extension State/*
-!BraveSoftware/Brave-Browser/Default/Local Extension Settings/*
-!BraveSoftware/Brave-Browser/Default/Sync Extension Settings/*
-!BraveSoftware/Brave-Browser/Default/Extensions/*
 !BraveSoftware/Brave-Browser/Default/Extension Rules/*
+!BraveSoftware/Brave-Browser/Default/Extension State/
 !BraveSoftware/Brave-Browser/Default/Extension State/*
 !BraveSoftware/Brave-Browser/Default/Secure Preferences
 !BraveSoftware/Brave-Browser/Default/Bookmarks

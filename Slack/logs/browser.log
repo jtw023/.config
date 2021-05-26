@@ -1,0 +1,4717 @@
+[05/17/21, 17:54:11:539] info: 
+╔═════════════════════════════════════════════════════╗
+║      Slack 4.15.0, linux 5.12.3-arch1-1 on x64      ║
+╚═════════════════════════════════════════════════════╝ 
+[05/17/21, 17:54:11:540] info: Configured logger via 
+{
+  "shouldUseNewBackend": false,
+  "loggerInstanceCount": 1
+}
+[05/17/21, 17:54:11:549] info: Predefined values for process 
+{
+  "NODE_ENV": "production",
+  "platform": "linux",
+  "type": "browser",
+  "timeZone": "America/Los_Angeles",
+  "PACKAGE_MANIFEST.productName": "Slack",
+  "PACKAGE_MANIFEST.version": "4.15.0",
+  "PACKAGE_MANIFEST.commit": "4dffcb7",
+  "PACKAGE_MANIFEST.branch": "HEAD"
+}
+[05/17/21, 17:54:11:676] info: Starting Sentry 
+[05/17/21, 17:54:11:679] info: Could not load previous electron version 
+[05/17/21, 17:54:11:890] info: Store: persist/PERSIST 
+[05/17/21, 17:54:11:892] info: Store: UPDATE_SETTINGS 
+{
+  "locale": "en-US"
+}
+[05/17/21, 17:54:11:894] info: Migrating from redux-persist@v4 
+[05/17/21, 17:54:11:894] info: Finished migrating state 
+{
+  "keys": [
+    "_persist"
+  ],
+  "version": 1
+}
+[05/17/21, 17:54:11:895] info: Store: persist/REHYDRATE 
+{
+  "_persist": "Persistence version: 1"
+}
+[05/17/21, 17:54:11:896] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 0,
+  "interval": 10
+}
+[05/17/21, 17:54:11:897] info: Store: INITIALIZE 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": []
+}
+[05/17/21, 17:54:11:898] info: persistUuid:: Generated uuid 
+{
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f"
+}
+[05/17/21, 17:54:11:899] info: persistUuid:: Uuid persisted successfully 
+[05/17/21, 17:54:11:913] error: Failed to load calls-desktop-interop.WindowBorderPanel 
+{
+  "error": {
+    "stack": "Error: Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'.\n    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\n    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\n    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\n    at Module.load (internal/modules/cjs/loader.js:935:32)\n    at Module._load (internal/modules/cjs/loader.js:776:14)\n    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\n    at Module.require (internal/modules/cjs/loader.js:959:19)\n    at require (internal/modules/cjs/helpers.js:88:18)\n    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\n    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)",
+    "message": "Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'."
+  },
+  "stackFrameString": "[{\"columnNumber\":1846,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"process.func [as dlopen]\",\"source\":\"    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\"},{\"columnNumber\":18,\"lineNumber\":1138,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Object.Module._extensions..node\",\"source\":\"    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\"},{\"columnNumber\":2073,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Object.func [as .node]\",\"source\":\"    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\"},{\"columnNumber\":32,\"lineNumber\":935,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.load\",\"source\":\"    at Module.load (internal/modules/cjs/loader.js:935:32)\"},{\"columnNumber\":14,\"lineNumber\":776,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module._load\",\"source\":\"    at Module._load (internal/modules/cjs/loader.js:776:14)\"},{\"columnNumber\":12684,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Function.f._load\",\"source\":\"    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\"},{\"columnNumber\":19,\"lineNumber\":959,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.require\",\"source\":\"    at Module.require (internal/modules/cjs/loader.js:959:19)\"},{\"columnNumber\":18,\"lineNumber\":88,\"fileName\":\"internal/modules/cjs/helpers.js\",\"functionName\":\"require\",\"source\":\"    at require (internal/modules/cjs/helpers.js:88:18)\"},{\"columnNumber\":48,\"lineNumber\":112,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js\",\"functionName\":\"bindings\",\"source\":\"    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\"},{\"columnNumber\":34,\"lineNumber\":1,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js\",\"functionName\":\"Object.<anonymous>\",\"source\":\"    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)\"}]"
+}
+[05/17/21, 17:54:11:938] warn: Failed to install protocol handler for slack:// links 
+[05/17/21, 17:54:11:950] warn: Couldn't get Linux distro info from lsb_release, trying fallback to get Linux distro info 
+{
+  "error": {
+    "stack": "Error: Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n\n    at ChildProcess.exithandler (child_process.js:317:12)\n    at ChildProcess.emit (events.js:315:20)\n    at ChildProcess.EventEmitter.emit (domain.js:467:12)\n    at maybeClose (internal/child_process.js:1048:16)\n    at Socket.<anonymous> (internal/child_process.js:439:11)\n    at Socket.emit (events.js:315:20)\n    at Socket.EventEmitter.emit (domain.js:467:12)\n    at Pipe.<anonymous> (net.js:673:12)",
+    "message": "Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n",
+    "killed": false,
+    "code": 127,
+    "signal": null,
+    "cmd": "lsb_release -a --short",
+    "stdout": "",
+    "stderr": "/bin/sh: line 1: lsb_release: command not found\n"
+  },
+  "stackFrameString": "[{\"columnNumber\":12,\"lineNumber\":317,\"fileName\":\"child_process.js\",\"functionName\":\"ChildProcess.exithandler\",\"source\":\"    at ChildProcess.exithandler (child_process.js:317:12)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"ChildProcess.emit\",\"source\":\"    at ChildProcess.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"ChildProcess.EventEmitter.emit\",\"source\":\"    at ChildProcess.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":16,\"lineNumber\":1048,\"fileName\":\"internal/child_process.js\",\"functionName\":\"maybeClose\",\"source\":\"    at maybeClose (internal/child_process.js:1048:16)\"},{\"columnNumber\":11,\"lineNumber\":439,\"fileName\":\"internal/child_process.js\",\"functionName\":\"Socket.<anonymous>\",\"source\":\"    at Socket.<anonymous> (internal/child_process.js:439:11)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"Socket.emit\",\"source\":\"    at Socket.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"Socket.EventEmitter.emit\",\"source\":\"    at Socket.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":12,\"lineNumber\":673,\"fileName\":\"net.js\",\"functionName\":\"Pipe.<anonymous>\",\"source\":\"    at Pipe.<anonymous> (net.js:673:12)\"}]"
+}
+[05/17/21, 17:54:11:954] info: getLinuxDistro: getos 
+{
+  "res": {
+    "os": "linux",
+    "dist": "Arch Linux"
+  }
+}
+[05/17/21, 17:54:11:954] info: Store: READY 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": [],
+  "appVersion": "4.15.0",
+  "is64Bit": true,
+  "isGpuCompositionAvailable": true,
+  "isTitleBarHidden": false,
+  "platform": "linux",
+  "platformVersion": {
+    "major": 5,
+    "minor": 12,
+    "build": 3
+  },
+  "releaseChannel": "prod",
+  "developerMenuOverride": false,
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f",
+  "sessionId": "MWFkOGRkZWYtYzRkNy01NDM2LTgzNTItMTBmYTYyZDAxYTJmXzE2MjEyOTkyNTE4OTk=",
+  "distribution": "DDL",
+  "linux": {
+    "os": "Arch Linux",
+    "name": "Arch Linux ",
+    "release": "",
+    "codename": ""
+  }
+}
+[05/17/21, 17:54:11:956] info: initializeApplicationEpic: Welcome to Slack 4.15.0 x64 
+[05/17/21, 17:54:11:957] info: AutoLoginEpic: Checking for autologin. 
+[05/17/21, 17:54:11:958] info: getIsUpdateSupported: Updates are not supported 
+{
+  "version": "4.15.0",
+  "reasons": [
+    "using Linux"
+  ],
+  "distribution": "DDL",
+  "executable": "/usr/lib/slack"
+}
+[05/17/21, 17:54:11:972] info: Store: SET_ACCESSIBILITY_SUPPORT_ENABLED 
+[05/17/21, 17:54:11:972] info: Store: CREATE_WINDOW 
+{
+  "type": "main"
+}
+[05/17/21, 17:54:11:973] info: Store: UPDATE_SETTINGS 
+{
+  "isSignedIntoSlackOrg": false
+}
+[05/17/21, 17:54:11:999] info: initialSettingsPayload: trying to invalidate settings 
+{
+  "payload": {
+    "useHwAcceleration": true,
+    "launchOnStartup": false,
+    "PrefSSBFileDownloadPath": "/home/jordan/Downloads",
+    "hasRunApp": true
+  }
+}
+[05/17/21, 17:54:11:999] info: Store: UPDATE_SETTINGS 
+{
+  "useHwAcceleration": true,
+  "launchOnStartup": false,
+  "PrefSSBFileDownloadPath": "/home/jordan/Downloads",
+  "hasRunApp": true
+}
+[05/17/21, 17:54:12:000] info: Store: SET_UPDATE_SUPPORTED 
+[05/17/21, 17:54:12:002] info: System configuration information 
+{
+  "info": {
+    "total_memory_in_gb": 15,
+    "gpuFeatures": {
+      "2d_canvas": "disabled_software",
+      "gpu_compositing": "disabled_software",
+      "multiple_raster_threads": "enabled_on",
+      "oop_rasterization": "disabled_off",
+      "opengl": "disabled_off",
+      "rasterization": "disabled_software",
+      "skia_renderer": "enabled_on",
+      "video_decode": "disabled_software",
+      "vulkan": "disabled_off",
+      "webgl": "disabled_off",
+      "webgl2": "disabled_off"
+    },
+    "cpu_model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "cpu_logical_core": 12,
+    "cpu_clock_speed": 4055,
+    "gpuDevice": [
+      {
+        "active": true,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 7953,
+        "vendorId": 4318
+      },
+      {
+        "active": false,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 16027,
+        "vendorId": 32902
+      }
+    ],
+    "machine_model_name": "unknown",
+    "machine_model_version": "unknown"
+  }
+}
+[05/17/21, 17:54:12:004] info: Store: TOKEN_FILE_PROCESSED 
+[05/17/21, 17:54:12:005] info: AutoLoginEpic: Processing token file for autologin. 
+[05/17/21, 17:54:12:005] info: AutoLoginEpic: Completed autologin processing — successfully logged in 0 workspaces. 
+[05/17/21, 17:54:12:005] info: AutoLoginEpic: Setting default sign-in team to null 
+[05/17/21, 17:54:12:005] info: Store: AUTOLOGIN_TEAMS_COMPLETE 
+[05/17/21, 17:54:12:005] info: Store: UPDATE_SETTINGS 
+{
+  "defaultSigninTeam": null
+}
+[05/17/21, 17:54:12:007] error: Cannot override webPreferences key(s): webviewTag 
+[05/17/21, 17:54:12:103] info: MainWindowEpics: Setting main window ID 
+{
+  "id": 1
+}
+[05/17/21, 17:54:12:105] info: Store: WINDOW_CREATED 
+{
+  "type": "main",
+  "id": 1,
+  "frame": {
+    "isHtmlFullScreen": false,
+    "isFullScreen": false,
+    "isMinimized": false,
+    "isMaximized": false,
+    "isVisible": false,
+    "isFocused": false,
+    "bounds": {
+      "x": 400,
+      "y": 150,
+      "width": 800,
+      "height": 600
+    }
+  }
+}
+[05/17/21, 17:54:12:106] info: validateBoundsForDisplay: Bounds {"width":1024,"height":768,"x":2048,"y":156} not contained in Display with workArea {"x":3520,"y":0,"width":1920,"height":1080} 
+[05/17/21, 17:54:12:108] info: Watching for keyboard layout changes 
+[05/17/21, 17:54:12:150] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 1,
+  "interval": 210
+}
+[05/17/21, 17:54:12:151] info: Store: UPDATE_SETTINGS 
+{
+  "keyboardLayout": "us"
+}
+[05/17/21, 17:54:12:152] info: registerLifeCycleEvents: Registering webContents:1 
+[05/17/21, 17:54:12:153] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "unloaded"
+}
+[05/17/21, 17:54:12:434] info: Finished download of spellcheck dictionary 
+{
+  "code": "en-US"
+}
+[05/17/21, 17:54:12:435] info: Spellcheck dictionary initialized 
+{
+  "code": "en-US"
+}
+[05/17/21, 17:54:13:160] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 2048,
+      "y": 156,
+      "width": 1024,
+      "height": 768
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:13:251] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 2048,
+      "y": 156,
+      "width": 1024,
+      "height": 768
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:13:583] info: registerLifeCycleEvents: webContents:1 from 'unloaded' to 'loaded' took 1430 ms 
+[05/17/21, 17:54:13:584] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "loaded"
+}
+[05/17/21, 17:54:13:585] info: initializeMainWindowEpic: Showing main window 
+{
+  "maximized": false,
+  "shouldHide": false,
+  "fullScreen": false
+}
+[05/17/21, 17:54:13:618] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 2,
+  "interval": 1480
+}
+[05/17/21, 17:54:13:618] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:13:619] info: Store: MAIN_WINDOW_SHOWN 
+[05/17/21, 17:54:13:621] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 2048,
+      "y": 156,
+      "width": 1024,
+      "height": 768
+    }
+  }
+}
+[05/17/21, 17:54:13:623] info: Store: CLEAR_NOTIFICATIONS 
+[05/17/21, 17:54:13:726] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:13:838] info: registerLifeCycleEvents: webContents:1 is type 'app' 
+[05/17/21, 17:54:13:839] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "type": "app",
+  "history": "[REDACTED]"
+}
+[05/17/21, 17:54:13:902] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true,
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:14:031] info: Store: SET_NETWORK_STATUS online
+[05/17/21, 17:54:14:721] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:14:789] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:14:904] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:54:16:889] info: Store: persist/FLUSH 
+[05/17/21, 17:54:17:250] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:17:316] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:54:18:831] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:19:829] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:19:830] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:19:878] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:19:895] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/17/21, 17:54:20:882] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:20:950] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/17/21, 17:54:21:163] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:22:162] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:54:22:229] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/17/21, 17:55:11:962] info: Store: UPDATE_SETTINGS 
+{
+  "lastClogForProxyInfo": 1621299311962
+}
+[05/17/21, 17:55:33:678] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/17/21, 17:56:23:701] info: Store: SET_SYSTEM_IDLE active
+[05/17/21, 17:58:50:683] info: secondInstanceEpic: Received deep link protocol activation 
+[05/17/21, 17:58:50:683] info: Store: HANDLE_DEEP_LINK 
+{
+  "url": "slack://T01H3SXSFEV/magic-login/2067824241014-cf3d5d90caec542ddca703c73b9f5d3c2cf555e97c39c8156c3bd0f44cf5e55e"
+}
+[05/17/21, 17:58:50:689] info: MagicLogin: Making magic login API request to https://app.slack.com/api/ 
+[05/17/21, 17:58:50:728] info: Store: MAGIC_LOGIN_IN_PROGRESS true
+[05/17/21, 17:58:50:728] info: registerLifeCycleEvents: Registering webContents:2 
+[05/17/21, 17:58:50:729] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 2,
+  "state": "unloaded"
+}
+[05/17/21, 17:58:50:735] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:58:51:145] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "history": "[REDACTED]"
+}
+[05/17/21, 17:58:51:169] info: registerLifeCycleEvents: webContents:2 from 'unloaded' to 'loaded' took 440 ms 
+[05/17/21, 17:58:51:169] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 2,
+  "state": "loaded"
+}
+[05/17/21, 17:58:51:172] info: registerLifeCycleEvents: webContents:2 is type 'auth' 
+[05/17/21, 17:58:51:173] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 2,
+  "type": "auth",
+  "history": "[REDACTED]"
+}
+[05/17/21, 17:58:51:178] info: registerLifeCycleEvents: webContents:2 from 'loaded' to 'page-closed' took 6 ms 
+[05/17/21, 17:58:51:178] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 2,
+  "state": "page-closed"
+}
+[05/17/21, 17:58:51:182] info: Store: REMOVE_WEB_CONTENTS 
+{
+  "id": 2
+}
+[05/17/21, 17:58:51:560] info: registerLifeCycleEvents: webContents:1 from 'loaded' to 'loaded' took 415 ms 
+[05/17/21, 17:58:51:561] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "loaded"
+}
+[05/17/21, 17:58:51:731] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:58:51:735] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:58:51:801] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:58:52:183] info: Store: SET_NETWORK_STATUS online
+[05/17/21, 17:58:52:584] info: Store: UPDATE_SETTINGS 
+{
+  "userTheme": "light"
+}
+[05/17/21, 17:58:52:585] info: Store: UPDATE_SETTINGS 
+{
+  "systemThemeSyncEnabled": false
+}
+[05/17/21, 17:58:53:116] info: Store: SYNC (Empty)
+[05/17/21, 17:58:53:116] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/17/21, 17:58:53:171] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme,notificationPrefs,connectivityPrefs,featureFlags,unreads,locale,version]
+[05/17/21, 17:58:53:179] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [featureFlags,userId]
+[05/17/21, 17:58:53:180] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme,notificationPrefs,unreads]
+[05/17/21, 17:58:53:181] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [connectivityPrefs]
+[05/17/21, 17:58:53:243] info: Store: SYNC Synced 1 workspaces with IDs [T01H3SXSFEV]
+[05/17/21, 17:58:53:248] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/17/21, 17:58:53:248] info: registerLifeCycleEvents: webContents:1 from 'loaded' to 'webapp-loaded' took 1688 ms 
+[05/17/21, 17:58:53:248] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "webapp-loaded"
+}
+[05/17/21, 17:58:53:250] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 3,
+  "interval": 279665
+}
+[05/17/21, 17:58:53:462] info: Store: UPDATE_SETTINGS 
+{
+  "forceHiddenInsetTitleBar": false
+}
+[05/17/21, 17:58:53:463] info: Store: UPDATE_SETTINGS 
+{
+  "trafficLightPosition": {
+    "x": 14,
+    "y": 22
+  }
+}
+[05/17/21, 17:58:53:464] info: Store: UPDATE_SETTINGS 
+{
+  "isIAEnabled": true
+}
+[05/17/21, 17:58:53:465] info: Store: EXTEND_MENU global: menucategory-file,menucategory-jump-to
+[05/17/21, 17:58:53:469] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/17/21, 17:58:53:757] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/17/21, 17:58:58:246] info: Store: persist/FLUSH 
+[05/17/21, 17:58:59:967] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:59:00:031] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:59:03:780] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:59:03:846] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:59:13:057] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:59:13:122] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:59:14:232] info: Store: UPDATE_SETTINGS 
+{
+  "userTheme": "dark"
+}
+[05/17/21, 17:59:14:328] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme]
+[05/17/21, 17:59:15:149] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:59:15:214] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:59:19:101] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:59:19:167] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 17:59:21:190] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 17:59:21:254] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:00:14:874] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:00:14:940] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:00:20:764] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:00:20:808] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:00:45:727] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/17/21, 18:00:46:661] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:00:46:692] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:00:48:251] info: Store: OPEN_CONTEXT_MENU 
+{
+  "id": 1,
+  "params": "[REDACTED]"
+}
+[05/17/21, 18:00:48:642] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:00:48:708] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:00:59:590] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:00:59:657] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:01:05:873] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:01:06:873] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:01:06:938] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:03:33:960] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/17/21, 18:03:43:976] info: Store: SET_SYSTEM_IDLE active
+[05/17/21, 18:09:19:986] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:09:19:996] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:09:19:997] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:09:21:000] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:09:21:066] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/17/21, 18:09:23:378] info: Attempted to close the window, hiding due to run from tray 
+[05/17/21, 18:09:23:379] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": false
+  },
+  "fromEvent": true
+}
+[05/17/21, 18:09:23:380] info: Store: UPDATE_SETTINGS 
+{
+  "hasRunFromTray": true
+}
+[05/17/21, 18:09:23:380] info: Store: SHOW_TRAY_BALLOON 
+{
+  "title": "Why didn’t Slack quit?",
+  "content": "Slack’s set to stay running in the notification area. To change this, visit Preferences > Advanced."
+}
+[05/17/21, 18:09:23:381] info: Tray Handler: Showing a tray balloon with title: Why didn’t Slack quit? 
+[05/21/21, 09:01:05:081] info: 
+╔═════════════════════════════════════════════════════╗
+║      Slack 4.16.0, linux 5.12.5-arch1-1 on x64      ║
+╚═════════════════════════════════════════════════════╝ 
+[05/21/21, 09:01:05:083] info: Configured logger via 
+{
+  "shouldUseNewBackend": false,
+  "loggerInstanceCount": 1
+}
+[05/21/21, 09:01:05:094] info: Predefined values for process 
+{
+  "NODE_ENV": "production",
+  "platform": "linux",
+  "type": "browser",
+  "timeZone": "America/Los_Angeles",
+  "PACKAGE_MANIFEST.productName": "Slack",
+  "PACKAGE_MANIFEST.version": "4.16.0",
+  "PACKAGE_MANIFEST.commit": "c22285b",
+  "PACKAGE_MANIFEST.branch": "HEAD"
+}
+[05/21/21, 09:01:05:245] info: Starting Sentry 
+[05/21/21, 09:01:05:715] info: Store: persist/PERSIST 
+[05/21/21, 09:01:05:718] info: Store: UPDATE_SETTINGS 
+{
+  "locale": "en-US"
+}
+[05/21/21, 09:01:05:723] info: Store: persist/REHYDRATE 
+{
+  "appTeams": "[DEPRECATED]",
+  "bookmarks": "[REDACTED]",
+  "dialog": "[REDACTED]",
+  "downloads": "No downloads",
+  "enterprise": "No Enterprise orgs",
+  "settings": {
+    "isSignedIntoSlackOrg": false,
+    "locale": "en-US",
+    "notificationMethod": null,
+    "releaseChannelOverride": null
+  },
+  "teams": "[DEPRECATED]",
+  "webapp": "[REDACTED]",
+  "workspaces": "1 workspaces: T01H3SXSFEV",
+  "workspacesMeta": "Selected workspace: T01H3SXSFEV",
+  "_persist": "Persistence version: 1"
+}
+[05/21/21, 09:01:05:724] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 0,
+  "interval": 15
+}
+[05/21/21, 09:01:05:725] info: Store: INITIALIZE 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": []
+}
+[05/21/21, 09:01:05:727] info: getInstanceUuid:: Read existing uuid from persisted location 
+{
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f"
+}
+[05/21/21, 09:01:05:745] error: Failed to load calls-desktop-interop.WindowBorderPanel 
+{
+  "error": {
+    "stack": "Error: Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'.\n    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\n    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\n    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\n    at Module.load (internal/modules/cjs/loader.js:935:32)\n    at Module._load (internal/modules/cjs/loader.js:776:14)\n    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\n    at Module.require (internal/modules/cjs/loader.js:959:19)\n    at require (internal/modules/cjs/helpers.js:88:18)\n    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\n    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)",
+    "message": "Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'."
+  },
+  "stackFrameString": "[{\"columnNumber\":1846,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"process.func [as dlopen]\",\"source\":\"    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\"},{\"columnNumber\":18,\"lineNumber\":1138,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Object.Module._extensions..node\",\"source\":\"    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\"},{\"columnNumber\":2073,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Object.func [as .node]\",\"source\":\"    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\"},{\"columnNumber\":32,\"lineNumber\":935,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.load\",\"source\":\"    at Module.load (internal/modules/cjs/loader.js:935:32)\"},{\"columnNumber\":14,\"lineNumber\":776,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module._load\",\"source\":\"    at Module._load (internal/modules/cjs/loader.js:776:14)\"},{\"columnNumber\":12684,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Function.f._load\",\"source\":\"    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\"},{\"columnNumber\":19,\"lineNumber\":959,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.require\",\"source\":\"    at Module.require (internal/modules/cjs/loader.js:959:19)\"},{\"columnNumber\":18,\"lineNumber\":88,\"fileName\":\"internal/modules/cjs/helpers.js\",\"functionName\":\"require\",\"source\":\"    at require (internal/modules/cjs/helpers.js:88:18)\"},{\"columnNumber\":48,\"lineNumber\":112,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js\",\"functionName\":\"bindings\",\"source\":\"    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\"},{\"columnNumber\":34,\"lineNumber\":1,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js\",\"functionName\":\"Object.<anonymous>\",\"source\":\"    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)\"}]"
+}
+[05/21/21, 09:01:05:855] warn: Failed to install protocol handler for slack:// links 
+[05/21/21, 09:01:05:864] warn: Couldn't get Linux distro info from lsb_release, trying fallback to get Linux distro info 
+{
+  "error": {
+    "stack": "Error: Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n\n    at ChildProcess.exithandler (child_process.js:317:12)\n    at ChildProcess.emit (events.js:315:20)\n    at ChildProcess.EventEmitter.emit (domain.js:467:12)\n    at maybeClose (internal/child_process.js:1048:16)\n    at Socket.<anonymous> (internal/child_process.js:439:11)\n    at Socket.emit (events.js:315:20)\n    at Socket.EventEmitter.emit (domain.js:467:12)\n    at Pipe.<anonymous> (net.js:673:12)",
+    "message": "Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n",
+    "killed": false,
+    "code": 127,
+    "signal": null,
+    "cmd": "lsb_release -a --short",
+    "stdout": "",
+    "stderr": "/bin/sh: line 1: lsb_release: command not found\n"
+  },
+  "stackFrameString": "[{\"columnNumber\":12,\"lineNumber\":317,\"fileName\":\"child_process.js\",\"functionName\":\"ChildProcess.exithandler\",\"source\":\"    at ChildProcess.exithandler (child_process.js:317:12)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"ChildProcess.emit\",\"source\":\"    at ChildProcess.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"ChildProcess.EventEmitter.emit\",\"source\":\"    at ChildProcess.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":16,\"lineNumber\":1048,\"fileName\":\"internal/child_process.js\",\"functionName\":\"maybeClose\",\"source\":\"    at maybeClose (internal/child_process.js:1048:16)\"},{\"columnNumber\":11,\"lineNumber\":439,\"fileName\":\"internal/child_process.js\",\"functionName\":\"Socket.<anonymous>\",\"source\":\"    at Socket.<anonymous> (internal/child_process.js:439:11)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"Socket.emit\",\"source\":\"    at Socket.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"Socket.EventEmitter.emit\",\"source\":\"    at Socket.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":12,\"lineNumber\":673,\"fileName\":\"net.js\",\"functionName\":\"Pipe.<anonymous>\",\"source\":\"    at Pipe.<anonymous> (net.js:673:12)\"}]"
+}
+[05/21/21, 09:01:05:869] info: getLinuxDistro: getos 
+{
+  "res": {
+    "os": "linux",
+    "dist": "Arch Linux"
+  }
+}
+[05/21/21, 09:01:05:870] info: Store: READY 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": [],
+  "appVersion": "4.16.0",
+  "is64Bit": true,
+  "isGpuCompositionAvailable": true,
+  "isTitleBarHidden": false,
+  "platform": "linux",
+  "platformVersion": {
+    "major": 5,
+    "minor": 12,
+    "build": 5
+  },
+  "releaseChannel": "prod",
+  "developerMenuOverride": false,
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f",
+  "sessionId": "MWFkOGRkZWYtYzRkNy01NDM2LTgzNTItMTBmYTYyZDAxYTJmXzE2MjE2MTI4NjU3Mjc=",
+  "distribution": "DDL",
+  "linux": {
+    "os": "Arch Linux",
+    "name": "Arch Linux ",
+    "release": "",
+    "codename": ""
+  }
+}
+[05/21/21, 09:01:05:872] info: initializeApplicationEpic: Welcome to Slack 4.16.0 x64 
+[05/21/21, 09:01:05:874] info: AutoLoginEpic: Checking for autologin. 
+[05/21/21, 09:01:05:875] info: getIsUpdateSupported: Updates are not supported 
+{
+  "version": "4.16.0",
+  "reasons": [
+    "using Linux"
+  ],
+  "distribution": "DDL",
+  "executable": "/usr/lib/slack"
+}
+[05/21/21, 09:01:05:890] info: Store: SET_ACCESSIBILITY_SUPPORT_ENABLED 
+[05/21/21, 09:01:05:892] info: Store: CREATE_WINDOW 
+{
+  "type": "main"
+}
+[05/21/21, 09:01:05:892] info: Store: UPDATE_SETTINGS 
+{
+  "isSignedIntoSlackOrg": false
+}
+[05/21/21, 09:01:05:901] info: initialSettingsPayload: trying to invalidate settings 
+{
+  "payload": {
+    "useHwAcceleration": true
+  }
+}
+[05/21/21, 09:01:05:902] info: Store: UPDATE_SETTINGS 
+{
+  "useHwAcceleration": true
+}
+[05/21/21, 09:01:05:903] info: Store: SET_UPDATE_SUPPORTED 
+[05/21/21, 09:01:05:905] info: System configuration information 
+{
+  "info": {
+    "total_memory_in_gb": 15,
+    "gpuFeatures": {
+      "2d_canvas": "disabled_software",
+      "gpu_compositing": "disabled_software",
+      "multiple_raster_threads": "enabled_on",
+      "oop_rasterization": "disabled_off",
+      "opengl": "disabled_off",
+      "rasterization": "disabled_software",
+      "skia_renderer": "enabled_on",
+      "video_decode": "disabled_software",
+      "vulkan": "disabled_off",
+      "webgl": "disabled_off",
+      "webgl2": "disabled_off"
+    },
+    "cpu_model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "cpu_logical_core": 12,
+    "cpu_clock_speed": 3303,
+    "gpuDevice": [
+      {
+        "active": true,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 7953,
+        "vendorId": 4318
+      },
+      {
+        "active": false,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 16027,
+        "vendorId": 32902
+      }
+    ],
+    "machine_model_name": "unknown",
+    "machine_model_version": "unknown"
+  }
+}
+[05/21/21, 09:01:05:910] info: Store: TOKEN_FILE_PROCESSED 
+[05/21/21, 09:01:05:911] info: AutoLoginEpic: Processing token file for autologin. 
+[05/21/21, 09:01:05:911] info: AutoLoginEpic: Completed autologin processing — successfully logged in 0 workspaces. 
+[05/21/21, 09:01:05:911] info: AutoLoginEpic: Setting default sign-in team to null 
+[05/21/21, 09:01:05:911] info: Store: AUTOLOGIN_TEAMS_COMPLETE 
+[05/21/21, 09:01:05:912] info: Store: UPDATE_SETTINGS 
+{
+  "defaultSigninTeam": null
+}
+[05/21/21, 09:01:05:914] error: Cannot override webPreferences key(s): webviewTag 
+[05/21/21, 09:01:05:993] info: MainWindowEpics: Setting main window ID 
+{
+  "id": 1
+}
+[05/21/21, 09:01:05:996] info: Store: WINDOW_CREATED 
+{
+  "type": "main",
+  "id": 1,
+  "frame": {
+    "isHtmlFullScreen": false,
+    "isFullScreen": false,
+    "isMinimized": false,
+    "isMaximized": false,
+    "isVisible": false,
+    "isFocused": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1599,
+      "height": 899
+    }
+  }
+}
+[05/21/21, 09:01:05:997] info: validateBoundsForDisplay: Bounds {"x":1616,"y":36,"width":1884,"height":1024} not contained in Display with workArea {"x":3520,"y":0,"width":1920,"height":1080} 
+[05/21/21, 09:01:06:000] info: Watching for keyboard layout changes 
+[05/21/21, 09:01:06:031] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 1,
+  "interval": 272
+}
+[05/21/21, 09:01:06:033] info: registerLifeCycleEvents: Registering webContents:1 
+[05/21/21, 09:01:06:034] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "unloaded"
+}
+[05/21/21, 09:01:06:274] info: registerLifeCycleEvents: webContents:1 from 'unloaded' to 'loaded' took 240 ms 
+[05/21/21, 09:01:06:274] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "loaded"
+}
+[05/21/21, 09:01:06:275] info: initializeMainWindowEpic: Showing main window 
+{
+  "maximized": false,
+  "shouldHide": false,
+  "fullScreen": false
+}
+[05/21/21, 09:01:06:303] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 2,
+  "interval": 279
+}
+[05/21/21, 09:01:06:304] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:06:304] info: Store: MAIN_WINDOW_SHOWN 
+[05/21/21, 09:01:06:309] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/21/21, 09:01:06:309] info: Store: CLEAR_NOTIFICATIONS 
+[05/21/21, 09:01:06:412] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:07:218] info: Store: UPDATE_SETTINGS 
+{
+  "userTheme": "dark"
+}
+[05/21/21, 09:01:07:220] info: Store: UPDATE_SETTINGS 
+{
+  "systemThemeSyncEnabled": false
+}
+[05/21/21, 09:01:07:408] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:07:411] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:07:478] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/21/21, 09:01:07:860] info: Store: SYNC (Empty)
+[05/21/21, 09:01:07:870] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/21/21, 09:01:07:889] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme,notificationPrefs,connectivityPrefs,featureFlags,unreads,locale,version,userId]
+[05/21/21, 09:01:07:905] info: Store: SYNC Synced 1 workspaces with IDs [T01H3SXSFEV]
+[05/21/21, 09:01:07:912] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/21/21, 09:01:07:914] info: registerLifeCycleEvents: webContents:1 from 'loaded' to 'webapp-loaded' took 1640 ms 
+[05/21/21, 09:01:07:914] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "webapp-loaded"
+}
+[05/21/21, 09:01:07:915] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 3,
+  "interval": 1640
+}
+[05/21/21, 09:01:07:975] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:08:230] info: Store: UPDATE_SETTINGS 
+{
+  "forceHiddenInsetTitleBar": false
+}
+[05/21/21, 09:01:08:232] info: Store: UPDATE_SETTINGS 
+{
+  "trafficLightPosition": {
+    "x": 14,
+    "y": 22
+  }
+}
+[05/21/21, 09:01:08:233] info: Store: UPDATE_SETTINGS 
+{
+  "isIAEnabled": true
+}
+[05/21/21, 09:01:08:236] info: Store: EXTEND_MENU global: menucategory-file,menucategory-jump-to
+[05/21/21, 09:01:08:242] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/21/21, 09:01:08:355] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/21/21, 09:01:08:683] info: Store: SET_NETWORK_STATUS online
+[05/21/21, 09:01:08:752] info: registerLifeCycleEvents: webContents:1 is type 'app' 
+[05/21/21, 09:01:08:753] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "type": "app",
+  "history": "[REDACTED]"
+}
+[05/21/21, 09:01:08:780] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true,
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:08:784] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/21/21, 09:01:09:307] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/21/21, 09:01:09:732] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "history": "[REDACTED]"
+}
+[05/21/21, 09:01:09:941] info: registerLifeCycleEvents: webContents:1 from 'webapp-loaded' to 'loaded' took 209 ms 
+[05/21/21, 09:01:09:941] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "loaded"
+}
+[05/21/21, 09:01:10:814] info: Store: UPDATE_SETTINGS 
+{
+  "userTheme": "dark"
+}
+[05/21/21, 09:01:10:817] info: Store: UPDATE_SETTINGS 
+{
+  "systemThemeSyncEnabled": false
+}
+[05/21/21, 09:01:11:351] info: Store: SYNC (Empty)
+[05/21/21, 09:01:11:356] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/21/21, 09:01:11:412] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme,notificationPrefs,connectivityPrefs,featureFlags,unreads,locale,version]
+[05/21/21, 09:01:11:415] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [featureFlags,userId]
+[05/21/21, 09:01:11:417] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme,notificationPrefs,unreads]
+[05/21/21, 09:01:11:418] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [connectivityPrefs]
+[05/21/21, 09:01:11:477] info: Store: SYNC Synced 1 workspaces with IDs [T01H3SXSFEV]
+[05/21/21, 09:01:11:482] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/21/21, 09:01:11:482] info: registerLifeCycleEvents: webContents:1 from 'loaded' to 'webapp-loaded' took 1541 ms 
+[05/21/21, 09:01:11:482] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "webapp-loaded"
+}
+[05/21/21, 09:01:11:692] info: Store: UPDATE_SETTINGS 
+{
+  "forceHiddenInsetTitleBar": false
+}
+[05/21/21, 09:01:11:693] info: Store: UPDATE_SETTINGS 
+{
+  "trafficLightPosition": {
+    "x": 14,
+    "y": 22
+  }
+}
+[05/21/21, 09:01:11:693] info: Store: UPDATE_SETTINGS 
+{
+  "isIAEnabled": true
+}
+[05/21/21, 09:01:11:694] info: Store: EXTEND_MENU global: menucategory-file,menucategory-jump-to
+[05/21/21, 09:01:11:699] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/21/21, 09:01:12:133] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/21/21, 09:01:12:232] info: Store: SET_NETWORK_STATUS online
+[05/21/21, 09:01:16:479] info: Store: persist/FLUSH 
+[05/21/21, 09:01:54:626] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:55:645] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:55:710] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/21/21, 09:01:55:993] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:56:992] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:01:57:056] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/21/21, 09:02:00:792] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:02:01:796] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:02:01:862] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/21/21, 09:02:07:839] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:02:07:959] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/21/21, 09:02:10:531] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:02:11:494] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:02:11:494] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:02:11:559] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/21/21, 09:02:36:366] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:02:56:357] info: Store: SET_SYSTEM_IDLE active
+[05/21/21, 09:08:36:625] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:08:46:667] info: Store: SET_SYSTEM_IDLE active
+[05/21/21, 09:09:05:889] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:09:06:929] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:09:06:994] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/21/21, 09:09:08:560] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:09:08:625] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/21/21, 09:09:13:058] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:09:13:122] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/21/21, 09:09:18:457] info: Attempted to close the window, hiding due to run from tray 
+[05/21/21, 09:09:18:458] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": false
+  },
+  "fromEvent": true
+}
+[05/21/21, 09:09:18:459] info: Store: UPDATE_SETTINGS 
+{
+  "hasRunFromTray": true
+}
+[05/21/21, 09:09:18:460] info: Store: SHOW_TRAY_BALLOON 
+{
+  "title": "Why didn’t Slack quit?",
+  "content": "Slack’s set to stay running in the notification area. To change this, visit Preferences > Advanced."
+}
+[05/21/21, 09:09:18:460] info: Tray Handler: Showing a tray balloon with title: Why didn’t Slack quit? 
+[05/21/21, 09:11:36:725] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:11:46:729] info: Store: SET_SYSTEM_IDLE active
+[05/21/21, 09:12:46:771] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:13:36:809] info: Store: SET_SYSTEM_IDLE active
+[05/21/21, 09:15:56:924] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:17:07:002] info: Store: SET_SYSTEM_IDLE active
+[05/21/21, 09:17:57:033] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:18:07:009] info: Store: SET_SYSTEM_IDLE active
+[05/21/21, 09:23:17:261] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:23:47:272] info: Store: SET_SYSTEM_IDLE active
+[05/21/21, 09:24:57:318] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/21/21, 09:25:17:324] info: Store: SET_SYSTEM_IDLE active
+[05/24/21, 14:07:08:440] info: 
+╔═════════════════════════════════════════════════════╗
+║      Slack 4.16.0, linux 5.12.5-arch1-1 on x64      ║
+╚═════════════════════════════════════════════════════╝ 
+[05/24/21, 14:07:08:441] info: Configured logger via 
+{
+  "shouldUseNewBackend": false,
+  "loggerInstanceCount": 1
+}
+[05/24/21, 14:07:08:450] info: Predefined values for process 
+{
+  "NODE_ENV": "production",
+  "platform": "linux",
+  "type": "browser",
+  "timeZone": "America/Los_Angeles",
+  "PACKAGE_MANIFEST.productName": "Slack",
+  "PACKAGE_MANIFEST.version": "4.16.0",
+  "PACKAGE_MANIFEST.commit": "c22285b",
+  "PACKAGE_MANIFEST.branch": "HEAD"
+}
+[05/24/21, 14:07:08:573] info: Starting Sentry 
+[05/24/21, 14:07:08:706] info: Store: persist/PERSIST 
+[05/24/21, 14:07:08:708] info: Store: UPDATE_SETTINGS 
+{
+  "locale": "en-US"
+}
+[05/24/21, 14:07:08:712] info: Store: persist/REHYDRATE 
+{
+  "appTeams": "[DEPRECATED]",
+  "bookmarks": "[REDACTED]",
+  "dialog": "[REDACTED]",
+  "downloads": "No downloads",
+  "enterprise": "No Enterprise orgs",
+  "settings": {
+    "isSignedIntoSlackOrg": false,
+    "locale": "en-US",
+    "notificationMethod": null,
+    "releaseChannelOverride": null
+  },
+  "teams": "[DEPRECATED]",
+  "webapp": "[REDACTED]",
+  "workspaces": "1 workspaces: T01H3SXSFEV",
+  "workspacesMeta": "Selected workspace: T01H3SXSFEV",
+  "_persist": "Persistence version: 1"
+}
+[05/24/21, 14:07:08:714] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 0,
+  "interval": 10
+}
+[05/24/21, 14:07:08:715] info: Store: INITIALIZE 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": []
+}
+[05/24/21, 14:07:08:716] info: getInstanceUuid:: Read existing uuid from persisted location 
+{
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f"
+}
+[05/24/21, 14:07:08:730] error: Failed to load calls-desktop-interop.WindowBorderPanel 
+{
+  "error": {
+    "stack": "Error: Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'.\n    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\n    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\n    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\n    at Module.load (internal/modules/cjs/loader.js:935:32)\n    at Module._load (internal/modules/cjs/loader.js:776:14)\n    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\n    at Module.require (internal/modules/cjs/loader.js:959:19)\n    at require (internal/modules/cjs/helpers.js:88:18)\n    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\n    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)",
+    "message": "Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'."
+  },
+  "stackFrameString": "[{\"columnNumber\":1846,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"process.func [as dlopen]\",\"source\":\"    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\"},{\"columnNumber\":18,\"lineNumber\":1138,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Object.Module._extensions..node\",\"source\":\"    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\"},{\"columnNumber\":2073,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Object.func [as .node]\",\"source\":\"    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\"},{\"columnNumber\":32,\"lineNumber\":935,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.load\",\"source\":\"    at Module.load (internal/modules/cjs/loader.js:935:32)\"},{\"columnNumber\":14,\"lineNumber\":776,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module._load\",\"source\":\"    at Module._load (internal/modules/cjs/loader.js:776:14)\"},{\"columnNumber\":12684,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Function.f._load\",\"source\":\"    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\"},{\"columnNumber\":19,\"lineNumber\":959,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.require\",\"source\":\"    at Module.require (internal/modules/cjs/loader.js:959:19)\"},{\"columnNumber\":18,\"lineNumber\":88,\"fileName\":\"internal/modules/cjs/helpers.js\",\"functionName\":\"require\",\"source\":\"    at require (internal/modules/cjs/helpers.js:88:18)\"},{\"columnNumber\":48,\"lineNumber\":112,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js\",\"functionName\":\"bindings\",\"source\":\"    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\"},{\"columnNumber\":34,\"lineNumber\":1,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js\",\"functionName\":\"Object.<anonymous>\",\"source\":\"    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)\"}]"
+}
+[05/24/21, 14:07:08:747] warn: Failed to install protocol handler for slack:// links 
+[05/24/21, 14:07:08:751] warn: Couldn't get Linux distro info from lsb_release, trying fallback to get Linux distro info 
+{
+  "error": {
+    "stack": "Error: Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n\n    at ChildProcess.exithandler (child_process.js:317:12)\n    at ChildProcess.emit (events.js:315:20)\n    at ChildProcess.EventEmitter.emit (domain.js:467:12)\n    at maybeClose (internal/child_process.js:1048:16)\n    at Socket.<anonymous> (internal/child_process.js:439:11)\n    at Socket.emit (events.js:315:20)\n    at Socket.EventEmitter.emit (domain.js:467:12)\n    at Pipe.<anonymous> (net.js:673:12)",
+    "message": "Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n",
+    "killed": false,
+    "code": 127,
+    "signal": null,
+    "cmd": "lsb_release -a --short",
+    "stdout": "",
+    "stderr": "/bin/sh: line 1: lsb_release: command not found\n"
+  },
+  "stackFrameString": "[{\"columnNumber\":12,\"lineNumber\":317,\"fileName\":\"child_process.js\",\"functionName\":\"ChildProcess.exithandler\",\"source\":\"    at ChildProcess.exithandler (child_process.js:317:12)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"ChildProcess.emit\",\"source\":\"    at ChildProcess.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"ChildProcess.EventEmitter.emit\",\"source\":\"    at ChildProcess.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":16,\"lineNumber\":1048,\"fileName\":\"internal/child_process.js\",\"functionName\":\"maybeClose\",\"source\":\"    at maybeClose (internal/child_process.js:1048:16)\"},{\"columnNumber\":11,\"lineNumber\":439,\"fileName\":\"internal/child_process.js\",\"functionName\":\"Socket.<anonymous>\",\"source\":\"    at Socket.<anonymous> (internal/child_process.js:439:11)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"Socket.emit\",\"source\":\"    at Socket.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"Socket.EventEmitter.emit\",\"source\":\"    at Socket.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":12,\"lineNumber\":673,\"fileName\":\"net.js\",\"functionName\":\"Pipe.<anonymous>\",\"source\":\"    at Pipe.<anonymous> (net.js:673:12)\"}]"
+}
+[05/24/21, 14:07:08:755] info: getLinuxDistro: getos 
+{
+  "res": {
+    "os": "linux",
+    "dist": "Arch Linux"
+  }
+}
+[05/24/21, 14:07:08:756] info: Store: READY 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": [],
+  "appVersion": "4.16.0",
+  "is64Bit": true,
+  "isGpuCompositionAvailable": true,
+  "isTitleBarHidden": false,
+  "platform": "linux",
+  "platformVersion": {
+    "major": 5,
+    "minor": 12,
+    "build": 5
+  },
+  "releaseChannel": "prod",
+  "developerMenuOverride": false,
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f",
+  "sessionId": "MWFkOGRkZWYtYzRkNy01NDM2LTgzNTItMTBmYTYyZDAxYTJmXzE2MjE4OTA0Mjg3MTY=",
+  "distribution": "DDL",
+  "linux": {
+    "os": "Arch Linux",
+    "name": "Arch Linux ",
+    "release": "",
+    "codename": ""
+  }
+}
+[05/24/21, 14:07:08:757] info: initializeApplicationEpic: Welcome to Slack 4.16.0 x64 
+[05/24/21, 14:07:08:759] info: AutoLoginEpic: Checking for autologin. 
+[05/24/21, 14:07:08:760] info: getIsUpdateSupported: Updates are not supported 
+{
+  "version": "4.16.0",
+  "reasons": [
+    "using Linux"
+  ],
+  "distribution": "DDL",
+  "executable": "/usr/lib/slack"
+}
+[05/24/21, 14:07:08:775] info: Store: SET_ACCESSIBILITY_SUPPORT_ENABLED 
+[05/24/21, 14:07:08:775] info: Store: CREATE_WINDOW 
+{
+  "type": "main"
+}
+[05/24/21, 14:07:08:775] info: Store: UPDATE_SETTINGS 
+{
+  "isSignedIntoSlackOrg": false
+}
+[05/24/21, 14:07:08:780] info: initialSettingsPayload: trying to invalidate settings 
+{
+  "payload": {
+    "useHwAcceleration": true
+  }
+}
+[05/24/21, 14:07:08:780] info: Store: UPDATE_SETTINGS 
+{
+  "useHwAcceleration": true
+}
+[05/24/21, 14:07:08:781] info: Store: SET_UPDATE_SUPPORTED 
+[05/24/21, 14:07:08:783] info: System configuration information 
+{
+  "info": {
+    "total_memory_in_gb": 15,
+    "gpuFeatures": {
+      "2d_canvas": "disabled_software",
+      "gpu_compositing": "disabled_software",
+      "multiple_raster_threads": "enabled_on",
+      "oop_rasterization": "disabled_off",
+      "opengl": "disabled_off",
+      "rasterization": "disabled_software",
+      "skia_renderer": "enabled_on",
+      "video_decode": "disabled_software",
+      "vulkan": "disabled_off",
+      "webgl": "disabled_off",
+      "webgl2": "disabled_off"
+    },
+    "cpu_model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "cpu_logical_core": 12,
+    "cpu_clock_speed": 2600,
+    "gpuDevice": [
+      {
+        "active": true,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 7953,
+        "vendorId": 4318
+      },
+      {
+        "active": false,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 16027,
+        "vendorId": 32902
+      }
+    ],
+    "machine_model_name": "unknown",
+    "machine_model_version": "unknown"
+  }
+}
+[05/24/21, 14:07:08:785] info: Store: TOKEN_FILE_PROCESSED 
+[05/24/21, 14:07:08:786] info: AutoLoginEpic: Processing token file for autologin. 
+[05/24/21, 14:07:08:786] info: AutoLoginEpic: Completed autologin processing — successfully logged in 0 workspaces. 
+[05/24/21, 14:07:08:786] info: AutoLoginEpic: Setting default sign-in team to null 
+[05/24/21, 14:07:08:786] info: Store: AUTOLOGIN_TEAMS_COMPLETE 
+[05/24/21, 14:07:08:787] info: Store: UPDATE_SETTINGS 
+{
+  "defaultSigninTeam": null
+}
+[05/24/21, 14:07:08:788] error: Cannot override webPreferences key(s): webviewTag 
+[05/24/21, 14:07:08:796] info: MainWindowEpics: Setting main window ID 
+{
+  "id": 1
+}
+[05/24/21, 14:07:08:798] info: Store: WINDOW_CREATED 
+{
+  "type": "main",
+  "id": 1,
+  "frame": {
+    "isHtmlFullScreen": false,
+    "isFullScreen": false,
+    "isMinimized": false,
+    "isMaximized": false,
+    "isVisible": false,
+    "isFocused": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:07:08:799] info: validateBoundsForDisplay: Bounds {"x":18,"y":38,"width":1564,"height":844} not contained in Display with workArea {"x":3520,"y":0,"width":1920,"height":1080} 
+[05/24/21, 14:07:08:799] info: validateBoundsForDisplay: Bounds {"x":18,"y":38,"width":1564,"height":844} not contained in Display with workArea {"x":1600,"y":0,"width":1920,"height":1080} 
+[05/24/21, 14:07:08:801] info: Watching for keyboard layout changes 
+[05/24/21, 14:07:08:803] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 1,
+  "interval": 86
+}
+[05/24/21, 14:07:08:805] info: registerLifeCycleEvents: Registering webContents:1 
+[05/24/21, 14:07:08:805] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "unloaded"
+}
+[05/24/21, 14:07:08:906] info: registerLifeCycleEvents: webContents:1 from 'unloaded' to 'loaded' took 101 ms 
+[05/24/21, 14:07:08:906] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "loaded"
+}
+[05/24/21, 14:07:08:907] info: initializeMainWindowEpic: Showing main window 
+{
+  "maximized": false,
+  "shouldHide": false,
+  "fullScreen": false
+}
+[05/24/21, 14:07:08:909] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 2,
+  "interval": 108
+}
+[05/24/21, 14:07:08:910] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:07:08:910] info: Store: MAIN_WINDOW_SHOWN 
+[05/24/21, 14:07:08:913] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:07:08:914] info: Store: CLEAR_NOTIFICATIONS 
+[05/24/21, 14:07:08:934] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:07:09:675] info: Store: UPDATE_SETTINGS 
+{
+  "userTheme": "dark"
+}
+[05/24/21, 14:07:09:677] info: Store: UPDATE_SETTINGS 
+{
+  "systemThemeSyncEnabled": false
+}
+[05/24/21, 14:07:09:919] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:07:09:985] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:07:10:246] info: Store: SYNC (Empty)
+[05/24/21, 14:07:10:254] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/24/21, 14:07:10:268] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme,notificationPrefs,connectivityPrefs,featureFlags,unreads,locale,version,userId]
+[05/24/21, 14:07:10:281] info: Store: SYNC Synced 1 workspaces with IDs [T01H3SXSFEV]
+[05/24/21, 14:07:10:285] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/24/21, 14:07:10:286] info: registerLifeCycleEvents: webContents:1 from 'loaded' to 'webapp-loaded' took 1380 ms 
+[05/24/21, 14:07:10:286] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "webapp-loaded"
+}
+[05/24/21, 14:07:10:287] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 3,
+  "interval": 1379
+}
+[05/24/21, 14:07:10:539] info: Store: UPDATE_SETTINGS 
+{
+  "forceHiddenInsetTitleBar": false
+}
+[05/24/21, 14:07:10:540] info: Store: UPDATE_SETTINGS 
+{
+  "trafficLightPosition": {
+    "x": 14,
+    "y": 22
+  }
+}
+[05/24/21, 14:07:10:541] info: Store: UPDATE_SETTINGS 
+{
+  "isIAEnabled": true
+}
+[05/24/21, 14:07:10:542] info: Store: EXTEND_MENU global: menucategory-file,menucategory-jump-to
+[05/24/21, 14:07:10:547] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/24/21, 14:07:10:808] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/24/21, 14:07:11:199] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 14:07:11:226] info: registerLifeCycleEvents: webContents:1 is type 'app' 
+[05/24/21, 14:07:11:227] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "type": "app",
+  "history": "[REDACTED]"
+}
+[05/24/21, 14:07:11:259] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true,
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:07:11:794] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 14:07:15:282] info: Store: persist/FLUSH 
+[05/24/21, 14:08:08:469] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:08:09:469] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:08:09:535] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:12:49:018] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:12:50:021] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:12:50:087] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:13:32:285] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:13:33:284] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:13:33:350] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:15:31:008] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:15:32:011] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:15:32:077] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:15:33:109] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:15:34:106] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:15:34:107] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:15:34:172] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:17:48:489] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:17:48:554] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:17:49:977] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1617,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:17:50:042] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1617,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:17:50:493] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:17:51:496] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:17:51:561] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:20:30:961] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:20:31:925] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:20:31:990] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:28:40:095] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1617,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:28:40:161] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1617,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:28:40:437] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:28:42:518] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:28:42:583] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:29:26:136] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:26:934] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:27:828] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:28:827] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:28:892] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:29:44:411] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:45:003] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:46:004] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:46:070] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:29:56:749] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:57:747] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:57:748] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:57:814] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:29:58:807] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:59:771] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:29:59:836] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:31:15:538] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:31:16:421] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:31:17:389] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:31:17:454] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:32:36:046] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:32:37:049] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:32:37:114] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:32:38:147] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:32:38:211] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:33:24:652] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:33:25:653] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:33:25:717] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:38:27:371] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:38:28:375] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:38:28:440] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 14:38:28:758] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:38:29:743] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:38:29:743] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:38:29:810] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:39:08:714] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:39:09:223] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:39:10:223] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:39:10:288] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:39:14:155] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:39:14:767] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:39:15:767] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:39:15:832] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:40:10:193] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/24/21, 14:41:50:270] info: Store: SET_SYSTEM_IDLE active
+[05/24/21, 14:43:30:767] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:43:30:832] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:43:31:992] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1617,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:43:32:058] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1617,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 14:57:39:376] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:57:39:809] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:57:40:779] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 14:57:40:844] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:01:11:947] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:01:12:003] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:01:12:997] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:01:12:998] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:01:13:064] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:01:58:064] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:01:58:542] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:01:59:540] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:01:59:607] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:04:30:883] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:04:31:945] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:04:32:011] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:04:33:352] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:04:33:418] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:04:39:261] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:04:39:349] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:04:48:633] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:04:48:699] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:04:54:998] info: Attempted to close the window, hiding due to run from tray 
+[05/24/21, 15:04:55:003] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:05:32:838] info: Telling native-keymap to ignore all future events as we are quitting 
+[05/24/21, 15:20:18:563] info: 
+╔═════════════════════════════════════════════════════╗
+║      Slack 4.16.0, linux 5.12.6-arch1-1 on x64      ║
+╚═════════════════════════════════════════════════════╝ 
+[05/24/21, 15:20:18:564] info: Configured logger via 
+{
+  "shouldUseNewBackend": false,
+  "loggerInstanceCount": 1
+}
+[05/24/21, 15:20:18:572] info: Predefined values for process 
+{
+  "NODE_ENV": "production",
+  "platform": "linux",
+  "type": "browser",
+  "timeZone": "America/Los_Angeles",
+  "PACKAGE_MANIFEST.productName": "Slack",
+  "PACKAGE_MANIFEST.version": "4.16.0",
+  "PACKAGE_MANIFEST.commit": "c22285b",
+  "PACKAGE_MANIFEST.branch": "HEAD"
+}
+[05/24/21, 15:20:18:702] info: Starting Sentry 
+[05/24/21, 15:20:18:833] info: Store: persist/PERSIST 
+[05/24/21, 15:20:18:836] info: Store: UPDATE_SETTINGS 
+{
+  "locale": "en-US"
+}
+[05/24/21, 15:20:18:840] info: Store: persist/REHYDRATE 
+{
+  "appTeams": "[DEPRECATED]",
+  "bookmarks": "[REDACTED]",
+  "dialog": "[REDACTED]",
+  "downloads": "No downloads",
+  "enterprise": "No Enterprise orgs",
+  "settings": {
+    "isSignedIntoSlackOrg": false,
+    "locale": "en-US",
+    "notificationMethod": null,
+    "releaseChannelOverride": null
+  },
+  "teams": "[DEPRECATED]",
+  "webapp": "[REDACTED]",
+  "workspaces": "1 workspaces: T01H3SXSFEV",
+  "workspacesMeta": "Selected workspace: T01H3SXSFEV",
+  "_persist": "Persistence version: 1"
+}
+[05/24/21, 15:20:18:841] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 0,
+  "interval": 12
+}
+[05/24/21, 15:20:18:842] info: Store: INITIALIZE 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": []
+}
+[05/24/21, 15:20:18:843] info: getInstanceUuid:: Read existing uuid from persisted location 
+{
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f"
+}
+[05/24/21, 15:20:18:857] error: Failed to load calls-desktop-interop.WindowBorderPanel 
+{
+  "error": {
+    "stack": "Error: Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'.\n    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\n    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\n    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\n    at Module.load (internal/modules/cjs/loader.js:935:32)\n    at Module._load (internal/modules/cjs/loader.js:776:14)\n    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\n    at Module.require (internal/modules/cjs/loader.js:959:19)\n    at require (internal/modules/cjs/helpers.js:88:18)\n    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\n    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)",
+    "message": "Module did not self-register: '/usr/lib/slack/resources/app.asar.unpacked/node_modules/@tinyspeck/calls-desktop-interop/build/Release/CallsDesktopInterop.node'."
+  },
+  "stackFrameString": "[{\"columnNumber\":1846,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"process.func [as dlopen]\",\"source\":\"    at process.func [as dlopen] (electron/js2c/asar_bundle.js:5:1846)\"},{\"columnNumber\":18,\"lineNumber\":1138,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Object.Module._extensions..node\",\"source\":\"    at Object.Module._extensions..node (internal/modules/cjs/loader.js:1138:18)\"},{\"columnNumber\":2073,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Object.func [as .node]\",\"source\":\"    at Object.func [as .node] (electron/js2c/asar_bundle.js:5:2073)\"},{\"columnNumber\":32,\"lineNumber\":935,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.load\",\"source\":\"    at Module.load (internal/modules/cjs/loader.js:935:32)\"},{\"columnNumber\":14,\"lineNumber\":776,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module._load\",\"source\":\"    at Module._load (internal/modules/cjs/loader.js:776:14)\"},{\"columnNumber\":12684,\"lineNumber\":5,\"fileName\":\"electron/js2c/asar_bundle.js\",\"functionName\":\"Function.f._load\",\"source\":\"    at Function.f._load (electron/js2c/asar_bundle.js:5:12684)\"},{\"columnNumber\":19,\"lineNumber\":959,\"fileName\":\"internal/modules/cjs/loader.js\",\"functionName\":\"Module.require\",\"source\":\"    at Module.require (internal/modules/cjs/loader.js:959:19)\"},{\"columnNumber\":18,\"lineNumber\":88,\"fileName\":\"internal/modules/cjs/helpers.js\",\"functionName\":\"require\",\"source\":\"    at require (internal/modules/cjs/helpers.js:88:18)\"},{\"columnNumber\":48,\"lineNumber\":112,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js\",\"functionName\":\"bindings\",\"source\":\"    at bindings (/usr/lib/slack/resources/app.asar/node_modules/bindings/bindings.js:112:48)\"},{\"columnNumber\":34,\"lineNumber\":1,\"fileName\":\"/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js\",\"functionName\":\"Object.<anonymous>\",\"source\":\"    at Object.<anonymous> (/usr/lib/slack/resources/app.asar/node_modules/@tinyspeck/calls-desktop-interop/lib/index.js:1:34)\"}]"
+}
+[05/24/21, 15:20:18:875] warn: Failed to install protocol handler for slack:// links 
+[05/24/21, 15:20:18:879] warn: Couldn't get Linux distro info from lsb_release, trying fallback to get Linux distro info 
+{
+  "error": {
+    "stack": "Error: Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n\n    at ChildProcess.exithandler (child_process.js:317:12)\n    at ChildProcess.emit (events.js:315:20)\n    at ChildProcess.EventEmitter.emit (domain.js:467:12)\n    at maybeClose (internal/child_process.js:1048:16)\n    at Socket.<anonymous> (internal/child_process.js:439:11)\n    at Socket.emit (events.js:315:20)\n    at Socket.EventEmitter.emit (domain.js:467:12)\n    at Pipe.<anonymous> (net.js:673:12)",
+    "message": "Command failed: lsb_release -a --short\n/bin/sh: line 1: lsb_release: command not found\n",
+    "killed": false,
+    "code": 127,
+    "signal": null,
+    "cmd": "lsb_release -a --short",
+    "stdout": "",
+    "stderr": "/bin/sh: line 1: lsb_release: command not found\n"
+  },
+  "stackFrameString": "[{\"columnNumber\":12,\"lineNumber\":317,\"fileName\":\"child_process.js\",\"functionName\":\"ChildProcess.exithandler\",\"source\":\"    at ChildProcess.exithandler (child_process.js:317:12)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"ChildProcess.emit\",\"source\":\"    at ChildProcess.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"ChildProcess.EventEmitter.emit\",\"source\":\"    at ChildProcess.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":16,\"lineNumber\":1048,\"fileName\":\"internal/child_process.js\",\"functionName\":\"maybeClose\",\"source\":\"    at maybeClose (internal/child_process.js:1048:16)\"},{\"columnNumber\":11,\"lineNumber\":439,\"fileName\":\"internal/child_process.js\",\"functionName\":\"Socket.<anonymous>\",\"source\":\"    at Socket.<anonymous> (internal/child_process.js:439:11)\"},{\"columnNumber\":20,\"lineNumber\":315,\"fileName\":\"events.js\",\"functionName\":\"Socket.emit\",\"source\":\"    at Socket.emit (events.js:315:20)\"},{\"columnNumber\":12,\"lineNumber\":467,\"fileName\":\"domain.js\",\"functionName\":\"Socket.EventEmitter.emit\",\"source\":\"    at Socket.EventEmitter.emit (domain.js:467:12)\"},{\"columnNumber\":12,\"lineNumber\":673,\"fileName\":\"net.js\",\"functionName\":\"Pipe.<anonymous>\",\"source\":\"    at Pipe.<anonymous> (net.js:673:12)\"}]"
+}
+[05/24/21, 15:20:18:883] info: getLinuxDistro: getos 
+{
+  "res": {
+    "os": "linux",
+    "dist": "Arch Linux"
+  }
+}
+[05/24/21, 15:20:18:884] info: Store: READY 
+{
+  "resourcePath": "/usr/lib/slack/resources/app.asar",
+  "tsaToken": "[REDACTED]",
+  "bootFragments": [],
+  "appVersion": "4.16.0",
+  "is64Bit": true,
+  "isGpuCompositionAvailable": true,
+  "isTitleBarHidden": false,
+  "platform": "linux",
+  "platformVersion": {
+    "major": 5,
+    "minor": 12,
+    "build": 6
+  },
+  "releaseChannel": "prod",
+  "developerMenuOverride": false,
+  "uuid": "1ad8ddef-c4d7-5436-8352-10fa62d01a2f",
+  "sessionId": "MWFkOGRkZWYtYzRkNy01NDM2LTgzNTItMTBmYTYyZDAxYTJmXzE2MjE4OTQ4MTg4NDM=",
+  "distribution": "DDL",
+  "linux": {
+    "os": "Arch Linux",
+    "name": "Arch Linux ",
+    "release": "",
+    "codename": ""
+  }
+}
+[05/24/21, 15:20:18:885] info: initializeApplicationEpic: Welcome to Slack 4.16.0 x64 
+[05/24/21, 15:20:18:887] info: AutoLoginEpic: Checking for autologin. 
+[05/24/21, 15:20:18:887] info: getIsUpdateSupported: Updates are not supported 
+{
+  "version": "4.16.0",
+  "reasons": [
+    "using Linux"
+  ],
+  "distribution": "DDL",
+  "executable": "/usr/lib/slack"
+}
+[05/24/21, 15:20:18:901] info: Store: SET_ACCESSIBILITY_SUPPORT_ENABLED 
+[05/24/21, 15:20:18:903] info: Store: CREATE_WINDOW 
+{
+  "type": "main"
+}
+[05/24/21, 15:20:18:903] info: Store: UPDATE_SETTINGS 
+{
+  "isSignedIntoSlackOrg": false
+}
+[05/24/21, 15:20:18:906] info: initialSettingsPayload: trying to invalidate settings 
+{
+  "payload": {
+    "useHwAcceleration": true
+  }
+}
+[05/24/21, 15:20:18:907] info: Store: UPDATE_SETTINGS 
+{
+  "useHwAcceleration": true
+}
+[05/24/21, 15:20:18:907] info: Store: SET_UPDATE_SUPPORTED 
+[05/24/21, 15:20:18:909] info: System configuration information 
+{
+  "info": {
+    "total_memory_in_gb": 15,
+    "gpuFeatures": {
+      "2d_canvas": "disabled_software",
+      "gpu_compositing": "disabled_software",
+      "multiple_raster_threads": "enabled_on",
+      "oop_rasterization": "disabled_off",
+      "opengl": "disabled_off",
+      "rasterization": "disabled_software",
+      "skia_renderer": "enabled_on",
+      "video_decode": "disabled_software",
+      "vulkan": "disabled_off",
+      "webgl": "disabled_off",
+      "webgl2": "disabled_off"
+    },
+    "cpu_model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "cpu_logical_core": 12,
+    "cpu_clock_speed": 2600,
+    "gpuDevice": [
+      {
+        "active": true,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 7953,
+        "vendorId": 4318
+      },
+      {
+        "active": false,
+        "cudaComputeCapabilityMajor": 0,
+        "deviceId": 16027,
+        "vendorId": 32902
+      }
+    ],
+    "machine_model_name": "unknown",
+    "machine_model_version": "unknown"
+  }
+}
+[05/24/21, 15:20:18:911] info: Store: TOKEN_FILE_PROCESSED 
+[05/24/21, 15:20:18:912] info: AutoLoginEpic: Processing token file for autologin. 
+[05/24/21, 15:20:18:912] info: AutoLoginEpic: Completed autologin processing — successfully logged in 0 workspaces. 
+[05/24/21, 15:20:18:913] info: AutoLoginEpic: Setting default sign-in team to null 
+[05/24/21, 15:20:18:913] info: Store: AUTOLOGIN_TEAMS_COMPLETE 
+[05/24/21, 15:20:18:913] info: Store: UPDATE_SETTINGS 
+{
+  "defaultSigninTeam": null
+}
+[05/24/21, 15:20:18:915] error: Cannot override webPreferences key(s): webviewTag 
+[05/24/21, 15:20:18:924] info: MainWindowEpics: Setting main window ID 
+{
+  "id": 1
+}
+[05/24/21, 15:20:18:925] info: Store: WINDOW_CREATED 
+{
+  "type": "main",
+  "id": 1,
+  "frame": {
+    "isHtmlFullScreen": false,
+    "isFullScreen": false,
+    "isMinimized": false,
+    "isMaximized": false,
+    "isVisible": false,
+    "isFocused": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1599,
+      "height": 899
+    }
+  }
+}
+[05/24/21, 15:20:18:927] info: validateBoundsForDisplay: Bounds {"x":1618,"y":38,"width":1884,"height":1024} not contained in Display with workArea {"x":3520,"y":0,"width":1920,"height":1080} 
+[05/24/21, 15:20:18:929] info: Watching for keyboard layout changes 
+[05/24/21, 15:20:18:946] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 1,
+  "interval": 85
+}
+[05/24/21, 15:20:18:948] info: registerLifeCycleEvents: Registering webContents:1 
+[05/24/21, 15:20:18:948] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "unloaded"
+}
+[05/24/21, 15:20:19:081] info: registerLifeCycleEvents: webContents:1 from 'unloaded' to 'loaded' took 133 ms 
+[05/24/21, 15:20:19:082] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "loaded"
+}
+[05/24/21, 15:20:19:083] info: initializeMainWindowEpic: Showing main window 
+{
+  "maximized": false,
+  "shouldHide": false,
+  "fullScreen": false
+}
+[05/24/21, 15:20:19:093] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 2,
+  "interval": 156
+}
+[05/24/21, 15:20:19:093] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:19:094] info: Store: MAIN_WINDOW_SHOWN 
+[05/24/21, 15:20:19:097] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:20:19:097] info: Store: CLEAR_NOTIFICATIONS 
+[05/24/21, 15:20:19:113] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:19:121] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:19:125] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:19:832] info: Store: UPDATE_SETTINGS 
+{
+  "userTheme": "dark"
+}
+[05/24/21, 15:20:19:833] info: Store: UPDATE_SETTINGS 
+{
+  "systemThemeSyncEnabled": false
+}
+[05/24/21, 15:20:19:948] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:20:125] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:20:190] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:20:20:409] info: Store: SYNC (Empty)
+[05/24/21, 15:20:20:422] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/24/21, 15:20:20:429] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [theme,notificationPrefs,connectivityPrefs,featureFlags,unreads,locale,version,userId]
+[05/24/21, 15:20:20:441] info: Store: SYNC Synced 1 workspaces with IDs [T01H3SXSFEV]
+[05/24/21, 15:20:20:446] info: Store: SELECTION_CHANGED T01H3SXSFEV
+[05/24/21, 15:20:20:446] info: registerLifeCycleEvents: webContents:1 from 'loaded' to 'webapp-loaded' took 1365 ms 
+[05/24/21, 15:20:20:447] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "state": "webapp-loaded"
+}
+[05/24/21, 15:20:20:447] info: Store: RECORD_PERFORMANCE_TIMING 
+{
+  "phase": 3,
+  "interval": 1365
+}
+[05/24/21, 15:20:20:696] info: Store: UPDATE_SETTINGS 
+{
+  "forceHiddenInsetTitleBar": false
+}
+[05/24/21, 15:20:20:697] info: Store: UPDATE_SETTINGS 
+{
+  "trafficLightPosition": {
+    "x": 14,
+    "y": 22
+  }
+}
+[05/24/21, 15:20:20:697] info: Store: UPDATE_SETTINGS 
+{
+  "isIAEnabled": true
+}
+[05/24/21, 15:20:20:698] info: Store: EXTEND_MENU global: menucategory-file,menucategory-jump-to
+[05/24/21, 15:20:20:703] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/24/21, 15:20:21:042] info: Store: EXTEND_MENU T01H3SXSFEV: menucategory-file,menucategory-edit,menucategory-history,menucategory-help
+[05/24/21, 15:20:21:625] info: registerLifeCycleEvents: webContents:1 is type 'app' 
+[05/24/21, 15:20:21:625] info: Store: UPSERT_WEB_CONTENTS 
+{
+  "id": 1,
+  "type": "app",
+  "history": "[REDACTED]"
+}
+[05/24/21, 15:20:21:646] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true,
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:25:442] info: Store: persist/FLUSH 
+[05/24/21, 15:20:39:814] info: Attempted to close the window, hiding due to run from tray 
+[05/24/21, 15:20:39:815] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:40:820] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:20:40:887] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:21:39:159] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/24/21, 15:24:09:244] info: Store: SET_SYSTEM_IDLE active
+[05/24/21, 15:26:09:345] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/24/21, 15:26:39:350] info: Store: SET_SYSTEM_IDLE active
+[05/24/21, 15:28:29:420] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/24/21, 15:28:39:418] info: Store: SET_SYSTEM_IDLE active
+[05/24/21, 15:29:29:459] info: Store: SET_SYSTEM_IDLE idle_taskbar
+[05/24/21, 15:29:49:504] info: Store: SET_SYSTEM_IDLE active
+[05/24/21, 15:43:34:666] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 15:43:34:678] info: Store: NEW_NOTIFICATION 
+{
+  "id": "T01H3SXSFEV_1621896214.001400",
+  "title": "[REDACTED]",
+  "subtitle": "[REDACTED]",
+  "content": "[REDACTED]",
+  "authorName": "[REDACTED]",
+  "avatarImage": "[REDACTED]",
+  "teamId": "T01H3SXSFEV",
+  "userId": "U01GNKZ9BKP",
+  "msg": "1621896214.001400",
+  "channel": "D01H4BPB5A5",
+  "channelName": "[REDACTED]",
+  "launchUri": "slack://channel?id=D01H4BPB5A5&message=1621896214.001400&team=T01H3SXSFEV",
+  "silent": true,
+  "hasReply": true,
+  "trace_id": "{\"traceId\":\"d6abf5c6e363423baef409630e1c108c\",\"parentSpanId\":\"d6abf5c6e363423baef409630e1c108c\"}"
+}
+[05/24/21, 15:43:34:679] info: Creating new Electron notification. 
+[05/24/21, 15:43:39:897] info: Store: NEW_NOTIFICATION 
+{
+  "id": "T01H3SXSFEV_1621896219.001600",
+  "title": "[REDACTED]",
+  "subtitle": "[REDACTED]",
+  "content": "[REDACTED]",
+  "authorName": "[REDACTED]",
+  "avatarImage": "[REDACTED]",
+  "teamId": "T01H3SXSFEV",
+  "userId": "U01GNKZ9BKP",
+  "msg": "1621896219.001600",
+  "channel": "D01H4BPB5A5",
+  "channelName": "[REDACTED]",
+  "launchUri": "slack://channel?id=D01H4BPB5A5&message=1621896219.001600&team=T01H3SXSFEV",
+  "silent": true,
+  "hasReply": true,
+  "trace_id": "{\"traceId\":\"6582aac567494002bb1b48fc73a0ad7b\",\"parentSpanId\":\"6582aac567494002bb1b48fc73a0ad7b\"}"
+}
+[05/24/21, 15:43:39:898] info: Creating new Electron notification. 
+[05/24/21, 15:43:40:584] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 15:54:09:067] info: secondInstanceEpic: Otherwise signaled, foregrounding 
+[05/24/21, 15:54:09:067] info: Store: FOREGROUND_APP 
+[05/24/21, 15:54:09:071] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:54:09:119] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:54:09:121] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:54:09:342] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 15:54:10:122] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:54:10:187] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:54:17:624] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:54:17:696] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:54:24:247] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:54:24:312] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:55:34:924] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:55:34:989] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 15:55:40:303] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:55:40:313] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:55:41:313] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:55:41:314] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:55:41:402] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 15:55:41:946] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:55:42:944] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:55:43:010] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 15:59:22:621] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:59:24:193] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 15:59:24:259] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:00:04:357] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:00:05:356] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:00:05:423] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:01:16:645] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:01:18:427] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:01:18:494] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:01:34:196] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:01:35:197] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:01:35:262] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:01:54:890] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 16:01:54:961] info: Store: NEW_NOTIFICATION 
+{
+  "id": "T01H3SXSFEV_1621897314.004100",
+  "title": "[REDACTED]",
+  "subtitle": "[REDACTED]",
+  "content": "[REDACTED]",
+  "authorName": "[REDACTED]",
+  "avatarImage": "[REDACTED]",
+  "teamId": "T01H3SXSFEV",
+  "userId": "U01GNKZ9BKP",
+  "msg": "1621897314.004100",
+  "channel": "D01H4BPB5A5",
+  "channelName": "[REDACTED]",
+  "launchUri": "slack://channel?id=D01H4BPB5A5&message=1621897314.004100&team=T01H3SXSFEV",
+  "silent": true,
+  "hasReply": true,
+  "trace_id": "{\"traceId\":\"f0078a5663614448920a5b43bdf27f08\",\"parentSpanId\":\"f0078a5663614448920a5b43bdf27f08\"}"
+}
+[05/24/21, 16:01:54:962] info: Creating new Electron notification. 
+[05/24/21, 16:02:41:262] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:02:41:266] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:02:41:267] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:02:41:367] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 16:02:43:039] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:02:43:104] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:02:44:150] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:02:44:215] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:02:46:511] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:02:47:509] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:02:47:575] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:03:00:406] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:03:02:189] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:03:02:255] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:03:21:925] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:03:22:925] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:03:22:991] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:04:51:993] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:04:53:004] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:04:53:070] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:04:54:971] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:04:55:035] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:05:01:679] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 16:05:02:240] info: Store: REDUX_UPDATE_FROM_WEBAPP (T01H3SXSFEV) Changed keys [unreads]
+[05/24/21, 16:05:31:157] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:05:31:224] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:05:54:407] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:05:55:409] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:05:55:474] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 16,
+      "y": 36,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:05:57:998] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:05:59:050] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:05:59:135] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 18,
+      "y": 38,
+      "width": 1564,
+      "height": 844
+    }
+  }
+}
+[05/24/21, 16:06:00:597] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:06:01:593] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:06:01:594] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:06:01:658] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1616,
+      "y": 36,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 16:09:37:572] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:09:37:577] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:09:37:578] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isFocused": true
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:09:38:654] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    },
+    "isMaximized": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:09:38:727] info: Store: UPDATE_SETTINGS 
+{
+  "mainWindowSettings": {
+    "fullScreen": false,
+    "maximized": false,
+    "bounds": {
+      "x": 1618,
+      "y": 38,
+      "width": 1884,
+      "height": 1024
+    }
+  }
+}
+[05/24/21, 16:09:39:797] info: Attempted to close the window, hiding due to run from tray 
+[05/24/21, 16:09:39:799] info: Store: SET_WINDOW_FRAME 
+{
+  "id": 1,
+  "frame": {
+    "isVisible": false
+  },
+  "fromEvent": true
+}
+[05/24/21, 16:09:42:655] info: Telling native-keymap to ignore all future events as we are quitting 
