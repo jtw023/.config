@@ -82,19 +82,19 @@
 !BraveSoftware/Brave-Browser/
 !BraveSoftware/Brave-Browser/Default/
 !BraveSoftware/Brave-Browser/Default/Extension State/
-!BraveSoftware/Brave-Browser/Default/Extension State/*
-!BraveSoftware/Brave-Browser/Default/Favicons
 !BraveSoftware/Brave-Browser/Default/Local Extension Settings/
-!BraveSoftware/Brave-Browser/Default/Local Extension Settings/*
-!BraveSoftware/Brave-Browser/Default/Preferences
 !BraveSoftware/Brave-Browser/Default/Sync Extension Settings/
-!BraveSoftware/Brave-Browser/Default/Sync Extension Settings/*
-!BraveSoftware/Brave-Browser/Default/Bookmarks
-!BraveSoftware/Brave-Browser/Default/Bookmarks.bak
 !BraveSoftware/Brave-Browser/Default/Extensions/
-!BraveSoftware/Brave-Browser/Default/Extensions/*
 !BraveSoftware/Brave-Browser/Default/Extension Rules/
-!BraveSoftware/Brave-Browser/Default/Extension Rules/*
 !BraveSoftware/Brave-Browser/Default/Extension State/
 !BraveSoftware/Brave-Browser/Default/Extension State/*
+!BraveSoftware/Brave-Browser/Default/Local Extension Settings/*
+!BraveSoftware/Brave-Browser/Default/Sync Extension Settings/*
+!BraveSoftware/Brave-Browser/Default/Extensions/*
+!BraveSoftware/Brave-Browser/Default/Extension Rules/*
+!BraveSoftware/Brave-Browser/Default/Extension State/*
 !BraveSoftware/Brave-Browser/Default/Secure Preferences
+!BraveSoftware/Brave-Browser/Default/Bookmarks
+!BraveSoftware/Brave-Browser/Default/Bookmarks.bak
+!BraveSoftware/Brave-Browser/Default/Preferences
+!BraveSoftware/Brave-Browser/Default/Favicons
