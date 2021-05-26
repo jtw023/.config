@@ -1,71 +1,55 @@
-Clementine/
-QtProject.conf
-configstore/
-dconf/
-gtk-2.0/
-gtk-3.0/
-kawaii-player/
-libfm/
-flameshot/
-libreoffice/
-lxsession/
-mimeapps.list
-mpv/watch_later/
-neofetch/
-nitrogen/
-pcmanfm/
-pragha/
-pulse/
-qtile/__pycache__/
-smplayer/
-tuta_integration/
-tutanota-desktop/
-vifm/
-tidal-hifi/
-xfce4/
-qutebrowser/dracula
-htop/
-ranger/__pycache__/
-pavucontrol.ini
-Slack/
-qpicospeaker/
-bat/
-Signal/
-BraveSoftware/Brave-Browser/Default/Cookies
-BraveSoftware/Brave-Browser/Default/File System/
-BraveSoftware/Brave-Browser/Default/History Provider Cache
-BraveSoftware/Brave-Browser/Default/History-journal
-BraveSoftware/Brave-Browser/Default/Local Storage/
-BraveSoftware/Brave-Browser/Default/Media History
-BraveSoftware/Brave-Browser/Default/Network Persistent State
-BraveSoftware/Brave-Browser/Default/QuotaManager
-BraveSoftware/Brave-Browser/Default/Service Worker/
-BraveSoftware/Brave-Browser/Default/Site Characteristics Database/
-BraveSoftware/Brave-Browser/Default/TransportSecurity
-BraveSoftware/Brave-Browser/Default/Visited Links
-BraveSoftware/Brave-Browser/Default/Web Data
-BraveSoftware/Brave-Browser/Default/IndexedDB/
-BraveSoftware/Brave-Browser/GrShaderCache/GPUCache/
-BraveSoftware/Brave-Browser/Safe Browsing/
-BraveSoftware/Brave-Browser/ShaderCache/
-BraveSoftware/Brave-Browser/GrShaderCache/GPUCache/data_1
-BraveSoftware/Brave-Browser/GrShaderCache/GPUCache/index
-BraveSoftware/Brave-Browser/Local State
-BraveSoftware/Brave-Browser/ShaderCache/GPUCache/index
-BraveSoftware/Brave-Browser/chrome_shutdown_ms.txt
-BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.43/6.0/httpse.leveldb/000011.log
-BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.43/6.0/httpse.leveldb/LOG
-BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/1.0.43/6.0/httpse.leveldb/MANIFEST-000004
-BraveSoftware/Brave-Browser/CertificateRevocation/
-BraveSoftware/Brave-Browser/Default/Sessions/
-BraveSoftware/Brave-Browser/Default/data_reduction_proxy_leveldb/
-BraveSoftware/Brave-Browser/oofiananboodjbbmdelgdommihjbkfag/
-BraveSoftware/Brave-Browser/Default/Sessions/
-BraveSoftware/Brave-Browser/Greaselion/
-BraveSoftware/Brave-Browser/SafetyTips/
-BraveSoftware/Brave-Browser/SingletonCookie
-BraveSoftware/Brave-Browser/SingletonLock
-BraveSoftware/Brave-Browser/SingletonSocket
-BraveSoftware/Brave-Browser/hyphen-data/
-BraveSoftware/Brave-Browser/cffkpbalmllkdoenhmdmpbkajipdjfam/
-BraveSoftware/Brave-Browser/gccbbckogglekeggclmmekihdgdpdgoe/
+# Ignore Everything
+*
+
+# Exceptions
+!.gitignore
+!alacritty/*
+!autostart/*
+!bash/*
+!colorscripts/*
+!dconf/*
+!dunst/*
+!dwm-6.2/*
+!efm-langserver/*
+!flameshot/*
+!gedit/*
+!gtk-3.0/*
+!htop/*
+!libfm/*
+!libreoffice/*
+!libvirt/*
+!lsd/*
+!lxtask.conf
+!mpv/*
+!nvim/*
+!paru/*
+!pavucontrol.ini
+!pcmanfm/*
+!picom/*
+!pulse/*
+!pulseaudio-ctl/*
+!qtile/*
+!qutebrowser/*
+!README.md
+!rofi/*
+!Slack/*
+!transmission-daemon/*
+!tutanota-desktop/*
+!vim/*
+!wallpapers/*
+!Xauthority/*
+!xinit/*
+!Xresources/*
+!yay/*
+!zsh/*
+!BraveSoftware/Brave-Browser/Default/Extension State/*
+!BraveSoftware/Brave-Browser/Default/Favicons
+!BraveSoftware/Brave-Browser/Default/Local Extension Settings/*
+!BraveSoftware/Brave-Browser/Default/Preferences
+!BraveSoftware/Brave-Browser/Default/Sync Extension Settings/*
+!BraveSoftware/Brave-Browser/Default/Bookmarks
+!BraveSoftware/Brave-Browser/Default/Bookmarks.bak
+!BraveSoftware/Brave-Browser/Default/Extensions/*
+!BraveSoftware/Brave-Browser/Default/Extension Rules/*
+!BraveSoftware/Brave-Browser/Default/Extension State/*
+!BraveSoftware/Brave-Browser/Default/Secure Preferences
