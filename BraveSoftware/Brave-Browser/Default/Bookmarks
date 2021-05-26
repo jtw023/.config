@@ -1,0 +1,54 @@
+{
+   "checksum": "9c96f237edf2ee5142900a9904b1ac59",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13266090967656364",
+            "guid": "af3ff86f-0414-451e-9435-b02e57a44573",
+            "id": "5",
+            "name": "Thundercats meeting",
+            "type": "url",
+            "url": "https://meet.google.com/cxh-nabm-myq"
+         }, {
+            "date_added": "13266091630232448",
+            "guid": "f6b396c7-5718-4b01-84ec-60c855898a0c",
+            "id": "7",
+            "name": "USG",
+            "type": "url",
+            "url": "http://www.usasexguide.nl/forum/"
+         }, {
+            "date_added": "13266367859328606",
+            "guid": "9be3b14f-6af9-4832-adc2-bcb208fc9d27",
+            "id": "9",
+            "name": "Google Data Analytics Professional Certificate | Coursera",
+            "type": "url",
+            "url": "https://www.coursera.org/professional-certificates/google-data-analytics?utm_source=bg&utm_medium=sem&utm_campaign=15-GoogleDataAnalytics-US&utm_content=15-GoogleDataAnalytics-US&campaignid=415059035&adgroupid=1217159837730041&device=c&keyword=google%20college%20career%20certificates&matchtype=b&network=s&devicemodel=&adpostion=&creativeid=&hide_mobile_promo&utm_term=google%20college%20career%20certificates"
+         } ],
+         "date_added": "13266090891190293",
+         "date_modified": "13266367859328606",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13266090891190295",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13266090891190296",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
