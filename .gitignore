@@ -15,6 +15,7 @@ BraveSoftware/Brave-Browser/Default/*
 !BraveSoftware/Brave-Browser/Default/Bookmarks.bak
 !BraveSoftware/Brave-Browser/Default/Preferences
 !BraveSoftware/Brave-Browser/Default/Favicons
+configstore/
 Slack/*
 !Slack/Preferences
 !Slack/local-settings.json
