@@ -15,3 +15,11 @@ BraveSoftware/Brave-Browser/Default/*
 !BraveSoftware/Brave-Browser/Default/Bookmarks.bak
 !BraveSoftware/Brave-Browser/Default/Preferences
 !BraveSoftware/Brave-Browser/Default/Favicons
+Slack/*
+!Slack/Preferences
+!Slack/local-settings.json
+qtile/__pycache__/
+ranger/__pycache__/
+tutanota-desktop/*
+tutanota-desktop/Preferences
+tutanota-desktop/conf.json
