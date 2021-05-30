@@ -574,7 +574,7 @@
         return parsedURL;
     }
     function getAbsoluteURL($base, $relative) {
-        if ($relative.match(/^data\:/)) {
+        if ($relative.match(/^data\\?\:/)) {
             return $relative;
         }
         const b = parseURL($base);
@@ -1544,7 +1544,9 @@
 
     function createTextStyle(config) {
         const lines = [];
-        lines.push("*:not(pre, .far, .fa, .glyphicon) {");
+        lines.push(
+            '*:not(pre, .far, .fa, .glyphicon, [class*="vjs-"], .fab, .fa-github, .fas, .material-icons, .icofont, .typcn, mu, [class*="mu-"], .glyphicon, .icon) {'
+        );
         if (config.useFont && config.fontFamily) {
             lines.push(`  font-family: ${config.fontFamily} !important;`);
         }
@@ -4685,7 +4687,8 @@
         );
         const shouldWrapDocStyleSheets =
             location.hostname.endsWith("pushbullet.com") ||
-            location.hostname.endsWith("ilsole24ore.com");
+            location.hostname.endsWith("ilsole24ore.com") ||
+            location.hostname.endsWith("allegro.pl");
         const documentStyleSheetsDescriptor = shouldWrapDocStyleSheets
             ? Object.getOwnPropertyDescriptor(Document.prototype, "styleSheets")
             : null;

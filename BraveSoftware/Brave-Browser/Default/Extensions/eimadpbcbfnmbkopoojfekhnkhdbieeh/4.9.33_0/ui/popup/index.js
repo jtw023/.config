@@ -1349,10 +1349,12 @@
                 url = url.substring(0, url.lastIndexOf("#"));
             }
             if (
-                url.match(/(wikipedia|wikimedia).org/i) &&
-                url.match(
-                    /(wikipedia|wikimedia)\.org\/.*\/[a-z]+\:[^\:\/]+\.pdf/i
-                )
+                (url.match(/(wikipedia|wikimedia).org/i) &&
+                    url.match(
+                        /(wikipedia|wikimedia)\.org\/.*\/[a-z]+\:[^\:\/]+\.pdf/i
+                    )) ||
+                (url.match(/timetravel\.mementoweb\.org\/reconstruct/i) &&
+                    url.match(/\.pdf$/i))
             ) {
                 return false;
             }
@@ -1378,13 +1380,13 @@
             return userSettings.enableForPDF;
         }
         const isURLInUserList = isURLInList(url, userSettings.siteList);
-        if (userSettings.applyToListedOnly) {
-            return isURLInUserList;
-        }
         const isURLInEnabledList = isURLInList(
             url,
             userSettings.siteListEnabled
         );
+        if (userSettings.applyToListedOnly && !isURLInEnabledList) {
+            return isURLInUserList;
+        }
         if (isURLInEnabledList && isInDarkList) {
             return true;
         }

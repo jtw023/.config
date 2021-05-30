@@ -2118,7 +2118,7 @@
     };
 
     const DEVTOOLS_DOCS_URL =
-        "https://github.com/alexanderby/darkreader#how-to-contribute";
+        "https://github.com/darkreader/darkreader#how-to-contribute";
 
     function isIPV6(url) {
         const openingBracketIndex = url.indexOf("[");

@@ -38,6 +38,7 @@
    } ],
    "default_locale": "en",
    "description": "__MSG_extension_description__",
+   "differential_fingerprint": "1.f9ac75efbc788461667517f46b10992704e4eb2be1bd548e8c8c5dc71b351fb2",
    "icons": {
       "128": "icons/dr_128.png",
       "16": "icons/dr_16.png",
@@ -48,5 +49,5 @@
    "name": "Dark Reader",
    "permissions": [ "fontSettings", "storage", "tabs", "\u003Call_urls>" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "4.9.32"
+   "version": "4.9.33"
 }
