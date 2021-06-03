@@ -545,7 +545,7 @@ def assign_app_group(client):
     d["4"] = ["tutanota-desktop"]
     d["5"] = ["pcmanfm", "kitty"]
     d["6"] = ["sxiv"]
-    d["7"] = ["virt-manager", "libreoffice", "libreoffice-calc"]
+    d["7"] = ["virt-manager", "libreoffice", "libreoffice-calc", "r_x11"]
     d["8"] = ["superproductivity"]
     d["9"] = ["gl"]
 
