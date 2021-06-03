@@ -519,10 +519,10 @@ config.bind('sb', 'config-cycle statusbar.show never always;; config-cycle tabs.
 # config.bind('sr', 'open -t https://www.naturalreaders.com/online/')
 config.bind('sr', 'spawn alacritty -e bash -c \'tts --text "{primary}" && mpv tts_output.wav\'')
 
-c.url.start_pages = 'https://searx.bar/'
+c.url.start_pages = 'https://searx.ir/'
 
 c.url.searchengines = {
-        'DEFAULT': 'https://searx.bar/search?q={}',
+        'DEFAULT': 'https://searx.ir/search?q={}',
         'ddg': 'https://duckduckgo.com/?q={}',
         'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',
         'al': 'https://archlinux.org/packages/?q={}',
