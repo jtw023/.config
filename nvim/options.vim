@@ -36,6 +36,3 @@ let R_auto_start = 1
 " Always start R vertically
 let R_rconsole_width = 57
 let R_min_editor_width = 18
-
-" Push R console to the left of the screen
-set nosplitright

@@ -34,6 +34,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ncm2/ncm2-path'
 	Plug 'roxma/nvim-yarp'
 	Plug 'gaalcaras/ncm-R'
-	Plug 'Raimondi/delimitMate'
 
 call plug#end()
