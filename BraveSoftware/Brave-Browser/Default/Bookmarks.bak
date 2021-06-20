@@ -1,5 +1,5 @@
 {
-   "checksum": "118e94758c22ab7d0bac68b69903d955",
+   "checksum": "07a0696d49cd8dbdbbf28a20d7a9ab98",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -17,26 +17,12 @@
             "type": "url",
             "url": "http://www.usasexguide.nl/forum/"
          }, {
-            "date_added": "13266367859328606",
-            "guid": "9be3b14f-6af9-4832-adc2-bcb208fc9d27",
-            "id": "9",
-            "name": "Google Data Analytics Professional Certificate | Coursera",
-            "type": "url",
-            "url": "https://www.coursera.org/professional-certificates/google-data-analytics?utm_source=bg&utm_medium=sem&utm_campaign=15-GoogleDataAnalytics-US&utm_content=15-GoogleDataAnalytics-US&campaignid=415059035&adgroupid=1217159837730041&device=c&keyword=google%20college%20career%20certificates&matchtype=b&network=s&devicemodel=&adpostion=&creativeid=&hide_mobile_promo&utm_term=google%20college%20career%20certificates"
-         }, {
             "date_added": "13267384368450813",
             "guid": "659fcd2f-156b-45b4-8fdc-dabd667a98ef",
             "id": "11",
-            "name": "Case Study PDF",
+            "name": "pg6 Case Study PDF",
             "type": "url",
             "url": "https://d18ky98rnyall9.cloudfront.net/pzIQif2cTPmyEIn9nFz5bw_787a5f20bd0b4e8d92d326d0925e0211_Case-Study-1_Bike-share.pdf?Expires=1623024000&Signature=KFFlsluZF3g0RCJAbYAzSodmsddI01OTGBz2zybt1oqPLjsAxTf2tf6WRHjfxOX-NKg9cyCQKwUZg1KieS0m9zQrRHkQC7FO1Lq4ot2XjU1iVdnQ5BghH6P9GUOrAkyg-4aT4CzAR~zsYxub58Bv9qe31aFSnXtFFMfvCPvCy5A_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A"
-         }, {
-            "date_added": "13267404483796162",
-            "guid": "a77d65a0-18bd-478c-a17b-0b99f84b62ca",
-            "id": "12",
-            "name": "Grow With Google | Big Interview",
-            "type": "url",
-            "url": "https://googlecerts.biginterview.com/"
          }, {
             "date_added": "13267406837844841",
             "guid": "d2df110f-f4e9-4f63-817f-23e420d243ea",
@@ -51,9 +37,16 @@
             "name": "Coursera Job Platform",
             "type": "url",
             "url": "https://googlecerts.courserajobplatform.org/"
+         }, {
+            "date_added": "13268475166331550",
+            "guid": "396390ba-7f47-44f5-a6b3-6181797df86f",
+            "id": "17",
+            "name": "Career Site - Self Service",
+            "type": "url",
+            "url": "https://recruiting.adp.com/srccar/public/RTI.home?appUI=true&c=1152751&d=ExternalCareerSite&r=5000694347906#"
          } ],
          "date_added": "13266090891190293",
-         "date_modified": "13267406956163068",
+         "date_modified": "13268475166331550",
          "guid": "00000000-0000-4000-a000-000000000002",
          "id": "1",
          "name": "Bookmarks",
