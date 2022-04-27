@@ -152,6 +152,7 @@ alias cat='bat'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -v'
+alias rmd='rm -rv'
 
 # Always make a directory as well as any needed directories in the path
 alias mkd='mkdir -pv'
