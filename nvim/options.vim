@@ -24,3 +24,6 @@ set smartcase
 
 " Error settings
 set noerrorbells
+
+set list
+set listchars=tab:\ ,trail:

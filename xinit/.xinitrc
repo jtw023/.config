@@ -4,22 +4,6 @@
 #
 # Executed by startx (run your window manager from here)
 
-# Set Functions For DWM Status Bar
-dte(){
-	dt="$(date +'%a %b %I:%M:%S %p')"
-	echo -e "$dt"
-}
-
-bat(){
-	battery="$(acpi | awk '{print $4}' | sed s/,// | head -n 1)"
-	echo -e "$battery"
-}
-
-upd(){
-	updates="$(checkupdates | wc -l) "
-	echo -e "$updates"
-}
-
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.config/xinit/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
@@ -64,26 +48,11 @@ picom --config /home/jordan/.config/picom/picom.conf &
 # Start Redshift
 redshift -l 36.114647:-115.172813 -O 1900 -m randr &
 
+# Start Conky
+conky &
 
 # Set DWM Status Bar
-time=$(date +%S)
-
-if [ $time != '00' ]; then
-
-	sleep $(expr 60 - $time)
-	while true; do
-		xsetroot -name "$(dte) | Battery: $(bat) | Updates: $(upd) "
-		sleep 59
-	done &
-
-else
-
-	while true; do
-		xsetroot -name "$(dte) | Battery: $(bat) | Updates: $(upd) "
-		sleep 59
-	done &
-
-fi &
+bash /home/jordan/Random-Scripts/dwmbar.sh &
 
 # Restart DWM
 while true; do

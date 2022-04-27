@@ -69,10 +69,10 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 ## use the vim keys for tab menu navigation
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'm' vi-backward-char
+bindkey -M menuselect 'e' vi-up-line-or-history
+bindkey -M menuselect 'i' vi-forward-char
+bindkey -M menuselect 'n' vi-down-line-or-history
 
 ## vim mode on terminal line
 bindkey -v

@@ -1,5 +1,5 @@
 {
-   "checksum": "07a0696d49cd8dbdbbf28a20d7a9ab98",
+   "checksum": "ec45784de3167831de4037d99d2312f7",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -37,13 +37,6 @@
             "name": "Coursera Job Platform",
             "type": "url",
             "url": "https://googlecerts.courserajobplatform.org/"
-         }, {
-            "date_added": "13268475166331550",
-            "guid": "396390ba-7f47-44f5-a6b3-6181797df86f",
-            "id": "17",
-            "name": "Career Site - Self Service",
-            "type": "url",
-            "url": "https://recruiting.adp.com/srccar/public/RTI.home?appUI=true&c=1152751&d=ExternalCareerSite&r=5000694347906#"
          } ],
          "date_added": "13266090891190293",
          "date_modified": "13268475166331550",
