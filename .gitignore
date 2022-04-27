@@ -1,5 +1,4 @@
-!/BraveSoftware
-BraveSoftware/*
+BraveSoftware/Brave-Browser/**/**
 !BraveSoftware/Brave-Browser/Default/Extensions/
 !BraveSoftware/Brave-Browser/Default/Bookmarks
 !BraveSoftware/Brave-Browser/Default/Bookmarks.bak
