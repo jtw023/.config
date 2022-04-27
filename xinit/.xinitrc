@@ -36,17 +36,45 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-# Clearing the caps lock key
-xmodmap -e 'clear lock'
-
 # Set all displays
-xrandr --output "DP-1-0" --primary --mode 1920x1080 --rate 60.00 --output "eDP-1" --mode 1920x1080 --rate 144.00 --right-of "DP-1-0" --output "DP-1-2" --mode 1600x900 --rate 59.95 --left-of "DP-1-0"
+xrandr --output "DP-2" --primary --mode 2560x1440 --rate 59.96 --output "DP-1" --mode 1440x2560 --rate 59.95 --right-of "DP-2" --output "eDP-1" --mode 3072x1920 --rate 60.00 --left-of "DP-2"
+
+# Start Wallpaper
+superpaper &
+
+# Start Redshift
+redshift -l 36.114647:-115.172813 -O 1900 -m randr &
+
+# Set Functions For DWM Status Bar
+dte(){
+	dt="$(date +'%a %b %I:%M:%S %p')"
+	echo -e "$dt"
+}
+
+bat(){
+	battery="$(acpi | awk '{print $4}' | sed s/,// | head -n 1)"
+	echo -e "$battery"
+}
+
+upd(){
+	updates="$(checkupdates | wc -l) "
+	echo -e "$updates"
+}
+
+# Set DWM Status Bar
+until [ $(date +"%S") = '00' ]
+do
+	while true; do
+		xsetroot -name "$(dte) | $(bat) | $(upd)"
+		sleep 60s
+	done
+done
 
 # Restart DWM
-# while true; do
-#     dwm >/dev/null 2>&1
-# done
+while true; do
+    dwm >/dev/null 2>&1
+done
 
 # Execute chosen window manager
-# exec dwm
-exec qtile
+exec dwm
+# exec qtile

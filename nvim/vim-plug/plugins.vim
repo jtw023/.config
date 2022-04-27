@@ -27,12 +27,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nvim-treesitter/nvim-treesitter'
     " Comment Plugin
     Plug 'terrortylor/nvim-comment'
-    " R Development Plugins
-    Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
-    Plug 'ncm2/ncm2'
-    Plug 'ncm2/ncm2-bufword'
-    Plug 'ncm2/ncm2-path'
-	Plug 'roxma/nvim-yarp'
-	Plug 'gaalcaras/ncm-R'
+	" Easy Motion
+	Plug 'easymotion/vim-easymotion'
 
 call plug#end()

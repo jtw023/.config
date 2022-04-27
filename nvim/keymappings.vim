@@ -10,6 +10,8 @@
 noremap <Space> <Nop>
 let mapleader = " "
 
+map <Leader> <Plug>(easymotion-prefix)
+
 " Spawn terminal in split screen
 nmap <Leader>t :vs term://zsh<CR>
 

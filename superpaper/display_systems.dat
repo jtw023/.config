@@ -1,0 +1,7 @@
+[7729974106081559918]
+ppi_norm_offsets = 0.0,2464.8870351341184;3044.860455165676,1159.9468400631145;8366.969486043496,0.0
+bezel_mms = 0.0,0.0;0.0,0.0;0.0,0.0
+user_diagonal_inches = None
+use_perspective = 1
+def_perspective = None
+
