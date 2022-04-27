@@ -1,8 +1,8 @@
-!BraveSoftware/Brave-Browser/Default
+# !BraveSoftware/Brave-Browser/Default
 BraveSoftware/Brave-Browser/*
-!BraveSoftware/Brave-Browser/Default/Extensions/
-!BraveSoftware/Brave-Browser/Default/Bookmarks
-!BraveSoftware/Brave-Browser/Default/Bookmarks.bak
+# !BraveSoftware/Brave-Browser/Default/Extensions/
+# !BraveSoftware/Brave-Browser/Default/Bookmarks
+# !BraveSoftware/Brave-Browser/Default/Bookmarks.bak
 Slack/
 !Slack/Preferences
 !Slack/local-settings.json
