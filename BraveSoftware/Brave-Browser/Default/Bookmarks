@@ -1,10 +1,17 @@
 {
-   "checksum": "63f44463ff5b5d59ed180378fdcd1d9d",
+   "checksum": "a0fd7aec01c93d7abbddd6aaffe61401",
    "roots": {
       "bookmark_bar": {
-         "children": [  ],
+         "children": [ {
+            "date_added": "13295656396877642",
+            "guid": "e8575a7f-6a4b-4e7e-9ef5-d457ac4e752f",
+            "id": "5",
+            "name": "GitHub - kristijanhusak/vim-dadbod-completion: Database autocompletion powered by https://github.com/tpope/vim-dadbod",
+            "type": "url",
+            "url": "https://github.com/kristijanhusak/vim-dadbod-completion"
+         } ],
          "date_added": "13266090891190293",
-         "date_modified": "13268475166331550",
+         "date_modified": "13295656396877642",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",
