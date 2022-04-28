@@ -1,9 +1,8 @@
 " Colors and fonts
 set termguicolors
 syntax on
-colorscheme onedark
-set encoding=utf8
-" set cursorline
+colorscheme terafox
+set encoding=utf-8
 
 " Timeout
 set timeoutlen=500
@@ -25,5 +24,13 @@ set smartcase
 " Error settings
 set noerrorbells
 
+" Add beginning and trailing whitespace notification
 set list
 set listchars=tab:\ ,trail:
+
+" Set how far to the top and bottom your cursor can go
+set scrolloff=8
+set sidescrolloff=8
+
+" Set height of command line
+set cmdheight=2

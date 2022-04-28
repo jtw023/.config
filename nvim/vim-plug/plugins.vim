@@ -8,26 +8,37 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    " Colorizer Plugin
-    Plug 'norcalli/nvim-colorizer.lua'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
-    " Auto pairs for '(' '[' '{'
-    Plug 'windwp/nvim-autopairs'
-    " Vimwiki
-    Plug 'vimwiki/vimwiki'
-    " Galaxy Line
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    " Git Signs
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'lewis6991/gitsigns.nvim'
-    " Colorschemes
-    Plug 'christianchiarulli/nvcode-color-schemes.vim'
-    Plug 'nvim-treesitter/nvim-treesitter'
-    " Comment Plugin
-    Plug 'terrortylor/nvim-comment'
+	" Colorizer Plugin
+	Plug 'norcalli/nvim-colorizer.lua'
+	" File Explorer
+	Plug 'scrooloose/NERDTree'
+	" Auto pairs for '(' '[' '{'
+	Plug 'windwp/nvim-autopairs'
+	" Vimwiki
+	Plug 'vimwiki/vimwiki'
+	" Galaxy Line
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	" Colorschemes
+	Plug 'EdenEast/nightfox.nvim'
+	" Comment Plugin
+	Plug 'terrortylor/nvim-comment'
 	" Easy Motion
 	Plug 'easymotion/vim-easymotion'
+	" Float Term Plugin
+	Plug 'voldikss/vim-floaterm'
+	" Install LSP
+	Plug 'neovim/nvim-lspconfig'
+	" Git Signs
+	Plug 'lewis6991/gitsigns.nvim'
+	" Vim Telescope
+	Plug 'sharkdp/fd'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
+	" Dev Icons
+	Plug 'nvim-telescope/telescope-fzf-native.nvim'
+	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'kyazdani42/nvim-web-devicons'
+	Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

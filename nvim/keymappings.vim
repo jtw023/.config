@@ -13,7 +13,7 @@ let mapleader = " "
 map <Leader> <Plug>(easymotion-prefix)
 
 " Spawn terminal in split screen
-nmap <Leader>t :vs term://zsh<CR>
+nmap <Leader>t :FloatermNew<CR>
 
 " Save and quit
 imap <F1> <ESC>:x<CR>
@@ -28,13 +28,20 @@ nmap <Leader><S-n> <S-o><ESC>
 nmap <Leader>n o<ESC>
 
 " Change window
-nmap <Leader>l <C-w>l
-nmap <Leader>k <C-w>k
-nmap <Leader>j <C-w>j
-nmap <Leader>h <C-w>h
+nmap <Leader>o <C-w>l
+nmap <Leader>i <C-w>k
+nmap <Leader>e <C-w>j
+nmap <Leader>n <C-w>h
 
 " Explorer
-nmap <Leader>e :NvimTreeToggle<CR>
+nmap <expr> <Leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
+
+" Open Buffer
+nmap <A-b> :Telescope buffers<CR>
+
+nmap <Leader>u :w \| :Telescope find_files hidden=true<CR>
+
+nmap <A-w> :w \| :so %<CR>
 
 " Split screen
 nmap <Leader>v :vs<CR>
@@ -50,10 +57,10 @@ nmap <C-Right> :vertical resize +2<CR>
 nmap <Leader><C-Right> :vertical resize +2<CR>
 
 " Move selected line
-vmap <S-k> :m '<-2<CR>gv=gv
-vmap <Leader><S-k> :m '<-2<CR>gv=gv
-vmap <S-j> :m '>+1<CR>gv=gv
-vmap <Leader><S-j> :m '>+1<CR>gv=gv
+vmap <S-e> :m '<-2<CR>gv=gv
+vmap <Leader><S-e> :m '<-2<CR>gv=gv
+vmap <S-n> :m '>+1<CR>gv=gv
+vmap <Leader><S-n> :m '>+1<CR>gv=gv
 
 " Indenting
 vnoremap <Leader>, <<<Esc>gv
@@ -79,6 +86,3 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Switch between tabs
 nmap <Leader><S-h> :tabprevious<CR>
 nmap <Leader><S-l> :tabnext<CR>
-
-" R completion
-imap <S-Tab> <C-x><C-o>
