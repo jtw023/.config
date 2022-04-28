@@ -31,6 +31,15 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'neovim/nvim-lspconfig'
 	" Git Signs
 	Plug 'lewis6991/gitsigns.nvim'
+	" CMP Plugins
+	Plug 'hrsh7th/nvim-cmp'
+	Plug 'hrsh7th/cmp-buffer'
+	Plug 'hrsh7th/cmp-path'
+	Plug 'hrsh7th/cmp-cmdline'
+	Plug 'saadparwaiz1/cmp_luasnip'
+	" Snippets
+	Plug 'L3MON4D3/LuaSnip'
+	Plug 'rafamadriz/friendly-snippets'
 	" Vim Telescope
 	Plug 'sharkdp/fd'
 	Plug 'nvim-lua/plenary.nvim'
