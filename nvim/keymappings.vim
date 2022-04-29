@@ -24,8 +24,8 @@ imap <F8> <ESC>:q!<CR>
 nmap <F8> :q!<CR>
 
 " Create newline above or below
-nmap <Leader><S-n> <S-o><ESC>
-nmap <Leader>n o<ESC>
+nmap <Leader><S-l> <S-o><ESC>
+nmap <Leader>l o<ESC>
 
 " Change window
 nmap <Leader>o <C-w>l
@@ -66,6 +66,9 @@ vmap <Leader><S-n> :m '>+1<CR>gv=gv
 vnoremap <Leader>, <<<Esc>gv
 vnoremap <Leader>. >><Esc>gv
 
+" Git Signs
+nmap <Leader>g :Gitsigns preview_hunk<CR>
+
 " Turn off highlighting
 map <F2> :nohlsearch<CR>
 
@@ -82,7 +85,3 @@ nmap <F3> :tabnew /home/jordan/.config/nvim/vimkeybindings.md<CR>
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Switch between tabs
-nmap <Leader><S-h> :tabprevious<CR>
-nmap <Leader><S-l> :tabnext<CR>
