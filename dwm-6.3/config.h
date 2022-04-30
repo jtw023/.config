@@ -64,13 +64,15 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *browser[] = { "brave", NULL };
+static const char *browser[]  = { "brave", NULL };
+static const char *slack[]    = { "slack", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|Mod1Mask,              XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|Mod1Mask,              XK_t,	   spawn,          {.v = termcmd } },
 	{ MODKEY|Mod1Mask,		XK_w,	   spawn,	   {.v = browser } },
+	{ MODKEY|Mod1Mask,		XK_s,	   spawn,	   {.v = slack } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_e,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_n,      focusstack,     {.i = -1 } },
