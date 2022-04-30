@@ -112,6 +112,9 @@ alias sudo='doas'
 # Run 'lsd' whenever I 'ls'
 alias ls='lsd -al'
 
+# Run 'ping -c 3' whenever I 'ping'
+alias ping='ping -c 3'
+
 # Run a special script to clear a page
 alias cl='clear; bash $HOME/Random-Scripts/generate_random.sh'
 
@@ -153,6 +156,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -v'
 alias rmd='rm -rv'
+alias cpd='cp -rv'
 
 # Always make a directory as well as any needed directories in the path
 alias mkd='mkdir -pv'
