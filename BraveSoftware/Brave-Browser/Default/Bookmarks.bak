@@ -1,10 +1,94 @@
 {
-   "checksum": "63f44463ff5b5d59ed180378fdcd1d9d",
+   "checksum": "5a961288c8464a2e90ee337cd3659453",
    "roots": {
       "bookmark_bar": {
-         "children": [  ],
-         "date_added": "13266090891190293",
-         "date_modified": "13268475166331550",
+         "children": [ {
+            "date_added": "13271809283000000",
+            "guid": "e33b2a72-b20f-43b4-9f52-4d77d031850c",
+            "id": "6",
+            "name": "Quarterly Objectives for Data - Weekdone",
+            "type": "url",
+            "url": "https://weekdone.com/okr/443071"
+         }, {
+            "date_added": "13272764912000000",
+            "guid": "2a8b5c31-52fe-44ea-8f9d-121d923e06a2",
+            "id": "7",
+            "name": "Data science team board - Agile Board - Reflex Media Jira",
+            "type": "url",
+            "url": "https://jira.reflexmedia.com/secure/RapidBoard.jspa?rapidView=250&selectedIssue=DST-1370"
+         }, {
+            "date_added": "13276044968000000",
+            "guid": "6d1ac2de-ac9e-4478-9b36-b4b0098b581d",
+            "id": "8",
+            "name": "Reflex Media / Data Team — Bitbucket",
+            "type": "url",
+            "url": "https://bitbucket.org/reflexmediainc/workspace/projects/DST"
+         }, {
+            "date_added": "13280963886050509",
+            "guid": "3ab73009-d010-4547-abd7-882163f59adb",
+            "id": "14",
+            "name": "Mailinator",
+            "type": "url",
+            "url": "https://www.mailinator.com/"
+         }, {
+            "date_added": "13280964092808775",
+            "guid": "dea2ed56-e2f2-4edf-a56d-a3b85a5aa795",
+            "id": "15",
+            "name": "This Person Does Not Exist",
+            "type": "url",
+            "url": "https://thispersondoesnotexist.com/"
+         }, {
+            "date_added": "13285896903798720",
+            "guid": "2d67e8a8-8f38-43a6-b212-a03d21ee206f",
+            "id": "35",
+            "name": "Confluence Docs",
+            "type": "url",
+            "url": "https://confluence.reflexmedia.com/users/viewmyfavourites.action"
+         }, {
+            "date_added": "13286499357010900",
+            "guid": "b6c3b65a-60db-4fb8-965b-655f507bd4b9",
+            "id": "37",
+            "name": "SA/WYP Promo Codes & Promotions - Google Sheets",
+            "type": "url",
+            "url": "https://docs.google.com/spreadsheets/d/1wy0i_mvuWnZnhPvTaqvQYLH2hT2hJ4rj3UM9LM1X3WM/edit#gid=1000367151"
+         }, {
+            "date_added": "13287186006786988",
+            "guid": "92164d4d-64f2-4116-a6cc-e1b0d2ae0660",
+            "id": "40",
+            "name": "Data Science - Data Definitions - Google Sheets",
+            "type": "url",
+            "url": "https://docs.google.com/spreadsheets/d/1YdBQWSgjSspHY0qjRxyN6ZhgS2I-2DpJfIZ7VUDRyIg/edit#gid=0"
+         }, {
+            "date_added": "13290711464756587",
+            "guid": "a38b31b2-b7d3-4306-a7e3-b7a6a15fcea9",
+            "id": "51",
+            "name": "Admin Queries",
+            "type": "url",
+            "url": "https://reflexmedia.looker.com/admin/queries"
+         }, {
+            "date_added": "13290885872919255",
+            "guid": "465e3140-7f4b-4450-8843-44a599235f5b",
+            "id": "53",
+            "name": "My Looker Folder",
+            "type": "url",
+            "url": "https://reflexmedia.looker.com/folders/695"
+         }, {
+            "date_added": "13293075108744420",
+            "guid": "e592a2c1-8e3f-4287-93ea-774b1eb65d5d",
+            "id": "57",
+            "name": "conda-cheatsheet.pdf",
+            "type": "url",
+            "url": "https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf"
+         }, {
+            "date_added": "13293075122741705",
+            "guid": "26cc6ff6-2177-4528-a041-ed6765296ab2",
+            "id": "58",
+            "name": "MLB Game Logs 1871-2016 - dataset by dataquest | data.world",
+            "type": "url",
+            "url": "https://data.world/dataquest/mlb-game-logs"
+         } ],
+         "date_added": "13280639152327180",
+         "date_modified": "13295736423099004",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",
@@ -12,20 +96,20 @@
       },
       "other": {
          "children": [  ],
-         "date_added": "13266090891190295",
+         "date_added": "13280639152327204",
          "date_modified": "0",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
-         "name": "Other bookmarks",
+         "name": "Other Bookmarks",
          "type": "folder"
       },
       "synced": {
          "children": [  ],
-         "date_added": "13266090891190296",
+         "date_added": "13280639152327207",
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
          "id": "3",
-         "name": "Mobile bookmarks",
+         "name": "Mobile Bookmarks",
          "type": "folder"
       }
    },
