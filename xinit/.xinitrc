@@ -37,7 +37,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # Set all displays
-xrandr --output "DP-2" --primary --mode 2560x1440 --rate 59.96 --output "DP-1" --mode 2560x1440 --rotate left --rate 59.95 --right-of "DP-2" --output "eDP-1" --mode 3072x1920 --rate 60.00 --left-of "DP-2" &
+bash /home/jordan/Random-Scripts/set_screens.sh
 
 # Start Wallpaper
 superpaper &
