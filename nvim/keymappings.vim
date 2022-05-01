@@ -36,8 +36,9 @@ nmap <Leader>n <C-w>h
 " Explorer
 nmap <expr> <Leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':w<CR>:NERDTreeFind<CR>'
 
-" test comment
-
+" Run Python
+nmap <A-r> :w \| :!python3 %<CR>
+nmap <A-t> :w \| :!time python3 %<CR>
 
 " Open Buffer
 nmap <A-b> :w \| :Telescope buffers<CR>
