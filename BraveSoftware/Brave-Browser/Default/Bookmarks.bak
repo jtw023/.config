@@ -1,5 +1,5 @@
 {
-   "checksum": "5a961288c8464a2e90ee337cd3659453",
+   "checksum": "c2cdffaa3d5eb067a44ec20afa3ab60f",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -86,9 +86,16 @@
             "name": "MLB Game Logs 1871-2016 - dataset by dataquest | data.world",
             "type": "url",
             "url": "https://data.world/dataquest/mlb-game-logs"
+         }, {
+            "date_added": "13295850387862857",
+            "guid": "be404a1e-acc1-424f-8215-0366b0a36d9b",
+            "id": "60",
+            "name": "Jupyter Notebook + Vim/Neovim. Vim/Neovim code editing experience for… | by alpha2phi | Medium",
+            "type": "url",
+            "url": "https://alpha2phi.medium.com/jupyter-notebook-vim-neovim-c2d67d56d563"
          } ],
          "date_added": "13280639152327180",
-         "date_modified": "13295736423099004",
+         "date_modified": "13295850387862857",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",
@@ -100,7 +107,7 @@
          "date_modified": "0",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
-         "name": "Other Bookmarks",
+         "name": "Other bookmarks",
          "type": "folder"
       },
       "synced": {
@@ -109,7 +116,7 @@
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
          "id": "3",
-         "name": "Mobile Bookmarks",
+         "name": "Mobile bookmarks",
          "type": "folder"
       }
    },
