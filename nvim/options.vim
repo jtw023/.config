@@ -34,3 +34,15 @@ set sidescrolloff=8
 
 " Set height of command line
 set cmdheight=2
+
+" Set Rainbow Colors
+hi rainbowcol2 guifg=#00FF00
+hi rainbowcol3 guifg=#5218FA
+hi rainbowcol4 guifg=#FF69B4
+hi rainbowcol5 guifg=#808080
+hi rainbowcol7 guifg=#00FF00
+hi rainbowcol8 guifg=#5218FA
+hi rainbowcol9 guifg=#FF69B4
+hi rainbowcol10 guifg=$808080
+
+

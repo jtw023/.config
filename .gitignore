@@ -9,4 +9,3 @@ Slack/*
 !Slack/local-settings.json
 qtile/__pycache__/
 ranger/__pycache__/
-pulse

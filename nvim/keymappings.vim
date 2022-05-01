@@ -13,7 +13,7 @@ let mapleader = " "
 map <Leader> <Plug>(easymotion-prefix)
 
 " Spawn terminal in split screen
-nmap <Leader>t :FloatermNew<CR>
+nmap <Leader>t :w \| :FloatermNew<CR>
 
 " Save and quit
 imap <F1> <ESC>:x<CR>
@@ -34,10 +34,13 @@ nmap <Leader>e <C-w>j
 nmap <Leader>n <C-w>h
 
 " Explorer
-nmap <expr> <Leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
+nmap <expr> <Leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':w<CR>:NERDTreeFind<CR>'
+
+" test comment
+
 
 " Open Buffer
-nmap <A-b> :Telescope buffers<CR>
+nmap <A-b> :w \| :Telescope buffers<CR>
 
 nmap <Leader>u :w \| :Telescope find_files hidden=true<CR>
 

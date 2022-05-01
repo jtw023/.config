@@ -49,6 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" Dev Icons
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'p00f/nvim-ts-rainbow'
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'ryanoasis/vim-devicons'
 
