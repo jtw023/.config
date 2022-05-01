@@ -49,7 +49,7 @@ setopt pushdminus
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-zstyle ':completion:*' rehash true                   # automatically find new executables in path 
+zstyle ':completion:*' rehash true                   # automatically find new executables in path
 # zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' menu select=2
@@ -203,18 +203,15 @@ ex ()
 
 bash $HOME/Random-Scripts/get_colorscript.sh # Command to run on launch
 
+## Source ZSH Stuff
 ## Theme
 source /usr/share/zsh/themes/bira.zsh-theme
-
 ## Plugins section: Enable fish style features
 # Use autosuggestion
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+## Fuzzy Finder
  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Use syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Zsh you should use plugin
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
-
