@@ -5,11 +5,9 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*:*' unstagedstr "[!]"
 zstyle ':vcs_info:*:*' stagedstr "[+]"
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats "%{$fg[white]%}on %{$fg[red]%} %b %u%c%{$fg[white]%}"
+zstyle ':vcs_info:git:*' formats "%{$fg[white]%}on %{$fg[red]%}  %b %u%c%{$fg[white]%}"
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 setopt prompt_subst
-
-#  
 
 +vi-git-untracked() {
   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
