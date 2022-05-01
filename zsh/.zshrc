@@ -79,6 +79,9 @@ alias ls='lsd -al'
 # Run 'ping -c 3' whenever I 'ping'
 alias ping='ping -c 3'
 
+# Run 'paru -S --skipreview'
+alias parui='paru -S --skipreview'
+
 # Run a special script to clear a page
 alias cl='clear; bash $HOME/Random-Scripts/generate_random.sh'
 
