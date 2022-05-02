@@ -1,11 +1,7 @@
-##	R keybindings 			R keybindings 				 Unmap and remap Leader key 			Spawn terminal in split screen
+##			Open New File 					Save and Source File 		Unmap and remap Leader key 				Spawn terminal in split screen
 
-*\rf Connect to R console 	\rq Quit R console			 noremap <Space> <Nop> 					nmap <Leader>t :vs term://zsh<CR>*
-*\d Execute current line  	\ro open object browser      let mapleader = " "*
-*\ss Execute selection    	\aa Execute entire script*
-*<S-Tab> autocomplete menu	\cc Execute code chunk*
-*\kl Create Beamer PDF		\kp Create Regular PDF*
-*\kw Create Word Doc		\kh Create HTML*
+*nmap <A-b> :w \| :Telescope buffers<CR> 	nmap <A-w> :w \| :so %<CR>	 noremap <Space> <Nop> 					nmap <Leader>t :vs term://zsh<CR>*
+*nmap <Leader>u :w \| :Telescope find_files hidden=true<CR>  	         let mapleader = " "*
 
 ## Save and quit 			Quit and exit				 Create newline above or below 		    Change window					EasyMotion
 
@@ -38,5 +34,8 @@
 *nmap <F3> :vs /home/jordan/.config/nvim/keymappings.vim<CR>							inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"*
 																						*inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"*
 																						
-		## Git Signs
-nmap <Leader>g :Gitsigns preview_hunk<CR>
+		## Git Signs										Fold Lines						Run Python
+nmap <Leader>g :Gitsigns preview_hunk<CR>				   nmap <A-f> za				nmap <A-r> :w \| :!python3 %<CR>
+														   vmap <A-f> za				nmap <A-t> :w \| :!time python3 %<CR>
+														   nmap <A-n> zf
+														   vmap <A-n> zf

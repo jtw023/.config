@@ -27,6 +27,12 @@ nmap <F8> :q!<CR>
 nmap <Leader><S-l> <S-o><ESC>
 nmap <Leader>l o<ESC>
 
+" Fold Lines
+nmap <A-f> za
+vmap <A-f> za
+nmap <A-n> zf
+vmap <A-n> zf
+
 " Change window
 nmap <Leader>o <C-w>l
 nmap <Leader>i <C-w>k
@@ -45,6 +51,7 @@ nmap <A-b> :w \| :Telescope buffers<CR>
 
 nmap <Leader>u :w \| :Telescope find_files hidden=true<CR>
 
+" Save and source file
 nmap <A-w> :w \| :so %<CR>
 
 " Split screen
