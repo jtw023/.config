@@ -21,6 +21,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	" Colorschemes
 	Plug 'EdenEast/nightfox.nvim'
+	" Vim dadbod
+	Plug 'tpope/vim-dadbod'
 	" Comment Plugin
 	Plug 'terrortylor/nvim-comment'
 	" Easy Motion
