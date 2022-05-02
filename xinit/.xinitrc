@@ -42,6 +42,9 @@ bash /home/jordan/Random-Scripts/set_screens.sh
 # Start Wallpaper
 superpaper &
 
+# Start Email Client
+thunderbird &
+
 # Start Picom
 picom --config /home/jordan/.config/picom/picom.conf &
 
