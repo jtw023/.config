@@ -43,7 +43,9 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
-
+## vi mode
+bindkey -v
+export KEYTIMEOUT=1
 
 ## Completion
 autoload -Uz compinit
