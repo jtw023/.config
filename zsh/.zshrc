@@ -217,3 +217,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Zsh you should use plugin
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+# Initiate conda
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
