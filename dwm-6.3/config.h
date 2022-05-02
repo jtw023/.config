@@ -32,7 +32,7 @@ static const Rule rules[] = {
 	{ "Brave-browser", NULL,   NULL,	  0,	    0,		 0  },
 	{ "Slack",     	   NULL,   NULL,	  0,	    0,		 1  },
 	{ "kitty", 	   NULL,   NULL,	  0,	    0,		 2  },
-	{ "Thunderbird",   NULL,   NULL,	  0,	    1,		 0  },
+	{ "Thunderbird",   NULL,   NULL,	1 << 3,	    0,		 1  },
 };
 
 /* layout(s) */
