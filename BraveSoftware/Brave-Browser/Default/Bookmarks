@@ -1,5 +1,5 @@
 {
-   "checksum": "8cf89728a4126298b796144efb29ca78",
+   "checksum": "e51e9335ae03d16ed156b7544c4752bd",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -86,13 +86,6 @@
             "name": "MLB Game Logs 1871-2016 - dataset by dataquest | data.world",
             "type": "url",
             "url": "https://data.world/dataquest/mlb-game-logs"
-         }, {
-            "date_added": "13295850387862857",
-            "guid": "be404a1e-acc1-424f-8215-0366b0a36d9b",
-            "id": "60",
-            "name": "Jupyter Notebook + Vim/Neovim. Vim/Neovim code editing experience for… | by alpha2phi | Medium",
-            "type": "url",
-            "url": "https://alpha2phi.medium.com/jupyter-notebook-vim-neovim-c2d67d56d563"
          }, {
             "date_added": "13295902416616255",
             "guid": "6dccdf5b-3b4c-49f3-a51b-9599a06ebbab",

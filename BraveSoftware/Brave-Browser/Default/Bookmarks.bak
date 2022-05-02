@@ -1,5 +1,5 @@
 {
-   "checksum": "c2cdffaa3d5eb067a44ec20afa3ab60f",
+   "checksum": "8cf89728a4126298b796144efb29ca78",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -93,9 +93,16 @@
             "name": "Jupyter Notebook + Vim/Neovim. Vim/Neovim code editing experience for… | by alpha2phi | Medium",
             "type": "url",
             "url": "https://alpha2phi.medium.com/jupyter-notebook-vim-neovim-c2d67d56d563"
+         }, {
+            "date_added": "13295902416616255",
+            "guid": "6dccdf5b-3b4c-49f3-a51b-9599a06ebbab",
+            "id": "62",
+            "name": "GitHub - tpope/vim-dadbod: dadbod.vim: Modern database interface for Vim",
+            "type": "url",
+            "url": "https://github.com/tpope/vim-dadbod"
          } ],
          "date_added": "13280639152327180",
-         "date_modified": "13295850387862857",
+         "date_modified": "13295902416616255",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",
