@@ -33,6 +33,7 @@ static const Rule rules[] = {
 	{ "Slack",     	   NULL,   NULL,	  0,	    0,		 1  },
 	{ "kitty", 	   NULL,   NULL,	  0,	    0,		 2  },
 	{ "Thunderbird",   NULL,   NULL,	1 << 3,	    0,		 1  },
+	{ "Pavucontrol",   NULL,   NULL,	1 << 4,     0,		 2  },
 };
 
 /* layout(s) */
@@ -74,6 +75,8 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,		XK_w,	   spawn,	   {.v = browser } },
 	{ MODKEY|Mod1Mask,		XK_s,	   spawn,	   {.v = slack } },
 	{ MODKEY|Mod1Mask,		XK_m,	   spawn,	   {.v = mail } },
+	{ MODKEY|Mod1Mask,		XK_4,	   spawn,	   SHCMD("$HOME/Random-Scripts/screenshot.sh") },
+	{ MODKEY|Mod1Mask,		XK_5,	   spawn,	   SHCMD("simplescreenrecorder") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_e,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_n,      focusstack,     {.i = -1 } },
