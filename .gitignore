@@ -10,3 +10,4 @@ Slack/*
 qtile/__pycache__/
 ranger/__pycache__/
 nvim/autoload/plugged/vim-dadbod-ui/
+nvim/autoload/plugged/vim-dadbod/
