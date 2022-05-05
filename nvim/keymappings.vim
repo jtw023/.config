@@ -59,7 +59,9 @@ nmap <A-t> :w \| :!time python3 %<CR>
 " Open Buffer
 nmap <A-b> :w \| :Telescope buffers<CR>
 
-nmap <Leader>u :w \| :Telescope find_files hidden=true<CR>
+nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
+
+nmap <Leader>fg :w \| :Telescope live_grep cwd=
 
 " Save and source file
 nmap <A-w> :w \| :so %<CR>
