@@ -10,3 +10,4 @@ lua require'plug-telescope'
 lua require'plug-cmp'
 lua require'lsp'
 lua require'plug-treesitter'
+lua require'telescope'.load_extension('media_files')

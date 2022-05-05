@@ -1,7 +1,8 @@
 ##			Open New File 					Save and Source File 		Unmap and remap Leader key 			Spawn terminal in split screen
 
 *nmap <A-b> :w \| :Telescope buffers<CR> 	nmap <A-w> :w \| :so %<CR>	  noremap <Space> <Nop> 		   nmap <Leader>t :vs term://zsh<CR>*
-*nmap <Leader>u :w \| :Telescope find_files hidden=true<CR>  	          let mapleader = " "*
+*nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>  	          let mapleader = " "*
+*nmap <Leader>fg :w \| :TeLescope live_grep cwd=*
 
 ## Save and quit 			Quit and exit				 Create newline above or below 		    Change window					EasyMotion
 
@@ -10,15 +11,15 @@
 																								*nmap <Leader>e <C-w>j*
 																								*nmap <Leader>n <C-w>h*
 
-		## Explorer										 Split screen							Resize buffers
-*nmap <Leader>m :NvimTreeToggle<CR>						 nmap <Leader>y :vs<CR>*				nmap <C-Up> :resize -2<CR>
-																								nmap <Leader><C-Up> :resize -2<CR>
-																								nmap <C-Down> :resize +2<CR>
-																								nmap <Leader><C-Down> :resize +2<CR>
-																								nmap <C-Left> :vertical resize -2<CR>
-																								nmap <Leader><C-Left> :vertical resize -2<CR>
-																								nmap <C-Right> :vertical resize +2<CR>
-																								nmap <Leader><C-Right> :vertical resize +2<CR>
+	## 	Resize buffers   						Explorer 	           		Split screen		Next Cursor Location	Prev Cursor Location
+*nmap <C-Up> :resize -2<CR>  		nmap <Leader>m :NvimTreeToggle<CR>	nmap <Leader>y :vs<CR>			CTRL-I				 	CTRL-O*
+nmap <Leader><C-Up> :resize -2<CR>
+nmap <C-Down> :resize +2<CR>
+nmap <Leader><C-Down> :resize +2<CR>
+nmap <C-Left> :vertical resize -2<CR>
+nmap <Leader><C-Left> :vertical resize -2<CR>
+nmap <C-Right> :vertical resize +2<CR>
+nmap <Leader><C-Right> :vertical resize +2<CR>
 
 		## Move selected line									Indenting								Turn off highlighting
 *vmap <S-k> :m <-2<CR>gv=gv								vnoremap <Leader>, <<<Esc>gv					map <F2> :nohlsearch<CR>*
@@ -40,6 +41,6 @@ nmap <Leader>g :Gitsigns preview_hunk<CR>				   nmap <A-f> za				nmap <A-r> :w \
 														   nmap <A-n> zf
 														   vmap <A-n> zf
 														   
-		## Launch Dadbod								Run Dadbod 							Scroll horizontal
-	nmap <Leader>s :DBUI<CR>						 nmap <A-s> :w<CR>						nmap <Leader>j zL
-																							nmap <Leader>k zH
+		## Launch Dadbod				Run Dadbod 			Scroll horizontal							View Variables
+	nmap <Leader>s :DBUI<CR>		nmap <A-s> :w<CR>		nmap <Leader>j zL		nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR> 
+															nmap <Leader>k zH

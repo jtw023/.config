@@ -49,6 +49,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'sharkdp/fd'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
+	Plug 'nvim-lua/popup.nvim'
+	Plug 'nvim-telescope/telescope-media-files.nvim'
 	" Dev Icons
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
 	Plug 'nvim-treesitter/nvim-treesitter'

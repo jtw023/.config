@@ -63,6 +63,9 @@ nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
 
 nmap <Leader>fg :w \| :Telescope live_grep cwd=
 
+" View variables
+nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
+
 " Save and source file
 nmap <A-w> :w \| :so %<CR>
 
