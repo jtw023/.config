@@ -93,6 +93,9 @@ alias ref='source $HOME/.config/zsh/.zshrc'
 # Modify the zshrc file
 alias zsh='v $HOME/.config/zsh/.zshrc'
 
+# Run ssh in kitty
+alias ssh='kitty +kitten ssh'
+
 # Bind 'nvim' to 'v'
 alias v='nvim'
 
@@ -110,6 +113,9 @@ alias tra='transmission-remote -a --download-dir /home/jordan/kvmISOs/'
 alias trl='transmission-remote -l'
 alias trt='transmission-remote -t'
 alias trs='bash /home/jordan/Random-Scripts/tor.sh'
+
+# Show image in terminal
+alias imgshow='kitty +kitten icat'
 
 # Trim a song with ffmpeg
 alias trim='/home/jordan/Random-Scripts/trim.sh'
