@@ -40,7 +40,17 @@ nmap <Leader>e <C-w>j
 nmap <Leader>n <C-w>h
 
 " Explorer
-nmap <expr> <Leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':w<CR>:NERDTreeFind<CR>'
+nmap <expr> <Leader>m g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':w<CR>:NERDTreeFind<CR>'
+
+" Launch Dadbod
+nmap <Leader>s :DBUI<CR>
+
+" Run Dadbod
+nmap <A-s> :w<CR>
+
+" Scroll horizontal
+nmap <Leader>j zL
+nmap <Leader>k zH
 
 " Run Python
 nmap <A-r> :w \| :!python3 %<CR>
@@ -55,7 +65,7 @@ nmap <Leader>u :w \| :Telescope find_files hidden=true<CR>
 nmap <A-w> :w \| :so %<CR>
 
 " Split screen
-nmap <Leader>v :vs<CR>
+nmap <Leader>y :vs<CR>
 
 " Resize buffers
 nmap <C-Up> :resize -2<CR>
@@ -88,7 +98,8 @@ nmap <Leader>/ :CommentToggle<CR>
 vmap <Leader>/ :CommentToggle<CR>
 
 " Switch vertical split to horizontal split
-nmap <Leader>s <C-w>L
+nmap <Leader>h <C-w>L
+nmap <Leader>v <C-w>J
 
 " Cheat sheet
 nmap <F3> :tabnew /home/jordan/.config/nvim/vimkeybindings.md<CR>

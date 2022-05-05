@@ -23,6 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'EdenEast/nightfox.nvim'
 	" Vim dadbod
 	Plug 'tpope/vim-dadbod'
+	Plug 'kristijanhusak/vim-dadbod-ui'
 	" Comment Plugin
 	Plug 'terrortylor/nvim-comment'
 	" Easy Motion
