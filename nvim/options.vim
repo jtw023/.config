@@ -44,3 +44,5 @@ hi rainbowcol7 guifg=#00FF00
 hi rainbowcol8 guifg=#5218FA
 hi rainbowcol9 guifg=#FF69B4
 hi rainbowcol10 guifg=#808080
+
+let g:vimwiki_global_ext = 0
