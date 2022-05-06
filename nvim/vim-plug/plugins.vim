@@ -14,6 +14,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'scrooloose/NERDTree'
 	" Auto pairs for '(' '[' '{'
 	Plug 'windwp/nvim-autopairs'
+	" Multi Cursor support
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	" Vimwiki
 	Plug 'vimwiki/vimwiki'
 	" Galaxy Line
@@ -53,7 +55,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'nvim-telescope/telescope-media-files.nvim'
 	" Dev Icons
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
-	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'p00f/nvim-ts-rainbow'
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'ryanoasis/vim-devicons'
