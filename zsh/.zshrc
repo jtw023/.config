@@ -126,6 +126,9 @@ alias sound='pavucontrol'
 # Bind the 'cat' program to the 'bat' program
 alias cat='bat'
 
+# Copy weekly update file to clipboard
+alias copy='\cat /home/jordan/vimwiki/Weekly\ Update.md | xclip -selection clipboard'
+
 # Always copy, move, and remove interactively and verbosely
 alias cp='cp -iv'
 alias mv='mv -iv'
