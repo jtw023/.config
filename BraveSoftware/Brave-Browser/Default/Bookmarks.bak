@@ -1,5 +1,5 @@
 {
-   "checksum": "c349b9364e7ac547b14120f17fa1fe71",
+   "checksum": "2a874ade4f72aead55791012bdfd2d71",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -99,7 +99,7 @@
             "id": "66",
             "name": "/etc/pluse/default.pa set default for bluetooth headset - Searx Belgium",
             "type": "url",
-            "url": "https://searx.be/search"
+            "url": "https://searx.be/search?q=/etc/pluse/default.pa%20set%20default%20for%20bluetooth%20headset"
          } ],
          "date_added": "13280639152327180",
          "date_modified": "13296074060391932",

@@ -1,5 +1,5 @@
 {
-   "checksum": "2a874ade4f72aead55791012bdfd2d71",
+   "checksum": "d0348991176eef47d06c984a3a255971",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -79,27 +79,6 @@
             "name": "conda-cheatsheet.pdf",
             "type": "url",
             "url": "https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf"
-         }, {
-            "date_added": "13293075122741705",
-            "guid": "26cc6ff6-2177-4528-a041-ed6765296ab2",
-            "id": "58",
-            "name": "MLB Game Logs 1871-2016 - dataset by dataquest | data.world",
-            "type": "url",
-            "url": "https://data.world/dataquest/mlb-game-logs"
-         }, {
-            "date_added": "13295902416616255",
-            "guid": "6dccdf5b-3b4c-49f3-a51b-9599a06ebbab",
-            "id": "62",
-            "name": "GitHub - tpope/vim-dadbod: dadbod.vim: Modern database interface for Vim",
-            "type": "url",
-            "url": "https://github.com/tpope/vim-dadbod"
-         }, {
-            "date_added": "13296074060391932",
-            "guid": "13f16978-49d9-4954-a598-34183e2d4903",
-            "id": "66",
-            "name": "/etc/pluse/default.pa set default for bluetooth headset - Searx Belgium",
-            "type": "url",
-            "url": "https://searx.be/search?q=/etc/pluse/default.pa%20set%20default%20for%20bluetooth%20headset"
          } ],
          "date_added": "13280639152327180",
          "date_modified": "13296074060391932",
