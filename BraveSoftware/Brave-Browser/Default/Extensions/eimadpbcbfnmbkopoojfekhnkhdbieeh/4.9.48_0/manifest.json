@@ -38,6 +38,7 @@
    } ],
    "default_locale": "en",
    "description": "__MSG_extension_description__",
+   "differential_fingerprint": "1.4391a87b180c69334303c2aa7d4ca4c5d3e554335a0d0abe153737351781ab32",
    "icons": {
       "128": "icons/dr_128.png",
       "16": "icons/dr_16.png",
