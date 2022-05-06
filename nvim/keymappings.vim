@@ -1,15 +1,8 @@
-" R keybindings
-" \rf Connect to R console
-" \rq Quit R console
-" \ro open object browser
-" \d Execute current line
-" \ss Execute block of selected code
-" \aa Execute entire script
-
 " Unmap and remap Leader key
 noremap <Space> <Nop>
 let mapleader = " "
 
+" Vim Easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
 " Spawn terminal in split screen
@@ -38,6 +31,9 @@ nmap <Leader>o <C-w>l
 nmap <Leader>i <C-w>k
 nmap <Leader>e <C-w>j
 nmap <Leader>n <C-w>h
+
+" Rename
+nmap <Leader>r :%s/<C-r><C-w>/
 
 " Explorer
 nmap <expr> <Leader>m g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':w<CR>:NERDTreeFind<CR>'
