@@ -3,7 +3,7 @@ noremap <Space> <Nop>
 let mapleader = " "
 
 " Vim Easymotion
-map <Leader> <Plug>(easymotion-prefix)
+" map <Leader> <Plug>(easymotion-prefix)
 
 " Spawn terminal in split screen
 nmap <Leader>t :w \| :FloatermNew<CR>
