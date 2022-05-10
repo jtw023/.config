@@ -1,5 +1,5 @@
 {
-   "checksum": "d0348991176eef47d06c984a3a255971",
+   "checksum": "c69af9b8f687947e26e11f38cb139953",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -79,9 +79,16 @@
             "name": "conda-cheatsheet.pdf",
             "type": "url",
             "url": "https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf"
+         }, {
+            "date_added": "13296679207518982",
+            "guid": "ae1e8363-98b2-491a-b905-b63e3d8c81f3",
+            "id": "59",
+            "name": "Kibana",
+            "type": "url",
+            "url": "https://kibana.reflexmedia.com/_plugin/kibana/app/kibana#/home?_g=()"
          } ],
          "date_added": "13280639152327180",
-         "date_modified": "13296074060391932",
+         "date_modified": "13296679207518982",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",
