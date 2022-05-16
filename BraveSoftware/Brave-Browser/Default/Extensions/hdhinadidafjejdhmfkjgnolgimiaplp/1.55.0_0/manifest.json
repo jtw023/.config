@@ -36,6 +36,7 @@
    "content_security_policy": "script-src 'self'; object-src 'self'",
    "default_locale": "en",
    "description": "__MSG_extension_description__",
+   "differential_fingerprint": "1.b0040fc369279073da78feec7bd57c4876c0dca8c50a5831e46e944a0014cb3f",
    "icons": {
       "128": "img/icon.png",
       "16": "img/icon-16.png",
@@ -57,6 +58,6 @@
    "permissions": [ "activeTab", "contextMenus", "identity", "storage", "tts", "ttsEngine", "https://translate.google.com/" ],
    "short_name": "__MSG_extension_short_name__",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.54.1",
+   "version": "1.55.0",
    "web_accessible_resources": [ "js/page/*" ]
 }

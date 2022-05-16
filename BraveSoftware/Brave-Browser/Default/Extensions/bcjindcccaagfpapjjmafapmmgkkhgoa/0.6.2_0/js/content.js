@@ -72,6 +72,20 @@
 
           // Clear the slowAnalysisTimeout (if the BG worker had taken longer than 1s to respond with an answer to whether or not this is JSON, then it would have fired, unhiding the PRE... But now that we know it's JSON, we can clear this timeout, ensuring the PRE stays hidden.)
             clearTimeout(slowAnalysisTimeout) ;
+
+          // force to light theme until a dark mode version is created
+            try {
+              let meta = document.querySelector('meta[name="color-scheme"]')
+              if (!meta) {
+                meta = document.createElement('meta')
+                meta.setAttribute("name", "color-scheme")
+                document.head.appendChild(meta)
+              }
+
+              meta.setAttribute("content", "only light");
+            } catch (error) {
+              console.warn('Failed to force light color scheme', error)
+            }
           
           // Insert CSS
             jfStyleEl = document.createElement('style') ;
