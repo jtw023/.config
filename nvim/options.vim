@@ -35,6 +35,9 @@ set sidescrolloff=8
 " Set height of command line
 set cmdheight=2
 
+" Copy to clipboard
+set clipboard=unnamedplus
+
 " Set Rainbow Colors
 hi rainbowcol2 guifg=#00FF00
 hi rainbowcol3 guifg=#5218FA

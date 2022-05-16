@@ -42,7 +42,7 @@ nmap <F3> :vs /home/jordan/.config/nvim/keymappings.vim<CR>					  inoremap <expr
 				## Git Signs						  Fold Lines					  Run Python						Multi Cursor
 
 nmap <Leader>g :Gitsigns preview_hunk<CR>			nmap <A-f> za		  nmap <A-r> :w \| :!python3 %<CR>			 Select Word: CTRL-N
-													vmap <A-f> za		nmap <A-t> :w \| :!time python3 %<CR>	 Select Oharacter: Shift-Arrow
+													vmap <A-f> za		nmap <A-t> :w \| :!time python3 %<CR>	 Select Character: Shift-Arrow
 													nmap <A-n> zf													  Next Occurrence: n
 													vmap <A-n> zf												   Skip Current Occurrence: q
 														   
