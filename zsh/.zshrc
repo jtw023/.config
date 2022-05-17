@@ -227,4 +227,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Zsh you should use plugin
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 # Initiate conda
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+source /home/jordan/anaconda3/bin/activate
