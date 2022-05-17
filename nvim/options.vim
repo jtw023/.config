@@ -38,6 +38,10 @@ set cmdheight=2
 " Copy to clipboard
 set clipboard=unnamedplus
 
+" Spell Suggest
+set spell!
+set spelllang=en_us
+
 " Set Rainbow Colors
 hi rainbowcol2 guifg=#00FF00
 hi rainbowcol3 guifg=#5218FA

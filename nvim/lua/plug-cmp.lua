@@ -40,7 +40,7 @@ cmp.setup {
     },
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
+    ["<CR>"] = cmp.mapping.confirm { select = false },
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -90,7 +90,8 @@ cmp.setup {
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
-        emoji = "[Emoji]",
+        calc = "[Calculation]",
+		spell = "[Spelling]"
 
         -- nvim_lsp = "",
         -- nvim_lua = "",
@@ -107,9 +108,9 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },
-    { name = "cmp_tabnine" },
     { name = "path" },
-    { name = "emoji" },
+	{ name = "calc" },
+	{ name = "spell" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

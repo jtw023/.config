@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" Vim dadbod
 	Plug 'tpope/vim-dadbod'
 	Plug 'kristijanhusak/vim-dadbod-ui'
+	Plug 'kristijanhusak/vim-dadbod-completion'
 	" Comment Plugin
 	Plug 'terrortylor/nvim-comment'
 	" Easy Motion
@@ -34,6 +35,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'voldikss/vim-floaterm'
 	" Install LSP
 	Plug 'neovim/nvim-lspconfig'
+	Plug 'nvim-lua/completion-nvim'
 	Plug 'williamboman/nvim-lsp-installer'
 	" Git Signs
 	Plug 'lewis6991/gitsigns.nvim'
@@ -41,9 +43,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-buffer'
 	Plug 'hrsh7th/cmp-path'
-	Plug 'hrsh7th/cmp-cmdline'
 	Plug 'saadparwaiz1/cmp_luasnip'
 	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'hrsh7th/cmp-calc'
+	Plug 'f3fora/cmp-spell'
 	" Snippets
 	Plug 'L3MON4D3/LuaSnip'
 	Plug 'rafamadriz/friendly-snippets'

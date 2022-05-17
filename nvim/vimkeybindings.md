@@ -39,12 +39,12 @@ vmap <Leader>/ :CommentToggle<CR>					  nmap <Leader>v <C-w>J	vertical				   nma
 nmap <F3> :vs /home/jordan/.config/nvim/keymappings.vim<CR>					  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 																			inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 																						
-				## Git Signs						  Fold Lines					  Run Python						Multi Cursor
+				## Git Signs						  Fold Lines					  Run Files						Multi Cursor
 
-nmap <Leader>g :Gitsigns preview_hunk<CR>			nmap <A-f> za		  nmap <A-r> :w \| :!python3 %<CR>			 Select Word: CTRL-N
-													vmap <A-f> za		nmap <A-t> :w \| :!time python3 %<CR>	 Select Character: Shift-Arrow
-													nmap <A-n> zf													  Next Occurrence: n
-													vmap <A-n> zf												   Skip Current Occurrence: q
+nmap <Leader>g :Gitsigns preview_hunk<CR>			nmap <A-f> za		  			  nmap <A-r>			 	Select Word: CTRL-N
+													vmap <A-f> za					  				 		Select Character: Shift-Arrow
+													nmap <A-n> zf												 Next Occurrence: n
+													vmap <A-n> zf											  Skip Current Occurrence: q
 														   
 	## Launch Dadbod				Run Dadbod 			Scroll horizontal							View Variables
 

@@ -26,6 +26,9 @@ vmap <A-f> za
 nmap <A-n> zf
 vmap <A-n> zf
 
+" Suggest Spelling
+nmap <Tab> z=
+
 " Change window
 nmap <Leader>o <C-w>l
 nmap <Leader>i <C-w>k
@@ -47,10 +50,6 @@ nmap <A-s> :w<CR>
 " Scroll horizontal
 nmap <Leader>j zL
 nmap <Leader>k zH
-
-" Run Python
-nmap <A-r> :w \| :!python3 %<CR>
-nmap <A-t> :w \| :!time python3 %<CR>
 
 " Open Buffer
 nmap <A-b> :w \| :Telescope buffers<CR>
