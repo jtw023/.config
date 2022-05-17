@@ -104,10 +104,10 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "nvim_lsp" },
-    { name = "nvim_lua" },
     { name = "luasnip" },
-    { name = "buffer" },
+    { name = "nvim_lsp", max_item_count = 4 },
+    { name = "nvim_lua" },
+    { name = "buffer", max_item_count = 4 },
     { name = "path" },
 	{ name = "calc" },
 	{ name = "spell" },
