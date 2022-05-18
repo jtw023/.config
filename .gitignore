@@ -7,6 +7,8 @@ BraveSoftware/Brave-Browser/Default/*
 Slack/*
 !Slack/Preferences
 !Slack/local-settings.json
+!Slack/Preferences.bak
+!Slack/local-settings.json.bak
 qtile/__pycache__/
 ranger/__pycache__/
 nvim/autoload/plugged/vim-dadbod-ui/
