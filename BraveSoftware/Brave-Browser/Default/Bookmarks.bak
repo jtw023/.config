@@ -1,5 +1,5 @@
 {
-   "checksum": "3a6a79ccf88c3137a7c853f4ff337eda",
+   "checksum": "c69af9b8f687947e26e11f38cb139953",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -86,20 +86,6 @@
             "name": "Kibana",
             "type": "url",
             "url": "https://kibana.reflexmedia.com/_plugin/kibana/app/kibana#/home?_g=()"
-         }, {
-            "date_added": "13297296487411251",
-            "guid": "77d13f1a-b2eb-47ca-8aab-627526a323e7",
-            "id": "65",
-            "name": "redirect Chrome/Brave notifications to dunst : bspwm",
-            "type": "url",
-            "url": "https://old.reddit.com/r/bspwm/comments/haveqg/redirect_chromebrave_notifications_to_dunst/"
-         }, {
-            "date_added": "13297301785459695",
-            "guid": "f595845c-ca29-4d47-8c90-f62506770c10",
-            "id": "67",
-            "name": "HTML5 Web Notifications Test - Bennish.net",
-            "type": "url",
-            "url": "https://www.bennish.net/web-notifications.html"
          } ],
          "date_added": "13280639152327180",
          "date_modified": "13297301785459695",
