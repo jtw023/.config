@@ -69,10 +69,10 @@ cmp.setup {
     }),
   },
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      vim_item.kind = string.format('%s', kind_icons[vim_item.kind], vim_item.kind)
 
       if entry.source.name == "cmp_tabnine" then
         -- if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
@@ -84,30 +84,23 @@ cmp.setup {
       -- NOTE: order matters
       vim_item.menu = ({
         luasnip = "[Snippet]",
-        nvim_lsp = "[LSP]",
         nvim_lua = "[Nvim]",
-        buffer = "[Buffer]",
+        nvim_lsp = "[LSP]",
         path = "[Path]",
         calc = "[Calculation]",
+        buffer = "[Buffer]",
 		spell = "[Spelling]"
-
-        -- nvim_lsp = "",
-        -- nvim_lua = "",
-        -- luasnip = "",
-        -- buffer = "",
-        -- path = "",
-        -- emoji = "",
       })[entry.source.name]
       return vim_item
     end,
   },
   sources = {
     { name = "luasnip" },
-    { name = "nvim_lsp", max_item_count = 4 },
     { name = "nvim_lua" },
-    { name = "buffer", max_item_count = 4 },
+    { name = "nvim_lsp", max_item_count = 4 },
     { name = "path" },
 	{ name = "calc" },
+    { name = "buffer", max_item_count = 4 },
 	{ name = "spell", max_item_count = 4 },
   },
   confirm_opts = {
@@ -121,11 +114,10 @@ cmp.setup {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
   },
-  -- documentation = {
-  -- 	border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  -- },
   experimental = {
-    ghost_text = true,
-    -- native_menu = false,
+    ghost_text = false,
   },
+  view = {
+	  entries = { name = 'custom', selection_order = 'near_cursor' }
+  }
 }

@@ -45,8 +45,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-buffer'
 	Plug 'hrsh7th/cmp-path'
-	Plug 'saadparwaiz1/cmp_luasnip'
+	Plug 'hrsh7th/cmp-nvim-lua'
 	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'saadparwaiz1/cmp_luasnip'
 	Plug 'hrsh7th/cmp-calc'
 	Plug 'f3fora/cmp-spell'
 	" Snippets
