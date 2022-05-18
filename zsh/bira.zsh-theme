@@ -23,6 +23,28 @@ function preexec() {
   timer=$(($(date +%s%0N)/1000000000))
 }
 
+# Determines prompt modifier if and when a conda environment is active
+precmd_conda_info() {
+  if [[ -n $CONDA_PREFIX ]]; then
+      if [[ $(basename $CONDA_PREFIX) == "anaconda3" ]]; then
+        # Without this, it would display conda version
+        CONDA_ENV="(base) "
+      else
+        # For all environments that aren't (base)
+        CONDA_ENV="($(basename $CONDA_PREFIX)) "
+      fi
+  # When no conda environment is active, don't show anything
+  else
+    CONDA_ENV=""
+  fi
+}
+
+# Run the previously defined function before each prompt
+precmd_functions+=( precmd_conda_info )
+
+# Allow substitutions and expansions in the prompt
+setopt prompt_subst
+
 function precmd() {
   if [ $timer ]; then
     now=$(($(date +%s%0N)/1000000000))
@@ -63,7 +85,7 @@ local git_branch='${vcs_info_msg_0_}'
 local TIME='%F{220}${elapsed}'
 
 PROMPT="
-${current_dir} ${git_branch}
+$CONDA_ENV${current_dir} ${git_branch}
 ${TIME}${PR_PROMPT}"
 
 }
