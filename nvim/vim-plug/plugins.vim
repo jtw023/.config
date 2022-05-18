@@ -39,6 +39,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'williamboman/nvim-lsp-installer'
 	" Git Signs
 	Plug 'lewis6991/gitsigns.nvim'
+	" Todo Comments
+	Plug 'folke/todo-comments.nvim'
 	" CMP Plugins
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-buffer'

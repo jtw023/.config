@@ -27,7 +27,7 @@ nmap <A-n> zf
 vmap <A-n> zf
 
 " Suggest Spelling
-nmap <Tab> z=
+nmap <C-s> z=
 
 " Change window
 nmap <Leader>o <C-w>l
@@ -44,8 +44,8 @@ nmap <expr> <Leader>m g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':
 " Launch Dadbod
 nmap <Leader>s :DBUI<CR>
 
-" Run Dadbod
-nmap <A-s> :w<CR>
+" Save and Source Snippets
+nmap <A-s> :w \| :so ~/.config/nvim/lua/plug-cmp.lua<CR>
 
 " Scroll horizontal
 nmap <Leader>j zL
