@@ -7,21 +7,6 @@ zstyle ':vcs_info:*:*' stagedstr "[+]"
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats "%{$fg[white]%}on %{$fg[red]%}  %b %u%c%{$fg[white]%}"
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-setopt prompt_subst
-
-+vi-git-untracked() {
-  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-     git status --porcelain | grep -m 1 '^??' &>/dev/null
-  then
-    hook_com[staged]+='[?]'
-  fi
-}
-
-() {
-
-function preexec() {
-  timer=$(($(date +%s%0N)/1000000000))
-}
 
 # Determines prompt modifier if and when a conda environment is active
 precmd_conda_info() {
@@ -44,6 +29,21 @@ precmd_functions+=( precmd_conda_info )
 
 # Allow substitutions and expansions in the prompt
 setopt prompt_subst
+
++vi-git-untracked() {
+  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+     git status --porcelain | grep -m 1 '^??' &>/dev/null
+  then
+    hook_com[staged]+='[?]'
+  fi
+}
+
+() {
+
+function preexec() {
+  timer=$(($(date +%s%0N)/1000000000))
+}
+
 
 function precmd() {
   if [ $timer ]; then
