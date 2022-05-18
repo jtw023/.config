@@ -11,7 +11,7 @@ nmap <F1> :x<CR> 			nmap <F8> :q!<CR>			 	nmap <Leader>l o<ESC> 			nmap <Leader>
 																							nmap <Leader>e <C-w>j
 																							nmap <Leader>n <C-w>h
 
-	## 	Resize buffers   						Explorer 	           		Split screen		Next Cursor Location	Prev Cursor Location
+## 		Resize buffers   						Explorer 	           		Split screen		Next Cursor Location	Prev Cursor Location
 
 nmap <C-Up> :resize -2<CR>  		nmap <Leader>m :NvimTreeToggle<CR>	nmap <Leader>y :vs<CR>			CTRL-I				 	CTRL-O
 nmap <Leader><C-Up> :resize -2<CR>
@@ -22,31 +22,31 @@ nmap <Leader><C-Left> :vertical resize -2<CR>
 nmap <C-Right> :vertical resize +2<CR>
 nmap <Leader><C-Right> :vertical resize +2<CR>
 
-		## Move selected line					Indenting					 Turn off highlighting					Rename
+## 			Move selected line					Indenting					 Turn off highlighting					Rename
 
 	 vmap <S-k> :m <-2<CR>gv=gv		  vnoremap <Leader>, <<<Esc>gv			map <F2> :nohlsearch<CR>		nmap <Leader>r :%s/<C-r><C-w>/
 vmap <Leader><S-k> :m <-2<CR>gv=gv	  vnoremap <Leader>. >><Esc>gv
 	 vmap <S-j> :m >+1<CR>gv=gv
 vmap <Leader><S-j> :m >+1<CR>gv=gv'
 
-		## Comment toggle						Switch between horizontal and vertical split				Switch between tabs
+## 			Comment toggle						Switch between horizontal and vertical split				Switch between tabs
 
 nmap <Leader>/ :CommentToggle<CR>					nmap <Leader>h <C-w>L - horizontal				 nmap <Leader><S-h> :tabprevious<CR>
 vmap <Leader>/ :CommentToggle<CR>					  nmap <Leader>v <C-w>J	vertical				   nmap <Leader><S-l> :tabnext<CR>
 
-					## Cheat sheet														Use <TAB> to select the popup menu
+## 						Cheat sheet														Use <TAB> to select the popup menu
 
 nmap <F3> :vs /home/jordan/.config/nvim/keymappings.vim<CR>					  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 																			inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 																						
-				## Git Signs						  Fold Lines					  Run Files						Multi Cursor
+## 					Git Signs						  Fold Lines					  Run Files						Multi Cursor
 
 nmap <Leader>g :Gitsigns preview_hunk<CR>			nmap <A-f> za		  			  nmap <A-r>			 	Select Word: CTRL-N
 													vmap <A-f> za					  				 		Select Character: Shift-Arrow
 													nmap <A-n> zf												 Next Occurrence: n
 													vmap <A-n> zf											  Skip Current Occurrence: q
 														   
-	## Launch Dadbod				Run Dadbod 			Scroll horizontal							View Variables
+## 		Launch Dadbod						Format Files 					Scroll horizontal					View Variables
 
-nmap <Leader>s :DBUI<CR>		nmap <A-s> :w<CR>		nmap <Leader>j zL		nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
+nmap <Leader>s :DBUI<CR>	nmap <C-f> :lua vim.lsp.buf.formatting()<CR>	nmap <Leader>j zL	 <Leader>fv :Telescope lsp_document_symbols<CR>
 													    nmap <Leader>k zH
