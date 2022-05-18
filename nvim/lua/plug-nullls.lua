@@ -7,7 +7,6 @@ local sources = {
 	sources = {
 		formatting.autopep8,
 		formatting.pg_format,
-		formatting.stylua,
 		diagnostics.pylint,
 	},
 }
