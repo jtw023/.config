@@ -67,6 +67,9 @@ nmap <A-w> :w \| :so %<CR>
 " Split screen
 nmap <Leader>y :vs<CR>
 
+" Format
+nmap <C-f> :lua vim.lsp.buf.formatting()<CR>
+
 " Resize buffers
 nmap <C-Up> :resize -2<CR>
 nmap <Leader><C-Up> :resize -2<CR>

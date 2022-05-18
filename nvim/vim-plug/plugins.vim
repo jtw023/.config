@@ -18,6 +18,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	" Vimwiki
 	Plug 'vimwiki/vimwiki'
+	" Null-ls
+	Plug 'jose-elias-alvarez/null-ls.nvim'
 	" Galaxy Line
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
