@@ -97,8 +97,10 @@ nmap <Leader>g :Gitsigns preview_hunk<CR>
 map <F2> :nohlsearch<CR>
 
 " Comment toggle
-nmap <Leader>/ :CommentToggle<CR>
-vmap <Leader>/ :CommentToggle<CR>
+nmap <Leader>/ gcc
+vmap <Leader>/ gcc
+nmap <Leader>w/ gci(
+vmap <Leader>w/ gci(
 
 " Switch vertical split to horizontal split
 nmap <Leader>h <C-w>L

@@ -41,6 +41,27 @@ ls.add_snippets(nil, {
 			dscr = 'Make the print function easier',
 		}, {
 			text({'print("'}), insert(1, 'text'), text({'")'})
+		}),
+		snip({
+			trig = 'doc',
+			name = 'Inline Docstring',
+			dscr = 'One line string used to document code.',
+		}, {
+			text({"'''"}), insert(1, 'docstring'), text({"'''"}), insert(2, "")
+		}),
+		snip({
+			trig = 'docm',
+			name = 'Multiline Docstring',
+			dscr = 'Deltailed, multiline string used to document code.',
+		}, {
+			text({"'''",
+			""}), insert(1, "docstring"), text({"",
+			":param: "}), insert(2, "info about parameters"), text({"",
+			":ptype: "}), insert(3, "info about param types"), text({"",
+			":return: "}), insert(4, "info about return value"), text({"",
+			":rtype: "}), insert(5, "info about return type"), text({"",
+			":raises error: "}), insert(6, "error type and when"), text({"",
+			"'''"}), insert(7, "")
 		})
 	},
 })
