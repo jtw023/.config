@@ -8,25 +8,6 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats "%{$fg[white]%}on %{$fg[red]%}  %b %u%c%{$fg[white]%}"
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
-# Determines prompt modifier if and when a conda environment is active
-precmd_conda_info() {
-  if [[ -n $CONDA_PREFIX ]]; then
-      if [[ $(basename $CONDA_PREFIX) == "anaconda3" ]]; then
-        # Without this, it would display conda version
-        CONDA_ENV="(base) "
-      else
-        # For all environments that aren't (base)
-        CONDA_ENV="($(basename $CONDA_PREFIX)) "
-      fi
-  # When no conda environment is active, don't show anything
-  else
-    CONDA_ENV=""
-  fi
-}
-
-# Run the previously defined function before each prompt
-precmd_functions+=( precmd_conda_info )
-
 # Allow substitutions and expansions in the prompt
 setopt prompt_subst
 
@@ -67,6 +48,7 @@ function precmd() {
 
     unset timer
   fi
+
 }
 
 local PR_PROMPT
@@ -74,18 +56,18 @@ local PR_PROMPT
 # Check the UID
 if [[ $UID -ne 0 ]]; then # normal user
  current_dir="%B%F{cyan}%~%f%b"
- PR_PROMPT='%B%{$fg[cyan]%}%{❯%G%} '
+ PR_PROMPT='%B%{$fg[cyan]%}%{❯%G%}%b '
 else # root
   current_dir="%B%F{008}%~%f%b"
-PR_PROMPT='%B%F{008}%{%G%} '
+PR_PROMPT='%B%F{008}%{%G%}%f%b '
 fi
 
 local git_branch='${vcs_info_msg_0_}'
 
-local TIME='%F{220}${elapsed}'
+local TIME='%F{220}${elapsed}%f'
 
 PROMPT="
-$CONDA_ENV${current_dir} ${git_branch}
+${current_dir} ${git_branch}
 ${TIME}${PR_PROMPT}"
 
 }
