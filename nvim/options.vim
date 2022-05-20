@@ -4,6 +4,9 @@ syntax on
 colorscheme terafox
 set encoding=utf-8
 
+" turn off line wrap
+set nowrap
+
 " Timeout
 set timeoutlen=500
 
@@ -29,7 +32,8 @@ set noerrorbells
 
 " Add beginning and trailing whitespace notification
 set list
-set listchars=tab:\ ,trail:
+set listchars=tab:\ ,trail:·,extends:☛,precedes:☚
+" 
 
 " Set how far to the top and bottom your cursor can go
 set scrolloff=8
