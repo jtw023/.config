@@ -45,7 +45,7 @@ telescope.setup {
       find_cmd = "rg", -- find command (defaults to `fd`)
     },
     file_browser = {
-      -- theme = "ivy",
+      -- theme = "dropdown",
       -- require("telescope.themes").get_dropdown {
       --   previewer = false,
       --   -- even more opts

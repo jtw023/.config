@@ -91,7 +91,9 @@ vnoremap <Leader>, <<<Esc>gv
 vnoremap <Leader>. >><Esc>gv
 
 " Git Signs
-nmap <Leader>g :Gitsigns preview_hunk<CR>
+nmap <Leader>gs :Gitsigns preview_hunk<CR>
+nmap <Leader>gn :Gitsigns next_hunk<CR> 
+nmap <Leader>gp :Gitsigns prev_hunk<CR> 
 
 " Turn off highlighting
 map <F2> :nohlsearch<CR>
