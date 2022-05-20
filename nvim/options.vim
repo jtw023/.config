@@ -11,6 +11,9 @@ set timeoutlen=500
 set relativenumber
 set number
 
+" Popup window for word replacements that are off screen
+set inccommand=split
+
 " Mouse support
 set mouse=a
 
@@ -53,3 +56,6 @@ hi rainbowcol9 guifg=#FF69B4
 hi rainbowcol10 guifg=#808080
 
 let g:vimwiki_global_ext = 0
+
+" Highlight on yank
+au TextYankPost * silent! lua vim.highlight.on_yank()

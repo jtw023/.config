@@ -2,9 +2,6 @@
 noremap <Space> <Nop>
 let mapleader = " "
 
-" Vim Easymotion
-" map <Leader> <Plug>(easymotion-prefix)
-
 " Spawn terminal in split screen
 nmap <Leader>t :w \| :FloatermNew<CR>
 
@@ -52,14 +49,14 @@ nmap <Leader>j zL
 nmap <Leader>k zH
 
 " Open Buffer
-nmap <A-b> :w \| :Telescope buffers<CR>
+nmap <A-b> :w \| :Telescope buffers theme=dropdown<CR>
 
-nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
+nmap <Leader>ff :w \| :Telescope find_files hidden=true theme=dropdown<CR>
 
-nmap <Leader>fg :w \| :Telescope live_grep cwd=
+nmap <Leader>fg :w \| :Telescope live_grep theme=dropdown cwd=
 
 " View variables
-nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
+nmap <Leader>fv :w \| :Telescope lsp_document_symbols theme=dropdown<CR>
 
 " Save and source file
 nmap <A-w> :w \| :so %<CR>
