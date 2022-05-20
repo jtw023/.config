@@ -1,5 +1,5 @@
 {
-   "checksum": "84e4bc85f435b2c3165a112c09bd16d6",
+   "checksum": "c69af9b8f687947e26e11f38cb139953",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -86,20 +86,6 @@
             "name": "Kibana",
             "type": "url",
             "url": "https://kibana.reflexmedia.com/_plugin/kibana/app/kibana#/home?_g=()"
-         }, {
-            "date_added": "13297385313885475",
-            "guid": "af6dbe48-9cce-441b-a6e5-64d88c5f313e",
-            "id": "61",
-            "name": "CLI Authentication Challenges | Bitwarden Help & Support",
-            "type": "url",
-            "url": "https://bitwarden.com/help/cli-auth-challenges/#get-your-personal-api-key"
-         }, {
-            "date_added": "13297386097429474",
-            "guid": "11b0f786-73b5-42ec-a446-e681df6c4092",
-            "id": "62",
-            "name": "Bitwarden CLI | Bitwarden Help & Support",
-            "type": "url",
-            "url": "https://bitwarden.com/help/cli/"
          } ],
          "date_added": "13280639152327180",
          "date_modified": "13297386097429474",
