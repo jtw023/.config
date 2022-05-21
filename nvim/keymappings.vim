@@ -6,12 +6,12 @@ let mapleader = " "
 nmap <Leader>t :w \| :FloatermNew<CR>
 
 " Save and quit
-imap <F1> <ESC>:x<CR>
-nmap <F1> :x<CR>
+imap <F1> <ESC>:xa<CR>
+nmap <F1> :xa<CR>
 
 " Quit and exit
-imap <F8> <ESC>:q!<CR>
-nmap <F8> :q!<CR>
+imap <F8> <ESC>:qa!<CR>
+nmap <F8> :qa!<CR>
 
 " Create newline above or below
 nmap <Leader><S-l> <S-o><ESC>
@@ -55,6 +55,9 @@ nmap <Leader>ff :w \| :Telescope find_files hidden=true theme=dropdown<CR>
 
 nmap <Leader>fg :w \| :Telescope live_grep theme=dropdown cwd=
 
+" Expand JSON
+nmap <A-e> :%!python -m json.tool<CR>
+
 " View variables
 nmap <Leader>fv :w \| :Telescope lsp_document_symbols theme=dropdown<CR>
 
@@ -62,7 +65,7 @@ nmap <Leader>fv :w \| :Telescope lsp_document_symbols theme=dropdown<CR>
 nmap <A-w> :w \| :so %<CR>
 
 " Split screen
-nmap <Leader>y :vs<CR>
+nmap <Leader>vs :vs<CR>
 
 " Format
 nmap <C-f> :lua vim.lsp.buf.formatting()<CR>
@@ -89,8 +92,8 @@ vnoremap <Leader>. >><Esc>gv
 
 " Git Signs
 nmap <Leader>gs :Gitsigns preview_hunk<CR>
-nmap <Leader>gn :Gitsigns next_hunk<CR> 
-nmap <Leader>gp :Gitsigns prev_hunk<CR> 
+nmap <Leader>gn :Gitsigns next_hunk<CR>
+nmap <Leader>gp :Gitsigns prev_hunk<CR>
 
 " Turn off highlighting
 map <F2> :nohlsearch<CR>
@@ -102,8 +105,8 @@ nmap <Leader>w/ gci(
 vmap <Leader>w/ gci(
 
 " Switch vertical split to horizontal split
-nmap <Leader>h <C-w>L
-nmap <Leader>v <C-w>J
+nmap <Leader>hr <C-w>L
+nmap <Leader>vr <C-w>J
 
 " Cheat sheet
 nmap <F3> :tabnew /home/jordan/.config/nvim/vimkeybindings.md<CR>

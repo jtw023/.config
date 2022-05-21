@@ -17,3 +17,4 @@ lua require'telescope'.load_extension('media_files')
 lua require'autocommands'
 lua require'plug-todo'
 lua require'plug-nullls'
+lua require'plug-nightfox'

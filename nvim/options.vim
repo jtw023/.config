@@ -33,7 +33,6 @@ set noerrorbells
 " Add beginning and trailing whitespace notification
 set list
 set listchars=tab:\ ,trail:·,extends:☛,precedes:☚
-" 
 
 " Set how far to the top and bottom your cursor can go
 set scrolloff=8
