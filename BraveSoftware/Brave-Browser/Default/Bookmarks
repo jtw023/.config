@@ -1,5 +1,5 @@
 {
-   "checksum": "c69af9b8f687947e26e11f38cb139953",
+   "checksum": "1bbb248d573ae979f7554397cc885de8",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -86,9 +86,16 @@
             "name": "Kibana",
             "type": "url",
             "url": "https://kibana.reflexmedia.com/_plugin/kibana/app/kibana#/home?_g=()"
+         }, {
+            "date_added": "13297560346381438",
+            "guid": "90cdeacd-92e8-44df-a4fe-c42be3f6e7a8",
+            "id": "61",
+            "name": "Dashboard | Rippling",
+            "type": "url",
+            "url": "https://app.rippling.com/dashboard"
          } ],
          "date_added": "13280639152327180",
-         "date_modified": "13297386097429474",
+         "date_modified": "13297560346381438",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",
