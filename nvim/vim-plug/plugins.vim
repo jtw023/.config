@@ -30,7 +30,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'kristijanhusak/vim-dadbod-ui'
 	Plug 'kristijanhusak/vim-dadbod-completion'
 	" Comment Plugin
-	Plug 'numToStr/Comment.nvim'
+	Plug 'terrortylor/nvim-comment'
 	" Easy Motion
 	Plug 'easymotion/vim-easymotion'
 	" Float Term Plugin

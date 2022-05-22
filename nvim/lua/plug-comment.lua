@@ -1,6 +1,5 @@
-local comment = require('Comment')
+local comment = require('nvim_comment')
 
-comment.setup {}
-
-local comment_ft = require "Comment.ft"
-comment_ft.set("python", { "# %s", "''' %s '''"})
+comment.setup({
+	comment_empty = false,
+})
