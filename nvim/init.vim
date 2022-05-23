@@ -3,6 +3,7 @@ source $HOME/.config/nvim/options.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/keymappings.vim
 source $HOME/.config/nvim/dadbod.vim
+source $HOME/.config/nvim/dashboard.vim
 lua require'snippets'
 lua require'luasnip-config'
 lua require'plug-cmp'

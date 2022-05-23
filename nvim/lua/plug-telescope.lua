@@ -17,56 +17,27 @@ telescope.setup {
 	layout_config = {
 		prompt_position = "top"
 	},
-
-    mappings = {
-      i = {
-		  -- Custom insert mode keybins go here
-      },
-
-      n = {
-		  -- Custom normal mode keybins go here
-      },
-    },
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
+		find_files = {
+			theme = "dropdown"
+		},
+		live_grep = {
+			theme = "dropdown"
+		},
+		buffers = {
+			theme = "dropdown"
+		},
+		lsp_document_symbols = {
+			theme = "dropdown"
+		},
   },
   extensions = {
     media_files = {
       -- filetypes whitelist
       -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = { "png", "webp", "jpg", "jpeg" },
+      filetypes = { "png", "webm", "jpg", "jpeg" },
       find_cmd = "rg", -- find command (defaults to `fd`)
     },
-    file_browser = {
-      -- theme = "dropdown",
-      -- require("telescope.themes").get_dropdown {
-      --   previewer = false,
-      --   -- even more opts
-      -- },
-      mappings = {
-        ["i"] = {
-          -- your custom insert mode mappings
-        },
-        ["n"] = {
-          -- your custom normal mode mappings
-        },
-      },
-    },
-    -- ["ui-select"] = {
-    --   require("telescope.themes").get_dropdown {
-    --     previewer = false,
-    --     -- even more opts
-    --   },
-    -- },
   },
 }
-
--- telescope.load_extension "ui-select"
--- telescope.load_extension "file_browser"

@@ -49,17 +49,20 @@ nmap <Leader>j zL
 nmap <Leader>k zH
 
 " Open Buffer
-nmap <A-b> :w \| :Telescope buffers theme=dropdown<CR>
+nmap <A-b> :w \| :Telescope buffers<CR>
 
-nmap <Leader>ff :w \| :Telescope find_files hidden=true theme=dropdown<CR>
+" Find Files
+nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
 
-nmap <Leader>fg :w \| :Telescope live_grep theme=dropdown cwd=
+" Live Grep
+nmap <Leader>fg :w \| :Telescope live_grep cwd=.<CR>
+
+" View variables
+nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
+
 
 " Expand JSON
 nmap <A-e> :%!python -m json.tool<CR>
-
-" View variables
-nmap <Leader>fv :w \| :Telescope lsp_document_symbols theme=dropdown<CR>
 
 " Save and source file
 nmap <A-w> :w \| :so %<CR>

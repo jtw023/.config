@@ -67,5 +67,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'p00f/nvim-ts-rainbow'
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'ryanoasis/vim-devicons'
+	" Dashboard
+	Plug 'glepnir/dashboard-nvim'
 
 call plug#end()
