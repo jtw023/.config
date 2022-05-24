@@ -57,7 +57,5 @@ hi rainbowcol8 guifg=#5218FA
 hi rainbowcol9 guifg=#FF69B4
 hi rainbowcol10 guifg=#808080
 
-let g:vimwiki_global_ext = 0
-
 " Highlight on yank
 au TextYankPost * silent! lua vim.highlight.on_yank()

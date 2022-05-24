@@ -1,4 +1,4 @@
-##			Open New File 					Save and Source File 		Unmap and remap Leader key 			Spawn terminal in split screen
+##			Open New File 					Savd and Source Fild 		Unmap and remap Leader key 			Spawn terminal in split screen
 
 nmap <A-b> :w \| :Telescope buffers<CR> 	nmap <A-w> :w \| :so %<CR>	  noremap <Space> <Nop> 		   nmap <Leader>t :vs term://zsh<CR>
 nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>  	          let mapleader = " "
@@ -24,10 +24,10 @@ nmap <Leader><C-Right> :vertical resize +2<CR>
 
 ## 			Move selected line					Indenting					 Turn off highlighting					Rename
 
-	 vmap <S-k> :m <-2<CR>gv=gv		  vnoremap <Leader>, <<<Esc>gv			map <F2> :nohlsearch<CR>		nmap <Leader>r :%s/<C-r><C-w>/
-vmap <Leader><S-k> :m <-2<CR>gv=gv	  vnoremap <Leader>. >><Esc>gv
-	 vmap <S-j> :m >+1<CR>gv=gv
-vmap <Leader><S-j> :m >+1<CR>gv=gv'
+	 vmap <S-e> :m <-2<CR>gv=gv		  vnoremap <Leader>, <<<Esc>gv			map <F2> :nohlsearch<CR>		nmap <Leader>r :%s/<C-r><C-w>/
+vmap <Leader><S-e> :m <-2<CR>gv=gv	  vnoremap <Leader>. >><Esc>gv
+	 vmap <S-n> :m >+1<CR>gv=gv
+vmap <Leader><S-n> :m >+1<CR>gv=gv'
 
 ## 			Comment toggle						Switch between horizontal and vertical split				Save and source snippets
 
@@ -50,3 +50,9 @@ nmap <Leader>gp :Gitsigns prev_hunk<CR>		  nmap <A-n> zf												 			Next Occ
 
 nmap <Leader>s :DBUI<CR>	nmap <C-f> :lua vim.lsp.buf.formatting()<CR>	nmap <Leader>j zL	 <Leader>fv :Telescope lsp_document_symbols<CR>
 													    					nmap <Leader>k zH
+
+##		NERD Tree Mappings
+	nmap <A-a> Create new file
+	  nmap <A-d> Delete file
+	   nmap <A-m> Move file
+nmap <Leader>m toggle nerd tree

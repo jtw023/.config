@@ -50,6 +50,13 @@ ls.add_snippets(nil, {
 			text({"'''"}), insert(1, 'docstring'), text({"'''"}), insert(2, "")
 		}),
 		snip({
+			trig = 'hello',
+			name = 'HELLO',
+			dscr = 'Testing',
+		}, {
+			text({'# Did it work?: '}), insert(1, 'YES'),
+		}),
+		snip({
 			trig = 'docm',
 			name = 'Multiline Docstring',
 			dscr = 'Deltailed, multiline string used to document code.',

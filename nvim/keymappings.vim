@@ -26,6 +26,13 @@ vmap <A-n> zf
 " Suggest Spelling
 nmap <C-s> z=
 
+" Move file in nerdtree
+nmap <A-m> mm
+" Delete file in nerdtree
+nmap <A-d> md
+" Create new file in nerdtree
+nmap <A-a> ma
+
 " Change window
 nmap <Leader>o <C-w>l
 nmap <Leader>i <C-w>k
@@ -41,9 +48,6 @@ nmap <expr> <Leader>m g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':
 " Launch Dadbod
 nmap <Leader>s :DBUI<CR>
 
-" Save and Source Snippets
-nmap <A-s> :w \| :so ~/.config/nvim/lua/plug-cmp.lua<CR>
-
 " Scroll horizontal
 nmap <Leader>j zL
 nmap <Leader>k zH
@@ -54,21 +58,20 @@ nmap <A-b> :w \| :Telescope buffers<CR>
 " Find Files
 nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
 
+" Find Recent Files
+nmap <Leader>fr :w \| :Telescope oldfiles<CR>
+
 " Live Grep
 nmap <Leader>fg :w \| :Telescope live_grep cwd=.<CR>
 
 " View variables
 nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
 
-
 " Expand JSON
 nmap <A-e> :%!python -m json.tool<CR>
 
-" Save and source file
-nmap <A-w> :w \| :so %<CR>
-
 " Split screen
-nmap <Leader>vs :vs<CR>
+nmap <Leader>vs :vs [No Name]<CR>
 
 " Format
 nmap <C-f> :lua vim.lsp.buf.formatting()<CR>

@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'norcalli/nvim-colorizer.lua'
 	" File Explorer
 	Plug 'scrooloose/NERDTree'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	" Auto pairs for '(' '[' '{'
 	Plug 'windwp/nvim-autopairs'
 	" Multi Cursor support
@@ -20,9 +21,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'vimwiki/vimwiki'
 	" Null-ls(format)
 	Plug 'jose-elias-alvarez/null-ls.nvim'
-	" Airline
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
 	" Colorschemes
 	Plug 'EdenEast/nightfox.nvim'
 	" Vim dadbod
@@ -64,10 +62,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-telescope/telescope-media-files.nvim'
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
+	" Lualine
+	Plug 'nvim-lualine/lualine.nvim'
 	" Dev Icons
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'p00f/nvim-ts-rainbow'
-	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'ryanoasis/vim-devicons'
-
+	Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()

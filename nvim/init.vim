@@ -1,9 +1,6 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/options.vim
-source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/keymappings.vim
-source $HOME/.config/nvim/dadbod.vim
-source $HOME/.config/nvim/dashboard.vim
 lua require'snippets'
 lua require'luasnip-config'
 lua require'plug-cmp'
@@ -19,3 +16,7 @@ lua require'autocommands'
 lua require'plug-todo'
 lua require'plug-nullls'
 lua require'plug-nightfox'
+lua require'plug-lualine'
+lua require'plug-dashboard'
+lua require'plug-nerdtree'
+lua require'plug-dadbod'

@@ -31,6 +31,12 @@ telescope.setup {
 		lsp_document_symbols = {
 			theme = "dropdown"
 		},
+		colorscheme = {
+			theme = "dropdown"
+		},
+		oldfiles = {
+			theme = "dropdown"
+		}
   },
   extensions = {
     media_files = {
