@@ -1,7 +1,6 @@
 " Colors and fonts
 set termguicolors
 syntax on
-" colorscheme terafox
 set encoding=utf-8
 
 " turn off line wrap
