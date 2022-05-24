@@ -1,9 +1,9 @@
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall
+	autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
@@ -18,9 +18,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	" Vimwiki
 	Plug 'vimwiki/vimwiki'
-	" Null-ls
+	" Null-ls(format)
 	Plug 'jose-elias-alvarez/null-ls.nvim'
-	" Galaxy Line
+	" Airline
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	" Colorschemes
@@ -55,19 +55,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" Snippets
 	Plug 'L3MON4D3/LuaSnip'
 	Plug 'rafamadriz/friendly-snippets'
+	" Dashboard
+	Plug 'glepnir/dashboard-nvim'
 	" Vim Telescope
 	Plug 'sharkdp/fd'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim'
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-telescope/telescope-media-files.nvim'
-	" Dev Icons
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
+	" Dev Icons
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'p00f/nvim-ts-rainbow'
 	Plug 'kyazdani42/nvim-web-devicons'
 	Plug 'ryanoasis/vim-devicons'
-	" Dashboard
-	Plug 'glepnir/dashboard-nvim'
 
 call plug#end()
