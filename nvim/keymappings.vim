@@ -59,7 +59,7 @@ nmap <A-b> :w \| :Telescope buffers<CR>
 nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
 
 " Find Recent Files
-nmap <Leader>fr :w \| :Telescope oldfiles<CR>
+nmap <Leader>fh :w \| :Telescope oldfiles<CR>
 
 " Live Grep
 nmap <Leader>fg :w \| :Telescope live_grep cwd=.<CR>
