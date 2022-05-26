@@ -36,6 +36,9 @@ telescope.setup {
 		},
 		oldfiles = {
 			theme = "dropdown"
+		},
+		help_tags = {
+			theme = "dropdown"
 		}
   },
   extensions = {
