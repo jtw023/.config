@@ -5,7 +5,9 @@ nf.setup({
 		all = {
 			-- Have not been able to get this actually working so I changed it in
 			-- nvim/autoload/plugged/nightfox.nvim/lua/nightfox/precompiled/nvim/terafox_compiled.lua
-			Whitespace = { link = "LineNr" }
+			Whitespace = { link = "LineNr" },
+			Search = { fg = "#FFFFFF", bg = "#FF69B4" },
+			IncSearch = { fg = "#FFFFFF", bg = "#FF69B4" }
     	}
     }
 })
