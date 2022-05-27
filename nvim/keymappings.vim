@@ -68,7 +68,7 @@ nmap <Leader>fg :w \| :Telescope live_grep cwd=.<CR>
 nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
 
 " View Help Tags
-nmap <Leader>hh :Telescope help_tags<CR>
+nmap <Leader>hh :w \| :Telescope help_tags<CR>
 
 " Expand JSON
 nmap <A-e> :%!python -m json.tool<CR>
