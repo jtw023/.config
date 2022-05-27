@@ -9,6 +9,8 @@ require("todo-comments").setup {
 	    alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
 	    -- signs = false, -- configure signs for some keywords individually
 	  },
+	  QUESTION = { icon = " ", color = "question" },
+	  CAVEAT = { icon = " ", color = "error" },
 	  TODO = { icon = " ", color = "error" },
 	  HACK = { icon = " ", color = "error" },
 	  WARN = { icon = " ", color = "error", alt = { "WARNING", "XXX" } },
@@ -37,6 +39,7 @@ require("todo-comments").setup {
 	  info = { "DiagnosticInfo", "#ffc0cb" },
 	  hint = { "DiagnosticHint", "#ff00ff" },
 	  default = { "Identifier", "#7C3AED" },
+	  question = { "Question", "#00FFFF"}
     },
     search = {
 	  command = "rg",

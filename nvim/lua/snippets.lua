@@ -6,6 +6,50 @@ local insert = ls.insert_node
 
 -- ls.parser.parse_snippet(<text>, <VS**** style snippet>)
 ls.add_snippets(nil, {
+	vimwiki = {
+		snip({
+			trig = 'todo',
+			name = 'Todo',
+			dscr = 'Todo Comment',
+		}, {
+			text({'TODO: '}), insert(1, 'task'),
+		}),
+		snip({
+			trig = 'note',
+			name = 'Note',
+			dscr = 'Note Comment',
+		}, {
+			text({'NOTE: '}), insert(1, 'note'),
+		}),
+		snip({
+			trig = 'fix',
+			name = 'Fix',
+			dscr = 'Fix Comment',
+		}, {
+			text({'FIX: '}), insert(1, 'fix'),
+		}),
+		snip({
+			trig = 'hack',
+			name = 'Hack',
+			dscr = 'Hack Comment',
+		}, {
+			text({'HACK: '}), insert(1, 'hack'),
+		}),
+		snip({
+			trig = 'question',
+			name = 'Question',
+			dscr = 'Question',
+		}, {
+			text({'QUESTION: '}), insert(1, 'question'),
+		}),
+		snip({
+			trig = 'caveat',
+			name = 'Caveat',
+			dscr = 'Caveat',
+		}, {
+			text({'CAVEAT: '}), insert(1, 'caveat'),
+		}),
+	},
 	python = {
 		snip({
 			trig = 'todo',
@@ -34,6 +78,20 @@ ls.add_snippets(nil, {
 			dscr = 'Hack Comment',
 		}, {
 			text({'# HACK: '}), insert(1, 'hack'),
+		}),
+		snip({
+			trig = 'question',
+			name = 'Question',
+			dscr = 'Question',
+		}, {
+			text({'# QUESTION: '}), insert(1, 'question'),
+		}),
+		snip({
+			trig = 'caveat',
+			name = 'Caveat',
+			dscr = 'Caveat',
+		}, {
+			text({'CAVEAT: '}), insert(1, 'caveat'),
 		}),
 		snip({
 			trig = 'print',
