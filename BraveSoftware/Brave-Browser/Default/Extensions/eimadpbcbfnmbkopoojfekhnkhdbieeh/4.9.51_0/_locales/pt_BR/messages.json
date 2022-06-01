@@ -39,13 +39,13 @@
       "message": "Estático"
    },
    "extension_description": {
-      "message": "Tema escuro para todos os sites. Mantenha seus olhos relaxados usando o tema escuro em sua navegação diária."
+      "message": "Tema escuro para todos os sites. Mantenha os seus olhos relaxados usando o tema escuro em sua navegação diária."
    },
    "filter": {
       "message": "Filtro"
    },
    "grayscale": {
-      "message": "Tons de Cinza"
+      "message": "Tons de cinza"
    },
    "help": {
       "message": "Ajuda"
@@ -60,7 +60,7 @@
       "message": "Claro"
    },
    "loading_please_wait": {
-      "message": "Carregando, por favor, aguarde"
+      "message": "Carregando, aguarde"
    },
    "longitude": {
       "message": "Longitude"
@@ -69,7 +69,7 @@
       "message": "Modo"
    },
    "more": {
-      "message": "Mais"
+      "message": "Extras"
    },
    "news": {
       "message": "Notícias"
@@ -93,7 +93,7 @@
       "message": "Ferramentas"
    },
    "page_in_dark_list": {
-      "message": "Este site está na\nLista Negra global"
+      "message": "Este site está na\nlista negra global"
    },
    "page_protected": {
       "message": "Esta página é protegida\npelo navegador"
@@ -108,7 +108,7 @@
       "message": "Selecione uma fonte"
    },
    "sepia": {
-      "message": "Tons de Sépia"
+      "message": "Tons de sépia"
    },
    "set_active_hours": {
       "message": "Definir o horário ativo"
@@ -117,25 +117,25 @@
       "message": "Ativação automática após o pôr do sol"
    },
    "setup_add_site_hotkey": {
-      "message": "Configurar uma tecla de atalho para adicionar um site"
+      "message": "Configurar um atalho para adicionar um site"
    },
    "setup_hotkey_toggle_extension": {
-      "message": "Atalho de alternância\nda extensão"
+      "message": "Configurar atalho de\nalternância da extensão"
    },
    "setup_hotkey_toggle_site": {
-      "message": "Configurar o atalho de\nalternância do site atual"
+      "message": "Configurar atalho de\nalternância (site atual)"
    },
    "site_list": {
       "message": "Lista de sites"
    },
    "store_listing": {
-      "message": "Esta extensão ajuda seus olhos a relaxarem ao criar e aplicar o modo escuro aos sites que você visita. O Dark Reader inverte as cores brilhantes, tornando-as de alto contraste e deixando-as fáceis de serem lidas à noite.\n\nVocê pode ajustar o brilho, o contraste, os tons de sépia, o modo escuro, as configurações de fonte e a lista negra.\n\nO Dark Reader não exibe anúncios e não compartilha os dados de seus usuários. O código-fonte é totalmente aberto (open-source) https://github.com/darkreader/darkreader\n\nAntes de instalar esta extensão, desative extensões semelhantes. Divirta-se!"
+      "message": "Esta extensão ajuda os seus olhos a relaxarem ao criar e aplicar o modo escuro aos sites que você visita. O Dark Reader inverte as cores brilhantes, tornando-as de alto contraste e deixando-as fáceis de serem lidas à noite.\n\nVocê pode ajustar o brilho, o contraste, os tons de sépia, o modo escuro, as configurações de fonte e a lista negra.\n\nO Dark Reader não exibe anúncios e não compartilha os dados de seus usuários. O código-fonte é totalmente aberto (open-source): https://github.com/darkreader/darkreader\n\nAntes de instalar esta extensão, desative extensões semelhantes. Divirta-se!"
    },
    "system_dark_mode": {
       "message": "Usar o esquema de cores do sistema"
    },
    "system_dark_mode_description": {
-      "message": "Ative quando o modo escuro do sistema estiver habilitado"
+      "message": "Ativar quando o sistema estiver no modo escuro"
    },
    "text_stroke": {
       "message": "Intensidade do texto"
@@ -144,12 +144,12 @@
       "message": "Modo de geração de tema"
    },
    "toggle_current_site": {
-      "message": "Ativar/Des. no site atual"
+      "message": "Alternar (site atual)"
    },
    "toggle_extension": {
-      "message": "Ativar/Des. extensão"
+      "message": "Ativar/des. extensão"
    },
    "try_experimental_theme_engines": {
-      "message": "Experimente os motores de temas **experimentais**:\n**Filtro+** preserva a saturação de cores, usa a GPU\n**Tema estático** gera um tema simples rapidamente\n**Tema dinâmico** analisa cores e imagens"
+      "message": "Experimente os motores de temas **experimentais**:\n**Filtro+** preserva a saturação de cores (usa a GPU)\n**Tema estático** gera um tema simples rapidamente\n**Tema dinâmico** analisa cores e imagens"
    }
 }

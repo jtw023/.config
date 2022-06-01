@@ -1259,6 +1259,7 @@
         UI_SET_SHORTCUT: "ui-set-shortcut",
         UI_TOGGLE_ACTIVE_TAB: "ui-toggle-active-tab",
         UI_MARK_NEWS_AS_READ: "ui-mark-news-as-read",
+        UI_MARK_NEWS_AS_DISPLAYED: "ui-mark-news-as-displayed",
         UI_LOAD_CONFIG: "ui-load-config",
         UI_APPLY_DEV_DYNAMIC_THEME_FIXES: "ui-apply-dev-dynamic-theme-fixes",
         UI_RESET_DEV_DYNAMIC_THEME_FIXES: "ui-reset-dev-dynamic-theme-fixes",
@@ -1372,6 +1373,12 @@
         markNewsAsRead(ids) {
             chrome.runtime.sendMessage({
                 type: MessageType.UI_MARK_NEWS_AS_READ,
+                data: ids
+            });
+        }
+        markNewsAsDisplayed(ids) {
+            chrome.runtime.sendMessage({
+                type: MessageType.UI_MARK_NEWS_AS_DISPLAYED,
                 data: ids
             });
         }
@@ -5752,27 +5759,95 @@
             return false;
         }
     }
+    function NewsLink(props) {
+        const {news} = props;
+        return m$1(
+            "a",
+            {
+                href: news.url,
+                class: {
+                    "news-section__news": true,
+                    "news-section__news--highlight":
+                        !news.read && isFresh(news),
+                    "news-section__news--has-icon": news.icon,
+                    "news-section__news--small": props.isSmall
+                },
+                onclick: props.onClick,
+                target: "_blank",
+                rel: "noopener noreferrer"
+            },
+            news.icon
+                ? m$1("span", {
+                      class: "news-section__news__icon",
+                      style: {"background-image": `url('${news.icon}')`}
+                  })
+                : null,
+            m$1("span", {class: "news-section__news__text"}, news.headline)
+        );
+    }
     function NewsSection(props) {
+        const context = getComponentContext();
+        const store = context.getStore({
+            expanded: false,
+            didNewsSlideIn: false
+        });
+        const {expanded, didNewsSlideIn} = store;
         const news = props.data.news;
         const latest = news && news.length > 0 ? news[0] : null;
+        function markLatestAsRead() {
+            if (latest) {
+                props.actions.markNewsAsRead([latest.id]);
+            }
+        }
+        function toggleNews() {
+            if (expanded) {
+                markLatestAsRead();
+            }
+            store.expanded = !expanded;
+            store.didNewsSlideIn = didNewsSlideIn || !store.expanded;
+            context.refresh();
+        }
+        context.onRender(() => {
+            if (
+                latest &&
+                !latest.read &&
+                !store.expanded &&
+                !store.didNewsSlideIn
+            ) {
+                setTimeout(toggleNews, 750);
+            }
+        });
         return m$1(
             "div",
-            {class: "news-section"},
+            {class: {"news-section": true, "news-section--expanded": expanded}},
             latest
-                ? m$1(
-                      "a",
-                      {
-                          href: latest.url,
-                          class: {
-                              "news-section__main-link": true,
-                              "news-section__main-link--fresh": isFresh(latest)
-                          },
-                          target: "_blank",
-                          rel: "noopener noreferrer"
-                      },
-                      latest.headline
-                  )
-                : null
+                ? m$1(NewsLink, {
+                      isSmall: true,
+                      news: latest,
+                      onClick: markLatestAsRead
+                  })
+                : null,
+            m$1(
+                "div",
+                {class: "news-section__popover"},
+                m$1(
+                    "div",
+                    {class: "news-section__popover__top"},
+                    m$1("div", {class: "news-section__title"}, "What's New"),
+                    m$1(
+                        "span",
+                        {
+                            role: "button",
+                            class: "news-section__close",
+                            onclick: toggleNews
+                        },
+                        "\u2715"
+                    )
+                ),
+                latest
+                    ? m$1(NewsLink, {news: latest, onClick: markLatestAsRead})
+                    : null
+            )
         );
     }
 
@@ -7114,7 +7189,7 @@
                             class: {
                                 "news__event": true,
                                 "news__event--unread": !event.read,
-                                "news__event--important": event.important
+                                "news__event--has-icon": event.icon
                             }
                         },
                         m$1(
@@ -7126,6 +7201,14 @@
                                 target: "_blank",
                                 rel: "noopener noreferrer"
                             },
+                            event.icon
+                                ? m$1("span", {
+                                      class: "news__event__icon",
+                                      style: {
+                                          "background-image": `url('${event.icon}')`
+                                      }
+                                  })
+                                : null,
                             m$1(
                                 "span",
                                 {class: "news__event__date"},
@@ -7489,6 +7572,12 @@
             }
         } else if (document.documentElement.classList.contains("preview")) {
             document.documentElement.classList.remove("preview");
+        }
+        if (data.news && data.news.length > 0) {
+            const latest = data.news[0];
+            if (latest && !latest.displayed) {
+                actions.markNewsAsDisplayed([latest.id]);
+            }
         }
         sync(
             document.body,

@@ -38,7 +38,7 @@
    } ],
    "default_locale": "en",
    "description": "__MSG_extension_description__",
-   "differential_fingerprint": "1.4391a87b180c69334303c2aa7d4ca4c5d3e554335a0d0abe153737351781ab32",
+   "differential_fingerprint": "1.ca2b05581649da377737bb27bd775b1c1607bbb6cc2af515e9f1feed2ab5245d",
    "icons": {
       "128": "icons/dr_128.png",
       "16": "icons/dr_16.png",
@@ -50,5 +50,5 @@
    "optional_permissions": [ "contextMenus" ],
    "permissions": [ "alarms", "fontSettings", "storage", "tabs", "\u003Call_urls>" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "4.9.48"
+   "version": "4.9.51"
 }

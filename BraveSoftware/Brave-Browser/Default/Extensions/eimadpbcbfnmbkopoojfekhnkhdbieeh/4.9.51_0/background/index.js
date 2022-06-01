@@ -2611,9 +2611,9 @@
                 }
             });
         }
-        showImportantBadge() {
+        showBadge(text) {
             chrome.browserAction.setBadgeBackgroundColor({color: "#e96c4c"});
-            chrome.browserAction.setBadgeText({text: "!"});
+            chrome.browserAction.setBadgeText({text});
         }
         hideBadge() {
             chrome.browserAction.setBadgeText({text: ""});
@@ -2629,6 +2629,7 @@
         UI_SET_SHORTCUT: "ui-set-shortcut",
         UI_TOGGLE_ACTIVE_TAB: "ui-toggle-active-tab",
         UI_MARK_NEWS_AS_READ: "ui-mark-news-as-read",
+        UI_MARK_NEWS_AS_DISPLAYED: "ui-mark-news-as-displayed",
         UI_LOAD_CONFIG: "ui-load-config",
         UI_APPLY_DEV_DYNAMIC_THEME_FIXES: "ui-apply-dev-dynamic-theme-fixes",
         UI_RESET_DEV_DYNAMIC_THEME_FIXES: "ui-reset-dev-dynamic-theme-fixes",
@@ -2766,6 +2767,10 @@
                 }
                 case MessageType.UI_MARK_NEWS_AS_READ: {
                     this.adapter.markNewsAsRead(data);
+                    break;
+                }
+                case MessageType.UI_MARK_NEWS_AS_DISPLAYED: {
+                    this.adapter.markNewsAsDisplayed(data);
                     break;
                 }
                 case MessageType.UI_LOAD_CONFIG: {
@@ -3233,6 +3238,16 @@
                 ])
             );
         }
+        async getDisplayedNews() {
+            const sync = await readSyncStorage({displayedNews: []});
+            const local = await readLocalStorage({displayedNews: []});
+            return Array.from(
+                new Set([
+                    ...(sync ? sync.displayedNews : []),
+                    ...(local ? local.displayedNews : [])
+                ])
+            );
+        }
         async getNews() {
             try {
                 const response = await fetch(
@@ -3241,10 +3256,12 @@
                 );
                 const $news = await response.json();
                 const readNews = await this.getReadNews();
-                const news = $news.map(({id, date, headline, important}) => {
-                    const url = getBlogPostURL(id);
-                    const read = this.isRead(id, readNews);
-                    return {id, date, headline, url, important, read};
+                const displayedNews = await this.getDisplayedNews();
+                const news = $news.map((n) => {
+                    const url = getBlogPostURL(n.id);
+                    const read = this.wasRead(n.id, readNews);
+                    const displayed = this.wasDisplayed(n.id, displayedNews);
+                    return {...n, url, read, displayed};
                 });
                 for (let i = 0; i < news.length; i++) {
                     const date = new Date(news[i].date);
@@ -3269,12 +3286,10 @@
                 }
             });
             if (changed) {
-                this.latest = this.latest.map(
-                    ({id, date, url, headline, important}) => {
-                        const read = this.isRead(id, results);
-                        return {id, date, url, headline, important, read};
-                    }
-                );
+                this.latest = this.latest.map((n) => {
+                    const read = this.wasRead(n.id, results);
+                    return {...n, read};
+                });
                 this.onUpdate(this.latest);
                 const obj = {readNews: results};
                 await writeLocalStorage(obj);
@@ -3282,8 +3297,33 @@
                 await this.stateManager.saveState();
             }
         }
-        isRead(id, readNews) {
+        async markAsDisplayed(...ids) {
+            const displayedNews = await this.getDisplayedNews();
+            const results = displayedNews.slice();
+            let changed = false;
+            ids.forEach((id) => {
+                if (displayedNews.indexOf(id) < 0) {
+                    results.push(id);
+                    changed = true;
+                }
+            });
+            if (changed) {
+                this.latest = this.latest.map((n) => {
+                    const displayed = this.wasDisplayed(n.id, results);
+                    return {...n, displayed};
+                });
+                this.onUpdate(this.latest);
+                const obj = {displayedNews: results};
+                await writeLocalStorage(obj);
+                await writeSyncStorage(obj);
+                await this.stateManager.saveState();
+            }
+        }
+        wasRead(id, readNews) {
             return readNews.includes(id);
+        }
+        wasDisplayed(id, displayedNews) {
+            return displayedNews.includes(id);
         }
     }
     Newsmaker.UPDATE_INTERVAL = getDurationInMinutes({hours: 4});
@@ -3472,11 +3512,15 @@
                         case MessageType.CS_FETCH: {
                             const id = message.id;
                             const sendResponse = (response) =>
-                                chrome.tabs.sendMessage(sender.tab.id, {
-                                    type: MessageType.BG_FETCH_RESPONSE,
-                                    id,
-                                    ...response
-                                });
+                                chrome.tabs.sendMessage(
+                                    sender.tab.id,
+                                    {
+                                        type: MessageType.BG_FETCH_RESPONSE,
+                                        id,
+                                        ...response
+                                    },
+                                    {frameId: sender.frameId}
+                                );
                             if (isThunderbird) {
                                 if (message.data.url.startsWith("chrome://")) {
                                     sendResponse({data: null});
@@ -5299,6 +5343,8 @@
                 toggleActiveTab: async () => this.toggleActiveTab(),
                 markNewsAsRead: async (ids) =>
                     await this.news.markAsRead(...ids),
+                markNewsAsDisplayed: async (ids) =>
+                    await this.news.markAsDisplayed(...ids),
                 onPopupOpen: () =>
                     this.popupOpeningListener && this.popupOpeningListener(),
                 loadConfig: async (options) => await this.config.load(options),
@@ -5426,8 +5472,13 @@
                 this.icon = new IconManager();
             }
             const latestNews = news.length > 0 && news[0];
-            if (latestNews && latestNews.important && !latestNews.read) {
-                this.icon.showImportantBadge();
+            if (
+                latestNews &&
+                latestNews.badge &&
+                !latestNews.read &&
+                !latestNews.displayed
+            ) {
+                this.icon.showBadge(latestNews.badge);
                 return;
             }
             this.icon.hideBadge();

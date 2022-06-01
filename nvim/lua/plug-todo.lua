@@ -9,6 +9,7 @@ require("todo-comments").setup {
 	    alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
 	    -- signs = false, -- configure signs for some keywords individually
 	  },
+	  INPROGRESS = { icon = " ", color = "question" },
 	  QUESTION = { icon = " ", color = "question" },
 	  CAVEAT = { icon = " ", color = "error" },
 	  TODO = { icon = " ", color = "error" },

@@ -39,6 +39,9 @@ telescope.setup {
 		},
 		help_tags = {
 			theme = "dropdown"
+		},
+		grep_string = {
+			theme= "dropdown"
 		}
   },
   extensions = {

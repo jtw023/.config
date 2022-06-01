@@ -15,6 +15,13 @@ ls.add_snippets(nil, {
 			text({'TODO: '}), insert(1, 'task'),
 		}),
 		snip({
+			trig = 'inprogress',
+			name = 'Progress',
+			dscr = 'In Progress',
+		}, {
+			text({'INPROGRESS: '}), insert(1, 'task'),
+		}),
+		snip({
 			trig = 'note',
 			name = 'Note',
 			dscr = 'Note Comment',

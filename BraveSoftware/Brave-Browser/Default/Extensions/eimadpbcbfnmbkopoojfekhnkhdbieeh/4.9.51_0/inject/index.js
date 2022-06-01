@@ -523,6 +523,148 @@
         removeNode(document.getElementById("dark-reader-svg"));
     }
 
+    function evalMath(expression) {
+        const rpnStack = [];
+        const workingStack = [];
+        let lastToken;
+        for (let i = 0, len = expression.length; i < len; i++) {
+            const token = expression[i];
+            if (!token || token === " ") {
+                continue;
+            }
+            if (operators.has(token)) {
+                const op = operators.get(token);
+                while (workingStack.length) {
+                    const currentOp = operators.get(workingStack[0]);
+                    if (!currentOp) {
+                        break;
+                    }
+                    if (op.lessOrEqualThan(currentOp)) {
+                        rpnStack.push(workingStack.shift());
+                    } else {
+                        break;
+                    }
+                }
+                workingStack.unshift(token);
+            } else if (!lastToken || operators.has(lastToken)) {
+                rpnStack.push(token);
+            } else {
+                rpnStack[rpnStack.length - 1] += token;
+            }
+            lastToken = token;
+        }
+        rpnStack.push(...workingStack);
+        const stack = [];
+        for (let i = 0, len = rpnStack.length; i < len; i++) {
+            const op = operators.get(rpnStack[i]);
+            if (op) {
+                const args = stack.splice(0, 2);
+                stack.push(op.exec(args[1], args[0]));
+            } else {
+                stack.unshift(parseFloat(rpnStack[i]));
+            }
+        }
+        return stack[0];
+    }
+    class Operator {
+        constructor(precedence, method) {
+            this.precendce = precedence;
+            this.execMethod = method;
+        }
+        exec(left, right) {
+            return this.execMethod(left, right);
+        }
+        lessOrEqualThan(op) {
+            return this.precendce <= op.precendce;
+        }
+    }
+    const operators = new Map([
+        ["+", new Operator(1, (left, right) => left + right)],
+        ["-", new Operator(1, (left, right) => left - right)],
+        ["*", new Operator(2, (left, right) => left * right)],
+        ["/", new Operator(2, (left, right) => left / right)]
+    ]);
+
+    function getMatches(regex, input, group = 0) {
+        const matches = [];
+        let m;
+        while ((m = regex.exec(input))) {
+            matches.push(m[group]);
+        }
+        return matches;
+    }
+    function formatCSS(text) {
+        function trimLeft(text) {
+            return text.replace(/^\s+/, "");
+        }
+        function getIndent(depth) {
+            if (depth === 0) {
+                return "";
+            }
+            return " ".repeat(4 * depth);
+        }
+        if (text.length < 50000) {
+            const emptyRuleRegexp = /[^{}]+{\s*}/;
+            while (emptyRuleRegexp.test(text)) {
+                text = text.replace(emptyRuleRegexp, "");
+            }
+        }
+        const css = text
+            .replace(/\s{2,}/g, " ")
+            .replace(/\{/g, "{\n")
+            .replace(/\}/g, "\n}\n")
+            .replace(/\;(?![^\(|\"]*(\)|\"))/g, ";\n")
+            .replace(/\,(?![^\(|\"]*(\)|\"))/g, ",\n")
+            .replace(/\n\s*\n/g, "\n")
+            .split("\n");
+        let depth = 0;
+        const formatted = [];
+        for (let x = 0, len = css.length; x < len; x++) {
+            const line = `${css[x]}\n`;
+            if (line.includes("{")) {
+                formatted.push(getIndent(depth++) + trimLeft(line));
+            } else if (line.includes("}")) {
+                formatted.push(getIndent(--depth) + trimLeft(line));
+            } else {
+                formatted.push(getIndent(depth) + trimLeft(line));
+            }
+        }
+        return formatted.join("").trim();
+    }
+    function getParenthesesRange(input, searchStartIndex = 0) {
+        const length = input.length;
+        let depth = 0;
+        let firstOpenIndex = -1;
+        for (let i = searchStartIndex; i < length; i++) {
+            if (depth === 0) {
+                const openIndex = input.indexOf("(", i);
+                if (openIndex < 0) {
+                    break;
+                }
+                firstOpenIndex = openIndex;
+                depth++;
+                i = openIndex;
+            } else {
+                const closingIndex = input.indexOf(")", i);
+                if (closingIndex < 0) {
+                    break;
+                }
+                const openIndex = input.indexOf("(", i);
+                if (openIndex < 0 || closingIndex < openIndex) {
+                    depth--;
+                    if (depth === 0) {
+                        return {start: firstOpenIndex, end: closingIndex + 1};
+                    }
+                    i = closingIndex;
+                } else {
+                    depth++;
+                    i = openIndex;
+                }
+            }
+        }
+        return null;
+    }
+
     function hslToRGB({h, s, l, a = 1}) {
         if (s === 0) {
             const [r, b, g] = [l, l, l].map((x) => Math.round(x * 255));
@@ -740,68 +882,26 @@
             a: 1
         };
     }
-    const isCharDigit = (char) => char >= "0" && char <= "9";
-    const getAmountOfDigits = (number) => Math.floor(Math.log10(number)) + 1;
     function lowerCalcExpression(color) {
         let searchIndex = 0;
         const replaceBetweenIndices = (start, end, replacement) => {
             color =
                 color.substring(0, start) + replacement + color.substring(end);
         };
-        const getNumber = () => {
-            let resultNumber = 0;
-            for (let i = 1; i < 4; i++) {
-                const char = color[searchIndex + i];
-                if (char === " ") {
-                    break;
-                }
-                if (isCharDigit(char)) {
-                    resultNumber *= 10;
-                    resultNumber += Number(char);
-                } else {
-                    break;
-                }
-            }
-            const lenDigits = getAmountOfDigits(resultNumber);
-            searchIndex += lenDigits;
-            const possibleType = color[searchIndex + 1];
-            if (possibleType !== "%") {
-                return;
-            }
-            searchIndex++;
-            return resultNumber;
-        };
-        while ((searchIndex = color.indexOf("calc(")) !== 0) {
-            const startIndex = searchIndex;
-            searchIndex += 4;
-            const firstNumber = getNumber();
-            if (!firstNumber) {
+        while ((searchIndex = color.indexOf("calc(")) !== -1) {
+            const range = getParenthesesRange(color, searchIndex);
+            if (!range) {
                 break;
             }
-            if (color[searchIndex + 1] !== " ") {
-                break;
-            }
-            searchIndex++;
-            const operation = color[searchIndex + 1];
-            if (operation !== "+" && operation !== "-") {
-                break;
-            }
-            searchIndex++;
-            if (color[searchIndex + 1] !== " ") {
-                break;
-            }
-            searchIndex++;
-            const secondNumber = getNumber();
-            if (!secondNumber) {
-                break;
-            }
-            let replacement;
-            if (operation === "+") {
-                replacement = `${firstNumber + secondNumber}%`;
-            } else {
-                replacement = `${firstNumber - secondNumber}%`;
-            }
-            replaceBetweenIndices(startIndex, searchIndex + 2, replacement);
+            let slice = color.slice(range.start + 1, range.end - 1);
+            const includesPercentage = slice.includes("%");
+            slice = slice.split("%").join("");
+            const output = Math.round(evalMath(slice));
+            replaceBetweenIndices(
+                range.start - 4,
+                range.end,
+                output + (includesPercentage ? "%" : "")
+            );
         }
         return color;
     }
@@ -1268,6 +1368,7 @@
         /@import\s*(url\()?(('.+?')|(".+?")|([^\)]*?))\)? ?(screen)?;?/gi;
     function getCSSURLValue(cssURL) {
         return cssURL
+            .trim()
             .replace(/^url\((.*)\)$/, "$1")
             .trim()
             .replace(/^"(.*)"$/, "$1")
@@ -1317,86 +1418,6 @@
             }
         }
         return result;
-    }
-
-    function getMatches(regex, input, group = 0) {
-        const matches = [];
-        let m;
-        while ((m = regex.exec(input))) {
-            matches.push(m[group]);
-        }
-        return matches;
-    }
-    function formatCSS(text) {
-        function trimLeft(text) {
-            return text.replace(/^\s+/, "");
-        }
-        function getIndent(depth) {
-            if (depth === 0) {
-                return "";
-            }
-            return " ".repeat(4 * depth);
-        }
-        if (text.length < 50000) {
-            const emptyRuleRegexp = /[^{}]+{\s*}/;
-            while (emptyRuleRegexp.test(text)) {
-                text = text.replace(emptyRuleRegexp, "");
-            }
-        }
-        const css = text
-            .replace(/\s{2,}/g, " ")
-            .replace(/\{/g, "{\n")
-            .replace(/\}/g, "\n}\n")
-            .replace(/\;(?![^\(|\"]*(\)|\"))/g, ";\n")
-            .replace(/\,(?![^\(|\"]*(\)|\"))/g, ",\n")
-            .replace(/\n\s*\n/g, "\n")
-            .split("\n");
-        let depth = 0;
-        const formatted = [];
-        for (let x = 0, len = css.length; x < len; x++) {
-            const line = `${css[x]}\n`;
-            if (line.includes("{")) {
-                formatted.push(getIndent(depth++) + trimLeft(line));
-            } else if (line.includes("}")) {
-                formatted.push(getIndent(--depth) + trimLeft(line));
-            } else {
-                formatted.push(getIndent(depth) + trimLeft(line));
-            }
-        }
-        return formatted.join("").trim();
-    }
-    function getParenthesesRange(input, searchStartIndex = 0) {
-        const length = input.length;
-        let depth = 0;
-        let firstOpenIndex = -1;
-        for (let i = searchStartIndex; i < length; i++) {
-            if (depth === 0) {
-                const openIndex = input.indexOf("(", i);
-                if (openIndex < 0) {
-                    break;
-                }
-                firstOpenIndex = openIndex;
-                depth++;
-                i = openIndex;
-            } else {
-                const closingIndex = input.indexOf(")", i);
-                if (closingIndex < 0) {
-                    break;
-                }
-                const openIndex = input.indexOf("(", i);
-                if (openIndex < 0 || closingIndex < openIndex) {
-                    depth--;
-                    if (depth === 0) {
-                        return {start: firstOpenIndex, end: closingIndex + 1};
-                    }
-                    i = closingIndex;
-                } else {
-                    depth++;
-                    i = openIndex;
-                }
-            }
-        }
-        return null;
     }
 
     function createFilterMatrix(config) {
@@ -1844,6 +1865,7 @@
         UI_SET_SHORTCUT: "ui-set-shortcut",
         UI_TOGGLE_ACTIVE_TAB: "ui-toggle-active-tab",
         UI_MARK_NEWS_AS_READ: "ui-mark-news-as-read",
+        UI_MARK_NEWS_AS_DISPLAYED: "ui-mark-news-as-displayed",
         UI_LOAD_CONFIG: "ui-load-config",
         UI_APPLY_DEV_DYNAMIC_THEME_FIXES: "ui-apply-dev-dynamic-theme-fixes",
         UI_RESET_DEV_DYNAMIC_THEME_FIXES: "ui-reset-dev-dynamic-theme-fixes",
@@ -4719,12 +4741,6 @@
             }
             cancelAsyncOperations = false;
             function removeCSSRulesFromSheet(sheet) {
-                try {
-                    if (sheet.replaceSync) {
-                        sheet.replaceSync("");
-                        return;
-                    }
-                } catch (err) {}
                 for (let i = sheet.cssRules.length - 1; i >= 0; i--) {
                     sheet.deleteRule(i);
                 }
@@ -5902,13 +5918,15 @@
         changeMetaThemeColorWhenAvailable(filter);
     }
     function handleAdoptedStyleSheets(node) {
-        if (Array.isArray(node.adoptedStyleSheets)) {
-            if (node.adoptedStyleSheets.length > 0) {
-                const newManger = createAdoptedStyleSheetOverride(node);
-                adoptedStyleManagers.push(newManger);
-                newManger.render(filter, ignoredImageAnalysisSelectors);
+        try {
+            if (Array.isArray(node.adoptedStyleSheets)) {
+                if (node.adoptedStyleSheets.length > 0) {
+                    const newManger = createAdoptedStyleSheetOverride(node);
+                    adoptedStyleManagers.push(newManger);
+                    newManger.render(filter, ignoredImageAnalysisSelectors);
+                }
             }
-        }
+        } catch (err) {}
     }
     function watchForUpdates() {
         const managedStyles = Array.from(styleManagers.keys());

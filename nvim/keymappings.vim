@@ -13,6 +13,9 @@ nmap <F1> :xa<CR>
 imap <F8> <ESC>:qa!<CR>
 nmap <F8> :qa!<CR>
 
+" Change to Current Directory
+nmap <Leader>cd :lcd %:p:h<CR>
+
 " Create newline above or below
 nmap <Leader><S-l> <S-o><ESC>
 nmap <Leader>l o<ESC>
