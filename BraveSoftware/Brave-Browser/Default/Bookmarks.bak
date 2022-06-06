@@ -1,5 +1,5 @@
 {
-   "checksum": "23b76e0f2f5b46856e7c6a171ce9e6ac",
+   "checksum": "d838efcfabd7c9c6a11b7dac431ecec4",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -9,13 +9,6 @@
             "name": "Quarterly Objectives for Data - Weekdone",
             "type": "url",
             "url": "https://weekdone.com/okr/443071"
-         }, {
-            "date_added": "13272764912000000",
-            "guid": "2a8b5c31-52fe-44ea-8f9d-121d923e06a2",
-            "id": "7",
-            "name": "Data science team board - Agile Board - Reflex Media Jira",
-            "type": "url",
-            "url": "https://jira.reflexmedia.com/secure/RapidBoard.jspa?rapidView=250&selectedIssue=DST-1370"
          }, {
             "date_added": "13276044968000000",
             "guid": "6d1ac2de-ac9e-4478-9b36-b4b0098b581d",
@@ -87,22 +80,29 @@
             "type": "url",
             "url": "https://kibana.reflexmedia.com/_plugin/kibana/app/kibana#/home?_g=()"
          }, {
-            "date_added": "13298495674953498",
-            "guid": "d19a21e0-63cf-4eef-98f0-ca54d1db817e",
-            "id": "63",
-            "name": "Git how to clone with SSH key, username - Stack Overflow",
-            "type": "url",
-            "url": "https://stackoverflow.com/questions/41714882/git-how-to-clone-with-ssh-key-username"
-         }, {
             "date_added": "13298578606667847",
             "guid": "064a9cb3-cf31-4c2f-8cf6-0d4c2155f819",
             "id": "65",
             "name": "Data science team board - Agile Board - Reflex Media Jira",
             "type": "url",
             "url": "https://jira.reflexmedia.com/secure/RapidBoard.jspa?rapidView=250"
+         }, {
+            "date_added": "13298951572336477",
+            "guid": "961acfa6-5979-41dd-98af-9c3bfcfcc438",
+            "id": "67",
+            "name": "OpenVPN - ArchWiki",
+            "type": "url",
+            "url": "https://wiki.archlinux.org/title/OpenVPN"
+         }, {
+            "date_added": "13298959495819234",
+            "guid": "064032f8-f277-4647-90c4-a94705581390",
+            "id": "69",
+            "name": "NetworkManager - ArchWiki",
+            "type": "url",
+            "url": "https://wiki.archlinux.org/title/NetworkManager#Automatically_connect_to_VPN"
          } ],
          "date_added": "13280639152327180",
-         "date_modified": "13298578606667847",
+         "date_modified": "13298959495819234",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",

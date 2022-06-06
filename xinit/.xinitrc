@@ -60,9 +60,6 @@ conky &
 # Set DWM Status Bar
 bash /home/jordan/Random-Scripts/dwmbar.sh &
 
-# Start Open VPN
-alacritty -e doas openvpn --auth-nocache --config /home/jordan/openvpn/pepperlane-jordanw.ovpn --auth-user-pass /home/jordan/openvpn/login.conf &
-
 # Restart DWM
 while true; do
     dwm >/dev/null 2>&1
