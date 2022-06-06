@@ -6,7 +6,7 @@ vim.g.dashboard_custom_section = {
 	c = { description = { ' Search For Word   ' }, command = 'Telescope live_grep' },
 	d = { description = { ' Neovim Plugins    ' }, command = 'edit ~/.config/nvim/vim-plug/plugins.vim' },
 	e = { description = { ' Neovim Options    ' }, command = 'edit ~/.config/nvim/options.vim' },
-	f = { description = { ' Neovim Init File  ' }, command = 'edit ~/.config/nvim/init.vim' },
+	f = { description = { ' Neovim Keybindings' }, command = 'edit ~/.config/nvim/keymappings.vim' },
 }
 
 vim.g.dashboard_custom_header = {
