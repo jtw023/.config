@@ -41,7 +41,8 @@ telescope.setup {
 			theme = "dropdown"
 		},
 		grep_string = {
-			theme= "dropdown"
+			theme = "dropdown",
+			search_dirs = vim.fn.expand("%:p")
 		}
   },
   extensions = {
