@@ -13,8 +13,8 @@ nmap <F1> :xa<CR>
 imap <F8> <ESC>:qa!<CR>
 nmap <F8> :qa!<CR>
 
-" Change to Current Directory
-nmap <Leader>cd :lcd %:p:h<CR>
+" Show all TODOs
+nmap <Leader>d :exe ":TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
 
 " Create newline above or below
 nmap <Leader><S-l> <S-o><ESC>
@@ -65,7 +65,7 @@ nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
 nmap <Leader>fh :w \| :Telescope oldfiles<CR>
 
 " Live Grep
-nmap <Leader>fg :w \| :Telescope live_grep cwd=.<CR>
+nmap <Leader>fg :exe "w \| :Telescope live_grep cwd=" .. fnameescape(expand("%:p:h"))<CR>
 
 " View variables
 nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
