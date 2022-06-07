@@ -22,10 +22,16 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*.sql",
+	command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '-- %s')",
+	group = group1
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.md", "*.py" },
 	command = [[nmap <A-w> :w<CR>]],
 	group = group2
-})vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.lua", "*.vim" },
 	command = [[nmap <A-w> :w \| :so %<CR>]],
 	group = group2
