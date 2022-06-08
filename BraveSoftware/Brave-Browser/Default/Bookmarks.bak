@@ -1,5 +1,5 @@
 {
-   "checksum": "d838efcfabd7c9c6a11b7dac431ecec4",
+   "checksum": "ef668985673250a252c60d8875a4b278",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -86,20 +86,6 @@
             "name": "Data science team board - Agile Board - Reflex Media Jira",
             "type": "url",
             "url": "https://jira.reflexmedia.com/secure/RapidBoard.jspa?rapidView=250"
-         }, {
-            "date_added": "13298951572336477",
-            "guid": "961acfa6-5979-41dd-98af-9c3bfcfcc438",
-            "id": "67",
-            "name": "OpenVPN - ArchWiki",
-            "type": "url",
-            "url": "https://wiki.archlinux.org/title/OpenVPN"
-         }, {
-            "date_added": "13298959495819234",
-            "guid": "064032f8-f277-4647-90c4-a94705581390",
-            "id": "69",
-            "name": "NetworkManager - ArchWiki",
-            "type": "url",
-            "url": "https://wiki.archlinux.org/title/NetworkManager#Automatically_connect_to_VPN"
          } ],
          "date_added": "13280639152327180",
          "date_modified": "13298959495819234",
