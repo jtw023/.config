@@ -14,7 +14,7 @@ imap <F8> <ESC>:qa!<CR>
 nmap <F8> :qa!<CR>
 
 " Show all TODOs
-nmap <Leader>d :exe ":TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
+nmap <Leader>d :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
 
 " Create newline above or below
 nmap <Leader><S-l> <S-o><ESC>

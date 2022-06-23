@@ -51,8 +51,8 @@ nmap <Leader>gp :Gitsigns prev_hunk<CR>		  nmap <A-n> zf												 			Next Occ
 nmap <Leader>s :DBUI<CR>	nmap <C-f> :lua vim.lsp.buf.formatting()<CR>	nmap <Leader>j zL	 <Leader>fv :Telescope lsp_document_symbols<CR>
 													    					nmap <Leader>k zH
 
-##		NERD Tree Mappings
-	nmap <A-a> Create new file
+##		NERD Tree Mappings			Show All TODOs
+	nmap <A-a> Create new file		nmap <Leader>d
 	  nmap <A-d> Delete file
 	   nmap <A-m> Move file
 nmap <Leader>m toggle nerd tree
