@@ -1,5 +1,5 @@
 {
-   "checksum": "ef668985673250a252c60d8875a4b278",
+   "checksum": "1b6d990603bf43101d7a2b09186e0a87",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -86,9 +86,23 @@
             "name": "Data science team board - Agile Board - Reflex Media Jira",
             "type": "url",
             "url": "https://jira.reflexmedia.com/secure/RapidBoard.jspa?rapidView=250"
+         }, {
+            "date_added": "13299285753344583",
+            "guid": "1dabd331-65bd-41ff-a787-caf252036f65",
+            "id": "67",
+            "name": "Seeking PR Pitch - Required Stats - 2022-06-09 - Google Docs",
+            "type": "url",
+            "url": "https://docs.google.com/document/d/10jmw0r7xdbITIxzRaqOgIFF1_wStc7hQWNDhYcVKXNY/edit#heading=h.bnzw1zg9vyhu"
+         }, {
+            "date_added": "13301521767488583",
+            "guid": "cc8d9f43-ac04-4674-a5fb-f39260e3e26a",
+            "id": "73",
+            "name": "SQL Runner",
+            "type": "url",
+            "url": "https://reflexmedia.looker.com/sql/hh8b3kwvdnxmv9"
          } ],
          "date_added": "13280639152327180",
-         "date_modified": "13299181394489704",
+         "date_modified": "13301614446574210",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",

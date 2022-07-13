@@ -1,5 +1,5 @@
 {
-   "checksum": "25ad1d77125d50598eb45b743c7c2235",
+   "checksum": "67590305b897854b5133c168a4cf610e",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -93,9 +93,23 @@
             "name": "Seeking PR Pitch - Required Stats - 2022-06-09 - Google Docs",
             "type": "url",
             "url": "https://docs.google.com/document/d/10jmw0r7xdbITIxzRaqOgIFF1_wStc7hQWNDhYcVKXNY/edit#heading=h.bnzw1zg9vyhu"
+         }, {
+            "date_added": "13301521767488583",
+            "guid": "cc8d9f43-ac04-4674-a5fb-f39260e3e26a",
+            "id": "73",
+            "name": "SQL Runner",
+            "type": "url",
+            "url": "https://reflexmedia.looker.com/sql/hh8b3kwvdnxmv9"
+         }, {
+            "date_added": "13302224318109156",
+            "guid": "fd86d52f-fc13-4aef-aa34-b326e60d291b",
+            "id": "76",
+            "name": "Redshift Running Queries",
+            "type": "url",
+            "url": "https://us-west-2.console.aws.amazon.com/redshiftv2/home?region=us-west-2#queries?cluster=&filter=ActiveQueries&timerange=last12Hours"
          } ],
          "date_added": "13280639152327180",
-         "date_modified": "13299285753344583",
+         "date_modified": "13302224318109156",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks",
