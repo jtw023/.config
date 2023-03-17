@@ -9,15 +9,14 @@ require("todo-comments").setup {
 	    alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
 	    -- signs = false, -- configure signs for some keywords individually
 	  },
-	  INPROGRESS = { icon = " ", color = "question" },
-	  QUESTION = { icon = " ", color = "question" },
-	  CAVEAT = { icon = " ", color = "error" },
-	  TODO = { icon = " ", color = "error" },
-	  HACK = { icon = " ", color = "error" },
-	  WARN = { icon = " ", color = "error", alt = { "WARNING", "XXX" } },
-	  NEXT = { icon = " ", color = "error", alt = { "WARNING", "XXX" } },
-	  PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-	  NOTE = { icon = " ", color = "error", alt = { "INFO" } },
+	  INPROGRESS = { icon = " ", color = "#39FF14" },
+	  QUESTION = { icon = " ", color = "#00FFFF" },
+	  CAVEAT = { icon = " ", color = "#ff00ff" },
+	  TODO = { icon = " ", color = "#FF3131" },
+	  WARN = { icon = " ", color = "#E69D00" },
+	  TITLE = { icon = " ", color = "#7d12ff" },
+	  LINK = { icon = " ", color = "#CCFF00" },
+	  ABOUT = { icon = " ", color = "#FFFFFF" },
     },
     merge_keywords = true, -- when true, custom keywords will be merged with the defaults
     -- highlighting of the line containing the todo comment
@@ -25,23 +24,13 @@ require("todo-comments").setup {
     -- * keyword: highlights of the keyword
     -- * after: highlights after the keyword (todo text)
     highlight = {
-	  before = "", -- "fg" or "bg" or empty
+	  before = "fg", -- "fg" or "bg" or empty
 	  keyword = "fg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
-	  after = "", -- "fg" or "bg" or empty
+	  after = "fg", -- "fg" or "bg" or empty
 	  pattern = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlightng (vim regex)
 	  comments_only = true, -- uses treesitter to match keywords in comments only
 	  max_line_len = 400, -- ignore lines longer than this
 	  exclude = {}, -- list of file types to exclude highlighting
-    },
-    -- list of named colors where we try to extract the guifg from the
-    -- list of hilight groups or use the hex color if hl not found as a fallback
-   	colors = {
-	  error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-	  warning = { "DiagnosticWarning", "WarningMsg", "#FBBF24" },
-	  info = { "DiagnosticInfo", "#ffc0cb" },
-	  hint = { "DiagnosticHint", "#ff00ff" },
-	  default = { "Identifier", "#7C3AED" },
-	  question = { "Question", "#00FFFF"}
     },
     search = {
 	  command = "rg",

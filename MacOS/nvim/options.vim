@@ -3,8 +3,17 @@ set termguicolors
 syntax on
 set encoding=utf-8
 
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
+
 " turn off line wrap
 set nowrap
+
+" Set fold method to persistent between sessions
+set foldmethod=marker
 
 " Timeout
 set timeoutlen=500
@@ -46,6 +55,9 @@ set clipboard=unnamedplus
 " Spell Suggest
 set spell!
 set spelllang=en_us
+
+" Turn off highlighting for group Todo
+hi clear Todo
 
 " Set Rainbow Colors
 hi rainbowcol2 guifg=#00FF00

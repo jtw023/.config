@@ -1,11 +1,3 @@
-" auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall
-	autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 	" Colorizer Plugin
@@ -16,9 +8,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" Auto pairs for '(' '[' '{'
 	Plug 'windwp/nvim-autopairs'
 	" Multi Cursor support
-	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+	" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	" Vimwiki
-	Plug 'vimwiki/vimwiki'
+	" Plug 'vimwiki/vimwiki'
+	" Fold lines
+	Plug 'anuvyklack/pretty-fold.nvim'
+	Plug 'anuvyklack/fold-preview.nvim'
+	Plug 'anuvyklack/keymap-amend.nvim'
 	" Null-ls(format)
 	Plug 'jose-elias-alvarez/null-ls.nvim'
 	" Colorschemes
@@ -29,16 +25,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'kristijanhusak/vim-dadbod-completion'
 	" Comment Plugin
 	Plug 'terrortylor/nvim-comment'
-	" Easy Motion
-	Plug 'easymotion/vim-easymotion'
-	" Float Term Plugin
-	Plug 'voldikss/vim-floaterm'
 	" Install LSP
 	Plug 'neovim/nvim-lspconfig'
-	Plug 'nvim-lua/completion-nvim'
-	Plug 'williamboman/nvim-lsp-installer'
+	" Plug 'nvim-lua/completion-nvim'
+	Plug 'williamboman/mason.nvim'
+	Plug 'williamboman/mason-lspconfig.nvim'
 	" Git Signs
-	Plug 'lewis6991/gitsigns.nvim'
+	" Plug 'lewis6991/gitsigns.nvim'
 	" Todo Comments
 	Plug 'folke/todo-comments.nvim'
 	" CMP Plugins
@@ -47,14 +40,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'hrsh7th/cmp-path'
 	Plug 'hrsh7th/cmp-nvim-lua'
 	Plug 'hrsh7th/cmp-nvim-lsp'
-	Plug 'saadparwaiz1/cmp_luasnip'
+	" Plug 'saadparwaiz1/cmp_luasnip'
 	Plug 'hrsh7th/cmp-calc'
 	Plug 'f3fora/cmp-spell'
 	" Snippets
-	Plug 'L3MON4D3/LuaSnip'
-	Plug 'rafamadriz/friendly-snippets'
+	Plug 'SirVer/ultisnips'
+	Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+	Plug 'honza/vim-snippets'
+	" Plug 'L3MON4D3/LuaSnip'
+	" Plug 'rafamadriz/friendly-snippets'
 	" Dashboard
-	Plug 'glepnir/dashboard-nvim'
+	" Plug 'glepnir/dashboard-nvim'
 	" Vim Telescope
 	Plug 'sharkdp/fd'
 	Plug 'nvim-lua/plenary.nvim'

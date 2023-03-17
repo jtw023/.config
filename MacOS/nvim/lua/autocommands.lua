@@ -3,22 +3,34 @@ local group2 = vim.api.nvim_create_augroup("Save_File", { clear = true })
 local group3 = vim.api.nvim_create_augroup("Completion", { clear = true })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.py",
-	command = [[nmap <A-r> :w \| :!time python3 %<CR>]],
+	command = [[nmap <S-t> :w \| :!time python3 %<CR>]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.js",
-	command = [[nmap <A-r> :w \| :!time node %<CR>]],
+	command = [[nmap <S-t> :w \| :!time node %<CR>]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sh",
-	command = [[nmap <A-r> :w \| :!time sh %<CR>]],
+	command = [[nmap <S-t> :w \| :!time sh %<CR>]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sql",
-	command = [[nmap <A-r> :w<CR>]],
+	-- command = [[nmap <S-r> <Leader><S-s> \| :DBUIHideNotifications<CR>]],
+	command = [[nmap <S-r> <Leader><S-s>]],
+	group = group1
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*.sql",
+	-- command = [[vmap <S-r> <Leader><S-s> \| :DBUIHideNotifications<CR>]],
+	command = [[vmap <S-r> <Leader><S-s>]],
+	group = group1
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*",
+	command = [[:hi clear Todo]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
@@ -28,17 +40,17 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.md", "*.py" },
-	command = [[nmap <A-w> :w<CR>]],
+	command = [[nmap <Leader><S-w> :w<CR>]],
 	group = group2
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.lua", "*.vim" },
-	command = [[nmap <A-w> :w \| :so %<CR>]],
+	command = [[nmap <Leader><S-w> :w \| :so %<CR>]],
 	group = group2
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "~/.config/nvim/lua/snippets.lua",
-	command = [[nmap <A-w> :w \| :so ~/.config/nvim/lua/plug-cmp.lua<CR>]],
+	command = [[nmap <Leader><S-w> :w \| :so ~/.config/nvim/lua/plug-cmp.lua<CR>]],
 	group = group2
 })
 vim.api.nvim_create_autocmd({"FileType"}, {

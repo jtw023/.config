@@ -2,45 +2,47 @@
 noremap <Space> <Nop>
 let mapleader = " "
 
-" Spawn terminal in split screen
-nmap <Leader>t :w \| :FloatermNew<CR>
-
 " Save and quit
-imap <F1> <ESC>:xa<CR>
-nmap <F1> :xa<CR>
+nmap 4 :xa<CR>
 
 " Quit and exit
-imap <F8> <ESC>:qa!<CR>
-nmap <F8> :qa!<CR>
+nmap 8 :qa!<CR>
 
-" Show all TODOs
-nmap <Leader>d :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
+" Toggle Dadbod drawer
+nmap <Leader>o :DBUIToggle<CR>
 
 " Create newline above or below
-nmap <Leader><S-l> <S-o><ESC>
-nmap <Leader>l o<ESC>
+nmap <S-u> <S-o><ESC>
+nmap <S-b> o<ESC>
 
 " Fold Lines
-nmap <A-f> za
-vmap <A-f> za
-nmap <A-n> zf
-vmap <A-n> zf
+" Create a new fold
+nmap <C-n> zf
+vmap <C-n> zf
+
+" Toggle the fold
+nmap <C-f> za
+vmap <C-f> za
+
+" Delete the fold
+nmap <C-x> zd
+vmap <C-x> zd
 
 " Suggest Spelling
-nmap <C-s> z=
+nmap <S-s> z=
 
 " Move file in nerdtree
-nmap <A-m> mm
+" nmap <A-m> mm
 " Delete file in nerdtree
-nmap <A-d> md
+" nmap <A-d> md
 " Create new file in nerdtree
-nmap <A-a> ma
+" nmap <A-a> ma
 
 " Change window
-nmap <Leader>o <C-w>l
-nmap <Leader>i <C-w>k
-nmap <Leader>e <C-w>j
-nmap <Leader>n <C-w>h
+nmap <Leader>l <C-w>l
+nmap <Leader>k <C-w>k
+nmap <Leader>j <C-w>j
+nmap <Leader>h <C-w>h
 
 " Rename
 nmap <Leader>r :%s/<C-r><C-w>/
@@ -51,12 +53,21 @@ nmap <expr> <Leader>m g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':
 " Launch Dadbod
 nmap <Leader>s :DBUI<CR>
 
-" Scroll horizontal
-nmap <Leader>j zL
-nmap <Leader>k zH
+" Jump Scroll
+nmap <S-l> zL
+nmap <S-h> zH
+nmap <S-j> <C-d>
+nmap <S-k> <C-u>
+vmap <S-l> zL
+vmap <S-j> <C-d>
+vmap <S-k> <C-u>
+vmap <S-h> zH
+
+" Show all TODOs
+nmap <Leader>d :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
 
 " Open Buffer
-nmap <A-b> :w \| :Telescope buffers<CR>
+nmap <Leader>b :w \| :Telescope buffers<CR>
 
 " Find Files
 nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
@@ -74,41 +85,35 @@ nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
 nmap <Leader>hh :w \| :Telescope help_tags<CR>
 
 " Expand JSON
-nmap <A-e> :%!python -m json.tool<CR>
+nmap <C-e> :%!python -m json.tool<CR>
 
 " Split screen
 nmap <Leader>vs :vs [No Name]<CR>
 
 " Format
-nmap <C-f> :lua vim.lsp.buf.formatting()<CR>
+" nmap <C-f> :lua vim.lsp.buf.formatting()<CR>
 
 " Resize buffers
-nmap <C-Up> :resize -2<CR>
-nmap <Leader><C-Up> :resize -2<CR>
-nmap <C-Down> :resize +2<CR>
-nmap <Leader><C-Down> :resize +2<CR>
-nmap <C-Left> :vertical resize -2<CR>
-nmap <Leader><C-Left> :vertical resize -2<CR>
-nmap <C-Right> :vertical resize +2<CR>
-nmap <Leader><C-Right> :vertical resize +2<CR>
+nmap <S-Up> :resize -2<CR>
+nmap <S-Down> :resize +2<CR>
+nmap <S-Left> :vertical resize -2<CR>
+nmap <S-Right> :vertical resize +2<CR>
 
 " Move selected line
-vmap <S-e> :m '<-2<CR>gv=gv
-vmap <Leader><S-e> :m '<-2<CR>gv=gv
-vmap <S-n> :m '>+1<CR>gv=gv
-vmap <Leader><S-n> :m '>+1<CR>gv=gv
+vmap <S-u> :m '<-2<CR>gv=gv
+vmap <S-b> :m '>+1<CR>gv=gv
 
 " Indenting
 vnoremap <Leader>, <<<Esc>gv
 vnoremap <Leader>. >><Esc>gv
 
 " Git Signs
-nmap <Leader>gs :Gitsigns preview_hunk<CR>
-nmap <Leader>gn :Gitsigns next_hunk<CR>
-nmap <Leader>gp :Gitsigns prev_hunk<CR>
+" nmap <Leader>gs :Gitsigns preview_hunk<CR>
+" nmap <Leader>gn :Gitsigns next_hunk<CR>
+" nmap <Leader>gp :Gitsigns prev_hunk<CR>
 
 " Turn off highlighting
-map <F2> :nohlsearch<CR>
+map 2 :nohlsearch<CR>
 
 " Comment toggle
 nmap <Leader>/ :CommentToggle<CR>
@@ -119,7 +124,7 @@ nmap <Leader>hr <C-w>L
 nmap <Leader>vr <C-w>J
 
 " Cheat sheet
-nmap <F3> :tabnew /home/jordan/.config/nvim/vimkeybindings.md<CR>
+nmap 3 :tabnew /home/jordan/.config/nvim/vimkeybindings.md<CR>
 
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
