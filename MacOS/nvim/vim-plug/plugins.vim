@@ -2,15 +2,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 	" Colorizer Plugin
 	Plug 'norcalli/nvim-colorizer.lua'
-	" File Explorer
-	Plug 'scrooloose/NERDTree'
-	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	" Auto pairs for '(' '[' '{'
-	Plug 'windwp/nvim-autopairs'
-	" Multi Cursor support
-	" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-	" Vimwiki
-	" Plug 'vimwiki/vimwiki'
+	Plug 'm4xshen/autoclose.nvim'
 	" Fold lines
 	Plug 'anuvyklack/pretty-fold.nvim'
 	Plug 'anuvyklack/fold-preview.nvim'
@@ -18,7 +11,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	" Null-ls(format)
 	Plug 'jose-elias-alvarez/null-ls.nvim'
 	" Colorschemes
-	Plug 'EdenEast/nightfox.nvim'
+	Plug 'nxvu699134/vn-night.nvim'
 	" Vim dadbod
 	Plug 'tpope/vim-dadbod'
 	Plug 'kristijanhusak/vim-dadbod-ui'
@@ -27,7 +20,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'terrortylor/nvim-comment'
 	" Install LSP
 	Plug 'neovim/nvim-lspconfig'
-	" Plug 'nvim-lua/completion-nvim'
 	Plug 'williamboman/mason.nvim'
 	Plug 'williamboman/mason-lspconfig.nvim'
 	" Git Signs
@@ -49,8 +41,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'honza/vim-snippets'
 	" Plug 'L3MON4D3/LuaSnip'
 	" Plug 'rafamadriz/friendly-snippets'
-	" Dashboard
-	" Plug 'glepnir/dashboard-nvim'
 	" Vim Telescope
 	Plug 'sharkdp/fd'
 	Plug 'nvim-lua/plenary.nvim'
@@ -62,7 +52,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'nvim-lualine/lualine.nvim'
 	" Dev Icons
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'p00f/nvim-ts-rainbow'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()

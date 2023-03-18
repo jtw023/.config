@@ -11,5 +11,5 @@ m.setup({
 	}
 })
 mlsp.setup{
-	ensure_installed = { "pyright", "sqls" }
+	ensure_installed = { "pyright" }
 }

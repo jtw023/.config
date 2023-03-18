@@ -48,7 +48,26 @@ nmap <Leader>h <C-w>h
 nmap <Leader>r :%s/<C-r><C-w>/
 
 " Explorer
-nmap <expr> <Leader>m g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':w<CR>:NERDTreeFind<CR>'
+" Toggle Vexplore with Leader-m
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+          let cur_win_nr = winnr()
+          exec expl_win_num . 'wincmd w'
+          close
+          exec cur_win_nr . 'wincmd w'
+          unlet t:expl_buf_num
+      else
+          unlet t:expl_buf_num
+      endif
+  else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+map <silent> <Leader>m :call ToggleVExplorer()<CR>
 
 " Launch Dadbod
 nmap <Leader>s :DBUI<CR>
@@ -68,6 +87,9 @@ nmap <Leader>d :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%
 
 " Open Buffer
 nmap <Leader>b :w \| :Telescope buffers<CR>
+
+" Close Buffer
+nmap <Leader>c :bd<CR>
 
 " Find Files
 nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
@@ -94,10 +116,10 @@ nmap <Leader>vs :vs [No Name]<CR>
 " nmap <C-f> :lua vim.lsp.buf.formatting()<CR>
 
 " Resize buffers
-nmap <S-Up> :resize -2<CR>
-nmap <S-Down> :resize +2<CR>
-nmap <S-Left> :vertical resize -2<CR>
+nmap <S-Up> :resize +2<CR>
+nmap <S-Down> :resize -2<CR>
 nmap <S-Right> :vertical resize +2<CR>
+nmap <S-Left> :vertical resize -2<CR>
 
 " Move selected line
 vmap <S-u> :m '<-2<CR>gv=gv
@@ -131,11 +153,11 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " COLORFUL COMMENTS
-nmap <S-t> i-- TODO: 
-nmap <S-q> i-- QUESTION: 
-nmap <S-f> i-- FIX: 
-nmap <S-z> i-- CAVEAT: 
-nmap <S-x> i-- WARN: 
-nmap <S-p> i-- TITLE: 
-nmap <S-w> i-- LINK: 
-nmap <S-m> i-- ABOUT: 
+" nmap <S-t> i-- TODO: 
+" nmap <S-q> i-- QUESTION: 
+" nmap <S-f> i-- FIX: 
+" nmap <S-z> i-- CAVEAT: 
+" nmap <S-x> i-- WARN: 
+" nmap <S-p> i-- TITLE: 
+" nmap <S-w> i-- LINK: 
+" nmap <S-m> i-- ABOUT: 

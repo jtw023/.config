@@ -2,6 +2,7 @@
 set termguicolors
 syntax on
 set encoding=utf-8
+colorscheme vn-night
 
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
@@ -56,18 +57,21 @@ set clipboard=unnamedplus
 set spell!
 set spelllang=en_us
 
-" Turn off highlighting for group Todo
+" Turn off highlighting for groups
 hi clear Todo
+hi clear SpellBad
+hi clear Type
+hi clear SpellLocal
 
-" Set Rainbow Colors
-hi rainbowcol2 guifg=#00FF00
-hi rainbowcol3 guifg=#5218FA
-hi rainbowcol4 guifg=#FF69B4
-hi rainbowcol5 guifg=#808080
-hi rainbowcol7 guifg=#00FF00
-hi rainbowcol8 guifg=#5218FA
-hi rainbowcol9 guifg=#FF69B4
-hi rainbowcol10 guifg=#808080
+" Set highlights
+hi Visual guifg = #000000
+hi Search guifg = #000000
+hi IncSearch guifg = #000000
 
 " Highlight on yank
 au TextYankPost * silent! lua vim.highlight.on_yank()
+
+" Allow file manager to preview files with "p"
+let g:netrw_preview   = 1
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 30
