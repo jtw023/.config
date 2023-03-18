@@ -11,6 +11,7 @@ lua require'plug-lualine'
 lua require'plug-nerdtree'
 lua require'plug-treesitter'
 "lua require'plug-gitsigns'
+lua require'luasnip-config'
 lua require'lsp'
 lua require'plug-telescope'
 lua require'telescope'.load_extension('media_files')

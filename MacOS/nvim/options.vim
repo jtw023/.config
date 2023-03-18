@@ -4,6 +4,9 @@ syntax on
 set encoding=utf-8
 colorscheme vn-night
 
+" Turn off Tabbar
+set showtabline=0
+
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 
@@ -15,6 +18,7 @@ set nowrap
 
 " Set fold method to persistent between sessions
 set foldmethod=marker
+set foldmarker=\"FoldStart,\"FoldEnd
 
 " Timeout
 set timeoutlen=500
@@ -67,6 +71,7 @@ hi clear SpellLocal
 hi Visual guifg = #000000
 hi Search guifg = #000000
 hi IncSearch guifg = #000000
+hi Folded guifg = #000000
 
 " Highlight on yank
 au TextYankPost * silent! lua vim.highlight.on_yank()

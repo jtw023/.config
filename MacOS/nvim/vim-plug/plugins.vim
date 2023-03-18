@@ -36,9 +36,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'hrsh7th/cmp-calc'
 	Plug 'f3fora/cmp-spell'
 	" Snippets
-	Plug 'SirVer/ultisnips'
-	Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-	Plug 'honza/vim-snippets'
+	" Plug 'SirVer/ultisnips'
+	" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+	" Plug 'honza/vim-snippets'
 	" Plug 'L3MON4D3/LuaSnip'
 	" Plug 'rafamadriz/friendly-snippets'
 	" Vim Telescope

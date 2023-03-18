@@ -2,7 +2,8 @@ local pf = require('pretty-fold')
 local fp = require('fold-preview')
 
 pf.setup{
-	keep_indentation = false,
+	keep_indentation = true,
+	remove_fold_markers = true,
 	fill_char = '━',
 	sections = {
 	left = {
