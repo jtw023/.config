@@ -129,3 +129,13 @@ nmap 3 :tabnew /home/jordan/.config/nvim/vimkeybindings.md<CR>
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" COLORFUL COMMENTS
+nmap <S-t> i-- TODO: 
+nmap <S-q> i-- QUESTION: 
+nmap <S-f> i-- FIX: 
+nmap <S-z> i-- CAVEAT: 
+nmap <S-x> i-- WARN: 
+nmap <S-p> i-- TITLE: 
+nmap <S-w> i-- LINK: 
+nmap <S-m> i-- ABOUT: 

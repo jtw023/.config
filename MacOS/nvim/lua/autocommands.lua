@@ -48,11 +48,6 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	command = [[nmap <Leader><S-w> :w \| :so %<CR>]],
 	group = group2
 })
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = "~/.config/nvim/lua/snippets.lua",
-	command = [[nmap <Leader><S-w> :w \| :so ~/.config/nvim/lua/plug-cmp.lua<CR>]],
-	group = group2
-})
 vim.api.nvim_create_autocmd({"FileType"}, {
 	pattern = { "sql", "mysql", "plsql" },
 	command = "lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }}})",
