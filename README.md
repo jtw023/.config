@@ -16,6 +16,8 @@ cp -v ~$USER/.config/Xresources/.Xresources ~$USER/.Xresources && cp -v ~$USER/.
 ~~~
 ln -s ~$USER/.config/Linux/nvim ~$USER/.config/
 ~~~
+
+<b>These config files make use of the Fantasque Sans Mono font family systemwide. The TTF fonts for the entire family as well as the nerd family variant are available over in my fonts repo.</b>
 </details>
 
 <details>
@@ -37,8 +39,8 @@ ln -s $HOME/.config/MacOS/kitty $HOME/.config/
 ~~~
 cp $HOME/.config/MacOS/.gitignore $HOME/.config/
 ~~~
-</details>
 
-<b>These config files make use of the Fantasque Sans Mono font family systemwide. The TTF fonts for the entire family as well as the nerd family variant are available over in my fonts repo.</b>
+<b>These config files make use of the Fira Code font family in the kitty terminal emulator. If you use that terminal, the TTF fonts are available over in my fonts repo.</b>
+</details>
 
 As always, please make sure you understand what these commands will do before you run them on your system.
