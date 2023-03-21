@@ -8,7 +8,7 @@ git clone https://github.com/jtw023/.config.git
 ~~~
 
 <details>
-	<h1><summary>Linux</summary></h1>
+	<summary>Linux</summary>
 
 Then as a normal user run commands:
 ~~~
@@ -20,7 +20,7 @@ ln -s ~$USER/.config/Linux/nvim ~$USER/.config/
 </details>
 
 <details>
-	<h1><summary>MacOS</summary></h1>
+	<summary>MacOS</summary>
 
 Then as a normal user run commands:
 ~~~
