@@ -2,15 +2,14 @@
 
 ## Installation
 
-From your users home directory:
-~~~
-git clone https://github.com/jtw023/.config.git
-~~~
 
 <details>
 	<summary>Linux</summary>
 
-Then as a normal user run commands:
+As a normal user open a terminal and run commands:
+~~~
+git clone https://github.com/jtw023/.config.git ~$USER/
+~~~
 ~~~
 cp -v ~$USER/.config/Xresources/.Xresources ~$USER/.Xresources && cp -v ~$USER/.config/xinit/.xinitrc ~$USER/.xinitrc && cp -v ~$USER/.config/Xauthority/.Xauthority ~$USER/.Xauthority && cp -v ~$USER/.config/zsh/.zshenv ~$USER/.zshenv && sudo cp -v ~$USER/.config/zsh/.zshrc.root /root/.zshrc && sudo cp -v ~$USER/.config/zsh/bira.zsh-theme /usr/share/zsh/themes/bira.zsh-theme 
 ~~~
@@ -22,7 +21,10 @@ ln -s ~$USER/.config/Linux/nvim ~$USER/.config/
 <details>
 	<summary>MacOS</summary>
 
-Then as a normal user run commands:
+As a normal user open a terminal and run commands:
+~~~
+git clone https://github.com/jtw023/.config.git $HOME/
+~~~
 ~~~
 ln -s $HOME/.config/MacOS/nvim $HOME/.config/
 ~~~
