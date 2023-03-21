@@ -1,6 +1,6 @@
-# This is a collection of config files.
+## This is a collection of config files.
 
-## Installation
+### Installation
 
 
 <details>
