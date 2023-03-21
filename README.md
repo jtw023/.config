@@ -8,19 +8,19 @@ git clone https://github.com/jtw023/.config.git
 ~~~
 
 <details>
-	<summary>## Linux</summary>
+	<h1><summary>Linux</summary></h1>
 
-	Then as a normal user run commands:
-	~~~
-	cp -v ~$USER/.config/Xresources/.Xresources ~$USER/.Xresources && cp -v ~$USER/.config/xinit/.xinitrc ~$USER/.xinitrc && cp -v ~$USER/.config/Xauthority/.Xauthority ~$USER/.Xauthority && cp -v ~$USER/.config/zsh/.zshenv ~$USER/.zshenv && sudo cp -v ~$USER/.config/zsh/.zshrc.root /root/.zshrc && sudo cp -v ~$USER/.config/zsh/bira.zsh-theme /usr/share/zsh/themes/bira.zsh-theme 
-	~~~
-	~~~
-	ln -s ~$USER/.config/Linux/nvim ~$USER/.config/
-	~~~
+Then as a normal user run commands:
+~~~
+cp -v ~$USER/.config/Xresources/.Xresources ~$USER/.Xresources && cp -v ~$USER/.config/xinit/.xinitrc ~$USER/.xinitrc && cp -v ~$USER/.config/Xauthority/.Xauthority ~$USER/.Xauthority && cp -v ~$USER/.config/zsh/.zshenv ~$USER/.zshenv && sudo cp -v ~$USER/.config/zsh/.zshrc.root /root/.zshrc && sudo cp -v ~$USER/.config/zsh/bira.zsh-theme /usr/share/zsh/themes/bira.zsh-theme 
+~~~
+~~~
+ln -s ~$USER/.config/Linux/nvim ~$USER/.config/
+~~~
 </details>
 
 <details>
-	<summary>## MacOS</summary>
+	<h1><summary>MacOS</summary></h1>
 
 Then as a normal user run commands:
 ~~~
