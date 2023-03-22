@@ -38,8 +38,10 @@ alias cl="clear"
 # Refresh my zsh session
 alias ref="source $HOME/.zshrc"
 
+# Youtube-dl command
+alias song='youtube-dl -f bestvideo+bestaudio -o "%(title)s.%(ext)s"'
+
 # Bind nvim to v
-# alias v="/usr/local/bin/nvim"
 function v() {
 	if [ -z "$1" ]; then
 		/usr/local/bin/nvim .

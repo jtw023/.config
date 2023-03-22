@@ -157,7 +157,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 ""FoldStart
 " Git Signs
-" nmap <Leader>gs :Gitsigns preview_hunk<CR>
-" nmap <Leader>gn :Gitsigns next_hunk<CR>
-" nmap <Leader>gp :Gitsigns prev_hunk<CR>
+nmap <Leader>gs :Gitsigns preview_hunk<CR>
+nmap <Leader>gn :Gitsigns next_hunk<CR>
+nmap <Leader>gp :Gitsigns prev_hunk<CR>
 " "FoldEnd

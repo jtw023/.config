@@ -165,7 +165,7 @@ alias upd='sudo updatedb -v; paru --skipreview -Syu'
 alias backup='sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/jordan/Downloads/*","/home/jordan/.librewolf/*","/home/jordan/.cache/*","/lost+found"} /run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924/'
 
 # Youtube-dl command
-alias song='youtube-dl -x --audio-format mp3 --audio-quality 320k -o "%(title)s.%(ext)s"'
+alias song='youtube-dl -f bestvideo+bestaudio -o "%(title)s.%(ext)s"'
 
 # Timeshift snapshot command
 alias snapshot='sudo timeshift --create'

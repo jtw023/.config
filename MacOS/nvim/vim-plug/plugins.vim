@@ -23,7 +23,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'williamboman/mason.nvim'
 	Plug 'williamboman/mason-lspconfig.nvim'
 	" Git Signs
-	" Plug 'lewis6991/gitsigns.nvim'
+	Plug 'lewis6991/gitsigns.nvim'
 	" Todo Comments
 	Plug 'folke/todo-comments.nvim'
 	" CMP Plugins
