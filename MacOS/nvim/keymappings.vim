@@ -1,9 +1,3 @@
-"FoldStart
-" Unmap and remap Leader key
-noremap <Space> <Nop>
-let mapleader = " "
-"FoldEnd
-
 ""FoldStart
 " Enter and Exit
 " Save and quit
@@ -146,6 +140,9 @@ vnoremap <S-w> c''<ESC>hp
 
 ""FoldStart
 " Miscellaneous
+" Unmap and remap Leader key
+noremap <Space> <Nop>
+let mapleader = " "
 " Turn off highlighting
 map 2 :nohlsearch<CR>
 " Cheat sheet
@@ -163,7 +160,7 @@ nmap <Leader>gp :Gitsigns prev_hunk<CR>
 " "FoldEnd
 
 ""FoldStart
-" Autocommands
+" Autocommands -- keymappings that are only set in specific files
 " Python File
 " nmap <S-t> :w \| :!time python3 %<CR>
 " nmap <Leader><S-w> :w \| :so %<CR>
