@@ -18,19 +18,12 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sql",
-	-- command = [[nmap <S-r> <Leader><S-s> \| :DBUIHideNotifications<CR>]],
 	command = [[nmap <S-r> <Leader><S-s>]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sql",
-	-- command = [[vmap <S-r> <Leader><S-s> \| :DBUIHideNotifications<CR>]],
 	command = [[vmap <S-r> <Leader><S-s>]],
-	group = group1
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = "*",
-	command = [[:hi clear Todo]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
@@ -55,7 +48,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.md", "*.py" },
-	command = [[nmap <Leader><S-w> :w<CR>]],
+	command = [[nmap <Leader><S-w> :w \| :so %<CR>]],
 	group = group2
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {

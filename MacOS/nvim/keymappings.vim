@@ -156,8 +156,24 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 ""FoldEnd
 
 ""FoldStart
-" Git Signs
+" Git Signs -- Show diffs(also shows the line that was added[+], modified[->], or deleted[-])
 nmap <Leader>gs :Gitsigns preview_hunk<CR>
 nmap <Leader>gn :Gitsigns next_hunk<CR>
 nmap <Leader>gp :Gitsigns prev_hunk<CR>
 " "FoldEnd
+
+""FoldStart
+" Autocommands
+" Python File
+" nmap <S-t> :w \| :!time python3 %<CR>
+" nmap <Leader><S-w> :w \| :so %<CR>
+" "JavaScript File
+" nmap <S-t> :w \| :!time node %<CR>
+" Shell Fil
+" nmap <S-t> :w \| :!time sh %<CR>
+" SQL File
+" nmap <S-r> <Leader><S-s>
+" vmap <S-r> <Leader><S-s>
+" Lua/Vim File
+" nmap <Leader><S-w> :w \| :so %<CR>
+""FoldEnd
