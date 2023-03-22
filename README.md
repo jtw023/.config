@@ -7,6 +7,7 @@
 	<summary>Linux</summary>
 
 As a normal user open a terminal and run commands:
+
 Git Clone Repo to Home Directory:
 ~~~
 git clone https://github.com/jtw023/.config.git ~$USER/
@@ -23,6 +24,7 @@ ln -sv ~$USER/.config/Linux/nvim ~$USER/.config/ && ln -sv ~$USER/.config/Xresou
 	<summary>MacOS</summary>
 
 As a normal user open a terminal and run commands:
+
 Git Clone Repo to Home Directory:
 ~~~
 git clone https://github.com/jtw023/.config.git $HOME/
@@ -42,7 +44,7 @@ brew install postgresql@14 neovim
 ~~~
 /usr/local/bin/nvim -c :PlugInstall
 ~~~
-Then quit neovim`:q` and exit terminal. With my keybindings for neovim, if you push the number 3 while in normal mode it will open a new tab to show a folded list of keybindings. Use shift+f to fold and unfold.
+Then quit neovim`:q` and exit terminal. With my keybindings for neovim, if you push the number 3 while in normal mode it will open a new tab showing a folded list of keybindings. Use shift+f to fold and unfold.
 
 <b>These config files make use of the Fira Code font family in the kitty terminal emulator. If you use that terminal, the TTF fonts are available over in my fonts repo.</b>
 </details>
