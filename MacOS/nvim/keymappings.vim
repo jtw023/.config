@@ -110,7 +110,7 @@ map <silent> <Leader>m :call ToggleVExplorer()<CR>"
 ""FoldStart
 " Telescope
 " Show all TODOs
-nmap <Leader>d :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
+nmap <Leader>td :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
 " Open Buffer
 nmap <Leader>b :w \| :Telescope buffers<CR>
 " Close Buffer
@@ -173,10 +173,11 @@ vnoremap <S-w> c''<ESC>hp
 ""FoldEnd
 
 ""FoldStart
-" Git Signs -- Show diff or jump to added[+], modified[->], or deleted[-] line
+" Git -- Show diff or jump to added[+], modified[->], or deleted[-] line
 nmap <Leader>gs :Gitsigns preview_hunk<CR>
 nmap <Leader>gn :Gitsigns next_hunk<CR>
 nmap <Leader>gp :Gitsigns prev_hunk<CR>
+nmap <Leader>d :diffsplit 
 " "FoldEnd
 
 ""FoldStart
