@@ -100,7 +100,7 @@ alias grh='git reset --hard' # roll all tracked files back to state of hash you 
 alias gcp='git cherry-pick' # insert commit hash to move that commit to a new branch
 alias gco='git checkout' # choose a file to unmodify or a different branch to switch to
 alias gsl='git status' # show the status of a git directory
-alias gs='git status -s' # show a shorter status of a git directory
+alias gss='git status -s' # show a shorter status of a git directory
 alias ga='git add' # choose files to add to git staging area
 alias gaa='git add .' # add all files to staging area
 alias gb='git branch' # view branches of git repo
@@ -108,13 +108,14 @@ alias gc='git commit' # write a longer message with a new commit
 alias gcm='git commit -m' # include a one line message with new commit
 alias gca='git commit --amend -m' # ammend the message of a previous commit
 alias gcaf='git commit --amend' # choose a new file to add to previous commit
-alias gp='git push' # push commits to github
+alias gpush='git push' # push commits to from local to remote
+alias gpull='git pull' # equalizes local and remote repo
 alias gl='git log' # show a log of previous git commits
 alias glo='git log --oneline' # show a short log of previous git commits
 alias gd='git difftool' # view diffs of unstaged files
 alias gds='git difftool --staged' # view diffs of staged files
 alias gcl='git clean -df' # remove all untracked files and directories
-alias gitalias="bat -r 92:113 $HOME/.zshrc" # show all git aliases
+alias gita="bat -fn --theme base16 ~/.zshrc | grep -i git" # show all git aliases
 
 ## Function Alias to extract zipped files
 ex ()
