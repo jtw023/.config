@@ -112,8 +112,8 @@ alias gpush='git push' # push commits to from local to remote
 alias gpull='git pull' # equalizes local and remote repo
 alias gl='git log' # show a log of previous git commits
 alias glo='git log --oneline' # show a short log of previous git commits
-alias gd='git difftool' # view diffs of unstaged files
-alias gds='git difftool --staged' # view diffs of staged files
+alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged files
+alias gds='git difftool --tool=nvimdiff --staged' # view diffs of staged files
 alias gcl='git clean -df' # remove all untracked files and directories
 alias gita="bat -fn --theme base16 ~/.zshrc | grep -i git" # show all git aliases
 
