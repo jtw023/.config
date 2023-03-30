@@ -27,6 +27,16 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*.sql",
+	command = [[:iab tod -- TODO:| :iab fi -- FIX:| :iab inp -- INPROGRESS:| :iab que -- QUESTION:| :iab cav -- CAVEAT:| :iab war -- WARN:| :iab tit -- TITLE:| :iab lin -- LINK:| :iab abo -- ABOUT:]],
+	group = group1
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*.py",
+	command = [[:iab tod # TODO:| :iab fi # FIX:| :iab inp # INPROGRESS:| :iab que # QUESTION:| :iab cav # CAVEAT:| :iab war # WARN:| :iab tit # TITLE:| :iab lin # LINK:| :iab abo # ABOUT:]],
+	group = group1
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.py",
 	command = [[:set foldmarker=#FoldStart,#FoldEnd]],
 	group = group1

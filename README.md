@@ -39,7 +39,7 @@ cp $HOME/.config/MacOS/.gitignore $HOME/.config/
 ~~~
 Install Neovim and Neovim Plugins:
 ~~~
-brew install postgresql@14 neovim
+brew install postgresql@14 neovim sqlfluff
 ~~~
 ~~~
 /usr/local/bin/nvim -c :PlugInstall

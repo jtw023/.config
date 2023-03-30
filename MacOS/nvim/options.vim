@@ -37,7 +37,9 @@ set inccommand=split
 set mouse=a
 
 " Tab settings
-set ts=4 sw=4
+set tabstop=4
+set shiftwidth=4 smarttab
+set expandtab
 
 " Search settings
 set ignorecase
@@ -69,6 +71,7 @@ hi clear Todo
 hi clear SpellBad
 hi clear Type
 hi clear SpellLocal
+hi clear SpellCap
 
 " Set highlights
 hi Visual guifg = #000000

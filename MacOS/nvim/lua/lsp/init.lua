@@ -44,7 +44,7 @@ require('lspconfig')['pyright'].setup{
     flags = lsp_flags,
 }
 
--- require('lspconfig')['sqls'].setup{
+-- require('lspconfig')['sqlfluff'].setup{
 --     on_attach = on_attach,
 --     flags = lsp_flags,
 -- 	root_dir = lsp.util.root_pattern('.git');

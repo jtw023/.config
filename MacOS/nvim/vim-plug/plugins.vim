@@ -36,6 +36,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'hrsh7th/cmp-calc'
 	Plug 'f3fora/cmp-spell'
 	" Snippets
+	" Plug 'ycm-core/YouCompleteMe'
 	" Plug 'SirVer/ultisnips'
 	" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 	" Plug 'honza/vim-snippets'

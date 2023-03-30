@@ -16,5 +16,5 @@ pf.setup{
 }
 
 fp.setup({
-	auto = 4000
+	auto = false
 })

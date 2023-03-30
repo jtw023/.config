@@ -1,4 +1,18 @@
 ""FoldStart
+" Miscellaneous
+" Unmap and remap Leader key
+noremap <Space> <Nop>
+let mapleader = " "
+" Turn off highlighting
+map 2 :nohlsearch<CR>
+" Cheat sheet
+nmap 3 :w \| :tabnew $HOME/.config/nvim/keymappings.vim<CR>
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+""FoldEnd
+
+""FoldStart
 " Enter and Exit
 " Save and quit
 nmap 4 :xa<CR>
@@ -35,9 +49,9 @@ vmap <S-x> zd"
 
 ""FoldStart
 " Rename and Spelling
-" Spelling
+" Fix spelling
 nmap <S-s> z=
-" Rename
+" Rename all instances in file of word under cursor
 nmap <Leader>r :%s/<C-r><C-w>/
 ""FoldEnd
 
@@ -114,46 +128,52 @@ nmap <Leader>hh :w \| :Telescope help_tags<CR>"
 ""FoldEnd
 
 ""FoldStart
-" Format Code
+" Code Snippets and Formatting
 " Expand JSON
 nmap <C-e> :%!python -m json.tool<CR>
 " Format
 nmap <C-f> :lua vim.lsp.buf.formatting()<CR>"
+" Snippets
+" Python File
+" tod = # TODO: snippet
+" fi = # FIX: snippet
+" inp = # INPROGRESS: snippet
+" que = # QUESTION: snippet
+" cav = # CAVEAT: snippet
+" war = # WARN: snippet
+" tit = # TITLE: snippet
+" lin = # LINK: snippet
+" abo = # ABOUT: snippet
+" SQL File
+" tod = -- TODO: snippet
+" fi = -- FIX: snippet
+" inp = -- INPROGRESS: snippet
+" que = -- QUESTION: snippet
+" cav = -- CAVEAT: snippet
+" war = -- WARN: snippet
+" tit = -- TITLE: snippet
+" lin = -- LINK: snippet
+" abo = -- ABOUT: snippet
 ""FoldEnd
 
 ""FoldStart
 " Line Manipulation
-" Move selected line
+" Move selected line up or down
 vmap <S-u> :m '<-2<CR>gv=gv
 vmap <S-b> :m '>+1<CR>gv=gv
-" Indenting
+" Indent selected line in or out
 vnoremap <Leader>, <<<Esc>gv
 vnoremap <Leader>. >><Esc>gv
-" Comment toggle
-nmap <Leader>/ :CommentToggle<CR>
-vmap <Leader>/ :CommentToggle<CR>"
-" Surround entire line quotes
+" Comment toggle current line or selected line
+nmap <Leader>/ :CommentToggle<CR><ESC>
+vmap <Leader>/ :CommentToggle<CR>"<ESC>
+" Surround selection or entire line quotes
 nnoremap <S-w> ^vg_c''<ESC>hp
-" Surround only selection in quotes
 vnoremap <S-w> c''<ESC>hp
 ""FoldEnd
 
 ""FoldStart
-" Miscellaneous
-" Unmap and remap Leader key
-noremap <Space> <Nop>
-let mapleader = " "
-" Turn off highlighting
-map 2 :nohlsearch<CR>
-" Cheat sheet
-nmap 3 :tabnew $HOME/.config/nvim/keymappings.vim<CR>
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-""FoldEnd
-
-""FoldStart
-" Git Signs -- Show diffs(also shows the line that was added[+], modified[->], or deleted[-])
+" Git Signs -- Show diff or jump to added[+], modified[->], or deleted[-] line
 nmap <Leader>gs :Gitsigns preview_hunk<CR>
 nmap <Leader>gn :Gitsigns next_hunk<CR>
 nmap <Leader>gp :Gitsigns prev_hunk<CR>
@@ -166,7 +186,7 @@ nmap <Leader>gp :Gitsigns prev_hunk<CR>
 " nmap <Leader><S-w> :w \| :so %<CR>
 " "JavaScript File
 " nmap <S-t> :w \| :!time node %<CR>
-" Shell Fil
+" Shell File
 " nmap <S-t> :w \| :!time sh %<CR>
 " SQL File
 " nmap <S-r> <Leader><S-s>

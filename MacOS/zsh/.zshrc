@@ -1,5 +1,7 @@
 # Set prompt
-PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %B%F{46}->%f%b '
+PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %B%F{46}-%f%b '
+# PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %B%F{46}->%f%b '
+# PROMPT='%n%[%1~] '
 
 # Use vim keys
 # set -o vi
@@ -61,6 +63,8 @@ alias zsh="/usr/local/bin/nvim $HOME/.zshrc"
 
 # Run ssh in kitty
 alias s='kitty +kitten ssh'
+alias s1='kitty +kitten ssh etl-prod01'
+alias s2='kitty +kitten ssh etl-prod02'
 
 # Show image in terminal
 alias imgshow='kitty +kitten icat'
@@ -109,8 +113,8 @@ alias gl='git log' # show a log of previous git commits
 alias glo='git log --oneline' # show a short log of previous git commits
 alias gd='git difftool' # view diffs of unstaged files
 alias gds='git difftool --staged' # view diffs of staged files
-alias clean='git clean -df' # remove all untracked files and directories
-alias gitalias='alias | grep "git "' # show all git aliases
+alias gcl='git clean -df' # remove all untracked files and directories
+alias gitalias="bat -r 92:113 $HOME/.zshrc" # show all git aliases
 
 ## Function Alias to extract zipped files
 ex ()
