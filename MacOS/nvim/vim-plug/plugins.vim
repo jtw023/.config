@@ -51,6 +51,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'nvim-telescope/telescope-fzf-native.nvim'
 	" Lualine
 	Plug 'nvim-lualine/lualine.nvim'
-	" Dev Icons
+	" Treesitter
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter-context'
 call plug#end()

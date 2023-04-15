@@ -4,9 +4,9 @@
 noremap <Space> <Nop>
 let mapleader = " "
 " Turn off highlighting
-map 2 :nohlsearch<CR>
+map <Leader>2 :nohlsearch<CR>
 " Cheat sheet
-nmap 3 :w \| :tabnew $HOME/.config/nvim/keymappings.vim<CR>
+nmap <Leader>3 :w \| :tabnew $HOME/.config/nvim/keymappings.vim<CR>
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -15,9 +15,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 ""FoldStart
 " Enter and Exit
 " Save and quit
-nmap 4 :xa<CR>
+nmap <Leader>4 :xa<CR>
 " Quit and exit
-nmap 8 :qa!<CR>
+nmap <Leader>8 :qa!<CR>
 ""FoldEnd
 
 ""FoldStart
@@ -25,7 +25,7 @@ nmap 8 :qa!<CR>
 " Toggle Drawer
 nmap <Leader>o :DBUIToggle<CR>
 " Launch Program
-nmap <Leader>s :DBUI<CR>"
+nmap <Leader>s :DBUI<CR>
 ""FoldEnd
 
 ""FoldStart
@@ -37,11 +37,11 @@ nmap <S-b> o<ESC>"
 ""FoldStart
 " Fold Lines
 " Create a new fold
-nmap <S-n> zf
-vmap <S-n> zf
+nmap <S-z> zf
+vmap <S-z> zf
 " Toggle the fold
-nmap <S-f> za
-vmap <S-f> za
+nnoremap <S-m> za
+vnoremap <S-m> za
 " Delete the fold
 nmap <S-x> zd
 vmap <S-x> zd"
@@ -50,7 +50,7 @@ vmap <S-x> zd"
 ""FoldStart
 " Rename and Spelling
 " Fix spelling
-nmap <S-s> z=
+nmap <S-s> :Telescope spell_suggest<CR>
 " Rename all instances in file of word under cursor
 nmap <Leader>r :%s/<C-r><C-w>/
 ""FoldEnd
@@ -81,6 +81,9 @@ nmap <S-Left> :vertical resize -2<CR>
 " Switch vertical split to horizontal split
 nmap <Leader>hr <C-w>L
 nmap <Leader>vr <C-w>J"
+" Tab Navigation
+nmap > gT
+nmap < gt
 ""FoldEnd
 
 ""FoldStart
@@ -111,6 +114,8 @@ map <silent> <Leader>m :call ToggleVExplorer()<CR>"
 " Telescope
 " Show all TODOs
 nmap <Leader>td :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
+" GoTo Definition
+nmap <Leader>tg :w \| :Telescope lsp_definitions<CR>
 " Open Buffer
 nmap <Leader>b :w \| :Telescope buffers<CR>
 " Close Buffer
@@ -119,8 +124,12 @@ nmap <Leader>c :bd<CR>
 nmap <Leader>ff :w \| :Telescope find_files hidden=true<CR>
 " Find Recent Files
 nmap <Leader>fh :w \| :Telescope oldfiles<CR>
+" Find Git Files
+nmap <Leader>fg :w \| :Telescope git_files<CR>
+" Find Keymaps
+nmap <Leader>fk :w \| :Telescope keymaps<CR>
 " Live Grep
-nmap <Leader>fg :exe "w \| :Telescope live_grep cwd=" .. fnameescape(expand("%:p:h"))<CR>
+nmap <Leader>fl :exe "w \| :Telescope live_grep cwd=" .. fnameescape(expand("%:p:h"))<CR>
 " View variables
 nmap <Leader>fv :w \| :Telescope lsp_document_symbols<CR>
 " View Help Tags
@@ -170,6 +179,9 @@ vmap <Leader>/ :CommentToggle<CR>"<ESC>
 " Surround selection or entire line quotes
 nnoremap <S-w> ^vg_c''<ESC>hp
 vnoremap <S-w> c''<ESC>hp
+" Invert Character Case
+nmap <S-c> v~
+vmap <S-c> ~
 ""FoldEnd
 
 ""FoldStart

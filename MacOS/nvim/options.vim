@@ -53,8 +53,8 @@ set list
 set listchars=tab:\ ,trail:·,extends:☛,precedes:☚
 
 " Set how far to the top and bottom your cursor can go
-set scrolloff=8
-set sidescrolloff=8
+set scrolloff=999
+set sidescrolloff=999
 
 " Set height of command line
 set cmdheight=2
