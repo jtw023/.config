@@ -2,7 +2,6 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/options.vim
 source $HOME/.config/nvim/keymappings.vim
 lua require'plug-cmp'
-lua require'plug-colorizer'
 lua require'autopairs'
 lua require'plug-comment'
 lua require'autocommands'
