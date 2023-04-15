@@ -15,13 +15,25 @@ telescope.setup {
 	sorting_strategy = "ascending",
 
 	layout_config = {
+        horizontal = {
+            preview_cutoff = 0,
+            preview_width = 0.7,
+            width = 0.95
+        },
 		prompt_position = "top"
 	},
   },
   pickers = {
 		find_files = {
+			-- theme = "dropdown"
+            previewer = true
+		},
+		git_files = {
 			theme = "dropdown"
 		},
+		        oldfiles = {
+		            theme = "dropdown"
+		        },
 		live_grep = {
 			theme = "dropdown"
 		},
@@ -32,9 +44,6 @@ telescope.setup {
 			theme = "dropdown"
 		},
 		colorscheme = {
-			theme = "dropdown"
-		},
-		oldfiles = {
 			theme = "dropdown"
 		},
 		help_tags = {
