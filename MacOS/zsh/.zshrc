@@ -84,9 +84,6 @@ alias ls='lsd -alhr --group-directories-first'
 # Alias for ping command to only run 3 times
 alias ping='ping -c 3'
 
-# Alias for tldr(a short version of man)
-alias man='tldr'
-
 # Change directory shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
