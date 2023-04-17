@@ -1,5 +1,7 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+    " " Autopep8 formatter for python
+    " Plug 'tell-k/vim-autopep8'
 	" Colorizer Plugin
 	Plug 'norcalli/nvim-colorizer.lua'
 	" Auto pairs for '(' '[' '{'

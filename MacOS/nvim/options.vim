@@ -38,8 +38,14 @@ set mouse=a
 
 " Tab settings
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4 smarttab
 set expandtab
+set smartindent
+
+" Vim File Management
+set noswapfile
+set nobackup nowritebackup
 
 " Search settings
 set ignorecase
@@ -54,7 +60,6 @@ set listchars=tab:\ ,trail:·,extends:☛,precedes:☚
 
 " Set how far to the top and bottom your cursor can go
 set scrolloff=999
-set sidescrolloff=999
 
 " Set height of command line
 set cmdheight=2

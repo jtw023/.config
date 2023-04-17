@@ -90,24 +90,24 @@ nmap < gt
 " Explorer
 " Toggle Vexplore with Leader-m
 function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Vexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
+    if exists("t:expl_buf_num")
+        let expl_win_num = bufwinnr(t:expl_buf_num)
+        if expl_win_num != -1
+            let cur_win_nr = winnr()
+            exec expl_win_num . 'wincmd w'
+            close
+            exec cur_win_nr . 'wincmd w'
+            unlet t:expl_buf_num
+        else
+            unlet t:expl_buf_num
+        endif
+    else
+        exec '1wincmd w'
+        Vexplore
+        let t:expl_buf_num = bufnr("%")
+    endif
 endfunction
-map <silent> <Leader>m :call ToggleVExplorer()<CR>"
+map <silent> <Leader>m :call ToggleVExplorer()<CR>
 ""FoldEnd
 
 ""FoldStart
@@ -115,7 +115,7 @@ map <silent> <Leader>m :call ToggleVExplorer()<CR>"
 " Show all TODOs
 nmap <Leader>td :exe ":w \| :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>
 " GoTo Definition
-nmap <Leader>tg :w \| :Telescope lsp_definitions<CR>
+nmap <Leader>tg :w \| :Telescope lsp_type_definitions<CR>
 " Open Buffer
 nmap <Leader>b :w \| :Telescope buffers<CR>
 " Close Buffer
@@ -128,6 +128,8 @@ nmap <Leader>fh :w \| :Telescope oldfiles<CR>
 nmap <Leader>fg :w \| :Telescope git_files<CR>
 " Find Keymaps
 nmap <Leader>fk :w \| :Telescope keymaps<CR>
+" Find Word References
+nmap <Leader>fr :w \| :Telescope lsp_references<CR>
 " Live Grep
 nmap <Leader>fl :exe "w \| :Telescope live_grep cwd=" .. fnameescape(expand("%:p:h"))<CR>
 " View variables
@@ -141,7 +143,7 @@ nmap <Leader>hh :w \| :Telescope help_tags<CR>"
 " Expand JSON
 nmap <C-e> :%!python -m json.tool<CR>
 " Format
-nmap <C-f> :lua vim.lsp.buf.formatting()<CR>"
+nmap <silent> <Leader>= :lua vim.lsp.buf.format({ async = true })<CR>
 " Snippets
 " Python File
 " tod = # TODO: snippet
