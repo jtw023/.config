@@ -12,8 +12,8 @@ vim.keymap.set('n', '<Leader>3', ':w <BAR> :tabnew $HOME/.config/nvim/lua/main/k
 vim.keymap.set('v', '<Leader>p', [["_dP]], opts)
 
 -- Use <TAB> to select the popup menu:
-vim.keymap.set('i', '<TAB>', 'pumvisible() ? "<C-n>" : "<TAB>"', opts)
-vim.keymap.set('i', '<S-TAB>', 'pumvisible() ? "<C-p>" : "<S-TAB>"', opts)
+vim.keymap.set('i', '<TAB>', 'pumvisible() ? "<C-n>" : "<TAB>"', { expr = true, noremap = true, silent = true })
+vim.keymap.set('i', '<S-TAB>', 'pumvisible() ? "<C-p>" : "<S-TAB>"', { expr = true, noremap = true, silent = true })
 -- FoldEnd
 
 -- FoldStart
