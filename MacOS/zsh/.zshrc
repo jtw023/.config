@@ -37,6 +37,9 @@ alias history='history -i'
 # Alias to clear terminal
 alias cl="clear"
 
+# Alias cat to bat
+alias cat="bat -fn --theme base16 "
+
 # Refresh my zsh session
 alias ref="source $HOME/.zshrc"
 

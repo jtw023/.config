@@ -2,5 +2,6 @@
 /nvim
 /MacOS/nvim/autoload/plugged
 /Linux/nvim/autoload/plugged
+tmp/
 configstore
 .DS_Store
