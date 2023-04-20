@@ -81,7 +81,7 @@ vim.keymap.set('n', '<Leader>vr', '<C-w>J', opts) -- vertical
 -- Switch Tabs
 -- <Leader>b opens a list of all buffers
 -- 'gd' jumps to definition of any word in any file(python or lua only)
-vim.keymap.set('n', 'gb', ':w <BAR> <C-t>', opts) -- return to previous buffer after using 'gd'
+vim.keymap.set('n', 'gb', ':w <BAR> :norm <C-t><CR>', opts) -- return to previous buffer after using 'gd'
 vim.keymap.set('n', '>', ':w <BAR> :bnext<CR>', opts) -- go to next buffer
 vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts) -- return to previous buffer
 -- FoldEnd
