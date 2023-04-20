@@ -41,7 +41,7 @@ vim.keymap.set('n', '<S-b>', 'o<ESC>', opts)
 -- FoldStart
 -- Fold Lines
 -- Create a new fold
-vim.keymap.set('v', '<S-z>', 'zf', opts)
+vim.keymap.set({'n', 'v'}, '<S-z>', 'zf', opts)
 -- Toggle the fold
 vim.keymap.set('n', '<S-m>', 'za', opts)
 -- Delete the fold
@@ -64,14 +64,10 @@ vim.keymap.set('n', '<Leader>k', '<C-w>k', opts) -- up
 vim.keymap.set('n', '<Leader>j', '<C-w>j', opts) -- down
 vim.keymap.set('n', '<Leader>h', '<C-w>h', opts) -- left
 -- Jump Scroll
-vim.keymap.set('n', '<S-l>', 'zL', opts) -- jump right
-vim.keymap.set('n', '<S-h>', 'zH', opts) -- jump left
-vim.keymap.set('n', '<S-j>', '<C-d>', opts) -- jump down
-vim.keymap.set('n', '<S-k>', '<C-u>', opts) -- jump up
-vim.keymap.set('v', '<S-l>', 'zL', opts) -- jump right
-vim.keymap.set('v', '<S-h>', 'zH', opts) -- jump left
-vim.keymap.set('v', '<S-j>', '<C-d>', opts) -- jump down
-vim.keymap.set('v', '<S-k>', '<C-u>', opts) -- jump up
+vim.keymap.set({'n', 'v'}, '<S-l>', 'zL', opts) -- jump right
+vim.keymap.set({'n', 'v'}, '<S-h>', 'zH', opts) -- jump left
+vim.keymap.set({'n', 'v'}, '<S-k>', '<C-u>', opts) -- jump up
+vim.keymap.set({'n', 'v'}, '<S-j>', '<C-d>', opts) -- jump down
 -- Split screen
 vim.keymap.set('n', '<Leader>vs', ':vs .<CR>', opts)
 -- Resize buffers
@@ -83,8 +79,11 @@ vim.keymap.set('n', '<S-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<Leader>hr', '<C-w>L', opts) -- horizontal
 vim.keymap.set('n', '<Leader>vr', '<C-w>J', opts) -- vertical
 -- Switch Tabs
-vim.keymap.set('n', '>', 'gT', opts)
-vim.keymap.set('n', '<', 'gt', opts)
+-- <Leader>b opens a list of all buffers
+-- 'gd' jumps to definition of any word in any file(python or lua only)
+vim.keymap.set('n', 'gb', ':w <BAR> <C-t>', opts) -- return to previous buffer after using 'gd'
+vim.keymap.set('n', '>', ':w <BAR> :bnext<CR>', opts) -- go to next buffer
+vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts) -- return to previous buffer
 -- FoldEnd
 
 -- FoldStart
@@ -116,6 +115,8 @@ end, opts)
 -- Telescope
 -- Show all TODOs
 vim.keymap.set('n', '<Leader>td', ':exe ":w <BAR> :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>', opts)
+-- Fuzzy find keymaps
+vim.keymap.set('n', '<Leader>tk', ':w <BAR> :Telescope keymaps<CR>', opts)
 -- Show Buffer List
 vim.keymap.set('n', '<Leader>b', ':w <BAR> :Telescope buffers<CR>', opts)
 -- Close Current Buffer
@@ -166,6 +167,7 @@ vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
 -- FoldStart
 -- Line Manipulation
 -- Move selected line up or down
+					  -- :'<,'>s/\w\+/"\0"/g
 vim.keymap.set('v', '<S-u>', ":m '<-2<CR>gv=gv", opts)
 vim.keymap.set('v', '<S-b>', ":m '>+1<CR>gv=gv", opts)
 -- Indent selected line in or out
@@ -174,9 +176,9 @@ vim.keymap.set('v', '<Leader>.', '>><ESC>gv', opts)
 -- Comment toggle current line or selected line
 vim.keymap.set('n', '<Leader>/', ':CommentToggle<CR><ESC>', opts)
 vim.keymap.set('v', '<Leader>/', ':CommentToggle<CR>"<ESC>', opts)
--- Surround selection or entire line quotes
-vim.keymap.set('n', '<S-w>', "^vg_c''<ESC>hp", opts)
-vim.keymap.set('v', '<S-w>', "c''<ESC>hp", opts)
+-- Surround selection or word in quotes
+vim.keymap.set('n', '<S-w>', "viwc''<ESC>hp", opts) -- word
+vim.cmd([[vnoremap <S-w> :s/\w\+/'\0'/g<CR> \| :noh<CR>]]) -- line
 -- Invert Character Case
 vim.keymap.set('n', '<S-c>', 'v~', opts)
 vim.keymap.set('v', '<S-c>', '~', opts)
@@ -188,6 +190,12 @@ vim.keymap.set('n', '<Leader>gs', ':Gitsigns preview_hunk<CR>', opts)
 vim.keymap.set('n', '<Leader>gn', ':Gitsigns next_hunk<CR>', opts)
 vim.keymap.set('n', '<Leader>gp', ':Gitsigns prev_hunk<CR>', opts)
 vim.keymap.set('n', '<Leader>d', ':diffsplit<CR>', opts)
+vim.keymap.set('n', 'gs', ':Git<CR>', opts)
+vim.keymap.set('n', 'gl', ':Git log<CR>', opts)
+vim.keymap.set('n', 'gds', ':Gdiffsplit<CR>', opts)
+vim.keymap.set('n', 'gc', ':Git commit<CR>', opts)
+vim.keymap.set('n', 'gpush', ':Git push<CR>', opts)
+vim.keymap.set('n', 'gpull', ':Git pull<CR>', opts)
 -- FoldEnd
 
 -- FoldStart

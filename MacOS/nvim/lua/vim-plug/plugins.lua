@@ -1,6 +1,9 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- Git Plugins
+Plug 'APZelos/blamer.nvim'
+Plug 'tpope/vim-fugitive'
 -- Colorizer Plugin
 Plug 'norcalli/nvim-colorizer.lua'
 -- Auto pairs for '(' '[' '{'
