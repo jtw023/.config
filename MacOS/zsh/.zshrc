@@ -100,6 +100,7 @@ alias grh='git reset --hard' # roll all tracked files back to state of hash you 
 alias gcp='git cherry-pick' # insert commit hash to move that commit to a new branch
 alias gco='git checkout' # choose a file to unmodify or a different branch to switch to
 alias gsl='git status' # show the status of a git directory
+alias gs='git status' # show a shorter status of a git directory
 alias gss='git status -s' # show a shorter status of a git directory
 alias ga='git add' # choose files to add to git staging area
 alias gaa='git add .' # add all files to staging area
