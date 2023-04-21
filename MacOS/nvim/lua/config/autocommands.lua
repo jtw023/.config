@@ -63,7 +63,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sql",
-	command = [[nmap <Leader>= :w \| :silent !sqlfluff format --config /Users/jordanwalters/finished_scripts/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>]],
+	command = [[nmap <Leader>= :w \| :silent !sqlfluff format --config /Users/jordanwalters/bitbucket_repos/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>]],
 	group = group2
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
