@@ -62,7 +62,7 @@ alias vs='/usr/local/bin/nvim -c :DBUI'
 alias p='/usr/local/bin/nvim $HOME/finished_scripts/jordanw/Python/ -c '\'':execute "normal jjjj" | :execute "normal ma"'\'
 
 # Modify the zshrc file
-alias zsh="/usr/local/bin/nvim $HOME/.zshrc"
+alias zsh="/usr/local/bin/nvim $HOME/.config/MacOS/zsh/.zshrc"
 
 # Run ssh in kitty
 alias s='kitty +kitten ssh'
