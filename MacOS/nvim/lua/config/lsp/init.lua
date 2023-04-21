@@ -20,6 +20,17 @@ lsp['pyright'].setup {
     flags = lsp_flags,
 }
 
+lsp['bashls'].setup {
+	on_attach = on_attach,
+	flags = lsp_flags,
+	settings = {
+		bashIde = {
+			globPattern = "*@(.sh|.inc|.bash|.command|.zshrc|.zsh)"
+		},
+	},
+	root_dir = lsp.util.root_pattern('.git'),
+}
+
 lsp['lua_ls'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
