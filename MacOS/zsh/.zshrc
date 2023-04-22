@@ -94,6 +94,8 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # Git commands
+alias create="bash $HOME/github_repos/Random-Scripts/create_git_repo.sh" # create repo
+alias delete="bash $HOME/github_repos/Random-Scripts/delete_git_repo.sh" # delete repo
 alias grs='git reset --soft' # insert commit hash to undo commit but keep changes in staging area
 alias grm='git reset' # insert commit hash to undo commit but keep changes and remove from staging area
 alias grh='git reset --hard' # roll all tracked files back to state of hash you choose
