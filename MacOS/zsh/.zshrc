@@ -106,6 +106,7 @@ alias ga='git add' # choose files to add to git staging area
 alias gaa='git add .' # add all files to staging area
 alias gb='git branch' # view branches of git repo
 alias gc='git commit' # write a longer message with a new commit
+alias gclo='git clone' # clone git repo
 alias gcm='git commit -m' # include a one line message with new commit
 alias gca='git commit --amend -m' # ammend the message of a previous commit
 alias gcaf='git commit --amend' # choose a new file to add to previous commit
