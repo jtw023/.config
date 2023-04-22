@@ -1,6 +1,8 @@
 /kitty
-../nvim
+/nvim
+/gh
 /MacOS/nvim/autoload/plugged
 /Linux/nvim/autoload/plugged
+tmp/
 configstore
 .DS_Store
