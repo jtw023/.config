@@ -190,12 +190,12 @@ vim.keymap.set('n', '<Leader>gs', ':Gitsigns preview_hunk<CR>', opts)
 vim.keymap.set('n', '<Leader>gn', ':Gitsigns next_hunk<CR>', opts)
 vim.keymap.set('n', '<Leader>gp', ':Gitsigns prev_hunk<CR>', opts)
 vim.keymap.set('n', '<Leader>d', ':diffsplit<CR>', opts)
-vim.keymap.set('n', 'gs', ':Git<CR>', opts)
+vim.keymap.set('n', 'gs', ':w <BAR> :Git<CR>', opts)
 vim.keymap.set('n', 'gl', ':Git log<CR>', opts)
-vim.keymap.set('n', 'gds', ':Gdiffsplit<CR>', opts)
-vim.keymap.set('n', 'gc', ':Git commit<CR>', opts)
-vim.keymap.set('n', 'gpush', ':Git push<CR>', opts)
-vim.keymap.set('n', 'gpull', ':Git pull<CR>', opts)
+vim.keymap.set('n', 'gds', ':w <BAR> :Gdiffsplit<CR>', opts)
+vim.keymap.set('n', 'gc', ':w <BAR> :Git commit<CR>', opts)
+vim.keymap.set('n', 'gpush', ':w <BAR> :Git push<CR>', opts)
+vim.keymap.set('n', 'gpull', ':w <BAR> :Git pull<CR>', opts)
 -- FoldEnd
 
 -- FoldStart
