@@ -35,7 +35,7 @@ alias po='osascript -e '\''tell application "System Events" to keystroke "q" usi
 alias history='history -i'
 
 # Alias to clear terminal
-alias cl="clear"
+alias cl="clear; bash $HOME/github_repos/Random-Scripts/generate_random.sh | lolcat"
 
 # Alias cat to bat
 alias cat="bat -fn --theme base16 "
