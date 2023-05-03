@@ -41,7 +41,7 @@ o.tabstop = 4
 o.softtabstop = 4
 o.shiftwidth = 4
 o.smartindent = true
--- o.expandtab = true
+o.expandtab = true
 
 -- Vim File Management
 o.swapfile = false
@@ -85,6 +85,7 @@ vim.cmd([[ hi Search guifg = #000000 ]])
 vim.cmd([[ hi IncSearch guifg = #000000 ]])
 vim.cmd([[ hi Folded guifg = #000000 ]])
 vim.cmd([[ hi Blamer guifg = #CCFF00 ]])
+vim.cmd([[ hi qfLineNr guifg = #FFF ]])
 
 -- Highlight on yank
 vim.cmd([[
