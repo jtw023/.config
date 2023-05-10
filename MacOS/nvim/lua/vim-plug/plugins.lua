@@ -1,6 +1,8 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- Markdown Preview
+Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
 -- Git Plugins
 Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'

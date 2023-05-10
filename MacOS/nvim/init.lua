@@ -2,7 +2,7 @@ require('vim-plug.plugins')
 require('main.set')
 require('main.keymap')
 
--- require('config.ultisnips')
+require('config.plug-markdown')
 require('config.plug-cmp.plug-cmp')
 require('config.autopairs')
 require('config.plug-netrw')
