@@ -28,7 +28,7 @@ python -m pip install autopep8
 ~~~
 With my keybindings for neovim, if you push the space bar plus the number 3 while in normal mode it'll open a new tab showing a folded list of keybindings. Use shift+m to fold and unfold.
 
-<b>These config files make use of the Fantasque Sans Mono font family systemwide. The TTF fonts for the entire family as well as the nerd family variant are available over in my fonts repo.</b>
+<b>These config files make use of the Fantasque Sans Mono font family systemwide. The TTF fonts for the entire family as well as the nerd family variant are available [in my fonts repo](https://github.com/jtw023/fonts).</b>
 </details>
 
 <details>
