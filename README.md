@@ -56,7 +56,7 @@ python -m pip install autopep8
 ~~~
 With my keybindings for neovim, if you push the space bar plus the number 3 while in normal mode it'll open a new tab showing a folded list of keybindings. Use shift+m to fold and unfold.
 
-<b>These config files make use of the Fira Code font family in the kitty terminal emulator. If you use that terminal, the TTF fonts are available over in my fonts repo.</b>
+<b>These config files make use of the Fira Code font family in the kitty terminal emulator. If you use that terminal, the TTF fonts are available [in my fonts repo](https://github.com/jtw023/fonts).</b>
 </details>
 
 As always, please make sure you understand what these commands will do before you run them on your system.
