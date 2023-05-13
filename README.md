@@ -12,9 +12,9 @@ Git Clone Repo to Home Directory(This will overwrite your config file if you hav
 ~~~
 git clone https://github.com/jtw023/.config.git ~$USER/.config
 ~~~
-Create Symlinks and copy file:
+Create Symlinks and copy gitignore:
 ~~~
-ln -sv ~$USER/.config/Linux/nvim ~$USER/.config/ && ln -sv ~$USER/.config/Linux/Xresources/.Xresources ~$USER/.Xresources && ln -sv ~$USER/.config/Linux/xinit/.xinitrc ~$USER/.xinitrc && ln -sv ~$USER/.config/Linux/Xauthority/.Xauthority ~$USER/.Xauthority && ln -sv ~$USER/.config/Linux/zsh/.zshenv ~$USER/.zshenv && sudo cp -v ~$USER/.config/Linux/zsh/.zshrc.root /root/.zshrc && sudo mkdir -p /usr/share/zsh/themes && sudo cp -v ~$USER/.config/Linux/zsh/bira.zsh-theme /usr/share/zsh/themes/bira.zsh-theme && ln -sv ~$USER/.config/Linux/.gitignore ~$USER/.config/
+ln -sv ~$USER/.config/Linux/nvim ~$USER/.config/ && ln -sv ~$USER/.config/Linux/Xresources/.Xresources ~$USER/.Xresources && ln -sv ~$USER/.config/Linux/xinit/.xinitrc ~$USER/.xinitrc && ln -sv ~$USER/.config/Linux/Xauthority/.Xauthority ~$USER/.Xauthority && ln -sv ~$USER/.config/Linux/zsh/.zshenv ~$USER/.zshenv && sudo cp -v ~$USER/.config/Linux/zsh/.zshrc.root /root/.zshrc && sudo mkdir -p /usr/share/zsh/themes && sudo cp -v ~$USER/.config/Linux/zsh/bira.zsh-theme /usr/share/zsh/themes/bira.zsh-theme && cp ~$USER/.config/Linux/.gitignore ~$USER/.config/
 ~~~
 Install Neovim and Neovim Plugins:
 ~~~
@@ -40,9 +40,9 @@ Git Clone Repo to Home Directory(This will overwrite your config file if you hav
 ~~~
 git clone https://github.com/jtw023/.config.git $HOME/.config
 ~~~
-Create Symlinks:
+Create Symlinks and copy gitignore:
 ~~~
-ln -sv $HOME/.config/MacOS/nvim $HOME/.config/ && ln -sv $HOME/.config/MacOS/zsh/.zshrc $HOME/ && ln -sv $HOME/.config/MacOS/kitty $HOME/.config/ &&  ln -sv $HOME/.config/MacOS/.gitignore $HOME/.config/
+ln -sv $HOME/.config/MacOS/nvim $HOME/.config/ && ln -sv $HOME/.config/MacOS/zsh/.zshrc $HOME/ && ln -sv $HOME/.config/MacOS/kitty $HOME/.config/ && cp $HOME/.config/MacOS/.gitignore $HOME/.config/
 ~~~
 Install Neovim and Neovim Plugins:
 ~~~
