@@ -1,3 +1,4 @@
+RANDOMSCRIPTS="$HOME/github_repos/Random-Scripts"
 # Set prompt
 PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %B%F{46}-%f%b '
 
@@ -33,7 +34,7 @@ alias po='osascript -e '\''tell application "System Events" to keystroke "q" usi
 alias history='history -i'
 
 # Alias to clear terminal
-alias cl="clear; bash $HOME/github_repos/Random-Scripts/generate_random.sh | lolcat"
+alias cl="clear; bash $RANDOMSCRIPTS/generate_random.sh | lolcat"
 
 # Alias cat to bat
 alias cat="bat -fn --theme base16"
@@ -92,32 +93,34 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # Git commands
-alias create="bash $HOME/github_repos/Random-Scripts/create_git_repo.sh" # create repo
-alias delete="bash $HOME/github_repos/Random-Scripts/delete_git_repo.sh" # delete repo
-alias grs='git reset --soft' # insert commit hash to undo commit but keep changes in staging area
-alias grm='git reset' # insert commit hash to undo commit but keep changes and remove from staging area
-alias grh='git reset --hard' # roll all tracked files back to state of hash you choose
-alias gcp='git cherry-pick' # insert commit hash to move that commit to a new branch
-alias gco='git checkout' # choose a file to unmodify or a different branch to switch to
+alias create="bash $RANDOMSCRIPTS/create_git_repo.sh" # create git repo
+alias delete="bash $RANDOMSCRIPTS/delete_git_repo.sh" # delete git repo
+alias grs='git reset --soft' # insert git commit hash to undo commit but keep changes in staging
+alias grm='git reset' # insert git commit hash to undo commit but keep changes and remove from staging
+alias grh='git reset --hard' # roll all tracked files back to state of git hash you choose
+alias gcp='git cherry-pick' # insert git commit hash to move to a new branch
+alias gco='git checkout' # choose a file to unmodify or a different git branch to switch to
 alias gsl='git status' # show the status of a git directory
 alias gs='git status' # show a shorter status of a git directory
 alias gss='git status -s' # show a shorter status of a git directory
 alias ga='git add' # choose files to add to git staging area
-alias gaa='git add .' # add all files to staging area
+alias gaa='git add .' # add all files to git staging area
 alias gb='git branch' # view branches of git repo
-alias gc='git commit' # write a longer message with a new commit
+alias gc='git commit' # write a longer message with a new git commit
 alias gclo='git clone' # clone git repo
-alias gcm='git commit -m' # include a one line message with new commit
-alias gca='git commit --amend -m' # ammend the message of a previous commit
-alias gcaf='git commit --amend' # choose a new file to add to previous commit
-alias gpush='git push' # push commits to from local to remote
-alias gpull='git pull' # equalizes local and remote repo
+alias gcm='git commit -m' # include a one line message with new git commit
+alias gca='git commit --amend -m' # ammend the message of a previous git commit
+alias gcaf='git commit --amend' # choose a new file to add to previous git commit
+alias gp="bash $RANDOMSCRIPTS/pull_all_git_repos.sh" # Pull all git repos simultaneously
+alias gpush='git push' # push commits to from local to remote git repo
+alias gpull='git pull' # equalizes local and remote git repo
 alias gl='git log' # show a log of previous git commits
 alias glo='git log --oneline' # show a short log of previous git commits
-alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged files
-alias gds='git difftool --tool=nvimdiff --staged' # view diffs of staged files
-alias gcl='git clean -df' # remove all untracked files and directories
-alias gita="bat -fn --theme base16 ~/.zshrc | grep -i git" # show all git aliases
+alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged git files
+alias gds='git difftool --tool=nvimdiff --staged' # view git diffs of staged files
+alias gcl='git clean -df' # remove all untracked git files and directories
+alias gw='git when' # see when the last git pull or git fetch was made
+alias gita="bat -fn --theme base16 ~/.zshrc | grep -iw git" # show all git aliases
 
 ## Function Alias to extract zipped files
 ex ()
