@@ -1,7 +1,6 @@
-### :warning: Please understand what these commands will do before running them.
-### This is a collection of config files.
+## :warning: Understand what these commands will do before running them.
 
-#### Installation
+### Installation
 
 
 <details>
