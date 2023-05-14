@@ -1,0 +1,43 @@
+[sqlfluff]
+dialect = redshift
+sql_file_exts = .sql
+max_line_length = 80
+# exclude_rules = LT02,ST05,AM04,AL05,RF03,CP05,L006
+exclude_rules = RF06, L036, structure.column_order
+[sqlfluff:indentation]
+indented_using_on = True
+allow_implicit_indents = True
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper
+[sqlfluff:rules:capitalisation.identifiers]
+capitalisation_policy = upper
+[sqlfluff:rules:capitalisation.types]
+extended_capitalisation_policy = upper
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = upper
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = upper
+[sqlfluff:rules:aliasing.table]
+aliasing = explicit
+[sqlfluff:rules:aliasing.expression]
+aliasing = explicit
+[sqlfluff:rules:aliasing.column]
+aliasing = explicit
+[sqlfluff:layout:type:comma]
+spacing_before = touch
+line_position = trailing
+[sqlfluff:rules:convention.casting_style]
+preferred_type_casting_style = shorthand
+[sqlfluff:rules:layout.long_lines]
+ignore_comment_lines = False
+ignore_comment_clauses = False
+[sqlfluff:rules:layout.select_targets]
+wildcard_policy = multiple
+[sqlfluff:rules:structure.subquery]
+forbid_subquery_in = join
+[sqlfluff:rules:references.keywords]
+quoted_identifiers_policy = none
+unquoted_identifiers_policy = all
+[sqlfluff:rules:references.special_chars]
+quoted_identifiers_policy = none
+unquoted_identifiers_policy = all
