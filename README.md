@@ -46,7 +46,7 @@ ln -sv $HOME/.config/MacOS/nvim $HOME/.config/ && ln -sv $HOME/.config/MacOS/zsh
 ~~~
 Install Neovim and Neovim Plugins:
 ~~~
-brew install postgresql@14 neovim sqlfluff pgformatter
+brew install postgresql@14 neovim sqlfluff gh fzf lsd bat jq kitty ripgrep
 ~~~
 ~~~
 python -m pip install autopep8
