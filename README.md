@@ -69,7 +69,7 @@ There are three options to do this but my preferred way is as follows:
 1. visit $HOME/.config/nvim/lua/config/plug-dadbod.lua and edit the `vim.g.db_ui_save_location` variable(This is okay to be commited as it is just a directory).
 2. open nvim and type `:DBUIAddConnection`. This will prompt you to enter a database connection and will be saved in `vim.g.db_ui_save_location` as `connections.json`. You can repeat this process as many times as desired. Or you can manually create and edit `connections.json` using the following structure:
 <pre><code>
--- The name will be a newly created directory inside of `vim.g.db_ui_save_location` to save files inside of.
+-- The name will be a newly created directory inside of `vim.g.db_ui_save_location` for saved files.
 [
     {"url": "insert-url-here", "name": "insert-directory-name-here"},
     {"url": "insert-second-url-here", "name": "insert-second-directory-name-here"},
