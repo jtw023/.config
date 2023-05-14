@@ -1,3 +1,4 @@
+-- TODO: Add descriptions to keymaps
 -- FoldStart
 -- Miscellaneous
 -- set variable opts to add into all keymaps
@@ -176,9 +177,19 @@ vim.keymap.set('v', '<Leader>.', '>><ESC>gv', opts)
 -- Comment toggle current line or selected line
 vim.keymap.set('n', '<Leader>/', ':CommentToggle<CR><ESC>', opts)
 vim.keymap.set('v', '<Leader>/', ':CommentToggle<CR>"<ESC>', opts)
--- Surround selection or word in quotes
-vim.keymap.set('n', '<S-w>', "viwc''<ESC>hp", opts) -- word
-vim.cmd([[vnoremap <S-w> :s/\w\+/'\0'/g<CR> \| :noh<CR>]]) -- line
+-- Surround every word under cursor or every word in selection
+vim.keymap.set('n', "'<S-w>", "viwc''<ESC>hp", opts) -- word
+vim.keymap.set('n', '"<S-w>', 'viwc""<ESC>hp', opts) -- word
+vim.keymap.set('n', '`<S-w>', 'viwc``<ESC>hp', opts) -- word
+vim.keymap.set('n', '{<S-w>', 'viwc{}<ESC>hp', opts) -- word
+vim.keymap.set('n', '[<S-w>', 'viwc[]<ESC>hp', opts) -- word
+vim.keymap.set('n', '(<S-w>', 'viwc()<ESC>hp', opts) -- word
+vim.cmd([[vnoremap '<S-w> :s/\w\+/'\0'/g<CR> \| :noh<CR>]]) -- line
+vim.cmd([[vnoremap "<S-w> :s/\w\+/"\0"/g<CR> \| :noh<CR>]]) -- line
+vim.cmd([[vnoremap `<S-w> :s/\w\+/`\0`/g<CR> \| :noh<CR>]]) -- line
+vim.cmd([[vnoremap {<S-w> :s/\w\+/{\0}/g<CR> \| :noh<CR>]]) -- line
+vim.cmd([[vnoremap [<S-w> :s/\w\+/[\0]/g<CR> \| :noh<CR>]]) -- line
+vim.cmd([[vnoremap (<S-w> :s/\w\+/(\0)/g<CR> \| :noh<CR>]]) -- line
 -- Invert Character Case
 vim.keymap.set('n', '<S-c>', 'v~', opts)
 vim.keymap.set('v', '<S-c>', '~', opts)
