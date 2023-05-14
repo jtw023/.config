@@ -1,19 +1,17 @@
 # Set prompt
 PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %B%F{46}-%f%b '
-# PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %B%F{46}->%f%b '
-# PROMPT='%n%[%1~] '
 
 # Use vim keys
 # set -o vi
 
 # Export local path
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/finished_scripts"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin"
 
 # Tell zsh not to save any commands starting with a space
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 
-# Set editor to vim
+# Set editor to neovim
 export EDITOR="/usr/local/bin/nvim"
 
 # Run previous command as sudo
@@ -38,9 +36,9 @@ alias history='history -i'
 alias cl="clear; bash $HOME/github_repos/Random-Scripts/generate_random.sh | lolcat"
 
 # Alias cat to bat
-alias cat="bat -fn --theme base16 "
+alias cat="bat -fn --theme base16"
 
-# Refresh my zsh session
+# Refresh zsh session
 alias ref="source $HOME/.zshrc"
 
 # Youtube-dl command
@@ -55,13 +53,13 @@ function v() {
 	fi
 }
 
-# Open vim straight to sql
+# Open nvim straight to sql
 alias vs='/usr/local/bin/nvim -c :DBUI'
 
 # Work on Python file
-alias p='/usr/local/bin/nvim $HOME/finished_scripts/jordanw/Python/ -c '\'':execute "normal jjjj" | :execute "normal ma"'\'
+alias p='/usr/local/bin/nvim $HOME/bitbucket_repos/jordanw/Python/ -c '\'':execute "normal jjjj" | :execute "normal ma"'\'
 
-# Modify the zshrc file
+# Modify MacOS zshrc file
 alias zsh="/usr/local/bin/nvim $HOME/.config/MacOS/zsh/.zshrc"
 
 # Run ssh in kitty
@@ -72,7 +70,7 @@ alias s2='kitty +kitten ssh etl-prod02'
 # Show image in terminal
 alias imgshow='kitty +kitten icat'
 
-# Always mkdir with preffered options
+# Always mkdir creating parent directories if not exists and run verbose
 alias mkd='mkdir -pv'
 
 # Add verbose and interactive options to potentially destructive commands
