@@ -80,5 +80,5 @@ If you have further questions about this please visit [the vim-dadbod-ui plugin 
 
 ----
 
-<b>These config files make use of the Fira Code font family in the kitty terminal emulator. If you use that terminal, the TTF fonts are available [in my fonts repo](https://github.com/jtw023/fonts).</b>
+<b>These config files make use of some custom scripts as well as the Fira Code font family. For everything to work as configured, please also clone [my fonts repo](https://github.com/jtw023/fonts) and [my random-scripts repo](https://github.com/jtw023/Random-Scripts).</b>
 </details>
