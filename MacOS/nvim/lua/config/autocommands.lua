@@ -3,17 +3,17 @@ local group2 = vim.api.nvim_create_augroup("Save_File", { clear = true })
 local group3 = vim.api.nvim_create_augroup("Completion", { clear = true })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.py",
-	command = [[nmap <S-t> :w \| :!time python3 %<CR>]],
+	command = [[nmap <S-r> :w \| :!time python3 %<CR>]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.js",
-	command = [[nmap <S-t> :w \| :!time node %<CR>]],
+	command = [[nmap <S-r> :w \| :!time node %<CR>]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sh",
-	command = [[nmap <S-t> :w \| :!time sh %<CR>]],
+	command = [[nmap <S-r> :w \| :!time sh %<CR>]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
