@@ -11,5 +11,5 @@ m.setup({
 	}
 })
 mlsp.setup{
-	ensure_installed = { "pyright", "lua_ls" }
+	ensure_installed = { "pyright", "lua_ls", "bashls", "sqlls" }
 }
