@@ -119,7 +119,7 @@ alias glo='git log --oneline' # show a short log of previous git commits
 alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged git files
 alias gds='git difftool --tool=nvimdiff --staged' # view git diffs of staged files
 alias gcl='git clean -df' # remove all untracked git files and directories
-alias gw='git when' # see when the last git pull or git fetch was made
+alias gw='git when' # see when the last pull or fetch was made(custom git alias)
 alias gita="bat -fn --theme base16 ~/.zshrc | grep -iw git" # show all git aliases
 
 ## Function Alias to extract zipped files
