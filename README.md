@@ -1,6 +1,7 @@
-## This is a collection of config files.
+### :warning: Please understand what these commands will do before running them.
+### This is a collection of config files.
 
-### Installation
+#### Installation
 
 
 <details>
@@ -40,11 +41,11 @@ Git Clone Repo to Home Directory(This will overwrite your config file if you hav
 ~~~
 git clone https://github.com/jtw023/.config.git $HOME/.config
 ~~~
-Create Symlinks and copy gitignore:
+Create Symlinks and copy files:
 ~~~
-ln -sv $HOME/.config/MacOS/nvim $HOME/.config/ && ln -sv $HOME/.config/MacOS/zsh/.zshrc $HOME/ && ln -sv $HOME/.config/MacOS/kitty $HOME/.config/ && cp $HOME/.config/MacOS/.gitignore $HOME/.config/
+ln -sv $HOME/.config/MacOS/nvim $HOME/.config/ && ln -sv $HOME/.config/MacOS/zsh/.zshrc $HOME/ && ln -sv $HOME/.config/MacOS/kitty $HOME/.config/ && cp $HOME/.config/MacOS/.gitignore $HOME/.config/ && cp $HOME/.config/MacOS/sqlfluff/.sqlfluff $HOME/bitbucket_repos/jordanw/SQL/
 ~~~
-Install Neovim and Neovim Plugins:
+Install Neovim and Neovim Necessary Programs:
 ~~~
 brew install postgresql@14 neovim sqlfluff gh fzf lsd bat jq kitty ripgrep
 ~~~
@@ -54,9 +55,30 @@ python -m pip install autopep8
 ~~~
 /usr/local/bin/nvim -c :PlugInstall
 ~~~
-With my keybindings for neovim, if you push the space bar plus the number 3 while in normal mode it'll open a new tab showing a folded list of keybindings. Use shift+m to fold and unfold.
+
+----
+
+With my keybindings for neovim, if you push the space bar plus the number 3 while in normal mode it'll open a new tab showing a folded list of keybindings. Use shift+m to fold and unfold. You can also push the space bar plus f plus k to open a text box and directly fuzzy search what you need.
+
+----
+
+If using SQL be sure to set up your database connection in a file named `connections.json` inside whichever directory you choose to save SQL files to. This can even be a git directory so that the files are automatically tracked. Just be sure to add your `connections.json` to the `.gitignore`.
+<details>
+    <summary>How to configure SQL</summary>
+
+There are three options to do this but my preferred way is as follows:
+1. visit $HOME/.config/nvim/lua/config/plug-dadbod.lua and edit the `vim.g.db_ui_save_location` variable(This is okay to be commited as it is just a directory).
+2. open nvim and type `:DBUIAddConnection`. This will prompt you to enter a database connection and will be saved in `vim.g.db_ui_save_location` as `connections.json`. You can repeat this process as many times as desired. Or you can manually create and edit `connections.json` using the following structure:
+<pre><code>
+    [
+        {"url": "insert-your-url-here", "name": "insert-your-name-here"},
+        {"url": "insert-your-second-url-here", "name": "insert-your-second-name-here"}
+    ]
+</code></pre>
+If you have further questions about this please visit [the vim-dadbod-ui plugin on github](https://github.com/kristijanhusak/vim-dadbod-ui#databases).
+</details>
+
+----
 
 <b>These config files make use of the Fira Code font family in the kitty terminal emulator. If you use that terminal, the TTF fonts are available [in my fonts repo](https://github.com/jtw023/fonts).</b>
 </details>
-
-As always, please make sure you understand what these commands will do before you run them on your system.
