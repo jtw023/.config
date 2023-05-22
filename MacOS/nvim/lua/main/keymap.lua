@@ -149,7 +149,7 @@ vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
 -- inp = # INPROGRESS: snippet
 -- que = # QUESTION: snippet
 -- cav = # CAVEAT: snippet
--- war = # WARN: snippet
+-- rol = # ROLLUP_KEYS: snippet
 -- tit = # TITLE: snippet
 -- lin = # LINK: snippet
 -- abo = # ABOUT: snippet
@@ -159,7 +159,7 @@ vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
 -- inp = -- INPROGRESS: snippet
 -- que = -- QUESTION: snippet
 -- cav = -- CAVEAT: snippet
--- war = -- WARN: snippet
+-- rol = -- ROLLUP_KEYS: snippet
 -- tit = -- TITLE: snippet
 -- lin = -- LINK: snippet
 -- abo = -- ABOUT: snippet

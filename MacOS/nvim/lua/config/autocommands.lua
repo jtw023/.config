@@ -28,12 +28,12 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.sql", "*.py" },
-	command = [[:iab tod -- TODO:| :iab fi -- FIX:| :iab inp -- INPROGRESS:| :iab que -- QUESTION:| :iab cav -- CAVEAT:| :iab war -- WARN:| :iab tit -- TITLE:| :iab lin -- LINK:| :iab abo -- ABOUT:]],
+	command = [[:iab tod -- TODO:| :iab fi -- FIX:| :iab inp -- INPROGRESS:| :iab que -- QUESTION:| :iab cav -- CAVEAT:| :iab rol -- ROLLUP_KEYS:| :iab tit -- TITLE:| :iab lin -- LINK:| :iab abo -- ABOUT:]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.py",
-	command = [[:iab tod # TODO:| :iab fi # FIX:| :iab inp # INPROGRESS:| :iab que # QUESTION:| :iab cav # CAVEAT:| :iab war # WARN:| :iab tit # TITLE:| :iab lin # LINK:| :iab abo # ABOUT:]],
+	command = [[:iab tod # TODO:| :iab fi # FIX:| :iab inp # INPROGRESS:| :iab que # QUESTION:| :iab cav # CAVEAT:| :iab rol # ROLLUP_KEYS:| :iab tit # TITLE:| :iab lin # LINK:| :iab abo # ABOUT:]],
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {

@@ -13,7 +13,7 @@ require("todo-comments").setup {
 	  QUESTION = { icon = " ", color = "#00FFFF" },
 	  CAVEAT = { icon = " ", color = "#ff00ff" },
 	  TODO = { icon = " ", color = "#FF3131" },
-	  WARN = { icon = " ", color = "#E69D00" },
+	  ROLLUP_KEYS = { icon = " ", color = "#808080" },
 	  TITLE = { icon = " ", color = "#7d12ff" },
 	  LINK = { icon = " ", color = "#CCFF00" },
 	  ABOUT = { icon = " ", color = "#FFFFFF" },
