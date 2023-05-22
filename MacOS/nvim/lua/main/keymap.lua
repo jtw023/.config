@@ -11,7 +11,8 @@ vim.keymap.set('n', '<Leader>2', ':nohlsearch<CR>', opts)
 vim.keymap.set('n', '<Leader>3', ':w <BAR> :tabnew $HOME/.config/nvim/lua/main/keymap.lua<CR>', opts)
 -- Delete and save to void register
 vim.keymap.set('v', '<Leader>p', [["_dP]], opts)
-
+-- Expand JSON
+vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
 -- Use <TAB> to select the popup menu:
 vim.keymap.set('i', '<TAB>', 'pumvisible() ? "<C-n>" : "<TAB>"', { expr = true, noremap = true, silent = true })
 vim.keymap.set('i', '<S-TAB>', 'pumvisible() ? "<C-p>" : "<S-TAB>"', { expr = true, noremap = true, silent = true })
@@ -139,33 +140,6 @@ vim.keymap.set('n', '<Leader>hh', ':w <BAR> :Telescope help_tags<CR>', opts)
 -- FoldEnd
 
 -- FoldStart
--- Code Snippets and Formatting
--- Expand JSON
-vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
--- Snippets
--- Python File
--- tod = # TODO: snippet
--- fi = # FIX: snippet
--- inp = # INPROGRESS: snippet
--- que = # QUESTION: snippet
--- cav = # CAVEAT: snippet
--- rol = # ROLLUP_KEYS: snippet
--- tit = # TITLE: snippet
--- lin = # LINK: snippet
--- abo = # ABOUT: snippet
--- SQL File
--- tod = -- TODO: snippet
--- fi = -- FIX: snippet
--- inp = -- INPROGRESS: snippet
--- que = -- QUESTION: snippet
--- cav = -- CAVEAT: snippet
--- rol = -- ROLLUP_KEYS: snippet
--- tit = -- TITLE: snippet
--- lin = -- LINK: snippet
--- abo = -- ABOUT: snippet
--- FoldEnd
-
--- FoldStart
 -- Line Manipulation
 -- Move selected line up or down
 					  -- :'<,'>s/\w\+/"\0"/g
@@ -209,18 +183,44 @@ vim.keymap.set('n', 'gpull', ':Git pull<CR>', opts)
 
 -- FoldStart
 -- Autocommands -- keymappings that are only set in specific files
+--
 -- Python File
 -- nmap <Leader>= :w \| :lua vim.lsp.buf.format { async = true }<CR>
 -- nmap <S-t> :w \| :!time python3 %<CR>
 -- nmap <Leader><S-w> :w \| :so %<CR>
+-- Snippets
+-- Python File
+-- tod = # TODO: snippet
+-- fi = # FIX: snippet
+-- inp = # INPROGRESS: snippet
+-- que = # QUESTION: snippet
+-- cav = # CAVEAT: snippet
+-- rol = # ROLLUP_KEYS: snippet
+-- tit = # TITLE: snippet
+-- lin = # LINK: snippet
+-- abo = # ABOUT: snippet
+--
 -- "JavaScript File
 -- nmap <S-t> :w \| :!time node %<CR>
+--
 -- Shell File
 -- nmap <S-t> :w \| :!time sh %<CR>
+--
 -- SQL File
 -- nmap <Leader>= :w \| :silent !sqlfluff format --config /Users/jordanwalters/finished_scripts/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>
 -- nmap <S-r> <Leader><S-s>
 -- vmap <S-r> <Leader><S-s>
+-- SQL File
+-- tod = -- TODO: snippet
+-- fi = -- FIX: snippet
+-- inp = -- INPROGRESS: snippet
+-- que = -- QUESTION: snippet
+-- cav = -- CAVEAT: snippet
+-- rol = -- ROLLUP_KEYS: snippet
+-- tit = -- TITLE: snippet
+-- lin = -- LINK: snippet
+-- abo = -- ABOUT: snippet
+--
 -- Lua/Vim File
 -- nmap <Leader><S-w> :w \| :so %<CR>
 -- FoldEnd
