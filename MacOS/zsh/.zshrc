@@ -121,6 +121,7 @@ alias glo='git log --oneline' # show a short log of previous git commits
 alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged git files
 alias gds='git difftool --tool=nvimdiff --staged' # view git diffs of staged files
 alias gcl='git clean -df' # remove all untracked git files and directories
+alias gm='git merge' # merge named git branch to current git branch
 alias gw='git when' # see when the last pull or fetch was made(custom git alias)
 alias gita="bat -fn --theme base16 ~/.zshrc | grep -iw git" # show all git aliases
 
