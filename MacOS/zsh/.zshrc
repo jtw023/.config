@@ -95,6 +95,7 @@ alias .....='cd ../../../..'
 # Git commands
 alias create="bash $RANDOMSCRIPTS/create_git_repo.sh" # create git repo
 alias delete="bash $RANDOMSCRIPTS/delete_git_repo.sh" # delete git repo
+alias gu='git restore --staged' # unstage a staged git file
 alias grs='git reset --soft' # insert git commit hash to undo commit but keep changes in staging
 alias grm='git reset' # insert git commit hash to undo commit but keep changes and remove from staging
 alias grh='git reset --hard' # roll all tracked files back to state of git hash you choose
