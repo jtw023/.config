@@ -95,35 +95,35 @@ alias .....='cd ../../../..'
 # Git commands
 alias create="bash $RANDOMSCRIPTS/create_git_repo.sh" # create git repo
 alias delete="bash $RANDOMSCRIPTS/delete_git_repo.sh" # delete git repo
-alias gu='git restore --staged' # unstage a staged git file
-alias grs='git reset --soft' # insert git commit hash to undo commit but keep changes in staging
-alias grm='git reset' # insert git commit hash to undo commit but keep changes and remove from staging
-alias grh='git reset --hard' # roll all tracked files back to state of git hash you choose
-alias gcp='git cherry-pick' # insert git commit hash to move to a new branch
-alias gco='git checkout' # choose a file to unmodify or a different git branch to switch to
-alias gcon='git checkout -b' # create and instantly switch to new git branch
-alias gsl='git status' # show the status of a git directory
-alias gs='git status' # show a shorter status of a git directory
-alias gss='git status -s' # show a shorter status of a git directory
 alias ga='git add' # choose files to add to git staging area
 alias gaa='git add .' # add all files to git staging area
 alias gb='git branch -a' # view branches of git repo
 alias gc='git commit' # write a longer message with a new git commit
-alias gclo='git clone' # clone git repo
-alias gcm='git commit -m' # include a one line message with new git commit
 alias gca='git commit --amend -m' # ammend the message of a previous git commit
 alias gcaf='git commit --amend' # choose a new file to add to previous git commit
-alias gp="bash $RANDOMSCRIPTS/pull_all_git_repos.sh" # Pull all git repos simultaneously
-alias gpush='git push' # push commits to from local to remote git repo
-alias gpull='git pull' # equalizes local and remote git repo
-alias gl='git log' # show a log of previous git commits
-alias glo='git log --oneline' # show a short log of previous git commits
+alias gcl='git clean -df' # remove all untracked git files and directories
+alias gclo='git clone' # clone git repo
+alias gcm='git commit -m' # include a one line message with new git commit
+alias gco='git checkout' # choose a file to unmodify or a different git branch to switch to
+alias gcon='git checkout -b' # create and instantly switch to new git branch
+alias gcp='git cherry-pick' # insert git commit hash to move to a new branch
 alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged git files
 alias gds='git difftool --tool=nvimdiff --staged' # view git diffs of staged files
-alias gcl='git clean -df' # remove all untracked git files and directories
-alias gm='git merge' # merge named git branch to current git branch
-alias gw='git when' # see when the last pull or fetch was made(custom git alias)
 alias gita="bat -fn --theme base16 ~/.zshrc | grep -iw git" # show all git aliases
+alias gl='git log' # show a log of previous git commits
+alias glo='git log --oneline' # show a short log of previous git commits
+alias gm='git merge' # merge named git branch to current git branch
+alias gp="bash $RANDOMSCRIPTS/pull_all_git_repos.sh" # Pull all git repos simultaneously
+alias gpull='git pull' # equalizes local and remote git repo
+alias gpush='git push' # push commits to from local to remote git repo
+alias grh='git reset --hard' # roll all tracked files back to state of git hash you choose
+alias grm='git reset' # insert git commit hash to undo commit but keep changes and remove from staging
+alias grs='git reset --soft' # insert git commit hash to undo commit but keep changes in staging
+alias gs='git status' # show a shorter status of a git directory
+alias gsl='git status' # show the status of a git directory
+alias gss='git status -s' # show a shorter status of a git directory
+alias gu='git restore --staged' # unstage a staged git file
+alias gw='git when' # see when the last pull or fetch was made(custom git alias)
 
 ## Function Alias to extract zipped files
 ex ()
