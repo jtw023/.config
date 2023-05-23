@@ -100,6 +100,7 @@ alias grm='git reset' # insert git commit hash to undo commit but keep changes a
 alias grh='git reset --hard' # roll all tracked files back to state of git hash you choose
 alias gcp='git cherry-pick' # insert git commit hash to move to a new branch
 alias gco='git checkout' # choose a file to unmodify or a different git branch to switch to
+alias gcon='git checkout -b' # create and instantly switch to new git branch
 alias gsl='git status' # show the status of a git directory
 alias gs='git status' # show a shorter status of a git directory
 alias gss='git status -s' # show a shorter status of a git directory
