@@ -1,6 +1,15 @@
 RANDOMSCRIPTS="$HOME/github_repos/Random-Scripts"
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '󰊢 %b'
+
 # Set prompt
-PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %B%F{46}-%f%b '
+setopt PROMPT_SUBST
+PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %F{red}${vcs_info_msg_0_}%f %B%F{46}-%f%b '
 
 # Use vim keys
 # set -o vi
