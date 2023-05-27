@@ -217,11 +217,11 @@ vim.keymap.set('v', '<S-c>', '~', opts)
 -- FoldStart
 -- Git -- Show diff or jump to added[+], modified[->], or deleted[-] line
 opts.desc = 'Preview Gitsigns Hunk'
-vim.keymap.set('n', '<Leader>gv', ':Gitsigns preview_hunk<CR>', opts)
+vim.keymap.set('n', '<Leader>+', ':Gitsigns preview_hunk<CR>', opts)
 opts.desc = 'Next Gitsigns Hunk'
-vim.keymap.set('n', '<Leader>gf', ':Gitsigns next_hunk<CR>', opts)
+vim.keymap.set('n', '<Leader>]', ':Gitsigns next_hunk<CR>', opts)
 opts.desc = 'Previous Gitsigns Hunk'
-vim.keymap.set('n', '<Leader>gb', ':Gitsigns prev_hunk<CR>', opts)
+vim.keymap.set('n', '<Leader>[', ':Gitsigns prev_hunk<CR>', opts)
 opts.desc = 'View Diffsplit'
 vim.keymap.set('n', '<Leader>d', ':diffsplit<CR>', opts)
 opts.desc = 'Open Git Buffer'
