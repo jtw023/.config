@@ -166,6 +166,9 @@ vim.keymap.set('n', '<Leader>to', ':w <BAR> :Telescope oldfiles<CR>', opts)
 -- Find Git Files
 opts.desc = 'Find Git Files With Telescope'
 vim.keymap.set('n', '<Leader>tg', ':w <BAR> :Telescope git_files<CR>', opts)
+-- See Git Commits
+opts.desc = 'See Git Commits With Telescope'
+vim.keymap.set('n', '<Leader>tc', ':Telescope git_commits<CR>', opts)
 -- Live Grep
 opts.desc = 'Live Grep Files With Telescope'
 vim.keymap.set('n', '<Leader>tl', ':exe "w <BAR> :Telescope live_grep cwd=" .. fnameescape(expand("%:p:h"))<CR>', opts)
