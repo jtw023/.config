@@ -50,7 +50,7 @@ vim.keymap.set('n', '<S-b>', 'o<ESC>', opts)
 -- Fold Lines
 -- Create a new fold
 opts.desc = 'Create New Fold'
-vim.keymap.set({'n', 'v'}, '<S-z>', 'zf', opts)
+vim.keymap.set({ 'n', 'v' }, '<S-z>', 'zf', opts)
 -- Toggle the fold
 opts.desc = 'Toggle Fold Between Open And Closed'
 vim.keymap.set('n', '<S-m>', 'za', opts)
@@ -77,30 +77,30 @@ vim.keymap.set('n', '<Leader>l', '<C-w>l', opts) -- right
 opts.desc = 'Change To Above Window'
 vim.keymap.set('n', '<Leader>k', '<C-w>k', opts) -- up
 opts.desc = 'Change To Below Window'
-vim.keymap.set('n', '<Leader>j', '<C-w>j', opts ) -- down
+vim.keymap.set('n', '<Leader>j', '<C-w>j', opts) -- down
 opts.desc = 'Change To Window To The Left'
-vim.keymap.set('n', '<Leader>h', '<C-w>h', opts ) -- left
+vim.keymap.set('n', '<Leader>h', '<C-w>h', opts) -- left
 -- Jump Scroll
 opts.desc = 'Jump Scroll To The Right'
-vim.keymap.set({'n', 'v'}, '<S-l>', 'zL', opts) -- jump right
+vim.keymap.set({ 'n', 'v' }, '<S-l>', 'zL', opts)    -- jump right
 opts.desc = 'Jump Scroll To The Left'
-vim.keymap.set({'n', 'v'}, '<S-h>', 'zH', opts) -- jump left
+vim.keymap.set({ 'n', 'v' }, '<S-h>', 'zH', opts)    -- jump left
 opts.desc = 'Jump Up Half Screen'
-vim.keymap.set({'n', 'v'}, '<S-k>', '<C-u>', opts) -- jump up
+vim.keymap.set({ 'n', 'v' }, '<S-k>', '<C-u>', opts) -- jump up
 opts.desc = 'Jump Down Half Screen'
-vim.keymap.set({'n', 'v'}, '<S-j>', '<C-d>', opts) -- jump down
+vim.keymap.set({ 'n', 'v' }, '<S-j>', '<C-d>', opts) -- jump down
 -- Split screen
 opts.desc = 'Open Splitscreen In Netrw'
 vim.keymap.set('n', '<Leader>s', ':vs .<CR>', opts)
 -- Resize buffers
 opts.desc = 'Mover Edge of Buffer Window Up'
-vim.keymap.set('n', '<S-Up>', ':resize +2<CR>', opts) -- up
+vim.keymap.set('n', '<S-Up>', ':resize +2<CR>', opts)             -- up
 opts.desc = 'Mover Edge of Buffer Window Down'
-vim.keymap.set('n', '<S-Down>', ':resize -2<CR>', opts) -- down
+vim.keymap.set('n', '<S-Down>', ':resize -2<CR>', opts)           -- down
 opts.desc = 'Mover Edge of Buffer Window Right'
 vim.keymap.set('n', '<S-Right>', ':vertical resize +2<CR>', opts) -- right
 opts.desc = 'Mover Edge of Buffer Window Left'
-vim.keymap.set('n', '<S-Left>', ':vertical resize -2<CR>', opts) -- left
+vim.keymap.set('n', '<S-Left>', ':vertical resize -2<CR>', opts)  -- left
 -- Switch vertical split to horizontal split
 opts.desc = 'Switch Vertical Split to Horizontal Split'
 vim.keymap.set('n', '<Leader>u', '<C-w>L', opts) -- horizontal
@@ -112,9 +112,9 @@ vim.keymap.set('n', '<Leader>v', '<C-w>J', opts) -- vertical
 opts.desc = 'Return To Previous Buffer After Jump To Definition'
 vim.keymap.set('n', 'gb', ':w <BAR> :norm <C-t><CR>', opts) -- return to previous buffer after using 'gd'
 opts.desc = 'Go To Next Already Open Buffer'
-vim.keymap.set('n', '>', ':w <BAR> :bnext<CR>', opts) -- go to next buffer
+vim.keymap.set('n', '>', ':w <BAR> :bnext<CR>', opts)       -- go to next buffer
 opts.desc = 'Return To Previous Already Open Buffer'
-vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts) -- return to previous buffer
+vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts)       -- return to previous buffer
 -- FoldEnd
 
 -- FoldStart
@@ -122,7 +122,7 @@ vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts) -- return to previous buff
 -- Toggle file explorer with Leader-m
 opts.desc = 'Toggle Netrw Window'
 vim.keymap.set('n', '<Leader>m', function()
-	vim.cmd([[
+    vim.cmd([[
 		if exists("t:expl_buf_num")
 			let expl_win_num = bufwinnr(t:expl_buf_num)
 			if expl_win_num != -1
@@ -180,7 +180,7 @@ vim.keymap.set('n', '<Leader>th', ':w <BAR> :Telescope help_tags<CR>', opts)
 -- FoldStart
 -- Line Manipulation
 -- Move selected line up or down
-					  -- :'<,'>s/\w\+/"\0"/g
+-- :'<,'>s/\w\+/"\0"/g
 opts.desc = 'Move Selected Line Up'
 vim.keymap.set('v', '<S-u>', ":m '<-2<CR>gv=gv", opts)
 opts.desc = 'Move Selected Line Down'
@@ -196,12 +196,12 @@ vim.keymap.set('n', '<Leader>/', ':CommentToggle<CR><ESC>', opts)
 vim.keymap.set('v', '<Leader>/', ':CommentToggle<CR>"<ESC>', opts)
 -- Surround every word under cursor or every word in selection
 opts.desc = 'Wrap Words'
-vim.keymap.set('n', "'<S-w>", "viwc''<ESC>hp", opts) -- word
-vim.keymap.set('n', '"<S-w>', 'viwc""<ESC>hp', opts) -- word
-vim.keymap.set('n', '`<S-w>', 'viwc``<ESC>hp', opts) -- word
-vim.keymap.set('n', '{<S-w>', 'viwc{}<ESC>hp', opts) -- word
-vim.keymap.set('n', '[<S-w>', 'viwc[]<ESC>hp', opts) -- word
-vim.keymap.set('n', '(<S-w>', 'viwc()<ESC>hp', opts) -- word
+vim.keymap.set('n', "'<S-w>", "viwc''<ESC>hp", opts)        -- word
+vim.keymap.set('n', '"<S-w>', 'viwc""<ESC>hp', opts)        -- word
+vim.keymap.set('n', '`<S-w>', 'viwc``<ESC>hp', opts)        -- word
+vim.keymap.set('n', '{<S-w>', 'viwc{}<ESC>hp', opts)        -- word
+vim.keymap.set('n', '[<S-w>', 'viwc[]<ESC>hp', opts)        -- word
+vim.keymap.set('n', '(<S-w>', 'viwc()<ESC>hp', opts)        -- word
 vim.cmd([[vnoremap '<S-w> :s/\w\+/'\0'/g<CR> \| :noh<CR>]]) -- line
 vim.cmd([[vnoremap "<S-w> :s/\w\+/"\0"/g<CR> \| :noh<CR>]]) -- line
 vim.cmd([[vnoremap `<S-w> :s/\w\+/`\0`/g<CR> \| :noh<CR>]]) -- line
