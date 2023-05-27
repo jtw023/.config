@@ -121,7 +121,7 @@ vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts)       -- return to previou
 -- Explorer
 -- Toggle file explorer with Leader-m
 opts.desc = 'Toggle Netrw Window'
-vim.keymap.set('n', '<Leader>m', function()
+vim.keymap.set('n', '<Leader>f', function()
     vim.cmd([[
 		if exists("t:expl_buf_num")
 			let expl_win_num = bufwinnr(t:expl_buf_num)
