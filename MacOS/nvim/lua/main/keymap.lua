@@ -227,6 +227,8 @@ opts.desc = 'Previous Gitsigns Hunk'
 vim.keymap.set('n', '<Leader>[', ':Gitsigns prev_hunk<CR>', opts)
 opts.desc = 'View Diffsplit'
 vim.keymap.set('n', '<Leader>d', ':w <BAR> :Gvdiff<CR>', opts)
+opts.desc = 'View 3 Way Diffsplit'
+vim.keymap.set('n', '<Leader>m', ':Gdiffsplit!<CR>', opts)
 opts.desc = 'Open Git Buffer'
 vim.keymap.set('n', 'gs', ':w <BAR> :Git<CR>', opts)
 opts.desc = 'View Git Log'
