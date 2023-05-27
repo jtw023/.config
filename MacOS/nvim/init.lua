@@ -2,6 +2,7 @@ require('vim-plug.plugins')
 require('main.set')
 require('main.keymap')
 
+require('config.plug-fterm')
 require('config.plug-markdown')
 require('config.plug-cmp.plug-cmp')
 require('config.autopairs')
