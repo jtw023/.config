@@ -13,6 +13,7 @@ local sources = {
         diagnostics.pylint,
         diagnostics.sqlfluff.with({
             command = "sqlfluff",
+            extra_args = { "--dialect", "redshift" },
             filetypes = { "sql" },
         }),
     },
