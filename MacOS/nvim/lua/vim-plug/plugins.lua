@@ -1,6 +1,8 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- Undotree
+Plug 'mbbill/undotree'
 -- Markdown Preview
 Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
 -- Git Plugins
