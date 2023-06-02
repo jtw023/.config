@@ -116,6 +116,7 @@ alias gclo='git clone' # clone git repo
 alias gcm='git commit -m' # include a one line message with new git commit
 alias gco='git checkout' # choose a file to unmodify or a different git branch to switch to
 alias gcon='git checkout -b' # create and instantly switch to new git branch
+alias gcor='git checkout -' # checkout most recently checked out git branch
 alias gcp='git cherry-pick' # insert git commit hash to move to a new branch
 alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged git files
 alias gds='git difftool --tool=nvimdiff --staged' # view git diffs of staged files
