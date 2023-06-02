@@ -64,17 +64,17 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sql",
 	command = [[nmap <Leader>= :w \| :silent !sqlfluff format --config /Users/jordanwalters/bitbucket_repos/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>]],
-	group = group2
+	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.py", "*.lua" },
 	command = [[nmap <Leader>= :w \| :lua vim.lsp.buf.format { async = true }<CR>]],
-	group = group2
+	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = { "*.lua", "*.vim", "*.md", "*.py" },
 	command = [[nmap <Leader><Leader> :w \| :so %<CR>]],
-	group = group2
+	group = group1
 })
 vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
 	pattern = "*.md",
@@ -84,5 +84,5 @@ vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
 vim.api.nvim_create_autocmd({"FileType"}, {
 	pattern = { "sql", "mysql", "plsql" },
 	command = "lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }}})",
-	group = group2
+	group = group3
 })
