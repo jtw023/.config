@@ -231,8 +231,8 @@ opts.desc = 'View 3 Way Diffsplit'
 vim.keymap.set('n', '<Leader>m', ':Gvdiffsplit!<CR>', opts)
 opts.desc = 'Open Git Buffer'
 vim.keymap.set('n', 'gs', ':w <BAR> :Git<CR>', opts)
-opts.desc = 'wq'
-vim.keymap.set('n', 'gw', ':wq<CR>', opts)
+opts.desc = 'Gwrite'
+vim.keymap.set('n', 'gw', ':Gwrite<CR>', opts)
 opts.desc = 'View Git Log'
 vim.keymap.set('n', 'gl', ':Git log<CR>', opts)
 opts.desc = 'Make Git Push'
