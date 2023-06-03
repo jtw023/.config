@@ -12,7 +12,7 @@ opts.desc = 'Open Keymap File In New Tab'
 vim.keymap.set('n', '<Leader>3', ':w <BAR> :tabnew $HOME/.config/nvim/lua/main/keymap.lua<CR>', opts)
 -- Delete and save to void register
 opts.desc = 'Paste To Register Without Overwriting Clipboard'
-vim.keymap.set('v', '<Leader>p', [["_dP]], opts)
+vim.keymap.set('v', 'p', [["_dP]], opts)
 -- Expand JSON
 opts.desc = 'Expand JSON'
 vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
