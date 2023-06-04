@@ -86,11 +86,6 @@ vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
 	command = [[ :silent ! osascript $HOME/github_repos/Random-Scripts/markdown_close.scpt ]],
 	group = group2
 })
-vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
-	pattern = { "*.lua","*.vim","*.md","*.sqlfluff","*.*sh*","*git*","*conf*","*.snippets","*.yml" },
-	command = [[ :call delete(undofile(@%)) ]],
-	group = group2
-})
 vim.api.nvim_create_autocmd({"FileType"}, {
 	pattern = { "sql", "mysql", "plsql" },
 	command = "lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }}})",
