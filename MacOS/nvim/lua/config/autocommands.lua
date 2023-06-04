@@ -78,6 +78,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = { "*.lua","*.vim","*.md","*.sqlfluff","*.*sh*","*.snippets","*.yml","*git*","*conf*","*COMMIT*" },
+    command = [[ :set noundofile ]],
 vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
 	pattern = "*.md",
 	command = [[ :silent ! osascript $HOME/github_repos/Random-Scripts/markdown_close.scpt ]],
