@@ -76,6 +76,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	command = [[nmap <Leader><Leader> :w \| :so %<CR>]],
 	group = group1
 })
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
 	pattern = "*.md",
 	command = [[ :silent ! osascript $HOME/github_repos/Random-Scripts/markdown_close.scpt ]],
