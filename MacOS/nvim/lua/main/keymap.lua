@@ -1,4 +1,4 @@
--- TODO: Test vim-fugitive push keybind
+-- TODO: Test vim-fugitive keybind
 -- FoldStart
 -- Miscellaneous
 -- set variable opts to add into all keymaps
