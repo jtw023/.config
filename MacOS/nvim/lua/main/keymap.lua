@@ -223,6 +223,8 @@ opts.desc = 'Toggle Git Undotree'
 vim.keymap.set('n', '<Leader>tr', ':UndotreeToggle<CR>', opts)
 opts.desc = 'Preview Gitsigns Hunk'
 vim.keymap.set('n', '<Leader>+', ':Gitsigns preview_hunk<CR>', opts)
+opts.desc = 'Exit Gitsigns Hunk'
+vim.keymap.set('n', '<Leader>_', '<C-w>w', opts)
 opts.desc = 'Next Gitsigns Hunk'
 vim.keymap.set('n', '<Leader>]', ':Gitsigns next_hunk<CR>', opts)
 opts.desc = 'Previous Gitsigns Hunk'
