@@ -23,6 +23,11 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sql",
+	command = [[:set nocursorline]],
+	group = group1
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*.sql",
 	command = [[vmap <S-r> <Leader><S-s>]],
 	group = group1
 })
