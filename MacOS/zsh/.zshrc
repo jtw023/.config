@@ -1,5 +1,10 @@
 RANDOMSCRIPTS="$HOME/github_repos/Random-Scripts"
 
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
+
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
