@@ -12,7 +12,7 @@ opts.desc = 'Open Keymap File In New Tab'
 vim.keymap.set('n', '<Leader>3', ':w <BAR> :tabnew $HOME/.config/nvim/lua/main/keymap.lua<CR>', opts)
 -- Delete and save to void register
 opts.desc = 'Paste To Register Without Overwriting Clipboard'
-vim.keymap.set('v', 'p', [["_dP]], opts)
+vim.keymap.set('v', 'p', [["_dp]], opts)
 -- Expand JSON
 opts.desc = 'Expand JSON'
 vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
@@ -33,9 +33,6 @@ vim.keymap.set('n', '<Leader>8', ':qa!<CR>', opts)
 -- Toggle Drawer
 opts.desc = 'Open DBUI Drawer'
 vim.keymap.set('n', '<Leader>o', ':DBUIToggle<CR>', opts)
--- Launch Program
-opts.desc = 'Open DBUI Program'
-vim.keymap.set('n', '<S-p>', ':DBUI<CR>', opts)
 -- FoldEnd
 
 -- FoldStart
