@@ -77,11 +77,6 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = { "*.lua", "*.vim", "*.md", "*.py" },
-	command = [[nmap <Leader><Leader> :w \| :so %<CR>]],
-	group = group1
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = { "*.lua","*.vim","*.md","*.sqlfluff","*.*sh*","*.snippets","*.yml","*git*","*conf*","*COMMIT*" },
     command = [[ :set noundofile ]],
     group = group1

@@ -4,6 +4,9 @@
 local opts = { noremap = true, silent = true }
 -- Unmap and remap Leader key
 vim.g.mapleader = ' '
+-- Save and source
+opts.desc = 'Save and Source File'
+vim.keymap.set('n', '<Leader><Leader>', ':w <BAR> :so %<CR>')
 -- Turn off highlighting
 opts.desc = 'Turn Off Highlighting'
 vim.keymap.set('n', '<Leader>2', ':nohlsearch<CR>', opts)
