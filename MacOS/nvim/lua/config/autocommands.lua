@@ -27,12 +27,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	group = group1
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = "*.sql",
-	command = [[vmap <S-r> <Leader><S-s>]],
-	group = group1
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = { "*.sql", "*.py" },
+	pattern = { "*.sql", "*.lua" },
 	command = [[:iab * -- *| :iab tod -- TODO:| :iab fi -- FIX:| :iab inp -- INPROGRESS:| :iab que -- QUESTION:| :iab cav -- CAVEAT:| :iab rol -- ROLLUP_KEYS:| :iab tit -- TITLE:| :iab lin -- LINK:| :iab abo -- ABOUT:]],
 	group = group1
 })
