@@ -18,7 +18,5 @@ if has('persistent_undo')
     endif
     " point Vim to the defined undo directory.
     let &undodir = target_path
-    " finally, enable undo persistence.
-    set undofile
 endif
 ]]

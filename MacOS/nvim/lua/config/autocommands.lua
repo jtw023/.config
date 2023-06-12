@@ -71,9 +71,9 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	command = [[nmap <Leader>= :w \| :lua vim.lsp.buf.format { async = true }<CR>]],
 	group = group1
 })
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = { "*.lua","*.vim","*.md","*.sqlfluff","*.*sh*","*.snippets","*.yml","*git*","*conf*","*COMMIT*" },
-    command = [[ :set noundofile ]],
+vim.api.nvim_create_autocmd({ "BufRead", "BufEnter", "BufWinEnter"}, {
+    pattern = "*/bitbucket_repos/jordanw/SQL/*",
+    command = [[ :set undofile ]],
     group = group1
 })
 vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
