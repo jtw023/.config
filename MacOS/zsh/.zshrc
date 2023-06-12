@@ -90,6 +90,7 @@ alias mkd='mkdir -pv'
 
 # Add verbose and interactive options to potentially destructive commands
 alias cp='cp -v'
+alias cpd='cp -rv'
 alias mv='mv -v'
 alias rm='rm -v'
 alias rmd='/bin/rm -rv'
