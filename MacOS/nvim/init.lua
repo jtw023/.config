@@ -1,7 +1,8 @@
 require('vim-plug.plugins')
 require('main.set')
-require('main.keymap-qwerty')
--- require('main.keymap-colemak')
+-- vim.g.keymap_config = 'main/keymap-colemak'
+vim.g.keymap_config = 'main/keymap-qwerty'
+require(vim.g.keymap_config)
 
 require('config.plug-undotree')
 require('config.plug-markdown')
