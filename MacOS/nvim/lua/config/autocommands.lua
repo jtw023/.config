@@ -19,9 +19,16 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	command = [[nmap <S-r> :w \| :!time sh %<CR>]],
 	group = runFile
 })
+-- Run SQL file in normal mode
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.sql",
 	command = [[nmap <S-r> <Leader><S-s>]],
+	group = runFile
+})
+-- Run SQL file in visual mode
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*.sql",
+	command = [[vmap <S-r> <Leader><S-s>]],
 	group = runFile
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
