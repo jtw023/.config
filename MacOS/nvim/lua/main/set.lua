@@ -82,7 +82,7 @@ vim.cmd([[hi clear SpellCap]])
 -- Set highlights
 vim.cmd([[ hi Visual guifg = #000000 ]])
 vim.cmd([[ hi Search guifg = #000000 ]])
-vim.cmd([[ hi IncSearch guifg = #000000 ]])
+-- vim.cmd([[ hi IncSearch guifg = #000000 ]])
 vim.cmd([[ hi Folded guifg = #000000 ]])
 vim.cmd([[ hi Blamer guifg = #808080 ]])
 vim.cmd([[ hi LineNr guifg = #205484]])
