@@ -1,4 +1,8 @@
-local colorizer = require('colorizer')
+local status_ok, colorizer = pcall(require, "colorizer")
+if not status_ok then
+    print('config/plug-colorizer.lua broken')
+    return
+end
 
 colorizer.setup(
   {'sql', 'python', 'lua';},

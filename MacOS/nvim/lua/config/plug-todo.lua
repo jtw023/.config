@@ -1,4 +1,11 @@
-require("todo-comments").setup {
+local status_ok, todo = pcall(require, 'todo-comments')
+if not status_ok then
+    print('config/plug-todo.lua broken')
+    return
+end
+
+
+todo.setup {
     signs = true, -- show icons in the signs column
     sign_priority = 8, -- sign priority
     -- keywords recognized as todo comments

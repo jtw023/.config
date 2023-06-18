@@ -1,5 +1,14 @@
-local pf = require('pretty-fold')
-local fp = require('fold-preview')
+local status_ok_pf, pf = pcall(require, "pretty-fold")
+if not status_ok_pf then
+    print('config/plug-fold.lua broken')
+    return
+end
+
+local status_ok_fp, fp = pcall(require, "fold-preview")
+if not status_ok_fp then
+    print('config/plug-fold.lua broken')
+    return
+end
 
 pf.setup{
 	keep_indentation = true,

@@ -1,4 +1,11 @@
-require('gitsigns').setup {
+local status_ok, gs = pcall(require, "gitsigns")
+if not status_ok then
+    print('config/plug-gitsigns.lua broken')
+    return
+end
+
+
+gs.setup {
       signs = {
         add          = {hl = 'GitSignsAdd'   , text = '', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
         change       = {hl = 'GitSignsChange', text = '', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},

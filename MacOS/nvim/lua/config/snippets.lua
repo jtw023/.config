@@ -1,4 +1,8 @@
-local ls = require("luasnip")
+local status_ok, ls = pcall(require, 'luasnip')
+if not status_ok then
+    print('config/snippets.lua broken')
+    return
+end
 
 local snip = ls.snippet
 local text = ls.text_node

@@ -1,5 +1,14 @@
-local m = require('mason')
-local mlsp = require('mason-lspconfig')
+local status_ok_m, m = pcall(require, "mason")
+if not status_ok_m then
+    print('config/plug-mason.lua broken')
+    return
+end
+
+local status_ok_mlsp, mlsp = pcall(require, "mason-lspconfig")
+if not status_ok_mlsp then
+    print('config/plug-mason.lua broken')
+    return
+end
 
 m.setup({
 	ui = {

@@ -1,4 +1,11 @@
-require'nvim-treesitter.configs'.setup {
+local status_ok, treesitter = pcall(require, 'nvim-treesitter.configs')
+if not status_ok then
+    print('config/plug-treesitter.lua broken')
+    return
+end
+
+
+treesitter.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "python", "lua", "bash", "vim" },
   -- ensure_installed = { "python", "lua", "bash", "vim", "sql" }, -- for when sql becomes available

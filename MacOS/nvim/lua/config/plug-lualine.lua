@@ -1,4 +1,8 @@
-local ll = require('lualine')
+local status_ok, ll = pcall(require, "lualine")
+if not status_ok then
+    print('config/plug-lualine.lua broken')
+    return
+end
 
 local colors = {
 	fg1 = '#000000',

@@ -1,4 +1,10 @@
-require('autoclose').setup({
+local status_ok, autopairs = pcall(require, "autoclose")
+if not status_ok then
+    print('config/autopairs.lua broken')
+    return
+end
+
+autopairs.setup({
 	-- Add a specific key to pair
 	-- close: If set to true, pressing the character will insert
 	-- both the opening and closing characters, and place the cursor in between them.
