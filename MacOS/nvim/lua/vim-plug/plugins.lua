@@ -56,5 +56,6 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'HiPhish/nvim-ts-rainbow2'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 vim.call('plug#end')

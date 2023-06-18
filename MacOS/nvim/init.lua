@@ -2,6 +2,7 @@ require('vim-plug.plugins')
 require('main.set')
 require('main.keymap')
 
+require('config.plug-indent')
 require('config.plug-undotree')
 require('config.plug-markdown')
 require('config.plug-cmp.plug-cmp')
