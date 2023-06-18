@@ -57,7 +57,7 @@ o.errorbells = false
 -- Add beginning and trailing whitespace notification
 o.list = true
 o.listchars = {
-    tab = ' ',
+    -- tab = ' ',
     trail = '·',
     extends = '☛',
     precedes = '☚'
@@ -94,6 +94,11 @@ vim.cmd([[ hi TSRainbowBlue guifg = #00FFFF ]])
 vim.cmd([[ hi TSRainbowOrange guifg = #800080 ]])
 vim.cmd([[ hi TSRainbowGreen guifg = #7CFC00 ]])
 vim.cmd([[ hi TSRainbowViolet guifg = #FFFFFF ]])
+-- Treesitter Blankline
+vim.cmd([[ hi IndentBlanklineIndent1 guifg = #D2042D gui = nocombine ]])
+vim.cmd([[ hi IndentBlanklineIndent2 guifg = #7CFC00 gui = nocombine ]])
+vim.cmd([[ hi IndentBlanklineIndent3 guifg = #800080 gui = nocombine ]])
+vim.cmd([[ hi IndentBlanklineIndent4 guifg = #00FFFF gui = nocombine ]])
 
 -- Highlight on yank
 vim.cmd([[
