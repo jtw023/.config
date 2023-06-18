@@ -85,7 +85,15 @@ vim.cmd([[ hi Search guifg = #000000 ]])
 -- vim.cmd([[ hi IncSearch guifg = #000000 ]])
 vim.cmd([[ hi Folded guifg = #000000 ]])
 vim.cmd([[ hi Blamer guifg = #808080 ]])
-vim.cmd([[ hi LineNr guifg = #205484]])
+vim.cmd([[ hi LineNr guifg = #205484 ]])
+-- Treesitter Rainbow
+vim.cmd([[ hi TSRainbowYellow guifg = #FFD700 ]])
+vim.cmd([[ hi TSRainbowRed guifg = #D2042D ]])
+vim.cmd([[ hi TSRainbowCyan guifg = #808080 ]])
+vim.cmd([[ hi TSRainbowBlue guifg = #00FFFF ]])
+vim.cmd([[ hi TSRainbowOrange guifg = #800080 ]])
+vim.cmd([[ hi TSRainbowGreen guifg = #7CFC00 ]])
+vim.cmd([[ hi TSRainbowViolet guifg = #FFFFFF ]])
 
 -- Highlight on yank
 vim.cmd([[

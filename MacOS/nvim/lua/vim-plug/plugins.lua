@@ -55,5 +55,6 @@ Plug 'nvim-lualine/lualine.nvim'
 -- Treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'HiPhish/nvim-ts-rainbow2'
 
 vim.call('plug#end')
