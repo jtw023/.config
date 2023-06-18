@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     command = [[vmap <S-r> <Leader><S-s>]],
     group = runFile
 })
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
     pattern = "*.sql",
     command = [[:set nocursorline]],
     group = nvimOptions
@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '# %s')",
 	group = nvimOptions
 })
-vim.api.nvim_create_autocmd({ "BufRead", "BufEnter", "BufWinEnter"}, {
+vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
     pattern = "*/bitbucket_repos/jordanw/SQL/*",
     command = [[ :set undofile ]],
     group = nvimOptions
