@@ -37,9 +37,9 @@ vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = "*.py",
-	command = [[:set foldmarker=#FoldStart,#FoldEnd]],
-	group = nvimOptions
+    pattern = "*.py",
+    command = [[:set foldmarker=#FoldStart,#FoldEnd]],
+    group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = { "*.sql", "*.lua" },
@@ -52,14 +52,14 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = "*.sql",
-	command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '-- %s')",
-	group = nvimOptions
+    pattern = "*.sql",
+    command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '-- %s')",
+    group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = "*.sqlfluff",
-	command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '# %s')",
-	group = nvimOptions
+    pattern = "*.sqlfluff",
+    command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '# %s')",
+    group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
     pattern = "*/bitbucket_repos/jordanw/SQL/*",
