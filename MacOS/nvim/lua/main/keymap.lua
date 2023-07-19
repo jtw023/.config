@@ -104,9 +104,9 @@ opts.desc = 'Mover Edge of Buffer Window Left'
 vim.keymap.set('n', '<S-Left>', ':vertical resize -2<CR>', opts)  -- left
 -- Switch vertical split to horizontal split
 opts.desc = 'Switch Vertical Split to Horizontal Split'
-vim.keymap.set('n', '<Leader>u', '<C-w>L', opts) -- horizontal
+vim.keymap.set('n', '<C-h>', '<C-w>L', opts) -- horizontal
 opts.desc = 'Switch Horizontal Split to Vertical Split'
-vim.keymap.set('n', '<Leader>v', '<C-w>J', opts) -- vertical
+vim.keymap.set('n', '<C-v>', '<C-w>J', opts) -- vertical
 -- Switch Tabs
 -- <Leader>b opens a list of all buffers
 -- 'gd' jumps to definition of any word in any file(python or lua only)
