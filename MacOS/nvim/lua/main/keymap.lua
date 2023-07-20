@@ -106,7 +106,7 @@ vim.keymap.set('n', '<S-Left>', ':vertical resize -2<CR>', opts)  -- left
 opts.desc = 'Switch Vertical Split to Horizontal Split'
 vim.keymap.set('n', '<C-h>', '<C-w>L', opts) -- horizontal
 opts.desc = 'Switch Horizontal Split to Vertical Split'
-vim.keymap.set('n', '<C-v>', '<C-w>J', opts) -- vertical
+vim.keymap.set('n', '<C-s>', '<C-w>J', opts) -- vertical
 -- Switch Tabs
 -- <Leader>b opens a list of all buffers
 -- 'gd' jumps to definition of any word in any file(python or lua only)
