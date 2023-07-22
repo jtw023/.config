@@ -1,21 +1,26 @@
-local status_ok, gs = pcall(require, "gitsigns")
-if not status_ok then
-    print('config/plug-gitsigns.lua broken')
+local notify_status_ok, notify = pcall(require, "notify")
+if not notify_status_ok then
+    print('notify broken in config/plug-gitsigns.lua')
     return
 end
 
+local status_ok, gs = pcall(require, "gitsigns")
+if not status_ok then
+    notify('gitsigns broken in config/plug-gitsigns.lua', 'error')
+    return
+end
 
 gs.setup {
-      signs = {
+    signs = {
         add          = {hl = 'GitSignsAdd'   , text = '', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
         change       = {hl = 'GitSignsChange', text = '', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
         delete       = {hl = 'GitSignsDelete', text = '', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
         topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
         changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-      },
-      numhl = false,
-      linehl = false,
-      keymaps = {
+    },
+    numhl = false,
+    linehl = false,
+    keymaps = {
         -- Default keymap options
         -- noremap = true,
         -- buffer = true,
@@ -33,13 +38,13 @@ gs.setup {
         -- -- Text objects
         -- ['o ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
         -- ['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
-	  },
-      watch_gitdir = {
+    },
+    watch_gitdir = {
         interval = 1000
-      },
-      current_line_blame = false,
-      sign_priority = 6,
-      update_debounce = 100,
-      status_formatter = nil, -- Use default
-      -- diff_opts.internal = true,  -- If luajit is present
-    }
+    },
+    current_line_blame = false,
+    sign_priority = 6,
+    update_debounce = 100,
+    status_formatter = nil, -- Use default
+    -- diff_opts.internal = true,  -- If luajit is present
+}

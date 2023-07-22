@@ -1,6 +1,8 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- notify
+Plug 'rcarriga/nvim-notify'
 -- Undotree
 Plug 'mbbill/undotree'
 -- Markdown Preview

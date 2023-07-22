@@ -1,20 +1,26 @@
+local notify_status_ok, notify = pcall(require, "notify")
+if not notify_status_ok then
+    print('notify broken in config/plug-treesitter.lua')
+    return
+end
+
 local status_ok_treesitter, treesitter = pcall(require, 'nvim-treesitter.configs')
 if not status_ok_treesitter then
-    print('config/plug-treesitter.lua broken')
+    notify('treesitter broken in config/plug-treesitter.lua', 'error')
     return
 end
 
 local status_ok_context, context = pcall(require, "treesitter-context")
 if not status_ok_context then
-    print('config/plug-treesitter.lua broken')
+    notify('context broken in config/plug-treesitter.lua', 'error')
     return
 end
 
 
 treesitter.setup {
     -- A list of parser names, or "all"
-    ensure_installed = { "python", "lua", "bash", "vim" },
-    -- ensure_installed = { "python", "lua", "bash", "vim", "sql" }, -- for when sql becomes available
+    -- ensure_installed = { "python", "lua", "bash", "vim" },
+    ensure_installed = { "python", "lua", "bash", "vim", "sql" }, -- for when sql becomes available
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,

@@ -1,6 +1,12 @@
+local notify_status_ok, notify = pcall(require, "notify")
+if not notify_status_ok then
+    print('notify broken in lsp/init.lua')
+    return
+end
+
 local status_ok, lsp = pcall(require, 'lspconfig')
 if not status_ok then
-    print('lsp/init.lua broken')
+    notify('lspconfig broken in lsp/init.lua', 'error')
     return
 end
 
@@ -19,6 +25,7 @@ local lsp_flags = {
 lsp['sqlls'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
+    root_dir = lsp.util.root_pattern('.git'),
 }
 
 lsp['pyright'].setup {
@@ -27,14 +34,14 @@ lsp['pyright'].setup {
 }
 
 lsp['bashls'].setup {
-	on_attach = on_attach,
-	flags = lsp_flags,
-	settings = {
-		bashIde = {
-			globPattern = "*@(.sh|.inc|.bash|.command|.zshrc|.zsh)"
-		},
-	},
-	root_dir = lsp.util.root_pattern('.git'),
+    on_attach = on_attach,
+    flags = lsp_flags,
+    settings = {
+    bashIde = {
+        globPattern = "*@(.sh|.inc|.bash|.command|.zshrc|.zsh)"
+    },
+    },
+    root_dir = lsp.util.root_pattern('.git'),
 }
 
 lsp['lua_ls'].setup {
