@@ -26,5 +26,6 @@ m.setup({
     }
 })
 mlsp.setup{
-    ensure_installed = { "pyright", "lua_ls", "bashls", "sqlls" }
+    -- ensure_installed = { "pyright", "lua_ls", "bashls", "sqlls" }
+    ensure_installed = { "pyright", "lua_ls", "bashls", "arduino_language_server" }
 }

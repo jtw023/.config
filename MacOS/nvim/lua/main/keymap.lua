@@ -20,6 +20,10 @@ vim.keymap.set('v', 'ep', [["_dp]], opts)
 -- Expand JSON
 opts.desc = 'Expand JSON'
 vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
+-- Dadbod
+-- Toggle Drawer
+opts.desc = 'Open DBUI Drawer'
+vim.keymap.set('n', '<Leader>o', ':DBUIToggle<CR>', opts)
 -- FoldEnd
 
 -- FoldStart
@@ -33,10 +37,15 @@ vim.keymap.set('n', '<Leader>8', ':qa!<CR>', opts)
 -- FoldEnd
 
 -- FoldStart
--- Dadbod
--- Toggle Drawer
-opts.desc = 'Open DBUI Drawer'
-vim.keymap.set('n', '<Leader>o', ':DBUIToggle<CR>', opts)
+-- Arduino
+opts.desc = 'Attach Your Board'
+vim.keymap.set('n', '<Leader>na', ':ArduinoAttach<CR>')
+vim.keymap.set('n', '<Leader>nv', ':ArduinoVerify<CR>')
+vim.keymap.set('n', '<Leader>nu', ':ArduinoUpload<CR>')
+vim.keymap.set('n', '<Leader>nud', ':ArduinoUploadAndSerial<CR>')
+vim.keymap.set('n', '<Leader>nd', ':ArduinoSerial<CR>')
+vim.keymap.set('n', '<Leader>nb', ':ArduinoChooseBoard<CR>')
+vim.keymap.set('n', '<Leader>np', ':ArduinoChooseProgrammer<CR>')
 -- FoldEnd
 
 -- FoldStart
@@ -272,7 +281,7 @@ vim.keymap.set('n', 'gpull', ':Git pull<CR>', opts)
 -- nmap <S-t> :w \| :!time sh %<CR>
 --
 -- SQL File
--- nmap <Leader>= :w \| :silent !sqlfluff format --config /Users/jordanwalters/finished_scripts/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>
+-- nmap <Leader>= :w \| :silent !sqlfluff format --config /Users/jordanwalters/bitbucket_repos/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>
 -- nmap <S-r> <Leader><S-s>
 -- vmap <S-r> <Leader><S-s>
 -- SQL File

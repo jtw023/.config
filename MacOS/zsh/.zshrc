@@ -32,6 +32,9 @@ export EDITOR="/usr/local/bin/nvim"
 # Run previous command as sudo
 alias please='sudo !!'
 
+# Arduino-cli aliases
+alias an='arduino-cli sketch new'
+
 # Logout command
 alias lo='launchctl bootout user/$(id -u 503)'
 

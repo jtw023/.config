@@ -22,10 +22,22 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-lsp['sqlls'].setup {
+-- lsp['sqlls'].setup {
+--     on_attach = on_attach,
+--     flags = lsp_flags,
+--     root_dir = lsp.util.root_pattern('.git'),
+-- }
+
+lsp['arduino_language_server'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
     root_dir = lsp.util.root_pattern('.git'),
+    cmd = {
+        -- Required
+        "arduino-language-server",
+        "-cli-config",
+        "~/Library/Arduino15/arduino-cli.yaml",
+    }
 }
 
 lsp['pyright'].setup {

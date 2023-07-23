@@ -1,7 +1,9 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
--- notify
+-- Arduino
+Plug 'stevearc/vim-arduino'
+-- Notify
 Plug 'rcarriga/nvim-notify'
 -- Undotree
 Plug 'mbbill/undotree'
@@ -30,7 +32,7 @@ Plug 'kristijanhusak/vim-dadbod-completion'
 Plug 'terrortylor/nvim-comment'
 -- Install LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason.nvim'
+Plug('williamboman/mason.nvim', { ['do'] = ':MasonUpdate' })
 Plug 'williamboman/mason-lspconfig.nvim'
 -- Git Signs
 Plug 'lewis6991/gitsigns.nvim'
