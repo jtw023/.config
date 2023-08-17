@@ -84,12 +84,12 @@ vim.api.nvim_create_autocmd({"FileType"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = { "*.sql", "*.lua" },
-    command = [[:iab * -- *| :iab tod -- TODO:| :iab fi -- FIX:| :iab inp -- INPROGRESS:| :iab que -- QUESTION:| :iab cav -- CAVEAT:| :iab rol -- ROLLUP_KEYS:| :iab tit -- TITLE:| :iab lin -- LINK:| :iab abo -- ABOUT:]],
+    command = [[:iab *@ -- *| :iab tod -- TODO:| :iab fi -- FIX:| :iab inp -- INPROGRESS:| :iab que -- QUESTION:| :iab cav -- CAVEAT:| :iab rol -- ROLLUP_KEYS:<CR>-- * INDEX FIELD: Primary Key<CR>-- * MERGE FIELD: Field To Merge On If Row Needs To Be Updated<CR>-- * ROLLUP LOAD TYPE: Merge(Insert/replace records in Redshift without consideration of merge field), updateRecords(Insert/replace records in Redshift where merge field greater than record merge field in Redshift), or refresh(Delete all records in Redshift table, replace with rollup results)<CR>-- * TABLE NAME: Descriptive Table Name<CR>-- * PERIODICITY: How Often To Run Query<CR>-- * LOOK BACK WINDOW: Run Query For Last X Hours<CR>-- * BACKFILL: Date To Backfill To| :iab tit -- TITLE:| :iab lin -- LINK:| :iab abo -- ABOUT:]],
     group = expandKey
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.py",
-    command = [[:iab * # *| :iab tod # TODO:| :iab fi # FIX:| :iab inp # INPROGRESS:| :iab que # QUESTION:| :iab cav # CAVEAT:| :iab rol # ROLLUP_KEYS:| :iab tit # TITLE:| :iab lin # LINK:| :iab abo # ABOUT:]],
+    command = [[:iab *@ # *| :iab tod # TODO:| :iab fi # FIX:| :iab inp # INPROGRESS:| :iab que # QUESTION:| :iab cav # CAVEAT:| :iab rol -- ROLLUP_KEYS:<CR># * INDEX FIELD: Primary Key<CR># * MERGE FIELD: Field To Merge On If Row Needs To Be Updated<CR># * ROLLUP LOAD TYPE: Merge(Insert/replace records in Redshift without consideration of merge field), updateRecords(Insert/replace records in Redshift where merge field greater than record merge field in Redshift), or refresh(Delete all records in Redshift table, replace with rollup results)<CR># * TABLE NAME: Descriptive Table Name<CR># * PERIODICITY: How Often To Run Query<CR># * LOOK BACK WINDOW: Run Query For Last X Hours<CR># * BACKFILL: Date To Backfill To| :iab tit # TITLE:| :iab lin # LINK:| :iab abo # ABOUT:]],
     group = expandKey
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
