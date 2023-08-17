@@ -1,6 +1,8 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- NV Term
+Plug 'NvChad/nvterm'
 -- Arduino
 Plug 'stevearc/vim-arduino'
 -- Notify

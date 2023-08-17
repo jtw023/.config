@@ -1,9 +1,20 @@
 local runFile = vim.api.nvim_create_augroup("Run_File", { clear = true })
+local compileFile = vim.api.nvim_create_augroup("Compile_File", { clear = true })
 local nvimOptions = vim.api.nvim_create_augroup("Nvim_Options", { clear = true })
 local formatNvim = vim.api.nvim_create_augroup("Format_Nvim", { clear = true })
 local onLeave = vim.api.nvim_create_augroup("On_Leave", { clear = true })
 local expandKey = vim.api.nvim_create_augroup("Expand_Key", { clear = true })
 
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.c",
+    command = [[nmap <Leader><S-c> :w \| :!gcc -o %:t:r %<CR>]],
+    group = compileFile
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.c",
+    command = [[nmap <S-r> :lua require("nvterm.terminal").send("cd " .. vim.fn.expand('%:h') .. " && ./" .. vim.fn.expand('%:t:r'), "float")<CR>]],
+    group = runFile
+})
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.py",
     command = [[nmap <S-r> :w \| :!time python3 %<CR>]],
