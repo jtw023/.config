@@ -1,3 +1,4 @@
+-- Test
 require('vim-plug.plugins')
 require('main.set')
 require('main.keymap')
