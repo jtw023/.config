@@ -42,11 +42,6 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     command = [[vmap <S-r> <Leader><S-s>]],
     group = runFile
 })
-vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
-    pattern = "*.sql",
-    command = [[:set nocursorline]],
-    group = nvimOptions
-})
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.py",
     command = [[:set foldmarker=#FoldStart,#FoldEnd]],
