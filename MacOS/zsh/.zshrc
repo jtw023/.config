@@ -84,6 +84,7 @@ alias zsh="/usr/local/bin/nvim $HOME/.config/MacOS/zsh/.zshrc"
 alias s='kitty +kitten ssh'
 alias s1='kitty +kitten ssh etl-prod01'
 alias s2='kitty +kitten ssh etl-prod02'
+alias sql='kitty +kitten ssh redshift-bastion'
 
 # Show image in terminal
 alias imgshow='kitty +kitten icat'
