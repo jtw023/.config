@@ -5,6 +5,9 @@ o.syntax = 'on'
 o.encoding = 'utf-8'
 vim.cmd([[ colorscheme vn-night ]])
 
+-- cursorline information
+o.cursorline = true
+o.cursorlineopt = 'number'
 -- Turn off undofile
 o.undofile = false
 
