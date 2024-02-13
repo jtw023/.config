@@ -49,7 +49,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = { "*.sql", "*.lua" },
-    command = [[:set foldmarker=--\ FoldStart,--\ FoldEnd]],
+    command = [[:set foldmarker=-->\ FoldStart,-->\ FoldEnd]],
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
@@ -59,7 +59,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.sql",
-    command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '-- %s')",
+    command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '--> %s')",
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
@@ -79,7 +79,7 @@ vim.api.nvim_create_autocmd({"FileType"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = { "*.sql", "*.lua" },
-    command = [[:iab tod -- TODO:| :iab fi -- FIX:| :iab inp -- INPROGRESS:| :iab que -- QUESTION:| :iab cav -- CAVEAT:| :iab rol /**\  =======================================================*//*<CR>    ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>13k/:<CR>| :iab tit -- TITLE:| :iab lin -- LINK:| :iab abo -- ABOUT:| :iab tem /**\  =======================================================*//*<CR>    AUTHOR: Jordan Walters<CR>DATE:<CR>TITLE:<CR>ABOUT:<CR>ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>16k/:<CR>]],
+    command = [[:iab tod --> TODO:| :iab fi --> FIX:| :iab inp --> INPROGRESS:| :iab que --> QUESTION:| :iab cav --> CAVEAT:| :iab rol /**\  =======================================================*//*<CR>    ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>13k/:<CR>| :iab tit --> TITLE:| :iab lin --> LINK:| :iab abo --> ABOUT:| :iab tem /**\  =======================================================*//*<CR>    AUTHOR: Jordan Walters<CR>DATE:<CR>TITLE:<CR>ABOUT:<CR>ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>16k/:<CR>]],
     group = expandKey
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
