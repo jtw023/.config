@@ -1,18 +1,12 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in config/plug-treesitter.lua')
-    return
-end
-
 local status_ok_treesitter, treesitter = pcall(require, 'nvim-treesitter.configs')
 if not status_ok_treesitter then
-    notify('treesitter broken in config/plug-treesitter.lua', 'error')
+    vim.notify('treesitter broken in config/plug-treesitter.lua', 'error')
     return
 end
 
 local status_ok_context, context = pcall(require, "treesitter-context")
 if not status_ok_context then
-    notify('context broken in config/plug-treesitter.lua', 'error')
+    vim.notify('context broken in config/plug-treesitter.lua', 'error')
     return
 end
 

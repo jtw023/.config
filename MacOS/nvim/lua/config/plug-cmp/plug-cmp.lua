@@ -1,12 +1,6 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in plug-cmp/plug-cmp.lua')
-    return
-end
-
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-    notify('cmp broken in plug-cmp/plug-cmp.lua', 'error')
+    vim.notify('cmp broken in plug-cmp/plug-cmp.lua', 'error')
     return
 end
 

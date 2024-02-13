@@ -1,12 +1,6 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in config/plug-colorizer.lua')
-    return
-end
-
 local status_ok, colorizer = pcall(require, "colorizer")
 if not status_ok then
-    notify('colorizer broken in config/plug-colorizer.lua', 'error')
+    vim.notify('colorizer broken in config/plug-colorizer.lua', 'error')
     return
 end
 

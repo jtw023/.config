@@ -1,12 +1,6 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in config/plug-todo.lua')
-    return
-end
-
 local status_ok, todo = pcall(require, 'todo-comments')
 if not status_ok then
-    notify('todo-comments broken in config/plug-todo.lua', 'error')
+    vim.notify('todo-comments broken in config/plug-todo.lua', 'error')
     return
 end
 
@@ -21,12 +15,14 @@ todo.setup {
             alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
             -- signs = false, -- configure signs for some keywords individually
         },
+        AUTHOR = { icon = " ", color = "#39FF14" },
         INPROGRESS = { icon = " ", color = "#39FF14" },
         QUESTION = { icon = " ", color = "#00FFFF" },
         CAVEAT = { icon = " ", color = "#ff00ff" },
         TODO = { icon = " ", color = "#FF3131" },
         ROLLUP_KEYS = { icon = "󱕴 ", color = "#808080" },
         TITLE = { icon = " ", color = "#7d12ff" },
+        DATE = { icon = " ", color = "#CCFF00" },
         LINK = { icon = " ", color = "#CCFF00" },
         ABOUT = { icon = " ", color = "#FFFFFF" },
     },

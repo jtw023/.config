@@ -4,19 +4,25 @@
 local opts = { noremap = true, silent = true }
 -- Unmap and remap Leader key
 vim.g.mapleader = ' '
+-- Select entire line except new line character
+opts.desc = 'Select entire line except new line character'
+vim.keymap.set('n', '<Leader>v', '^v$h', opts)
+-- Yank entire line except new line character
+opts.desc = 'Yank entire line except new line character'
+vim.keymap.set('n', '<Leader>y', '^v$hy', opts)
 -- Save and source
 opts.desc = 'Save and Source File'
-vim.keymap.set('n', '<Leader><Leader>', ':w <BAR> :so %<CR>')
+vim.keymap.set('n', '<Leader><Leader>', ':w <BAR> :so %<CR>', opts)
 -- Turn off highlighting
 opts.desc = 'Turn Off Highlighting'
-vim.keymap.set('n', '<Leader>2', ':nohlsearch<CR>', opts)
+vim.keymap.set('n', '<F2>', ':nohlsearch<CR>', opts)
 -- Cheat sheet
 opts.desc = 'Open Keymap File In New Tab'
-vim.keymap.set('n', '<Leader>3', ':tabnew $HOME/.config/nvim/lua/main/keymap.lua<CR>', opts)
+vim.keymap.set('n', '<F3>', ':tabnew $HOME/.config/nvim/lua/main/keymap.lua<CR>', opts)
 -- Delete and save to void register
 opts.desc = 'Paste To Register Without Overwriting Clipboard'
-vim.keymap.set('v', 'p', [["_dP]], opts)
-vim.keymap.set('v', 'ep', [["_dp]], opts)
+-- vim.keymap.set('v', 'p', [["_dP]], opts)
+vim.keymap.set('v', '<Leader>p', [["_dhp]], opts)
 -- Expand JSON
 opts.desc = 'Expand JSON'
 vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
@@ -24,16 +30,22 @@ vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
 -- Toggle Drawer
 opts.desc = 'Open DBUI Drawer'
 vim.keymap.set('n', '<Leader>o', ':DBUIToggle<CR>', opts)
+-- Easymotion
+-- Launch Program
+opts.desc = 'Choose Character for Easymotion'
+vim.cmd([[nnoremap <Leader>f <Plug>(easymotion-bd-f)]])
+opts.desc = 'Choose Word for Easymotion'
+vim.cmd([[nnoremap m <Plug>(easymotion-bd-w)]])
 -- FoldEnd
 
 -- FoldStart
 -- Enter and Exit
 -- Save and quit
 opts.desc = 'Save And Exit All Files'
-vim.keymap.set('n', '<Leader>4', ':xa<CR>', opts)
+vim.keymap.set('n', '<F1>', ':xa<CR>', opts)
 -- Quit and exit
 opts.desc = 'Force Quit All Files'
-vim.keymap.set('n', '<Leader>8', ':qa!<CR>', opts)
+vim.keymap.set('n', '<F8>', ':qa!<CR>', opts)
 -- FoldEnd
 
 -- FoldStart
@@ -51,29 +63,29 @@ vim.keymap.set('n', '<Leader>np', ':ArduinoChooseProgrammer<CR>')
 -- FoldStart
 -- Create newline above or below
 opts.desc = 'Add New Line Above Cursor And Stay In Normal Mode'
-vim.keymap.set('n', '<S-u>', '<S-o><ESC>', opts)
+vim.keymap.set('n', '<C-u>', '<S-o><ESC>', opts)
 opts.desc = 'Add New Line Below Cursor And Stay In Normal Mode'
-vim.keymap.set('n', '<S-b>', 'o<ESC>', opts)
+vim.keymap.set('n', '<C-b>', 'o<ESC>', opts)
 -- FoldEnd
 
 -- FoldStart
 -- Fold Lines
 -- Create a new fold
 opts.desc = 'Create New Fold'
-vim.keymap.set({ 'n', 'v' }, '<S-z>', 'zf', opts)
+vim.keymap.set({ 'n', 'v' }, '<C-z>', 'zf', opts)
 -- Toggle the fold
 opts.desc = 'Toggle Fold Between Open And Closed'
-vim.keymap.set('n', '<S-m>', 'za', opts)
+vim.keymap.set('n', '<C-m>', 'za', opts)
 -- Delete the fold
 opts.desc = 'Delete Current Fold'
-vim.keymap.set('n', '<S-x>', 'zd', opts)
+vim.keymap.set('n', '<C-x>', 'zd', opts)
 -- FoldEnd
 
 -- FoldStart
 -- Rename and Spelling
 -- Fix spelling
 opts.desc = 'Open Telescope Spell Suggest'
-vim.keymap.set('n', '<S-s>', ':Telescope spell_suggest<CR>', opts)
+vim.keymap.set('n', '<Leader>s', ':Telescope spell_suggest<CR>', opts)
 -- Rename all instances in file of word under cursor
 opts.desc = 'Rename All Instances In File Of Word Under Cursor'
 vim.keymap.set('n', '<Leader>r', ':%s/<C-r><C-w>/', opts)
@@ -101,7 +113,7 @@ opts.desc = 'Jump Down Half Screen'
 vim.keymap.set({ 'n', 'v' }, '<S-j>', '<C-d>', opts) -- jump down
 -- Split screen
 opts.desc = 'Open Splitscreen In Netrw'
-vim.keymap.set('n', '<Leader>s', ':vs .<CR>', opts)
+vim.keymap.set('n', '<C-w>', ':vs .<CR>', opts)
 -- Resize buffers
 opts.desc = 'Mover Edge of Buffer Window Up'
 vim.keymap.set('n', '<S-Up>', ':resize +2<CR>', opts)             -- up
@@ -131,7 +143,7 @@ vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts)       -- return to previou
 -- Explorer
 -- Toggle file explorer with Leader-m
 opts.desc = 'Toggle Netrw Window'
-vim.keymap.set('n', '<Leader>f', function()
+vim.keymap.set('n', '<Leader>w', function()
     vim.cmd([[
 		if exists("t:expl_buf_num")
 			let expl_win_num = bufwinnr(t:expl_buf_num)
@@ -188,6 +200,9 @@ vim.keymap.set('n', '<Leader>tv', ':w <BAR> :Telescope lsp_document_symbols<CR>'
 -- View Help Tags
 opts.desc = 'Nvim Help With Telescope'
 vim.keymap.set('n', '<Leader>th', ':w <BAR> :Telescope help_tags<CR>', opts)
+-- See Notifications
+opts.desc = 'See notification history with Telescope'
+vim.keymap.set('n', '<Leader>tn', ':w <BAR> :Telescope notify<CR>', opts)
 -- FoldEnd
 
 -- FoldStart

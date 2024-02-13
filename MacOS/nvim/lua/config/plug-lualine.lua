@@ -1,12 +1,6 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in config/plug-lualine.lua')
-    return
-end
-
 local status_ok, ll = pcall(require, "lualine")
 if not status_ok then
-    notify('lualine broken in config/plug-lualine.lua', 'error')
+    vim.notify('lualine broken in config/plug-lualine.lua', 'error')
     return
 end
 

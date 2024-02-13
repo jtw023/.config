@@ -1,12 +1,6 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in config/plug-indent.lua')
-    return
-end
-
 local status_ok, indent = pcall(require, "indent_blankline")
 if not status_ok then
-    notify('indent broken in config/plug-indent.lua', 'error')
+    vim.notify('indent broken in config/plug-indent.lua', 'error')
     return
 end
 

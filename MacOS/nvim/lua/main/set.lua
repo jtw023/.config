@@ -1,4 +1,8 @@
 local o = vim.opt
+
+-- Setting vim notify as default
+vim.notify = require("notify")
+
 -- Colors and fonts
 o.termguicolors = true
 o.syntax = 'on'

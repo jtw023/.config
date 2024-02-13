@@ -1,18 +1,12 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in config/plug-telescope.lua')
-    return
-end
-
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
-    notify('telescope broken in config/plug-telescope.lua', 'error')
+    vim.notify('telescope broken in config/plug-telescope.lua', 'error')
     return
 end
 
 local icons_status_ok, icons = pcall(require, "config.plug-cmp.icons")
 if not icons_status_ok then
-    notify('icons broken in config/plug-telescope.lua', 'error')
+    vim.notify('icons broken in config/plug-telescope.lua', 'error')
     return
 end
 

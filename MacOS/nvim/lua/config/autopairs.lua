@@ -1,12 +1,6 @@
-local notify_status_ok, notify = pcall(require, "notify")
-if not notify_status_ok then
-    print('notify broken in config/autopairs.lua')
-    return
-end
-
 local status_ok, autopairs = pcall(require, "autoclose")
 if not status_ok then
-    notify('autopairs broken in config/autopairs.lua', 'error')
+    vim.notify('autopairs broken in config/autopairs.lua', 'error')
     return
 end
 

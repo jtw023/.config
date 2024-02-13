@@ -1,6 +1,6 @@
 local status_ok, null_ls = pcall(require, "null-ls")
 if not status_ok then
-    print('config/plug-nullls.lua broken')
+    vim.notify('config/plug-nullls.lua broken')
     return
 end
 
@@ -10,7 +10,7 @@ local diagnostics = null_ls.builtins.diagnostics
 local sources = {
     sources = {
         formatting.autopep8.with({
-            extra_args = { "--aggressive" }
+            extra_args = { "--aggressive" },
         }),
         diagnostics.pylint,
         diagnostics.sqlfluff.with({

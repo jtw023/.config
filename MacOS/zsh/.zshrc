@@ -47,12 +47,21 @@ alias rb='osascript -e '\''tell application "System Events" to keystroke "r" usi
 # Poweroff command
 alias po='osascript -e '\''tell application "System Events" to keystroke "q" using {option down, command down}'\'
 
+# Start Postgres Server
+alias postgres='/usr/local/opt/postgresql@14/bin/postgres -D /usr/local/var/postgresql@14'
+alias localpsql='psql -h localhost -p 5432 -d postgres -U postgres'
+
 # Alias history command to show time next to command
 alias history='history -i'
 
 # Alias to clear terminal
-alias cl="clear; bash $RANDOMSCRIPTS/generate_random.sh | lolcat"
-
+function cl() {
+    if [ $(date +'%m') -eq '12' ]; then
+        python3 "$HOME/github_repos/Random-Scripts/clear_screen_snowfall.py"
+    else
+        bash "$HOME/github_repos/Random-Scripts/generate_random.sh"
+    fi
+}
 # Alias cat to bat
 alias cat="bat -fn --theme base16"
 
@@ -64,11 +73,11 @@ alias song='youtube-dl -f bestvideo+bestaudio -o "%(title)s.%(ext)s"'
 
 # Bind nvim to v
 function v() {
-	if [ -z "$1" ]; then
-		/usr/local/bin/nvim .
-	else
-		/usr/local/bin/nvim "$1"
-	fi
+    if [ -z "$1" ]; then
+        /usr/local/bin/nvim .
+    else
+        /usr/local/bin/nvim "$1"
+    fi
 }
 
 # Open nvim straight to sql

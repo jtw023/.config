@@ -2,6 +2,7 @@ require('vim-plug.plugins')
 require('main.set')
 require('main.keymap')
 
+require('config.plug-notify')
 require('config.plug-arduino')
 require('config.plug-indent')
 require('config.plug-term')
