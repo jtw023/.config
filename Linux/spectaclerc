@@ -1,0 +1,15 @@
+[Annotations]
+annotationToolType=3
+
+[General]
+autoSaveImage=true
+launchAction=DoNotTakeScreenshot
+
+[ImageSave]
+imageFilenameTemplate=Screenshot_<yyyy>-<MM>-<dd>_<hh>:<mm>:<ss>
+lastImageSaveLocation=file:///home/jordan/Pictures/Screenshots/Screenshot_2024-05-01_18:33:15.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts
+videoFilenameTemplate=Screencast_<yyyy>-<MM>-<dd>_<hh>:<mm>:<ss>

@@ -1,0 +1,17 @@
+[Applications][@other]
+ShowInHistory=true
+
+[Applications][firefox]
+Seen=true
+
+[Applications][slack]
+Seen=true
+
+[Applications][vlc]
+ShowInHistory=true
+
+[Notifications]
+LowPriorityHistory=true
+NormalAlwaysOnTop=true
+PopupPosition=TopRight
+PopupTimeout=10000

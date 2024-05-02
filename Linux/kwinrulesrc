@@ -1,0 +1,73 @@
+[1]
+Description=Firefox to Desktop 3
+desktops=459db3bf-b4c5-48bb-b71e-f261392f5f21
+desktopsrule=3
+wmclass=firefox
+wmclassmatch=1
+
+[2]
+Description=Kitty to Desktop 1
+desktops=a47f1ace-df42-4547-9d62-52e7da26bcf2
+desktopsrule=3
+wmclass=kitty
+wmclassmatch=1
+
+[3]
+Description=Slack to Desktop 2
+desktops=2246ae72-95bf-4f72-83e2-6c289494856d
+desktopsrule=3
+wmclass=Slack
+wmclassmatch=1
+
+[3b90c8e5-6bab-4e41-8118-e458a1b04b24]
+Description=Thunderbird to Desktop 4
+desktops=e88ffd96-4eb7-4066-8460-9b38fb503028
+desktopsrule=3
+wmclass=thunderbird
+wmclassmatch=1
+
+[3dde3d3b-bcdd-44d5-a914-effb274efc7a]
+Description=Slack to Desktop 2
+desktops=2246ae72-95bf-4f72-83e2-6c289494856d
+desktopsrule=3
+wmclass=Slack
+wmclassmatch=1
+
+[4]
+Description=Thunderbird to Desktop 4
+desktops=e88ffd96-4eb7-4066-8460-9b38fb503028
+desktopsrule=3
+wmclass=thunderbird
+wmclassmatch=1
+
+[5]
+Description=Obsidian to Desktop 5
+desktops=1de81a60-d8d2-462c-9ba1-3330275d2971
+desktopsrule=3
+wmclass=obsidian
+wmclassmatch=1
+
+[7558665a-7217-4d74-9ab0-e97d7f3adec7]
+Description=Obsidian to Desktop 5
+desktops=1de81a60-d8d2-462c-9ba1-3330275d2971
+desktopsrule=3
+wmclass=obsidian
+wmclassmatch=1
+
+[86d427ce-3815-44ef-aadf-b409ada51439]
+Description=Kitty to Desktop 1
+desktops=a47f1ace-df42-4547-9d62-52e7da26bcf2
+desktopsrule=3
+wmclass=kitty
+wmclassmatch=1
+
+[98051cf9-9c1d-4edf-bb2c-1efb7a2d86ff]
+Description=Firefox to Desktop 3
+desktops=459db3bf-b4c5-48bb-b71e-f261392f5f21
+desktopsrule=3
+wmclass=firefox
+wmclassmatch=1
+
+[General]
+count=5
+rules=1,2,3,4,5
