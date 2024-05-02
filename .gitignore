@@ -4,6 +4,7 @@
 # Ignore all files named .DS_Store or ending with .log
 **/.DS_Store
 **.log
+**Cache
 
 # Except These
 !.gitignore
@@ -15,6 +16,7 @@ MacOS/Slack/*
 Linux/Slack/*
 !Linux/Slack/local-settings.json
 !Linux/Slack/Preferences
+!README.md
 
 # Ignore Plugged Inside Linux and Mac Directories
 MacOS/nvim/autoload/plugged/*
