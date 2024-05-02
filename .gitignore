@@ -5,6 +5,7 @@
 **/.DS_Store
 **.log
 **Cache
+**WebStorage
 
 # Except These
 !.gitignore
@@ -22,3 +23,5 @@ Linux/Slack/*
 MacOS/nvim/autoload/plugged/*
 Linux/nvim/autoload/plugged/*
 
+# Ignore KDECONNECT
+Linux/kdeconnect/
