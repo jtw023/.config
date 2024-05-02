@@ -1,8 +1,22 @@
-/kitty
-/nvim
-/gh
-/MacOS/nvim/autoload/plugged
-/Linux/nvim/autoload/plugged
-tmp/
-configstore
-.DS_Store
+# Ignore Everything
+/*
+
+# Ignore all files named .DS_Store or ending with .log
+**/.DS_Store
+**.log
+
+# Except These
+!.gitignore
+!MacOS/
+MacOS/Slack/*
+!MacOS/Slack/local-settings.json
+!MacOS/Slack/Preferences
+!Linux/
+Linux/Slack/*
+!Linux/Slack/local-settings.json
+!Linux/Slack/Preferences
+
+# Ignore Plugged Inside Linux and Mac Directories
+MacOS/nvim/autoload/plugged/*
+Linux/nvim/autoload/plugged/*
+
