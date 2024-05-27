@@ -133,8 +133,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=817,874
-History Items[$e]=file:$HOME/backups,file:///sbin,file:///lib64,file:///lib,file:///etc,file:///bin,file:$HOME/backups,file:///run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924
+DirSelectDialog Size=819,591
+History Items[$e]=file:$HOME/Videos/Screencasts,file:$HOME/Videos/Kooha/Screencasts,file:$HOME/Videos/Kooha/Screencasts,file:$HOME/backups,file:///sbin,file:///lib64,file:///lib,file:///etc,file:///bin,file:$HOME/backups,file:///run/media/jordan/8fd20769-3607-44e1-87b4-d36bda05b924
 
 [General]
 ColorSchemeHash=cb4c6ee5cc9a59dbe09fb467a529af1bf5c55c97
@@ -152,6 +152,7 @@ toolBarFont=CaskaydiaCove NF,18,-1,5,200,1,0,0,0,0,0,0,0,0,0,1,Italic
 
 [KDE]
 DoubleClickInterval=200
+LookAndFeelPackage=com.endeavouros.breezedarkeos.desktop
 SingleClick=true
 
 [KFileDialog Settings]

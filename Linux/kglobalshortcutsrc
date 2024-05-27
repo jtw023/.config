@@ -3,6 +3,7 @@ _k_friendly_name=Activity Manager
 switch-to-activity-dd126140-c414-410e-8838-386d1a9edbd8=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
+Switch keyboard layout to English (Colemak-DH Ortholinear)=none,none,Switch keyboard layout to English (Colemak-DH Ortholinear)
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
@@ -270,8 +271,17 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][brave-browser.desktop]
+_launch=Alt+W
+
+[services][com.obsproject.Studio.desktop]
+_launch=Shift+Print
+
 [services][firefox.desktop]
 _launch=Alt+W
+
+[services][io.github.seadve.Kooha.desktop]
+_launch=Shift+Print
 
 [services][kitty.desktop]
 _launch=Alt+T
@@ -279,14 +289,27 @@ _launch=Alt+T
 [services][obsidian.desktop]
 _launch=Alt+O
 
+[services][org.kde.elisa.desktop]
+_launch=Alt+E
+
 [services][org.kde.krunner.desktop]
 _launch=Ctrl+Alt+R\tAlt+Space
 
 [services][org.kde.spectacle.desktop]
 ActiveWindowScreenShot=Meta+Alt+P\tAlt+Print
+FullScreenScreenShot=none
 
 [services][org.mozilla.Thunderbird.desktop]
 _launch=Alt+M
 
+[services][org.stronnag.wayfarer.desktop]
+_launch=
+
+[services][pavucontrol.desktop]
+_launch=Alt+V
+
 [services][slack.desktop]
 _launch=Alt+S
+
+[services][systemsettings.desktop]
+_launch=Alt+,\tTools

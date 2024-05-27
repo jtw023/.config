@@ -5,3 +5,5 @@ embed-application/x-yaml=false
 embed-text/markdown=false
 embed-text/plain=false
 embed-text/x-cmake=false
+embed-x-scheme-handler/http=false
+embed-x-scheme-handler/https=false

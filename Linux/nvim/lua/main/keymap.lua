@@ -4,15 +4,15 @@
 local opts = { noremap = true, silent = true }
 -- Unmap and remap Leader key
 vim.g.mapleader = ' '
--- Delete entire line to system clipboard
-opts.desc = 'Delete entire line to system clipboard'
-vim.keymap.set({'v', 'n'}, 'd', '"+d', opts)
--- Yank entire line to system clipboard
-opts.desc = 'Yank entire line to system clipboard'
-vim.keymap.set({'v', 'n'}, 'y', '"+y', opts)
--- Paste entire line from system clipboard
-opts.desc = 'Paste entire line from system clipboard'
-vim.keymap.set({'v', 'n'}, 'p', '"+p', opts)
+-- -- Delete entire line to system clipboard
+-- opts.desc = 'Delete entire line to system clipboard'
+-- vim.keymap.set({'v', 'n'}, 'd', '"+d', opts)
+-- -- Yank entire line to system clipboard
+-- opts.desc = 'Yank entire line to system clipboard'
+-- vim.keymap.set({'v', 'n'}, 'y', '"+y', opts)
+-- -- Paste entire line from system clipboard
+-- opts.desc = 'Paste entire line from system clipboard'
+-- vim.keymap.set({'v', 'n'}, 'p', '"+p', opts)
 -- Save and source
 opts.desc = 'Save and Source File'
 vim.keymap.set('n', '<Leader><Leader>', ':w <BAR> :so %<CR>', opts)

@@ -9,7 +9,7 @@ AutoSuspendAction=0
 PowerButtonAction=1
 
 [Battery][Performance]
-PowerProfile=power-saver
+PowerProfile=balanced
 
 [Battery][SuspendAndShutdown]
 PowerButtonAction=1

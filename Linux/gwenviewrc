@@ -7,12 +7,28 @@ MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [Recent Files]
-File1[$e]=$HOME/Pictures/Screenshots/Screenshot_20240429_004621.png
-File2[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-05-01_03:18:34.png
-Name1[$e]=Screenshot_20240429_004621.png
-Name2[$e]=Screenshot_2024-05-01_03:18:34.png
+File1[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-05-26_19:20:22.png
+File10[$e]=$HOME/Pictures/Screenshots/MoreThan2M10S.png
+File2[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-05-26_19:20:38.png
+File3[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-05-26_19:21:15.png
+File4[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-05-26_19:21:24.png
+File5[$e]=$HOME/Pictures/Screenshots/LessThan1M.png
+File6[$e]=$HOME/Pictures/Screenshots/LessThan1M10S.png
+File7[$e]=$HOME/Pictures/Screenshots/LessThan2M.png
+File8[$e]=$HOME/Pictures/Screenshots/LessThan2M10S.png
+File9[$e]=$HOME/Pictures/Screenshots/LessThan10S.png
+Name1[$e]=Screenshot_2024-05-26_19:20:22.png
+Name10[$e]=MoreThan2M10S.png
+Name2[$e]=Screenshot_2024-05-26_19:20:38.png
+Name3[$e]=Screenshot_2024-05-26_19:21:15.png
+Name4[$e]=Screenshot_2024-05-26_19:21:24.png
+Name5[$e]=LessThan1M.png
+Name6[$e]=LessThan1M10S.png
+Name7[$e]=LessThan2M.png
+Name8[$e]=LessThan2M10S.png
+Name9[$e]=LessThan10S.png
 
 [SideBar]
-InformationSplitterSizes=212,243
+InformationSplitterSizes=221,254
 IsVisible ViewMode=true
-SideBarSplitterSizes=396,1241
+SideBarSplitterSizes=396,1515

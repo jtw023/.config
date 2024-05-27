@@ -80,7 +80,7 @@ o.scrolloff = 999
 o.cmdheight = 2
 
 -- Copy to clipboard
--- vim.opt.clipboard = 'unnamedplus'
+o.clipboard = 'unnamedplus'
 -- vim.api.nvim_set_option("clipboard","unnamed")
 
 -- Turn off highlighting for groups
