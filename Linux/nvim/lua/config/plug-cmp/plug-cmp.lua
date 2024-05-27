@@ -83,45 +83,41 @@ cmp.setup {
                 -- end
                 vim_item.kind = icons.misc.Robot
             end
-            -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
             -- NOTE: order matters
             vim_item.menu = ({
-                -- ultisnips = "[UltiSnips]",
-                nvim_lua = "[Nvim]",
+                ["vim-dadbod-completion"] = ' ',
+                nvim_lua = "[NVIM]",
                 nvim_lsp = "[LSP]",
-                path = "[Path]",
-                calc = "[Calculation]",
-                buffer = "[Buffer]",
-                spell = "[Spelling]"
+                path = "[PATH]",
+                calc = "[CALCULATION]",
+                buffer = "[BUFFER]",
+                spell = "[SPELLING]",
             })[entry.source.name]
             return vim_item
         end,
     },
     sources = {
-        -- { name = "luasnip" },
-        -- { name = "ultisnips" }, -- For ultisnips users.
         { name = "nvim_lua" },
         { name = "nvim_lsp", max_item_count = 4 },
         { name = "path" },
         { name = "calc" },
         { name = "buffer", max_item_count = 4 },
         { name = "spell", max_item_count = 4 },
+        { name = "vim-dadbod-completion", max_item_count = 4 },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
         select = false,
     },
-    -- documentation = true,
     window = {
-        -- documentation = "native",
         documentation = {
             border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
         },
     },
-    experimental = {
-        ghost_text = false,
-    },
     view = {
-        entries = { name = 'custom', selection_order = 'near_cursor' }
+        entries = { name = 'custom', selection_order = 'near_cursor' },
+    },
+    performance = {
+        max_view_entries = 5
     }
 }
