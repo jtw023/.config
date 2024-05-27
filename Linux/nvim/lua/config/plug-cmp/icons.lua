@@ -6,11 +6,13 @@ if vim.fn.has "mac" == 1 then
     -- elseif vim.fn.has "mac" == 1 then
     return {
         kind = {
-            Text = "",
+            -- Text = "",
             -- Method = "m",
             Function = "",
             Constructor = "",
             Method = "",
+            schema = "",
+            Text = "",
             -- Function = "",
             -- Constructor = "",
             Field = "",
@@ -108,7 +110,8 @@ if vim.fn.has "mac" == 1 then
 else
     return {
         kind = {
-            Text = "",
+            -- Text = "",
+            Text = "",
             -- Method = "m",
             Function = "",
             Constructor = "",
