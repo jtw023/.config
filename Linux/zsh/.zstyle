@@ -9,9 +9,6 @@ zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %
 zstyle ':completion:*' verbose true
 zstyle :compinstall filename '/home/jordan/.config/Linux/zsh/.zshrc'
 
-autoload -Uz compinit
-compinit
-
 # End of lines added by compinstall
 
 # Load Git completion
