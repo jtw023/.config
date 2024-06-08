@@ -29,6 +29,7 @@ zle-line-init() {
         [[ -o ignore_eof ]] || exit 0
     done
 
+    ZSH_HIGHLIGHT_MAXLENGTH=0
     PROMPT='%/ '
     RPROMPT=''
     zle .reset-prompt

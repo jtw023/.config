@@ -29,6 +29,7 @@ function precmd() {
         export RPROMPT="%F{cyan}${timer_show}s %{$reset_color%}"
         unset timer
     fi
+    ZSH_HIGHLIGHT_MAXLENGTH=512
 }
 
 # Format the vcs_info_msg_0_ variable
