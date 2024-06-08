@@ -27,11 +27,17 @@ function! s:progress_tick(progress, timer) abort
       else
         let content = ' '.s:progress_icons[a:progress.icon_counter].' Execute query --- '.formattedminutes.' minute '.seconds.' seconds '
       endif
-    else
+    elseif formattedminutes < 10
       if seconds < 10
         let content = ' '.s:progress_icons[a:progress.icon_counter].' Execute query --- '.formattedminutes.' minutes '.seconds.' seconds '
       else
         let content = ' '.s:progress_icons[a:progress.icon_counter].' Execute query -- '.formattedminutes.' minutes '.seconds.' seconds '
+      endif
+    else
+      if seconds < 10
+        let content = ' '.s:progress_icons[a:progress.icon_counter].' Execute query -- '.formattedminutes.' minutes '.seconds.' seconds '
+      else
+        let content = ' '.s:progress_icons[a:progress.icon_counter].' Execute query - '.formattedminutes.' minutes '.seconds.' seconds '
       endif
     endif
   else

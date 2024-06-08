@@ -39,7 +39,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][20][Configuration]
-PreloadWeight=75
+PreloadWeight=85
 popupHeight=700
 popupWidth=764
 
@@ -136,7 +136,7 @@ immutability=1
 plugin=org.kde.kscreen
 
 [Containments][8][Applets][10][Configuration]
-PreloadWeight=80
+PreloadWeight=85
 
 [Containments][8][Applets][11]
 immutability=1
@@ -186,7 +186,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][8][Applets][22][Configuration][General]
 showPercentage=true
@@ -199,14 +199,14 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=100
+PreloadWeight=97
 
 [Containments][8][Applets][25]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][8][Applets][25][Configuration]
-PreloadWeight=70
+PreloadWeight=75
 
 [Containments][8][Applets][26]
 immutability=1

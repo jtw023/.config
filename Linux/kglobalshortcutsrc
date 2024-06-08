@@ -295,9 +295,13 @@ _launch=Alt+E
 [services][org.kde.krunner.desktop]
 _launch=Ctrl+Alt+R\tAlt+Space
 
+[services][org.kde.kscreen.desktop]
+ShowOSD=Display
+
 [services][org.kde.spectacle.desktop]
-ActiveWindowScreenShot=Meta+Alt+P\tAlt+Print
+ActiveWindowScreenShot=Alt+P
 FullScreenScreenShot=none
+RectangularRegionScreenShot=Meta+P
 
 [services][org.mozilla.Thunderbird.desktop]
 _launch=Alt+M

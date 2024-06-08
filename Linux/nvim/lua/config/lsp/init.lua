@@ -40,9 +40,14 @@ lsp['arduino_language_server'].setup {
     }
 }
 
-lsp['pyright'].setup {
+lsp['basedpyright'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
+    settings = {
+        basedpyright = {
+            typeCheckingMode = "standard",
+        },
+    },
 }
 
 lsp['bashls'].setup {

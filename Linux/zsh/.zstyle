@@ -19,9 +19,20 @@ zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
-# Load version control information
+# Load version control information and show previous command execution time
 autoload -Uz vcs_info
-precmd() { vcs_info }
+function preexec() {
+    timer=${timer:-$SECONDS}
+}
+
+function precmd() {
+    vcs_info
+    if [ $timer ]; then
+        timer_show=$(($SECONDS - $timer))
+        export RPROMPT="%F{cyan}${timer_show}s %{$reset_color%}"
+        unset timer
+    fi
+}
 
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats '%b '

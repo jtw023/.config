@@ -1,6 +1,10 @@
 RANDOMSCRIPTS="$HOME/github_repos/Random-Scripts"
 # Activate Virtual Environment
 alias bactive="source $HOME/base/bin/activate"
+alias ractive="source $HOME/reflex/bin/activate"
+
+# Use The Pip From The Virtual Environment
+alias pip="python -m pip"
 
 # Run previous command as sudo
 # alias pls="sudo !!"
@@ -18,6 +22,11 @@ alias an='arduino-cli sketch new'
 alias vpn='openvpn3 session-start --config /etc/openvpn/reflex_vpn.ovpn'
 alias stats='openvpn3 session-stats --config /etc/openvpn/reflex_vpn.ovpn'
 alias end='openvpn3 session-manage --config /etc/openvpn/reflex_vpn.ovpn --disconnect'
+
+# Manage ExpressVPN
+alias startexpress='sudo systemctl start expressvpn'
+alias stopexpress='sudo systemctl stop expressvpn'
+alias statsexpress='sudo systemctl status expressvpn'
 
 # Update System
 alias update='yay -Syu && yay -Fy'

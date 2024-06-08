@@ -22,7 +22,7 @@ TabletMode=off
 [NightColor]
 Active=true
 Mode=Constant
-NightTemperature=3200
+NightTemperature=3600
 
 [Plugins]
 poloniumEnabled=true

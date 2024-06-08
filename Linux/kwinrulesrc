@@ -115,6 +115,13 @@ Description=Brave to Desktop 3
 wmclass=Brave-browser
 wmclassmatch=1
 
+[9]
+Description=OBS to 7
+desktops=b66887ca-5261-4b8e-8b06-a738c190e4c5
+desktopsrule=3
+wmclass=com.obsproject.Studio
+wmclassmatch=1
+
 [98051cf9-9c1d-4edf-bb2c-1efb7a2d86ff]
 Description=Firefox to Desktop 3
 desktops=459db3bf-b4c5-48bb-b71e-f261392f5f21
@@ -124,4 +131,4 @@ wmclassmatch=1
 
 [General]
 count=9
-rules=1,2,3,4,5,6,7,8,34b36389-6adc-477f-bce3-7b5a13ba6de6
+rules=1,2,3,4,5,6,7,8,9

@@ -11,3 +11,4 @@ vim.g.db_ui_execute_on_save = 0
 vim.g.db_ui_save_location = '/home/jordan/bitbucket_repos/jordanw/'
 vim.g.completion_matching_strategy_list = {'exact', 'substring'}
 vim.g.completion_matching_ignore_case = 1
+vim.g.completion_use_svv = 1

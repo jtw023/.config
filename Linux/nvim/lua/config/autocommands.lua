@@ -4,7 +4,19 @@ local nvimOptions = vim.api.nvim_create_augroup("Nvim_Options", { clear = true }
 local formatNvim = vim.api.nvim_create_augroup("Format_Nvim", { clear = true })
 local onLeave = vim.api.nvim_create_augroup("On_Leave", { clear = true })
 local expandKey = vim.api.nvim_create_augroup("Expand_Key", { clear = true })
+local lint = vim.api.nvim_create_augroup("On_Lint", { clear = true })
 
+vim.api.nvim_create_autocmd({"BufWritePost"}, {
+    pattern = "*.sql",
+    callback = function()
+        -- try_lint without arguments runs the linters defined in `linters_by_ft`
+        -- for the current filetype
+        --
+        -- You can call `try_lint` with a linter name or a list of names to always
+        -- run specific linters, independent of the `linters_by_ft` configuration
+        require("lint").try_lint("sqlfluff")
+    end
+})
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.c",
     command = [[nmap <Leader><S-c> :w \| :!gcc -o %:t:r %<CR>]],

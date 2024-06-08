@@ -81,7 +81,6 @@ o.cmdheight = 2
 
 -- Copy to clipboard
 o.clipboard = 'unnamedplus'
--- vim.api.nvim_set_option("clipboard","unnamed")
 
 -- Turn off highlighting for groups
 vim.cmd([[hi clear Todo]])
@@ -98,18 +97,13 @@ vim.cmd([[ hi Folded guifg = #000000 ]])
 vim.cmd([[ hi Blamer guifg = #808080 ]])
 vim.cmd([[ hi LineNr guifg = #205484 ]])
 -- Treesitter Rainbow
-vim.cmd([[ hi TSRainbowYellow guifg = #FFD700 ]])
-vim.cmd([[ hi TSRainbowRed guifg = #D2042D ]])
-vim.cmd([[ hi TSRainbowCyan guifg = #808080 ]])
-vim.cmd([[ hi TSRainbowBlue guifg = #00FFFF ]])
-vim.cmd([[ hi TSRainbowOrange guifg = #800080 ]])
-vim.cmd([[ hi TSRainbowGreen guifg = #7CFC00 ]])
-vim.cmd([[ hi TSRainbowViolet guifg = #FFFFFF ]])
--- Treesitter Blankline
-vim.cmd([[ hi IndentBlanklineIndent1 guifg = #D2042D gui = nocombine ]])
-vim.cmd([[ hi IndentBlanklineIndent2 guifg = #7CFC00 gui = nocombine ]])
-vim.cmd([[ hi IndentBlanklineIndent3 guifg = #800080 gui = nocombine ]])
-vim.cmd([[ hi IndentBlanklineIndent4 guifg = #00FFFF gui = nocombine ]])
+vim.cmd([[ hi TSRainbowViolet guifg = #FFFF33 ]])
+vim.cmd([[ hi TSRainbowRed guifg = #FF3131 ]])
+vim.cmd([[ hi TSRainbowCyan guifg = #00FEFC ]])
+vim.cmd([[ hi TSRainbowBlue guifg = #1F51FF ]])
+vim.cmd([[ hi TSRainbowOrange guifg = #FF5F1F ]])
+vim.cmd([[ hi TSRainbowGreen guifg = #39FF14 ]])
+vim.cmd([[ hi TSRainbowYellow guifg = #B026FF ]])
 
 -- Highlight on yank
 vim.cmd([[

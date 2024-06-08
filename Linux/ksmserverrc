@@ -1,5 +1,7 @@
 [LegacySession: saved at previous logout]
-count=0
+clientMachine1=localhost
+command1=thunderbird
+count=1
 
 [Session: saved at previous logout]
 count=0

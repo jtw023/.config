@@ -11,13 +11,39 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt beep nomatch
+setopt PROMPT_SUBST
 unsetopt autocd extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # Set prompt
-setopt PROMPT_SUBST
-PROMPT='%F{14}%n%f%B[%b%F{13}%1~%f%B]%b %F{red} ${vcs_info_msg_0_}%f%B%F{46}-%f%b '
+zle-line-init() {
+    emulate -L zsh
+
+    [[ $CONTEXT == start ]] || return 0
+
+    while true; do
+        zle .recursive-edit
+        local -i ret=$?
+        [[ $ret == 0 && $KEYS == $'\4' ]] || break
+        [[ -o ignore_eof ]] || exit 0
+    done
+
+    PROMPT='%/ '
+    RPROMPT=''
+    zle .reset-prompt
+    PROMPT='
+%F{cyan}%n%f%B[%b%F{13}%1~%f%B]%b %F{red} ${vcs_info_msg_0_}%f%B%F{46}-%f%b '
+
+    if (( ret )); then
+        zle .send-break
+    else
+        zle .accept-line
+    fi
+    return ret
+}
+
+zle -N zle-line-init
 
 # Keychain eval
 eval $(keychain --eval --quiet reflex_etl_prod01 reflex_etl_prod02 personal_github reflex_bitbucket reflex_sql_redshift-bastion)

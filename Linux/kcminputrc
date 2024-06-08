@@ -1,2 +1,6 @@
+[Keyboard]
+NumLock=1
+
 [Libinput][1267][12737][ASUE120C:00 04F3:31C1 Touchpad]
 ClickMethod=2
+Enabled=true

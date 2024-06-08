@@ -31,7 +31,8 @@ Plug 'nxvu699134/vn-night.nvim'
 -- Vim dadbod
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'kristijanhusak/vim-dadbod-completion'
+-- Plug 'kristijanhusak/vim-dadbod-completion'
+Plug '/home/jordan/github_repos/vim-dadbod-completion-svv_columns'
 -- Comment Plugin
 Plug 'terrortylor/nvim-comment'
 -- Install LSP
@@ -60,6 +61,8 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim'
 -- Lualine
 Plug 'nvim-lualine/lualine.nvim'
+-- Linting
+Plug 'mfussenegger/nvim-lint'
 -- Treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'nvim-treesitter/nvim-treesitter-context'

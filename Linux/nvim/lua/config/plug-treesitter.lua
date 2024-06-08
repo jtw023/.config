@@ -10,11 +10,9 @@ if not status_ok_context then
     return
 end
 
-
 treesitter.setup {
     -- A list of parser names, or "all"
-    ensure_installed = { "python", "lua", "bash", "vim", "c" },
-    -- ensure_installed = { "python", "lua", "bash", "vim", "sql" }, -- for when sql becomes available
+    ensure_installed = { "python", "lua", "bash", "vim", "sql" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -39,12 +37,6 @@ treesitter.setup {
         -- Highlight the entire buffer all at once
         strategy = require 'ts-rainbow.strategy.global',
 
-        hlgroups = {
-            "TSRainbowRed",
-            "TSRainbowGreen",
-            "TSRainbowOrange",
-            "TSRainbowBlue",
-        },
         -- Also highlight non-bracket delimiters like html tags,
         -- boolean or table: lang -> boolean
         extended_mode = true,
@@ -54,6 +46,7 @@ treesitter.setup {
     }
 }
 
+
 context.setup {
     enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
     max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -61,7 +54,7 @@ context.setup {
     line_numbers = true,
     multiline_threshold = 20, -- Maximum number of lines to collapse for a single context line
     trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
-    mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+    mode = 'topline',  -- Line used to calculate context. Choices: 'cursor', 'topline'
     -- Separator between context and content. Should be a single character string, like '-'.
     -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
     separator = nil,

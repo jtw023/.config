@@ -14,6 +14,8 @@ MacOS/Slack/*
 !MacOS/Slack/local-settings.json
 !MacOS/Slack/Preferences
 !Linux/
+Linux/Docker Desktop/
+Linux/nvim/autoload/plug.vim.old
 Linux/BraveSoftware/
 Linux/borg/
 Linux/session/
