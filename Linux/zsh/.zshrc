@@ -15,6 +15,8 @@ setopt PROMPT_SUBST
 unsetopt autocd extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
+PROMPT='
+%F{cyan}%n%f%B[%b%F{13}%1~%f%B]%b %F{red} ${vcs_info_msg_0_}%f%B%F{46}-%f%b '
 
 # Set prompt
 zle-line-init() {

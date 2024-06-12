@@ -3,6 +3,52 @@
     "config_version": 2,
     "run": [
       {
+        "end": "2024-06-09T11:33:28.625831844+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 133.116178,
+                "id": "8b134cfc44df6c5a5be4415e360cdc76e5c5cb25470076acfe840107a3ae8918",
+                "name": "a2295e-cb8ca378",
+                "stats": {
+                  "compressed_size": 12404285166,
+                  "deduplicated_size": 6011269585,
+                  "nfiles": 105456,
+                  "original_size": 77013122136
+                }
+              }
+            }
+          }
+        },
+        "messages": [
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/home/jordan/.local/share/baloo/index: file changed while we backed it up",
+              "msgid": "Undefined"
+            }
+          }
+        ],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
         "end": "2024-06-03T02:45:17.296494723+02:00",
         "outcome": {
           "Completed": {
@@ -508,25 +554,34 @@
     ],
     "running": null,
     "last_completed": {
-      "end": "2024-06-03T02:45:17.296494723+02:00",
+      "end": "2024-06-09T11:33:28.625831844+02:00",
       "outcome": {
         "Completed": {
           "stats": {
             "archive": {
-              "duration": 20.481085,
-              "id": "c50eaeef54ae282c54b0f924520ea3abee78b67ed9967724d5466e9f03ba2784",
-              "name": "a2295e-632fa990",
+              "duration": 133.116178,
+              "id": "8b134cfc44df6c5a5be4415e360cdc76e5c5cb25470076acfe840107a3ae8918",
+              "name": "a2295e-cb8ca378",
               "stats": {
-                "compressed_size": 4200484458,
-                "deduplicated_size": 557102806,
-                "nfiles": 86515,
-                "original_size": 6434209681
+                "compressed_size": 12404285166,
+                "deduplicated_size": 6011269585,
+                "nfiles": 105456,
+                "original_size": 77013122136
               }
             }
           }
         }
       },
-      "messages": [],
+      "messages": [
+        {
+          "ParsedErr": {
+            "levelname": "WARNING",
+            "name": "borg.archiver",
+            "message": "/home/jordan/.local/share/baloo/index: file changed while we backed it up",
+            "msgid": "Undefined"
+          }
+        }
+      ],
       "include": [
         "",
         "/bin",

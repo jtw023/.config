@@ -10,6 +10,9 @@ Seen=true
 [Applications][net.openvpn.openvpn3_indicator]
 Seen=true
 
+[Applications][org.gnome.World.PikaBackup]
+Seen=true
+
 [Applications][slack]
 Seen=true
 
