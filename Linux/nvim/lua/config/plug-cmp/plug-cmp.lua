@@ -103,7 +103,7 @@ cmp.setup {
         { name = "calc" },
         { name = "buffer", max_item_count = 4 },
         { name = "spell", max_item_count = 4 },
-        { name = "vim-dadbod-completion", max_item_count = 4 },
+        { name = "vim-dadbod-completion" },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
