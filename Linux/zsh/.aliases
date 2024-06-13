@@ -91,6 +91,7 @@ alias s1='kitty +kitten ssh etl-prod01'
 alias sc='kitty +kitten ssh -Y etl-prod01 "cat ~/.vim/clip.txt" | xsel --clipboard --input'
 alias s2='kitty +kitten ssh etl-prod02'
 alias sql='kitty +kitten ssh redshift-bastion'
+alias sa='kitty +kitten ssh etl-autoload'
 
 # Show image in terminal
 alias imgshow='kitty +kitten icat'
