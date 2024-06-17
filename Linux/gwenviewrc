@@ -7,26 +7,26 @@ MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [Recent Files]
-File1[$e]=trash:/0-LessThan2M.png
-File10[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-06_02:15:49.png
-File2[$e]=trash:/0-LessThan1M10S.png
-File3[$e]=trash:/0-LessThan1M.png
-File4[$e]=trash:/0-May_5-11_V2.pdf
-File5[$e]=trash:/0-Information_Page_Passport.HEIC
-File6[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:31:32.png
-File7[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:31:07.png
-File8[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:18:38.png
-File9[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-06_02:15:20.png
-Name1[$e]=0-LessThan2M.png
-Name10[$e]=Screenshot_2024-06-06_02:15:49.png
-Name2[$e]=0-LessThan1M10S.png
-Name3[$e]=0-LessThan1M.png
-Name4[$e]=0-May_5-11_V2.pdf
-Name5[$e]=0-Information_Page_Passport.HEIC
-Name6[$e]=Screenshot_2024-06-04_08:31:32.png
-Name7[$e]=Screenshot_2024-06-04_08:31:07.png
-Name8[$e]=Screenshot_2024-06-04_08:18:38.png
-Name9[$e]=Screenshot_2024-06-06_02:15:20.png
+File1[$e]=trash:/0-LessThan1M10S.png
+File10[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_02:47:28.png
+File2[$e]=trash:/0-LessThan1M.png
+File3[$e]=trash:/0-May_5-11_V2.pdf
+File4[$e]=trash:/0-Information_Page_Passport.HEIC
+File5[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:31:32.png
+File6[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:31:07.png
+File7[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:18:38.png
+File8[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-06_02:15:20.png
+File9[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-06_02:15:49.png
+Name1[$e]=0-LessThan1M10S.png
+Name10[$e]=Screenshot_2024-06-04_02:47:28.png
+Name2[$e]=0-LessThan1M.png
+Name3[$e]=0-May_5-11_V2.pdf
+Name4[$e]=0-Information_Page_Passport.HEIC
+Name5[$e]=Screenshot_2024-06-04_08:31:32.png
+Name6[$e]=Screenshot_2024-06-04_08:31:07.png
+Name7[$e]=Screenshot_2024-06-04_08:18:38.png
+Name8[$e]=Screenshot_2024-06-06_02:15:20.png
+Name9[$e]=Screenshot_2024-06-06_02:15:49.png
 
 [SideBar]
 InformationSplitterSizes=221,254
