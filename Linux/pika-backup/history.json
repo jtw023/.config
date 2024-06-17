@@ -3,6 +3,43 @@
     "config_version": 2,
     "run": [
       {
+        "end": "2024-06-17T14:25:52.087552549+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 26.416172,
+                "id": "e691c7f4847d37ea7ffb90a89ade76e95b079595fc995ae3abfd3a0fe3d73f5a",
+                "name": "a2295e-c0c2373b",
+                "stats": {
+                  "compressed_size": 12482604230,
+                  "deduplicated_size": 781405659,
+                  "nfiles": 124234,
+                  "original_size": 77104388018
+                }
+              }
+            }
+          }
+        },
+        "messages": [],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
         "end": "2024-06-09T11:33:28.625831844+02:00",
         "outcome": {
           "Completed": {
@@ -554,34 +591,25 @@
     ],
     "running": null,
     "last_completed": {
-      "end": "2024-06-09T11:33:28.625831844+02:00",
+      "end": "2024-06-17T14:25:52.087552549+02:00",
       "outcome": {
         "Completed": {
           "stats": {
             "archive": {
-              "duration": 133.116178,
-              "id": "8b134cfc44df6c5a5be4415e360cdc76e5c5cb25470076acfe840107a3ae8918",
-              "name": "a2295e-cb8ca378",
+              "duration": 26.416172,
+              "id": "e691c7f4847d37ea7ffb90a89ade76e95b079595fc995ae3abfd3a0fe3d73f5a",
+              "name": "a2295e-c0c2373b",
               "stats": {
-                "compressed_size": 12404285166,
-                "deduplicated_size": 6011269585,
-                "nfiles": 105456,
-                "original_size": 77013122136
+                "compressed_size": 12482604230,
+                "deduplicated_size": 781405659,
+                "nfiles": 124234,
+                "original_size": 77104388018
               }
             }
           }
         }
       },
-      "messages": [
-        {
-          "ParsedErr": {
-            "levelname": "WARNING",
-            "name": "borg.archiver",
-            "message": "/home/jordan/.local/share/baloo/index: file changed while we backed it up",
-            "msgid": "Undefined"
-          }
-        }
-      ],
+      "messages": [],
       "include": [
         "",
         "/bin",
