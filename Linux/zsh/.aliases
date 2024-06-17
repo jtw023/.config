@@ -1,10 +1,7 @@
 RANDOMSCRIPTS="$HOME/github_repos/Random-Scripts"
 # Activate Virtual Environment
 alias bactive="source $HOME/base/bin/activate"
-alias ractive="source $HOME/reflex/bin/activate"
-
-# Use The Pip From The Virtual Environment
-alias pip="python -m pip"
+alias ractive="source $HOME/bitbucket_repos/reflex_etl/venv/bin/activate"
 
 # Run previous command as sudo
 # alias pls="sudo !!"
