@@ -4,7 +4,7 @@ local nvimOptions = vim.api.nvim_create_augroup("Nvim_Options", { clear = true }
 local formatNvim = vim.api.nvim_create_augroup("Format_Nvim", { clear = true })
 local onLeave = vim.api.nvim_create_augroup("On_Leave", { clear = true })
 local expandKey = vim.api.nvim_create_augroup("Expand_Key", { clear = true })
-local lint = vim.api.nvim_create_augroup("On_Lint", { clear = true })
+local expandDoc = vim.api.nvim_create_augroup("Expand_Doc", { clear = true })
 
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
     pattern = "*.sql",
@@ -97,6 +97,11 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.py",
     command = [[:iab tod # TODO:| :iab fi # FIX:| :iab inp # INPROGRESS:| :iab que # QUESTION:| :iab cav # CAVEAT:| :iab rol # ROLLUP_KEYS:<CR>#    * INDEX FIELD: Primary Key<CR>#    * MERGE FIELD: Field To Update Row<CR>#    * ROLLUP LOAD TYPE:<CR>#        * merge - Insert/replace regardless of merge field<CR>#        * updateRecords - Insert/replace if new merge field is greater<CR>#        * refresh - Replace table in Redshift with rollup results<CR>#    * TABLE NAME: 'Descriptive Table Name'<CR>#    * PERIODICITY: How Often To Run Query<CR>#    * LOOK BACK WINDOW: Run Query For Last X Hours<CR>#    * BACKFILL: 'Date To Backfill To'<ESC>10k/:<CR>| :iab tit # TITLE:| :iab lin # LINK:| :iab abo # ABOUT:]],
+    group = expandKey
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.py",
+    command = [[:iab doc ''''<BS><CR>:function def:<CR>Parameters:<CR><BS>Returns:<CR><BS><BS>''''<BS><ESC>4k/:<CR>]], -- <ESC>5k/:<CR>
     group = expandKey
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
