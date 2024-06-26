@@ -3,6 +3,43 @@
     "config_version": 2,
     "run": [
       {
+        "end": "2024-06-24T12:40:35.589494133+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 22.787925,
+                "id": "37f42abdec190095cbdaa6fd394b34b15d64fea2fc97d55e50fdfb756119843a",
+                "name": "a2295e-805f1f8c",
+                "stats": {
+                  "compressed_size": 12499901866,
+                  "deduplicated_size": 553352890,
+                  "nfiles": 124960,
+                  "original_size": 77074161140
+                }
+              }
+            }
+          }
+        },
+        "messages": [],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
         "end": "2024-06-17T14:25:52.087552549+02:00",
         "outcome": {
           "Completed": {
@@ -591,19 +628,19 @@
     ],
     "running": null,
     "last_completed": {
-      "end": "2024-06-17T14:25:52.087552549+02:00",
+      "end": "2024-06-24T12:40:35.589494133+02:00",
       "outcome": {
         "Completed": {
           "stats": {
             "archive": {
-              "duration": 26.416172,
-              "id": "e691c7f4847d37ea7ffb90a89ade76e95b079595fc995ae3abfd3a0fe3d73f5a",
-              "name": "a2295e-c0c2373b",
+              "duration": 22.787925,
+              "id": "37f42abdec190095cbdaa6fd394b34b15d64fea2fc97d55e50fdfb756119843a",
+              "name": "a2295e-805f1f8c",
               "stats": {
-                "compressed_size": 12482604230,
-                "deduplicated_size": 781405659,
-                "nfiles": 124234,
-                "original_size": 77104388018
+                "compressed_size": 12499901866,
+                "deduplicated_size": 553352890,
+                "nfiles": 124960,
+                "original_size": 77074161140
               }
             }
           }

@@ -1,5 +1,12 @@
 [1]
-Description=Librewolf to Desktop 3
+Description=Brave to Desktop 3
+desktops=459db3bf-b4c5-48bb-b71e-f261392f5f21
+desktopsrule=3
+wmclass=Brave-browser
+wmclassmatch=1
+
+[10]
+Description=LibreWolf to Desktop 3
 desktops=459db3bf-b4c5-48bb-b71e-f261392f5f21
 desktopsrule=3
 wmclass=LibreWolf
@@ -31,6 +38,13 @@ Description=Slack to Desktop 2
 desktops=2246ae72-95bf-4f72-83e2-6c289494856d
 desktopsrule=3
 wmclass=Slack
+wmclassmatch=1
+
+[313bff3a-13fe-4e37-9c6a-4d56b7f468c9]
+Description=LibreWolf to Desktop 3
+desktops=459db3bf-b4c5-48bb-b71e-f261392f5f21
+desktopsrule=3
+wmclass=LibreWolf
 wmclassmatch=1
 
 [34b36389-6adc-477f-bce3-7b5a13ba6de6]
@@ -130,5 +144,5 @@ wmclass=firefox
 wmclassmatch=1
 
 [General]
-count=9
-rules=1,2,3,4,5,6,7,8,9
+count=10
+rules=1,2,3,4,5,6,7,8,9,10

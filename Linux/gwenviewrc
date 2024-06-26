@@ -7,26 +7,26 @@ MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [Recent Files]
-File1[$e]=trash:/0-LessThan1M10S.png
-File10[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_02:47:28.png
-File2[$e]=trash:/0-LessThan1M.png
-File3[$e]=trash:/0-May_5-11_V2.pdf
-File4[$e]=trash:/0-Information_Page_Passport.HEIC
-File5[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:31:32.png
-File6[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:31:07.png
-File7[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-04_08:18:38.png
-File8[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-06_02:15:20.png
-File9[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-06_02:15:49.png
-Name1[$e]=0-LessThan1M10S.png
-Name10[$e]=Screenshot_2024-06-04_02:47:28.png
-Name2[$e]=0-LessThan1M.png
-Name3[$e]=0-May_5-11_V2.pdf
-Name4[$e]=0-Information_Page_Passport.HEIC
-Name5[$e]=Screenshot_2024-06-04_08:31:32.png
-Name6[$e]=Screenshot_2024-06-04_08:31:07.png
-Name7[$e]=Screenshot_2024-06-04_08:18:38.png
-Name8[$e]=Screenshot_2024-06-06_02:15:20.png
-Name9[$e]=Screenshot_2024-06-06_02:15:49.png
+File1[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-22_08:21:18.png
+File10[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-24_09:14:21.png
+File2[$e]=$HOME/Pictures/Screenshots/available-credit.png
+File3[$e]=$HOME/Pictures/Screenshots/current-available-creditline.png
+File4[$e]=$HOME/Pictures/Screenshots/decline-reason.png
+File5[$e]=$HOME/Pictures/Screenshots/declined-example.png
+File6[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-22_09:24:06.png
+File7[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-22_09:24:43.png
+File8[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-22_09:26:43.png
+File9[$e]=$HOME/Pictures/Screenshots/Screenshot_2024-06-22_09:29:36.png
+Name1[$e]=Screenshot_2024-06-22_08:21:18.png
+Name10[$e]=Screenshot_2024-06-24_09:14:21.png
+Name2[$e]=available-credit.png
+Name3[$e]=current-available-creditline.png
+Name4[$e]=decline-reason.png
+Name5[$e]=declined-example.png
+Name6[$e]=Screenshot_2024-06-22_09:24:06.png
+Name7[$e]=Screenshot_2024-06-22_09:24:43.png
+Name8[$e]=Screenshot_2024-06-22_09:26:43.png
+Name9[$e]=Screenshot_2024-06-22_09:29:36.png
 
 [SideBar]
 InformationSplitterSizes=221,254

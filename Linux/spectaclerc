@@ -1,5 +1,5 @@
 [Annotations]
-annotationToolType=6
+rectangleFillColor=255,0,0
 rectangleStrokeColor=255,0,0
 textFontColor=170,0,0
 
@@ -17,8 +17,8 @@ quitAfterSaveCopyExport=true
 
 [ImageSave]
 imageFilenameTemplate=Screenshot_<yyyy>-<MM>-<dd>_<hh>:<mm>:<ss>
-lastImageSaveAsLocation=file:///home/jordan/Pictures/Screenshots/dadbod_overwriting_default_postgres_views.png
-lastImageSaveLocation=file:///home/jordan/Pictures/Screenshots/Screenshot_2024-06-10_08:51:45.png
+lastImageSaveAsLocation=file:///home/jordan/Pictures/Screenshots/declined-example.png
+lastImageSaveLocation=file:///home/jordan/Pictures/Screenshots/Screenshot_2024-06-24_09:14:21.png
 translatedScreenshotsFolder=Screenshots
 
 [VideoSave]

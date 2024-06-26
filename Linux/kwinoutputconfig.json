@@ -3,6 +3,8 @@
         "data": [
             {
                 "autoRotation": "InTabletMode",
+                "brightness": 0.3,
+                "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
                 "edidHash": "65485859493ef32668133d2dacd847e8",
                 "edidIdentifier": "SDC 16768 0 27 2021 0",
@@ -24,6 +26,7 @@
             },
             {
                 "autoRotation": "InTabletMode",
+                "colorProfileSource": "sRGB",
                 "connectorName": "DP-2",
                 "edidHash": "f36f5ed2d0285a4232446c0259e5c9ef",
                 "edidIdentifier": "VIZ 103 16843009 13 2008 0",
