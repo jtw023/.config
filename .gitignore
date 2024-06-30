@@ -34,6 +34,19 @@ Linux/Slack/*
 !Linux/Slack/local-settings.json
 !Linux/Slack/Preferences
 !README.md
+Linux/Trolltech.conf
+Linux/gtk-3.0/colors.css
+Linux/gtk-4.0/colors.css
+Linux/gtkrc
+Linux/gtkrc-2.0
+Linux/kconf_updaterc
+Linux/kde.org/UserFeedback.org.kde.plasmashell.conf
+Linux/kde.org/elisa.conf
+Linux/kdeglobals
+Linux/kglobalshortcutsrc
+Linux/kwinoutputconfig.json
+Linux/plasma-org.kde.plasma.desktop-appletsrc
+Linux/zsh/.zcompdump
 
 # Ignore Plugged Inside Linux and Mac Directories
 MacOS/nvim/autoload/plugged/*
