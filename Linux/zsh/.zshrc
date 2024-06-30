@@ -32,7 +32,11 @@ zle-line-init() {
     done
 
     ZSH_HIGHLIGHT_MAXLENGTH=0
-    PROMPT='%/ '
+    GLYPHLINE=${(pl:$COLUMNS:: :)}
+    LOLCATIFIED=$(echo $GLYPHLINE | lolcat --force)
+    PROMPT='
+${LOLCATIFIED}
+%/ '
     RPROMPT=''
     zle .reset-prompt
     PROMPT='

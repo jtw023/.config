@@ -1,7 +1,9 @@
 [ExtractDialog]
 1646x926 screen: Height=413
 1646x926 screen: Width=817
-DirHistory[$e]=/run/media/jordan/B3FD-0F0A/
+1920x1080 screen: Height=1072
+1920x1080 screen: Width=954
+DirHistory[$e]=$HOME/Downloads/,/run/media/jordan/B3FD-0F0A/
 
 [General]
 Version=202
