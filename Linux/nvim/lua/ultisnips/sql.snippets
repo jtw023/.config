@@ -1,0 +1,115 @@
+###########################################################################
+#							 PLSQL SNIPPETS								  #
+###########################################################################
+
+
+global !p
+# Import package
+import datetime
+
+# Return the doc string for PLSQL script
+def docstring_plsql(params):
+	comment = ""
+	if params:
+		comment = "/** Parameters\n"
+		# Split the arguments
+		args = [arg.strip() for arg in params.split(',')]
+		for arg in args:
+			comment += "* {0:30} : \n".format(arg.split(' ')[0].upper())
+		comment += "*/\n"
+	# Return the comment string
+	return comment
+
+def hdr_params(params, level=0, gap="	 "):
+	line = level * gap + "-- -----------------------------------------------"
+	comment = line
+	if params:
+		# Split the arguments
+		args = [arg.strip() for arg in params.split(',')]
+		for arg in args:
+			comment += "\n" + level * gap + "-- {0:20} : ".format(arg.split(' ')[0].upper())
+	# comment += line
+	# Return the comment string
+	return comment
+
+def dyear():
+	""" Returns the current Year in YYYY format
+	"""
+	now = datetime.datetime.now()
+	rv=now.year
+	return rv
+
+def today():
+	""" Returns the current Date in DD-MON-YYYY format
+	"""
+	now = datetime.datetime.now()
+	rv=now.strftime("%d-%b-%Y")
+	return rv
+
+def param(var):
+	""" Returns the string name wrapped value """
+	return "'" + var + " : ' || "
+	
+endglobal
+
+########################################
+#		 SQL Snippets				   #
+########################################
+snippet sel10 "Select statement limit 10"
+SELECT
+	${0:*}
+FROM ${1}
+WHERE 1 = 1
+	AND ${2}
+LIMIT 10
+endsnippet
+
+snippet sel100 "Select statement limit 100"
+SELECT
+	${0:*}
+FROM ${1}
+WHERE 1 = 1
+	AND ${2}
+LIMIT 100
+endsnippet
+
+snippet sel1000 "Select statement limit 1000"
+SELECT
+	${0:*}
+FROM ${1}
+WHERE 1 = 1
+	AND ${2}
+LIMIT 1000
+endsnippet
+
+snippet sel10000 "Select statement limit 10000"
+SELECT
+	${0:*}
+FROM ${1}
+WHERE 1 = 1
+	AND ${2}
+LIMIT 10000
+endsnippet
+
+snippet sel50000 "Select statement limit 50000"
+SELECT
+	${0:*}
+FROM ${1}
+WHERE 1 = 1
+	AND ${2}
+LIMIT 50000
+endsnippet
+
+#########################################
+#		   CASE STATEMENT				#
+#########################################
+
+snippet case "Case statement"
+	CASE
+		WHEN (${1})
+			THEN ${2}
+		WHEN (${3})
+			THEN ${4}
+		${0:ELSE}
+	END 
+endsnippet

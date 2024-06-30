@@ -109,6 +109,7 @@ Linux/user-dirs.dirs
 Linux/user-dirs.locale
 Linux/xdg-desktop-portal-kderc
 Linux/xsettingsd
+Linux/filetypesrc
 
 # Ignore Plugged Inside Linux and Mac Directories
 MacOS/nvim/autoload/plugged/*
