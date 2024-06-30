@@ -1,0 +1,68 @@
+[
+  {
+    "config_version": 2,
+    "id": "4630d75b-bd9b-47f7-a292-49c153863b25",
+    "archive_prefix": "a2295e-",
+    "repo_id": "bbf1f02af9a002a9d3f638ea2471cfac4459d6593002fda2d29d5fbce6e5bb31",
+    "repo": {
+      "type": "Local",
+      "path": "/home/jordan/backups/backup-jordan-zenbook15",
+      "mount_path": "/",
+      "uri": null,
+      "drive_name": null,
+      "mount_name": "Filesystem root",
+      "volume_uuid": null,
+      "volume_uuid_identifier": null,
+      "removable": false,
+      "icon": ". GThemedIcon drive-harddisk drive drive-harddisk-symbolic drive-symbolic",
+      "icon_symbolic": ". GThemedIcon drive-harddisk-symbolic drive-symbolic drive-harddisk drive",
+      "settings": {
+        "command_line_args": []
+      }
+    },
+    "encrypted": true,
+    "encryption_mode": "repokey",
+    "include": [
+      "",
+      "/bin",
+      "/lib",
+      "/lib64",
+      "/sbin"
+    ],
+    "exclude": [
+      {
+        "PathPrefix": "backups"
+      },
+      "Caches",
+      "Trash",
+      "FlatpakApps",
+      "VmsContainers"
+    ],
+    "schedule": {
+      "enabled": true,
+      "settings": {
+        "run_on_battery": false
+      },
+      "frequency": {
+        "Weekly": {
+          "preferred_weekday": "Sat"
+        }
+      }
+    },
+    "prune": {
+      "enabled": true,
+      "keep": {
+        "hourly": 24,
+        "daily": 7,
+        "weekly": 2,
+        "monthly": 6,
+        "yearly": 0
+      }
+    },
+    "title": "Weekly Backup",
+    "user_scripts": {
+      "PreBackup": "notify-send -a \"Pika Backup\" -i ~/.local/share/knotify/PikaBackup.png \"$CONFIG_NAME Starting\"",
+      "PostBackup": "notify-send -a \"Pika Backup\" -i ~/.local/share/knotify/PikaBackup.png \"$CONFIG_NAME Finished\" \"Status: $OUTCOME\\nFiles Backed Up: $FILES_COUNT\""
+    }
+  }
+]

@@ -1,0 +1,7 @@
+logging=false
+use hotkeys=false
+next wallpaper hotkey=control+super+w
+pause wallpaper hotkey=control+super+shift+p
+show_help_at_start=false
+set_command=
+warn_large_img=true

@@ -1,0 +1,10 @@
+# Export local path
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/github_repos/Random-Scripts"
+
+# Set editor to neovim
+export EDITOR="/usr/bin/nvim"
+
+# Export Language Settings
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
