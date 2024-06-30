@@ -1,5 +1,0 @@
-[Confirmations]
-ConfirmEmptyTrash=true
-
-[Executable scripts]
-behaviourOnLaunch=execute
