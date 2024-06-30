@@ -14,7 +14,6 @@ Plug 'mbbill/undotree'
 -- Markdown Preview
 Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
 -- Git Plugins
-Plug 'APZelos/blamer.nvim'
 Plug 'tpope/vim-fugitive'
 -- Colorizer Plugin
 Plug 'norcalli/nvim-colorizer.lua'
