@@ -22,6 +22,7 @@ Linux/session/
 Linux/vlc/
 Linux/haruna/watch-later/
 Linux/obs-studio/logs/
+Linux/audacity/
 Linux/obsidian/*
 !Linux/obsidian/Preferences
 Linux/kioslaverc
