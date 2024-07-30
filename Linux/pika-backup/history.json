@@ -3,6 +3,163 @@
     "config_version": 2,
     "run": [
       {
+        "end": "2024-07-27T18:43:33.549231426+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 24.029929,
+                "id": "9143dba185a5c8056d390ac32503a43f44c9f0234d335040577003c8d6e6b46c",
+                "name": "a2295e-f48f16da",
+                "stats": {
+                  "compressed_size": 13414063331,
+                  "deduplicated_size": 494556468,
+                  "nfiles": 139516,
+                  "original_size": 79210555278
+                }
+              }
+            }
+          }
+        },
+        "messages": [],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
+        "end": "2024-07-22T10:19:58.941028852+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 22.213244,
+                "id": "43446b134aad3b6ef05e8beb4770503fed57c3570b341b93b5373bf0a297d3aa",
+                "name": "a2295e-e1cc688b",
+                "stats": {
+                  "compressed_size": 13365316499,
+                  "deduplicated_size": 518716645,
+                  "nfiles": 138106,
+                  "original_size": 79034822762
+                }
+              }
+            }
+          }
+        },
+        "messages": [],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
+        "end": "2024-07-14T09:13:20.136952719+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 29.182786,
+                "id": "1ca4a308fa60754f00463d954fba81261fc1c26bb2900c055c9663bdaf4fecf9",
+                "name": "a2295e-747eeff1",
+                "stats": {
+                  "compressed_size": 13268507984,
+                  "deduplicated_size": 657634494,
+                  "nfiles": 136818,
+                  "original_size": 79041157322
+                }
+              }
+            }
+          }
+        },
+        "messages": [],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
+        "end": "2024-07-06T20:27:23.560922564+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 26.214245,
+                "id": "9674292d294b6a2f84ad51b419b33716faf2721db5b0382587a5214594620cd6",
+                "name": "a2295e-55b7fc24",
+                "stats": {
+                  "compressed_size": 12758820991,
+                  "deduplicated_size": 382554845,
+                  "nfiles": 130770,
+                  "original_size": 77715956819
+                }
+              }
+            }
+          }
+        },
+        "messages": [
+          {
+            "ParsedErr": {
+              "levelname": "ERROR",
+              "name": "borg.archiver",
+              "message": "passphrase supplied in BORG_PASSPHRASE, by BORG_PASSCOMMAND or via BORG_PASSPHRASE_FD is incorrect.",
+              "msgid": "PassphraseWrong"
+            }
+          }
+        ],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
         "end": "2024-06-30T19:41:47.523641168+02:00",
         "outcome": {
           "Completed": {
@@ -665,19 +822,19 @@
     ],
     "running": null,
     "last_completed": {
-      "end": "2024-06-30T19:41:47.523641168+02:00",
+      "end": "2024-07-27T18:43:33.549231426+02:00",
       "outcome": {
         "Completed": {
           "stats": {
             "archive": {
-              "duration": 26.045494,
-              "id": "5a505a61d9764227730c18c45dd1b3808274e3e72a27450686a8b9a22480a116",
-              "name": "a2295e-d164e739",
+              "duration": 24.029929,
+              "id": "9143dba185a5c8056d390ac32503a43f44c9f0234d335040577003c8d6e6b46c",
+              "name": "a2295e-f48f16da",
               "stats": {
-                "compressed_size": 12552189696,
-                "deduplicated_size": 577976826,
-                "nfiles": 127566,
-                "original_size": 77292119256
+                "compressed_size": 13414063331,
+                "deduplicated_size": 494556468,
+                "nfiles": 139516,
+                "original_size": 79210555278
               }
             }
           }
