@@ -3,6 +3,60 @@
     "config_version": 2,
     "run": [
       {
+        "end": "2024-08-03T15:42:58.689258348+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 89.74702,
+                "id": "9fe41665ffd063c6b63cb36f3b9a93f63d013b4f353699b177f3cb6a2bffef07",
+                "name": "a2295e-3e1f6853",
+                "stats": {
+                  "compressed_size": 13488076787,
+                  "deduplicated_size": 568822048,
+                  "nfiles": 140396,
+                  "original_size": 79337817539
+                }
+              }
+            }
+          }
+        },
+        "messages": [
+          {
+            "ParsedErr": {
+              "levelname": "ERROR",
+              "name": "borg.archiver",
+              "message": "passphrase supplied in BORG_PASSPHRASE, by BORG_PASSCOMMAND or via BORG_PASSPHRASE_FD is incorrect.",
+              "msgid": "PassphraseWrong"
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/home/jordan/.local/share/baloo/index: file changed while we backed it up",
+              "msgid": "Undefined"
+            }
+          }
+        ],
+        "include": [
+          "",
+          "/bin",
+          "/lib",
+          "/lib64",
+          "/sbin"
+        ],
+        "exclude": [
+          {
+            "PathPrefix": "/home/jordan/backups"
+          },
+          "Caches",
+          "Trash",
+          "FlatpakApps",
+          "VmsContainers"
+        ]
+      },
+      {
         "end": "2024-07-27T18:43:33.549231426+02:00",
         "outcome": {
           "Completed": {
@@ -822,25 +876,42 @@
     ],
     "running": null,
     "last_completed": {
-      "end": "2024-07-27T18:43:33.549231426+02:00",
+      "end": "2024-08-03T15:42:58.689258348+02:00",
       "outcome": {
         "Completed": {
           "stats": {
             "archive": {
-              "duration": 24.029929,
-              "id": "9143dba185a5c8056d390ac32503a43f44c9f0234d335040577003c8d6e6b46c",
-              "name": "a2295e-f48f16da",
+              "duration": 89.74702,
+              "id": "9fe41665ffd063c6b63cb36f3b9a93f63d013b4f353699b177f3cb6a2bffef07",
+              "name": "a2295e-3e1f6853",
               "stats": {
-                "compressed_size": 13414063331,
-                "deduplicated_size": 494556468,
-                "nfiles": 139516,
-                "original_size": 79210555278
+                "compressed_size": 13488076787,
+                "deduplicated_size": 568822048,
+                "nfiles": 140396,
+                "original_size": 79337817539
               }
             }
           }
         }
       },
-      "messages": [],
+      "messages": [
+        {
+          "ParsedErr": {
+            "levelname": "ERROR",
+            "name": "borg.archiver",
+            "message": "passphrase supplied in BORG_PASSPHRASE, by BORG_PASSCOMMAND or via BORG_PASSPHRASE_FD is incorrect.",
+            "msgid": "PassphraseWrong"
+          }
+        },
+        {
+          "ParsedErr": {
+            "levelname": "WARNING",
+            "name": "borg.archiver",
+            "message": "/home/jordan/.local/share/baloo/index: file changed while we backed it up",
+            "msgid": "Undefined"
+          }
+        }
+      ],
       "include": [
         "",
         "/bin",
