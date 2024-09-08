@@ -148,6 +148,8 @@ alias grs='git reset --soft' # insert git commit hash to undo commit but keep ch
 alias gs='git status' # show a shorter status of a git directory
 alias gsl='git status' # show the status of a git directory
 alias gss='git status -s' # show a shorter status of a git directory
+alias gst='git stash' # temporarily stash git changes
+alias gsta='git stash apply' # re-apply stashed git changes
 alias gu='git restore --staged' # unstage a staged git file
 alias gw='git when' # see when the last pull or fetch was made(custom git alias)
 
