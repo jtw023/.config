@@ -22,6 +22,7 @@ alias end='openvpn3 session-manage --config /etc/openvpn/reflex_vpn.ovpn --disco
 
 # Manage ExpressVPN
 alias startexpress='sudo systemctl start expressvpn'
+alias connectexpress='expressvpn connect'
 alias stopexpress='sudo systemctl stop expressvpn'
 alias statsexpress='sudo systemctl status expressvpn'
 
