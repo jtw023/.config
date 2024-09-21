@@ -118,6 +118,6 @@ cmp.setup {
         entries = { name = 'custom', selection_order = 'near_cursor' },
     },
     performance = {
-        max_view_entries = 5
+        max_view_entries = 100
     }
 }
