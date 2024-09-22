@@ -81,7 +81,7 @@ opts.desc = 'Toggle Fold Between Open And Closed'
 vim.keymap.set('n', '<C-m>', 'za', opts)
 -- Delete the fold
 opts.desc = 'Delete Current Fold'
-vim.keymap.set('n', '<C-x>', 'zd', opts)
+vim.keymap.set('n', '<C-d>', 'zd', opts)
 -- FoldEnd
 
 -- FoldStart
