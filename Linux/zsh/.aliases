@@ -28,6 +28,7 @@ alias statsexpress='sudo systemctl status expressvpn'
 
 # Update System
 alias update='yay -Syu && yay -Fy'
+alias updatekeyrings='sudo pacman -Sy archlinux-keyring && sudo pacman -Sy endeavouros-keyring'
 
 # Logout command
 alias lo="openvpn3 session-manage --config /etc/openvpn/reflex_vpn.ovpn --disconnect && qdbus org.kde.LogoutPrompt /LogoutPrompt promptLogout"
