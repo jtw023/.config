@@ -66,9 +66,9 @@ vim.keymap.set('n', '<Leader>np', ':ArduinoChooseProgrammer<CR>')
 -- FoldStart
 -- Create newline above or below
 opts.desc = 'Add New Line Above Cursor And Stay In Normal Mode'
-vim.keymap.set('n', '<C-u>', '<S-o><ESC>', opts)
+vim.keymap.set('n', '<C-k>', '<S-o><ESC>', opts)
 opts.desc = 'Add New Line Below Cursor And Stay In Normal Mode'
-vim.keymap.set('n', '<C-b>', 'o<ESC>', opts)
+vim.keymap.set('n', '<C-j>', 'o<ESC>', opts)
 -- FoldEnd
 
 -- FoldStart
@@ -110,10 +110,10 @@ opts.desc = 'Jump Scroll To The Right'
 vim.keymap.set({ 'n', 'v' }, '<S-l>', 'zL', opts)    -- jump right
 opts.desc = 'Jump Scroll To The Left'
 vim.keymap.set({ 'n', 'v' }, '<S-h>', 'zH', opts)    -- jump left
-opts.desc = 'Jump Up Half Screen'
-vim.keymap.set({ 'n', 'v' }, '<S-k>', '<C-u>', opts) -- jump up
-opts.desc = 'Jump Down Half Screen'
-vim.keymap.set({ 'n', 'v' }, '<S-j>', '<C-d>', opts) -- jump down
+-- opts.desc = 'Jump Up Half Screen'
+-- vim.keymap.set({ 'n', 'v' }, '<S-k>', '<C-u>', opts) -- jump up
+-- opts.desc = 'Jump Down Half Screen'
+-- vim.keymap.set({ 'n', 'v' }, '<S-j>', '<C-d>', opts) -- jump down
 -- Split screen
 opts.desc = 'Open Splitscreen In Netrw'
 vim.keymap.set('n', '<C-w>', ':vs .<CR>', opts)
