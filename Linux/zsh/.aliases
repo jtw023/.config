@@ -55,7 +55,7 @@ function cl() {
     fi
 }
 # Alias cat to bat
-alias cat="bat -fn --theme base16"
+alias cat="/usr/bin/bat -fn --theme base16"
 
 # Alias bat to bat-asus-battery
 alias bat='bat-asus-battery'
