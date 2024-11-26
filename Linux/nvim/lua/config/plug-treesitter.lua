@@ -29,7 +29,7 @@ treesitter.setup {
     },
     rainbow = {
         -- `false` will disable the whole extension
-        enable = true,
+        enable = false,
 
         -- Which query to use for finding delimiters
         query = 'rainbow-parens',
