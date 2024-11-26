@@ -112,7 +112,12 @@ vim.cmd([[ hi TSRainbowOrange guifg = #FF5F1F ]])
 vim.cmd([[ hi TSRainbowGreen guifg = #39FF14 ]])
 vim.cmd([[ hi TSRainbowYellow guifg = #B026FF ]])
 
--- Highlight on yank
-vim.cmd([[
-    au TextYankPost * silent! lua vim.highlight.on_yank()
-]])
+-- Highlight On Yank
+vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#00FEFC", fg = "#000000" })
+vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight when yanking (copying) text",
+    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+    callback = function()
+    vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 300 })
+    end,
+})
