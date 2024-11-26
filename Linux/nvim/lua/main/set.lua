@@ -5,6 +5,7 @@ vim.notify = require("notify")
 
 -- Colors and fonts
 o.termguicolors = true
+o.guicursor='n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50'
 o.syntax = 'on'
 o.encoding = 'utf-8'
 vim.cmd([[ colorscheme vn-night ]])
@@ -92,7 +93,12 @@ vim.cmd([[hi clear SpellCap]])
 -- Set highlights
 vim.cmd([[ hi Visual guifg = #000000 ]])
 vim.cmd([[ hi Search guifg = #000000 ]])
--- vim.cmd([[ hi IncSearch guifg = #000000 ]])
+vim.cmd([[ hi Cursor guifg = #00FEFC]])
+vim.cmd([[ hi Cursor guibg = #00FEFC]])
+vim.cmd([[ hi lCursor2 guifg = #00FEFC]])
+vim.cmd([[ hi lCursor2 guibg = #00FEFC]])
+vim.cmd([[ hi Cursor2 guifg = #00FEFC]])
+vim.cmd([[ hi Cursor2 guibg = #00FEFC]])
 vim.cmd([[ hi Folded guifg = #000000 ]])
 vim.cmd([[ hi Blamer guifg = #808080 ]])
 vim.cmd([[ hi LineNr guifg = #205484 ]])
