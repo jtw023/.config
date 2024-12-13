@@ -28,7 +28,7 @@ opts.desc = 'Paste To Register Without Overwriting Clipboard'
 vim.keymap.set('v', '<Leader>p', [["_dhp]], opts)
 -- Expand JSON
 opts.desc = 'Expand JSON'
-vim.keymap.set('n', '<C-e>', ':%!python -m json.tool<CR>', opts)
+vim.keymap.set('n', '<A-e>', ':%!python -m json.tool<CR>', opts)
 -- Dadbod
 -- Toggle Drawer
 opts.desc = 'Open DBUI Drawer'
