@@ -36,9 +36,9 @@ vim.keymap.set('n', '<Leader>o', ':DBUIToggle<CR>', opts)
 -- Easymotion
 -- Launch Program
 opts.desc = 'Choose Character for Easymotion'
-vim.cmd([[nnoremap mc <Plug>(easymotion-bd-f)]])
-opts.desc = 'Choose Word for Easymotion'
-vim.cmd([[nnoremap mw <Plug>(easymotion-bd-w)]])
+vim.cmd([[nnoremap m <Plug>(easymotion-bd-f)]])
+-- opts.desc = 'Choose Word for Easymotion'
+-- vim.cmd([[nnoremap mw <Plug>(easymotion-bd-w)]])
 -- FoldEnd
 
 -- FoldStart
