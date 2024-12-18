@@ -15,7 +15,7 @@ vim.g.mapleader = ' '
 -- vim.keymap.set({'v', 'n'}, 'p', '"+p', opts)
 -- Save and source
 opts.desc = 'Save and Source File'
-vim.keymap.set('n', '<Leader><Leader>', ':w <BAR> :so %<CR>', opts)
+vim.keymap.set('n', '1', ':w <BAR> :so %<CR>', opts)
 -- Turn off highlighting
 opts.desc = 'Turn Off Highlighting'
 vim.keymap.set('n', '<F2>', ':nohlsearch<CR>', opts)
