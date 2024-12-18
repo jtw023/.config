@@ -3,6 +3,7 @@ require('main.set')
 require('main.keymap')
 
 require('config.plug-notify')
+require('config.plug-files')
 require('config.plug-lint')
 require('config.plug-arduino')
 require('config.plug-indent')
