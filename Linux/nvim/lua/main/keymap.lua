@@ -189,7 +189,7 @@ vim.keymap.set('n', '<Leader>tn', ':w <BAR> :Telescope notify<CR>', opts)
 opts.desc = 'Move Selected Line Up'
 vim.keymap.set('v', '<S-u>', ":m '<-2<CR>gv=gv", opts)
 opts.desc = 'Move Selected Line Down'
-vim.keymap.set('v', '<S-b>', ":m '>+1<CR>gv=gv", opts)
+vim.keymap.set('v', '<S-d>', ":m '>+1<CR>gv=gv", opts)
 -- Indent selected line in or out
 opts.desc = 'Unindent Selected Line'
 vim.keymap.set('v', '<Leader>,', '<<<ESC>gv', opts)
