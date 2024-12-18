@@ -52,6 +52,12 @@ vim.keymap.set('n', '<F8>', ':qa!<CR>', opts)
 -- FoldEnd
 
 -- FoldStart
+-- File Manager
+opts.desc = 'Launch Mini.Files'
+vim.keymap.set('n', '-', ':lua MiniFiles.open()<CR>', opts)
+-- FoldEnd
+
+-- FoldStart
 -- Arduino
 opts.desc = 'Attach Your Board'
 vim.keymap.set('n', '<Leader>na', ':ArduinoAttach<CR>')
