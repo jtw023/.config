@@ -1,6 +1,8 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- File Manager
+Plug 'echasnovski/mini.files'
 -- Vim Easymotion
 Plug 'easymotion/vim-easymotion'
 -- NV Term
