@@ -1,1 +1,1 @@
-{"lastEffectiveClientEnvironment":1000,"lastElectronVersionLaunched":"33.2.0","electronFeatureOverrides":[{"experiment":"","disable_chrome_features":["PostQuantumKyber"],"type":"normal"}]}
+{"lastEffectiveClientEnvironment":1000,"lastElectronVersionLaunched":"33.2.0","electronFeatureOverrides":[{"experiment":"","disable_chrome_features":["PostQuantumKyber"],"type":"normal"},{"experiment":"ripcord_document_policy_include_js_call_stacks","enable_chrome_features":["DocumentPolicyIncludeJSCallStacksInCrashReports"],"type":"normal"}]}
