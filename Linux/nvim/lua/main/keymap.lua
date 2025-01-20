@@ -227,6 +227,8 @@ vim.keymap.set('v', '<S-c>', '~', opts)
 
 -- FoldStart
 -- Git -- Show diff or jump to added[+], modified[->], or deleted[-] line
+opts.desc = 'First Git Push'
+vim.keymap.set('n', 't', ":<BS><BS><BS><BS><BS>Git push --set-upstream origin <C-r>*", opts)
 opts.desc = 'Toggle Git Undotree'
 vim.keymap.set('n', '<Leader>tr', ':UndotreeToggle<CR>', opts)
 opts.desc = 'Preview Gitsigns Hunk'
