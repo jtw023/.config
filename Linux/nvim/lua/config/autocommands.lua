@@ -80,7 +80,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
-    pattern = "/Users/jordanwalters/bitbucket_repos/jordanw/SQL/*.sql",
+    pattern = "/home/jordan/bitbucket_repos/jordanw/SQL/*.sql",
     command = [[ :set undofile ]],
     group = nvimOptions
 })
@@ -106,7 +106,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.sql",
-    command = [[nmap <Leader>= :w \| :silent !sqlfluff format --config /Users/jordanwalters/bitbucket_repos/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>]],
+    command = [[nmap <Leader>= :w \| :silent !sqlfluff format --config /home/jordan/bitbucket_repos/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>]],
     group = formatNvim
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
