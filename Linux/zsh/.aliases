@@ -18,7 +18,9 @@ alias an='arduino-cli sketch new'
 # Manage OpenVPN
 alias vpn='openvpn3 session-start --config /etc/openvpn/reflex_vpn.ovpn'
 alias stats='openvpn3 session-stats --config /etc/openvpn/reflex_vpn.ovpn'
+alias list='openvpn3 sessions-list'
 alias end='openvpn3 session-manage --config /etc/openvpn/reflex_vpn.ovpn --disconnect'
+alias stopov3="openvpn3 session-manage --session-path $1 --disconnect"
 
 # Manage ExpressVPN
 alias startexpress='sudo systemctl start expressvpn'
