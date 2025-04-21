@@ -25,7 +25,7 @@ alias stopov3="openvpn3 session-manage --session-path $1 --disconnect"
 
 # Manage ExpressVPN
 alias startexpress='sudo systemctl start expressvpn'
-alias connectexpress='expressvpn connect'
+alias connectexpress='expressvpn connect "USA - Phoenix"'
 alias stopexpress='sudo systemctl stop expressvpn'
 alias statsexpress='sudo systemctl status expressvpn'
 
