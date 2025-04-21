@@ -16,6 +16,7 @@ function pls () {
 alias an='arduino-cli sketch new'
 
 # Manage OpenVPN
+alias vpna="/usr/bin/bat -fn --theme='Solarized (dark)' $XDG_CONFIG_HOME/zsh/.aliases | grep -A 5 'Manage OpenVPN'"
 alias vpn='openvpn3 session-start --config /etc/openvpn/reflex_vpn.ovpn'
 alias stats='openvpn3 session-stats --config /etc/openvpn/reflex_vpn.ovpn'
 alias list='openvpn3 sessions-list'
