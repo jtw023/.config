@@ -21,7 +21,7 @@ opts.desc = 'Turn Off Highlighting'
 vim.keymap.set('n', '<F2>', ':nohlsearch<CR>', opts)
 -- Cheat sheet
 opts.desc = 'Open Keymap File In New Tab'
-vim.keymap.set('n', '<F3>', ':tabnew $HOME/.config/nvim/lua/main/keymap.lua<CR>', opts)
+vim.keymap.set('n', '<F3>', ':tabnew $HOME/.config/Linux/nvim/lua/main/keymap.lua<CR>', opts)
 -- Delete and save to void register
 opts.desc = 'Paste To Register Without Overwriting Clipboard'
 -- vim.keymap.set('v', 'p', [["_dP]], opts)
