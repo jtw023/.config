@@ -28,7 +28,7 @@ opts.desc = 'Paste To Register Without Overwriting Clipboard'
 vim.keymap.set('v', '<Leader>p', [["_dhp]], opts)
 -- Expand JSON
 opts.desc = 'Expand JSON'
-vim.keymap.set('n', '<A-e>', ':%!python -m json.tool<CR>', opts)
+vim.keymap.set('n', '<Leader>e', ':%!python -m json.tool<CR>', opts)
 -- Dadbod
 -- Toggle Drawer
 opts.desc = 'Open DBUI Drawer'
@@ -170,7 +170,7 @@ opts.desc = 'Find Recently Opened Files With Telescope'
 vim.keymap.set('n', '<Leader>to', ':w <BAR> :Telescope oldfiles<CR>', opts)
 -- Find Git Files
 opts.desc = 'Find Git Files With Telescope'
-vim.keymap.set('n', '<Leader>tg', ':w <BAR> :Telescope git_files<CR>', opts)
+vim.keymap.set('n', '<Leader>g', ':w <BAR> :Telescope git_files<CR>', opts)
 -- See Git Commits
 opts.desc = 'See Git Commits With Telescope'
 vim.keymap.set('n', '<Leader>tc', ':Telescope git_commits<CR>', opts)
@@ -179,7 +179,7 @@ opts.desc = 'Live Grep Files With Telescope'
 vim.keymap.set('n', '<Leader>tl', ':exe "w <BAR> :Telescope live_grep cwd=" .. fnameescape(expand("%:p:h"))<CR>', opts)
 -- View variables
 opts.desc = 'Find Variables With Telescope'
-vim.keymap.set('n', '<Leader>tv', ':w <BAR> :Telescope lsp_document_symbols<CR>', opts)
+vim.keymap.set('n', '<Leader>v', ':w <BAR> :Telescope lsp_document_symbols<CR>', opts)
 -- View Help Tags
 opts.desc = 'Nvim Help With Telescope'
 vim.keymap.set('n', '<Leader>th', ':w <BAR> :Telescope help_tags<CR>', opts)
