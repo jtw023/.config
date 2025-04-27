@@ -1,6 +1,8 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- Code Actions Viewer
+Plug 'aznhe21/actions-preview.nvim'
 -- File Manager
 Plug 'echasnovski/mini.files'
 -- Vim Easymotion
