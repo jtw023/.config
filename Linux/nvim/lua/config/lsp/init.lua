@@ -12,12 +12,12 @@ end
 
 local on_attach = function(client, bufnr)
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
-    bufopts.desc = 'Go to definition'
+    bufopts.desc = 'Go to definition(python or lua only)'
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     bufopts.desc = 'Display the hover help information'
     vim.keymap.set('n', 'sd', vim.lsp.buf.hover, bufopts)
     bufopts.desc = 'Displays a list of possible code actions'
-    vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', '<space>a', require("actions-preview").code_actions, bufopts)
 end
 
 local lsp_flags = {
