@@ -90,9 +90,11 @@ alias zsh="/usr/bin/nvim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 # Run ssh in kitty
 alias s='kitty +kitten ssh'
+alias ss='kitty +kitten ssh subpoena-prod'
 alias s1='kitty +kitten ssh etl-prod01'
 alias sc='kitty +kitten ssh -Y etl-prod01 "cat ~/.vim/clip.txt" | xsel --clipboard --input'
 alias s2='kitty +kitten ssh etl-prod02'
+alias s3='kitty +kitten ssh etl-prod03'
 alias sql='kitty +kitten ssh redshift-bastion'
 alias sa='kitty +kitten ssh etl-autoload'
 
