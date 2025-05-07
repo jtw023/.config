@@ -121,6 +121,7 @@ alias ping='ping -c 3'
 alias man='tldr'
 
 # Change directory shortcuts
+alias n='cdi'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
