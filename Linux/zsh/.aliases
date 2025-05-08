@@ -90,18 +90,18 @@ alias p='/usr/bin/nvim $HOME/bitbucket_repos/jordanw/Python/ -c '\'':execute "no
 # Modify MacOS zshrc file
 alias zsh="/usr/bin/nvim $XDG_CONFIG_HOME/zsh/.zshrc"
 
-# Run ssh in kitty
-alias s='kitty +kitten ssh'
-alias ss='kitty +kitten ssh subpoena-prod'
-alias s1='kitty +kitten ssh etl-prod01'
-alias sc='kitty +kitten ssh -Y etl-prod01 "cat ~/.vim/clip.txt" | xsel --clipboard --input'
-alias s2='kitty +kitten ssh etl-prod02'
-alias s3='kitty +kitten ssh etl-prod03'
-alias sql='kitty +kitten ssh redshift-bastion'
-alias sa='kitty +kitten ssh etl-autoload'
+# Run ssh in wezterm
+alias s='wezterm cli spawn ssh'
+alias ss='wezterm cli spawn ssh subpoena-prod'
+alias s1='wezterm cli spawn ssh etl-prod01'
+alias s2='wezterm cli spawn ssh etl-prod02'
+alias s3='wezterm cli spawn ssh etl-prod03'
+alias sc='wezterm cli spawn ssh -Y etl-prod01 "cat ~/.vim/clip.txt" | xsel --clipboard --input'
+alias sql='wezterm cli spawn ssh redshift-bastion'
+alias sa='wezterm cli spawn ssh etl-autoload'
 
 # Show image in terminal
-alias imgshow='kitty +kitten icat'
+alias imgshow='wezterm imgcat'
 
 # Always mkdir creating parent directories if not exists and run verbose
 alias mkd='mkdir -pv'
