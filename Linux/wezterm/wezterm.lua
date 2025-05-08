@@ -24,6 +24,12 @@ config.window_frame = {
     border_bottom_height = 0,
     border_top_height = 0,
 }
+config.window_padding = {
+    left = 0,
+    right = 0,
+    top = 0,
+    bottom = 0,
+}
 config.initial_rows = 31
 config.initial_cols = 47
 config.window_decorations = "RESIZE"
@@ -34,12 +40,6 @@ config.hide_tab_bar_if_only_one_tab = true
 -- Opacity Section
 config.window_background_opacity = 0.9
 config.text_background_opacity = 1
-config.window_padding = {
-    left = 0,
-    right = 0,
-    top = 0,
-    bottom = 0,
-}
 
 -- Key Bindings
 config.disable_default_key_bindings = true
