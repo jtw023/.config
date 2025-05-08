@@ -101,7 +101,7 @@ alias sql='wezterm cli spawn ssh redshift-bastion'
 alias sa='wezterm cli spawn ssh etl-autoload'
 
 # Show image in terminal
-alias imgshow='wezterm imgcat'
+alias show='wezterm imgcat'
 
 # Always mkdir creating parent directories if not exists and run verbose
 alias mkd='mkdir -pv'
