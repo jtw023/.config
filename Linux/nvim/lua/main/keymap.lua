@@ -42,16 +42,6 @@ vim.cmd([[nnoremap m <Plug>(easymotion-bd-f)]])
 -- FoldEnd
 
 -- FoldStart
--- Enter and Exit
--- Save and quit
-opts.desc = 'Save And Exit All Files'
-vim.keymap.set('n', '<F1>', ':xa<CR>', opts)
--- Quit and exit
-opts.desc = 'Force Quit All Files'
-vim.keymap.set('n', '<F8>', ':qa!<CR>', opts)
--- FoldEnd
-
--- FoldStart
 -- File Manager
 opts.desc = 'Launch Mini.Files'
 vim.keymap.set('n', '-', ':lua MiniFiles.open()<CR>', opts)
