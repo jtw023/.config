@@ -70,4 +70,12 @@ config.keys = {
     },
     { key = 'x', mods = 'SUPER', action = act.CloseCurrentTab {confirm = false} },
 }
+for i = 1, 8 do
+    -- SUPER + number to activate that tab
+    table.insert(config.keys, {
+        key = tostring(i),
+        mods = 'SUPER',
+        action = act.ActivateTab(i - 1),
+    })
+end
 return config
