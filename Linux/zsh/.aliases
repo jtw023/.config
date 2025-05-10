@@ -1,4 +1,8 @@
 RANDOMSCRIPTS="$HOME/github_repos/Random-Scripts"
+#
+# Alias cat to bat
+alias cat="/usr/bin/bat -fn --theme 'Solarized (dark)'"
+
 # Activate Virtual Environment
 alias bactive="source $HOME/base/bin/activate"
 alias ractive="source $HOME/bitbucket_repos/reflex_etl/venv/bin/activate"
@@ -18,7 +22,7 @@ function pls () {
 alias an='arduino-cli sketch new'
 
 # Manage OpenVPN
-alias vpna="/usr/bin/bat -fn --theme='Solarized (dark)' $XDG_CONFIG_HOME/zsh/.aliases | grep -A 6 'Manage OpenVPN'"
+alias vpna="cat $XDG_CONFIG_HOME/zsh/.aliases | grep -A 6 'Manage OpenVPN'"
 alias vpn='openvpn3 session-start --config /etc/openvpn/reflex_vpn.ovpn'
 alias stats='openvpn3 session-stats --config /etc/openvpn/reflex_vpn.ovpn'
 alias list='openvpn3 sessions-list'
@@ -26,7 +30,7 @@ alias end='openvpn3 session-manage --config /etc/openvpn/reflex_vpn.ovpn --disco
 alias stopov3="openvpn3 session-manage --session-path $1 --disconnect"
 
 # Manage ExpressVPN
-alias expressa="/usr/bin/bat -fn --theme='Solarized (dark)' $XDG_CONFIG_HOME/zsh/.aliases | grep -A 5 'Manage ExpressVPN'"
+alias expressa="cat $XDG_CONFIG_HOME/zsh/.aliases | grep -A 5 'Manage ExpressVPN'"
 alias startexpress='sudo systemctl start expressvpn'
 alias connectexpress='expressvpn connect "USA - Phoenix"'
 alias stopexpress='expressvpn disconnect && sudo systemctl stop expressvpn'
@@ -60,8 +64,6 @@ function cl() {
         bash "$RANDOMSCRIPTS/generate_random.sh"
     fi
 }
-# Alias cat to bat
-alias cat="/usr/bin/bat -fn --theme base16"
 
 # Alias bat to bat-asus-battery
 alias bat='bat-asus-battery'
@@ -146,7 +148,7 @@ alias gcor='git checkout -' # checkout most recently checked out git branch
 alias gcp='git cherry-pick' # insert git commit hash to move to a new branch
 alias gd='git difftool --tool=nvimdiff' # view diffs of unstaged git files
 alias gds='git difftool --tool=nvimdiff --staged' # view git diffs of staged files
-alias gita="/usr/bin/bat -fn --theme='Solarized (dark)' $XDG_CONFIG_HOME/zsh/.aliases | grep -iw git" # show all git aliases
+alias gita="cat $XDG_CONFIG_HOME/zsh/.aliases | grep -iw git" # show all git aliases
 alias gl='git log' # show a log of previous git commits
 alias glo='git log --oneline' # show a short log of previous git commits
 alias gm='git merge' # merge named git branch to current git branch
