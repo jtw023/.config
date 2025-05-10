@@ -57,9 +57,19 @@ config.keys = {
         key = 'h',
         mods = 'SUPER',
         action = act.QuickSelectArgs {
+            label = 'copy text',
+            patterns = {
+                '\\S.*$',
+            },
+        }
+    },
+    {
+        key = 'u',
+        mods = 'SUPER',
+        action = act.QuickSelectArgs {
             label = 'open URL',
             patterns = {
-                'https?://\\S+',
+                '\\S+[)/a-zA-Z0-9-]+.com\\S*',
             },
             action = wezterm.action_callback(function(window, pane)
                 local url = window:get_selection_text_for_pane(pane)
