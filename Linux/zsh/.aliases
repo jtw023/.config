@@ -37,8 +37,10 @@ alias stopexpress='expressvpn disconnect && sudo systemctl stop expressvpn'
 alias statsexpress='sudo systemctl status expressvpn'
 
 # Update System
-alias update='yay -Syu && yay -Fy'
+alias updatepackages='yay -Syu && yay -Fy'
+alias updatemirrors='sudo reflector --verbose --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --save /etc/pacman.d/mirrorlist && sudo eos-rankmirrors'
 alias updatekeyrings='sudo pacman -Sy archlinux-keyring && sudo pacman -Sy endeavouros-keyring'
+alias updatesystem='updatekeyrings && updatemirrors && updatepackages'
 
 # Logout command
 alias lo="openvpn3 session-manage --config /etc/openvpn/reflex_vpn.ovpn --disconnect && qdbus org.kde.LogoutPrompt /LogoutPrompt promptLogout"
