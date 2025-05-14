@@ -9,6 +9,8 @@
 
 # Except These
 !.gitignore
+!plasma-workspace
+!autostart
 !MacOS/
 MacOS/Slack/*
 !MacOS/Slack/local-settings.json
