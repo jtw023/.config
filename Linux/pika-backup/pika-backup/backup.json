@@ -1,0 +1,79 @@
+[
+  {
+    "config_version": 2,
+    "id": "a435d3a8-6d93-4998-b2fb-408092e91dfd",
+    "archive_prefix": "a1fbce-",
+    "repo_id": "706c231e2ec360306b748c46759db32836cd6ce1530520c1cab26040ea0f61e7",
+    "repo": {
+      "type": "Local",
+      "path": "/mnt/backup/backup-endeavouros-zenbook-jordan",
+      "mount_path": "/",
+      "uri": null,
+      "drive_name": null,
+      "mount_name": "backup",
+      "volume_uuid": null,
+      "volume_uuid_identifier": null,
+      "removable": false,
+      "icon": ". GThemedIcon drive-harddisk drive drive-harddisk-symbolic drive-symbolic",
+      "icon_symbolic": ". GThemedIcon drive-harddisk-symbolic drive-symbolic drive-harddisk drive",
+      "settings": {
+        "command_line_args": []
+      }
+    },
+    "encrypted": true,
+    "encryption_mode": "repokey",
+    "include": [
+      "",
+      "/etc/sddm.conf.d",
+      "/etc/systemd",
+      "/opt",
+      "/var/log"
+    ],
+    "exclude": [
+      {
+        "PathFullMatch": "/var/log/Calamares.log"
+      },
+      {
+        "PathFullMatch": "/var/log/btmp"
+      },
+      {
+        "PathFullMatch": "/var/log/endeavour-install.log"
+      },
+      {
+        "PathFullMatch": "/var/log/firewalld"
+      },
+      {
+        "PathPrefix": "/var/log/private"
+      },
+      "Caches",
+      "Trash",
+      "VmsContainers"
+    ],
+    "schedule": {
+      "enabled": true,
+      "settings": {
+        "run_on_battery": false
+      },
+      "frequency": {
+        "Daily": {
+          "preferred_time": "16:00:00"
+        }
+      }
+    },
+    "prune": {
+      "enabled": false,
+      "keep": {
+        "hourly": 24,
+        "daily": 7,
+        "weekly": 2,
+        "monthly": 6,
+        "yearly": 0
+      }
+    },
+    "title": "backup",
+    "user_scripts": {
+      "PreBackup": "notify-send -t 300000 -a \"Scheduled Backup\" \"Do not turn off the computer.\" \"Backup will be running for the next 30 minutes or so.\"",
+      "PostBackup": "notify-send -t 15000 -a \"Backup Status: $OUTCOME\" \"Archive Name: $ARCHIVE_NAME\" \"Files backed up: $FILES_COUNT\\nError message if given: $RESULT_MSG\\nBackup Finished\""
+    }
+  }
+]
