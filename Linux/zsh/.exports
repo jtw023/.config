@@ -4,6 +4,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME
 # Set editor to neovim
 export EDITOR="/usr/bin/nvim"
 
+# Set Config Home
+export XDG_CONFIG_HOME="/home/jordan/.config/Linux"
+
 # Export Language Settings
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
