@@ -105,7 +105,7 @@ alias sql='ssh redshift-bastion'
 alias sa='ssh etl-autoload'
 
 # Show image in terminal
-alias show='wezterm imgcat'
+alias show='viu --height 23'
 
 # Always mkdir creating parent directories if not exists and run verbose
 alias mkd='mkdir -pv'
