@@ -30,8 +30,8 @@ config.window_padding = {
     top = 0,
     bottom = 0,
 }
-config.initial_rows = 31
-config.initial_cols = 47
+-- config.initial_rows = 31
+-- config.initial_cols = 47
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
