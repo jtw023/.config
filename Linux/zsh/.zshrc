@@ -93,7 +93,7 @@ function command_not_found_handler {
 [ -f $XDG_CONFIG_HOME/zsh/.aliases ] && source $XDG_CONFIG_HOME/zsh/.aliases
 
 # Source ZSH Plugins
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
