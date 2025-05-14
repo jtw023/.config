@@ -1,4 +1,2014 @@
 {
+  "20736260-d986-4362-8eb1-a6869d55934e": {
+    "config_version": 2,
+    "run": [
+      {
+        "end": "2025-05-13T19:28:14.531540231+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 14.535494,
+                "id": "bd01989a409c2978f44f995a0c5a04124b7da9b0f8d017d0dde493b08431dc17",
+                "name": "81be22-7d64c574",
+                "stats": {
+                  "compressed_size": 23034225694,
+                  "deduplicated_size": 9615603,
+                  "nfiles": 149059,
+                  "original_size": 27016613828
+                }
+              }
+            }
+          }
+        },
+        "messages": [],
+        "include": [
+          "",
+          "/etc",
+          "/opt",
+          "/var/log"
+        ],
+        "exclude": [
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                46,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                97,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                98,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                99,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                100,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                101,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                111,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                119,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                103,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                104,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                107,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                108,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                109,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                110,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                111,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                112,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                114,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                97,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                101,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                104,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                107,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                108,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                109,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                115,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                121,
+                115,
+                99,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                116,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                118,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                119,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                120,
+                42
+              ]
+            }
+          },
+          {
+            "PathPrefix": "/etc/ImageMagick-7"
+          },
+          {
+            "PathPrefix": "/etc/ModemManager"
+          },
+          {
+            "PathPrefix": "/etc/NetworkManager"
+          },
+          {
+            "PathPrefix": "/etc/UPower"
+          },
+          {
+            "PathPrefix": "/etc/X11"
+          },
+          {
+            "PathPrefix": "/var/log/Calamares.log"
+          },
+          {
+            "PathPrefix": "/var/log/btmp"
+          },
+          {
+            "PathPrefix": "/var/log/endeavour-install.log"
+          },
+          {
+            "PathPrefix": "/var/log/firewalld"
+          },
+          {
+            "PathPrefix": "/var/log/private"
+          },
+          "Caches",
+          "Trash",
+          "VmsContainers"
+        ]
+      },
+      {
+        "end": "2025-05-13T19:23:57.230109903+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 15.046182,
+                "id": "4b6c65adaae1b37f7ad53b2572740025660bdf6b027b451e7070c34ff3e3569a",
+                "name": "81be22-9f615fe6",
+                "stats": {
+                  "compressed_size": 23034205047,
+                  "deduplicated_size": 36740448,
+                  "nfiles": 149051,
+                  "original_size": 27016509893
+                }
+              }
+            }
+          }
+        },
+        "messages": [
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/.pwd.lock: open: [Errno 13] Permission denied: '.pwd.lock'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          }
+        ],
+        "include": [
+          "",
+          "/etc",
+          "/opt",
+          "/var/log"
+        ],
+        "exclude": [
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                97,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                98,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                99,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                100,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                101,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                111,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                119,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                103,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                104,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                107,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                108,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                109,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                110,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                111,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                112,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                114,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                97,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                101,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                104,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                107,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                108,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                109,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                115,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                121,
+                115,
+                99,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                116,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                118,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                119,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                120,
+                42
+              ]
+            }
+          },
+          {
+            "PathPrefix": "/etc/ImageMagick-7"
+          },
+          {
+            "PathPrefix": "/etc/ModemManager"
+          },
+          {
+            "PathPrefix": "/etc/NetworkManager"
+          },
+          {
+            "PathPrefix": "/etc/UPower"
+          },
+          {
+            "PathPrefix": "/etc/X11"
+          },
+          {
+            "PathPrefix": "/var/log/Calamares.log"
+          },
+          {
+            "PathPrefix": "/var/log/btmp"
+          },
+          {
+            "PathPrefix": "/var/log/endeavour-install.log"
+          },
+          {
+            "PathPrefix": "/var/log/firewalld"
+          },
+          {
+            "PathPrefix": "/var/log/private"
+          },
+          "Caches",
+          "Trash",
+          "VmsContainers"
+        ]
+      },
+      {
+        "end": "2025-05-13T18:55:37.865674184+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 12.83596,
+                "id": "d2a16b7f985db7e9978c340ab5217928ab90a46f8e2999e78332c383272fed04",
+                "name": "81be22-276c1316",
+                "stats": {
+                  "compressed_size": 23038041997,
+                  "deduplicated_size": 36594373,
+                  "nfiles": 149603,
+                  "original_size": 27023831605
+                }
+              }
+            }
+          }
+        },
+        "messages": [
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/pacman.d/gnupg/openpgp-revocs.d: dir_open: [Errno 13] Permission denied: 'openpgp-revocs.d'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/pacman.d/gnupg/private-keys-v1.d: dir_open: [Errno 13] Permission denied: 'private-keys-v1.d'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/pacman.d/gnupg/secring.gpg: open: [Errno 13] Permission denied: 'secring.gpg'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/crypttab: open: [Errno 13] Permission denied: 'crypttab'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/audit/audisp-filter.conf: open: [Errno 13] Permission denied: 'audisp-filter.conf'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/audit/audisp-remote.conf: open: [Errno 13] Permission denied: 'audisp-remote.conf'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/audit/plugins.d: dir_open: [Errno 13] Permission denied: 'plugins.d'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/audit/zos-remote.conf: open: [Errno 13] Permission denied: 'zos-remote.conf'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/libaudit.conf: open: [Errno 13] Permission denied: 'libaudit.conf'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/default/useradd: open: [Errno 13] Permission denied: 'useradd'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/credstore: dir_open: [Errno 13] Permission denied: 'credstore'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/credstore.encrypted: dir_open: [Errno 13] Permission denied: 'credstore.encrypted'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/cryptsetup-keys.d: dir_open: [Errno 13] Permission denied: 'cryptsetup-keys.d'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/.pwd.lock: open: [Errno 13] Permission denied: '.pwd.lock'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/shadow-: open: [Errno 13] Permission denied: 'shadow-'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/openvpn/client: dir_open: [Errno 13] Permission denied: 'client'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/openvpn/server: dir_open: [Errno 13] Permission denied: 'server'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/sudoers: open: [Errno 13] Permission denied: 'sudoers'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/sudoers.d: dir_open: [Errno 13] Permission denied: 'sudoers.d'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/named.conf: open: [Errno 13] Permission denied: 'named.conf'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/polkit-1/rules.d: dir_open: [Errno 13] Permission denied: 'rules.d'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/ppp/chap-secrets.example: open: [Errno 13] Permission denied: 'chap-secrets.example'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/ppp/eaptls-client.example: open: [Errno 13] Permission denied: 'eaptls-client.example'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/ppp/eaptls-server.example: open: [Errno 13] Permission denied: 'eaptls-server.example'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/ppp/pap-secrets.example: open: [Errno 13] Permission denied: 'pap-secrets.example'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/vpnc/default.conf: open: [Errno 13] Permission denied: 'default.conf'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/fwupd/fwupd.conf: open: [Errno 13] Permission denied: 'fwupd.conf'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/samba/private: dir_open: [Errno 13] Permission denied: 'private'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/gshadow-: open: [Errno 13] Permission denied: 'gshadow-'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/gshadow: open: [Errno 13] Permission denied: 'gshadow'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          },
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/etc/shadow: open: [Errno 13] Permission denied: 'shadow'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          }
+        ],
+        "include": [
+          "",
+          "/etc",
+          "/opt",
+          "/var/log"
+        ],
+        "exclude": [
+          {
+            "Fnmatch": {
+              "Unix": [
+                47,
+                101,
+                116,
+                99,
+                47,
+                40,
+                97,
+                124,
+                98,
+                124,
+                99,
+                124,
+                100,
+                124,
+                101,
+                124,
+                102,
+                117,
+                124,
+                102,
+                105,
+                124,
+                102,
+                111,
+                124,
+                102,
+                119,
+                124,
+                115,
+                97,
+                124,
+                115,
+                117,
+                124,
+                115,
+                101,
+                124,
+                115,
+                107,
+                124,
+                115,
+                115,
+                124,
+                115,
+                121,
+                115,
+                99,
+                124,
+                115,
+                104,
+                124,
+                115,
+                105,
+                124,
+                115,
+                108,
+                124,
+                115,
+                109,
+                124,
+                103,
+                124,
+                104,
+                124,
+                105,
+                124,
+                106,
+                124,
+                107,
+                124,
+                108,
+                124,
+                109,
+                124,
+                110,
+                124,
+                111,
+                124,
+                112,
+                124,
+                113,
+                124,
+                114,
+                124,
+                116,
+                124,
+                117,
+                124,
+                118,
+                124,
+                119,
+                124,
+                120,
+                124,
+                121,
+                124,
+                122,
+                124,
+                46,
+                41,
+                42
+              ]
+            }
+          },
+          {
+            "PathPrefix": "/etc/ImageMagick-7"
+          },
+          {
+            "PathPrefix": "/etc/ModemManager"
+          },
+          {
+            "PathPrefix": "/etc/NetworkManager"
+          },
+          {
+            "PathPrefix": "/etc/UPower"
+          },
+          {
+            "PathPrefix": "/etc/X11"
+          },
+          {
+            "PathPrefix": "/var/log/Calamares.log"
+          },
+          {
+            "PathPrefix": "/var/log/btmp"
+          },
+          {
+            "PathPrefix": "/var/log/endeavour-install.log"
+          },
+          {
+            "PathPrefix": "/var/log/firewalld"
+          },
+          {
+            "PathPrefix": "/var/log/private"
+          },
+          "Caches",
+          "Trash",
+          "VmsContainers"
+        ]
+      },
+      {
+        "end": "2025-05-13T18:05:31.477186588+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 19.312015,
+                "id": "26e20d0f4ba77c83eef605f73c6a3621563788ac5839e62fbd164b26b12f101c",
+                "name": "81be22-28c746af",
+                "stats": {
+                  "compressed_size": 22736735251,
+                  "deduplicated_size": 495124133,
+                  "nfiles": 148857,
+                  "original_size": 26186431868
+                }
+              }
+            }
+          }
+        },
+        "messages": [],
+        "include": [
+          ""
+        ],
+        "exclude": [
+          "Caches"
+        ]
+      }
+    ],
+    "running": null,
+    "last_completed": {
+      "end": "2025-05-13T19:28:14.531540231+02:00",
+      "outcome": {
+        "Completed": {
+          "stats": {
+            "archive": {
+              "duration": 14.535494,
+              "id": "bd01989a409c2978f44f995a0c5a04124b7da9b0f8d017d0dde493b08431dc17",
+              "name": "81be22-7d64c574",
+              "stats": {
+                "compressed_size": 23034225694,
+                "deduplicated_size": 9615603,
+                "nfiles": 149059,
+                "original_size": 27016613828
+              }
+            }
+          }
+        }
+      },
+      "messages": [],
+      "include": [
+        "",
+        "/etc",
+        "/opt",
+        "/var/log"
+      ],
+      "exclude": [
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              46,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              97,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              98,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              99,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              100,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              101,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              102,
+              105,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              102,
+              111,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              102,
+              117,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              102,
+              119,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              103,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              104,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              105,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              107,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              108,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              109,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              110,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              111,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              112,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              114,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              97,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              101,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              104,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              105,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              107,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              108,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              109,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              115,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              117,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              115,
+              121,
+              115,
+              99,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              116,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              117,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              118,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              119,
+              42
+            ]
+          }
+        },
+        {
+          "Fnmatch": {
+            "Unix": [
+              101,
+              116,
+              99,
+              47,
+              120,
+              42
+            ]
+          }
+        },
+        {
+          "PathPrefix": "/etc/ImageMagick-7"
+        },
+        {
+          "PathPrefix": "/etc/ModemManager"
+        },
+        {
+          "PathPrefix": "/etc/NetworkManager"
+        },
+        {
+          "PathPrefix": "/etc/UPower"
+        },
+        {
+          "PathPrefix": "/etc/X11"
+        },
+        {
+          "PathPrefix": "/var/log/Calamares.log"
+        },
+        {
+          "PathPrefix": "/var/log/btmp"
+        },
+        {
+          "PathPrefix": "/var/log/endeavour-install.log"
+        },
+        {
+          "PathPrefix": "/var/log/firewalld"
+        },
+        {
+          "PathPrefix": "/var/log/private"
+        },
+        "Caches",
+        "Trash",
+        "VmsContainers"
+      ]
+    },
+    "last_check": null,
+    "suggested_exclude": {
+      "PermissionDenied": []
+    }
+  },
   "4630d75b-bd9b-47f7-a292-49c153863b25": {
     "config_version": 2,
     "run": [

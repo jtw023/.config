@@ -1,1 +1,541 @@
-[]
+[
+  {
+    "config_version": 2,
+    "id": "20736260-d986-4362-8eb1-a6869d55934e",
+    "archive_prefix": "81be22-",
+    "repo_id": "706c231e2ec360306b748c46759db32836cd6ce1530520c1cab26040ea0f61e7",
+    "repo": {
+      "type": "Local",
+      "path": "/mnt/backup/backup-endeavouros-zenbook-jordan",
+      "mount_path": "/",
+      "uri": null,
+      "drive_name": null,
+      "mount_name": "backup",
+      "volume_uuid": null,
+      "volume_uuid_identifier": null,
+      "removable": false,
+      "icon": ". GThemedIcon drive-harddisk drive drive-harddisk-symbolic drive-symbolic",
+      "icon_symbolic": ". GThemedIcon drive-harddisk-symbolic drive-symbolic drive-harddisk drive",
+      "settings": {
+        "command_line_args": []
+      }
+    },
+    "encrypted": true,
+    "encryption_mode": "repokey",
+    "include": [
+      "",
+      "/etc",
+      "/opt",
+      "/var/log"
+    ],
+    "exclude": [
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            46,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            97,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            98,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            99,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            100,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            101,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            102,
+            105,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            102,
+            111,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            102,
+            117,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            102,
+            119,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            103,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            104,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            105,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            107,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            108,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            109,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            110,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            111,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            112,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            114,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            97,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            101,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            104,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            105,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            107,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            108,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            109,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            115,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            117,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            115,
+            121,
+            115,
+            99,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            116,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            117,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            118,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            119,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            120,
+            42
+          ]
+        }
+      },
+      {
+        "Fnmatch": {
+          "Unix": [
+            101,
+            116,
+            99,
+            47,
+            122,
+            42
+          ]
+        }
+      },
+      {
+        "PathFullMatch": "/var/log/Calamares.log"
+      },
+      {
+        "PathFullMatch": "/var/log/btmp"
+      },
+      {
+        "PathFullMatch": "/var/log/endeavour-install.log"
+      },
+      {
+        "PathFullMatch": "/var/log/firewalld"
+      },
+      {
+        "PathPrefix": "/etc/ImageMagick-7"
+      },
+      {
+        "PathPrefix": "/etc/ModemManager"
+      },
+      {
+        "PathPrefix": "/etc/NetworkManager"
+      },
+      {
+        "PathPrefix": "/etc/UPower"
+      },
+      {
+        "PathPrefix": "/etc/X11"
+      },
+      {
+        "PathPrefix": "/var/log/private"
+      },
+      "Caches",
+      "Trash",
+      "VmsContainers"
+    ],
+    "schedule": {
+      "enabled": true,
+      "settings": {
+        "run_on_battery": false
+      },
+      "frequency": {
+        "Daily": {
+          "preferred_time": "16:00:00"
+        }
+      }
+    },
+    "prune": {
+      "enabled": true,
+      "keep": {
+        "hourly": 48,
+        "daily": 14,
+        "weekly": 4,
+        "monthly": 12,
+        "yearly": 10
+      }
+    },
+    "title": "backup",
+    "user_scripts": {
+      "PreBackup": "notify-send -t 15000 -a \"Sheduled Backup\" \"Do not turn off the computer.\" \"Backup will be running for the next minute or so.\"",
+      "PostBackup": "notify-send -t 15000 -a \"Backup Status: $OUTCOME\" \"Archive Name: $ARCHIVE_NAME\" \"Files Backed Up: $FILES_COUNT\\nError Message if Given: $RESULT_MSG\\nBACKUP FINISHED\""
+    }
+  }
+]
