@@ -8,12 +8,13 @@ alias bactive="source $HOME/base/bin/activate"
 alias ractive="source $HOME/bitbucket_repos/reflex_etl/venv/bin/activate"
 
 # Run previous command as sudo
-# alias pls="sudo !!"
-function pls () {
-    COMMAND=$(fc -l | tail -n 1 | awk '{print $2}')
-    FLAGS=$(fc -l | tail -n 1 | awk '{print $3}')
-    ARGUMENTS=$(fc -l | tail -n 1 | awk '{print $4}')
-    sudo $COMMAND $FLAGS $ARGUMENTS
+function pls() {
+    LAST_COMMAND=$(fc -ln -1)
+    eval "TMP=($LAST_COMMAND)"
+    echo "Running command as sudo: $TMP"
+    echo -n "Press Enter to continue or CTRL-C to quit."
+    read
+    sudo $TMP
 }
 
 # Arduino-cli aliases
