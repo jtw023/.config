@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Office;
+Comment=Obsidian
+Exec=/usr/bin/obsidian %U
+Icon=obsidian
+MimeType=x-scheme-handler/obsidian;
+Name=Obsidian
+StartupWMClass=obsidian
+Terminal=false
+Type=Application
