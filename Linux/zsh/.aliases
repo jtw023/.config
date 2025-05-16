@@ -7,8 +7,6 @@ alias cat="/usr/bin/bat -fn --theme 'Solarized (dark)'"
 alias bactive="source $HOME/base/bin/activate"
 alias ractive="source $HOME/bitbucket_repos/reflex_etl/venv/bin/activate"
 
-# Start All Programs
-alias launch="/home/jordan/autostart.sh"
 # Run previous command as sudo
 # alias pls="sudo !!"
 function pls () {
