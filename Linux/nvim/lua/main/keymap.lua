@@ -140,6 +140,9 @@ vim.keymap.set('n', '<', ':w <BAR> :bprev<CR>', opts)       -- return to previou
 
 -- FoldStart
 -- Telescope
+-- View Sessions
+opts.desc = 'View all sessions that I can jump to'
+vim.keymap.set('n', '<Leader>ts', ':SessionSearch<CR>', opts)
 -- Show all TODOs
 opts.desc = 'See TODOs In Project'
 vim.keymap.set('n', '<Leader>td', ':exe ":w <BAR> :TodoTelescope search_dirs=" .. fnameescape(expand("%:p"))<CR>', opts)

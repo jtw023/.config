@@ -1,7 +1,13 @@
 local o = vim.opt
 
+-- Telling Vim Where to Find Python3
+vim.g.python3_host_prog = "/home/jordan/.pyenv/shims/python3"
+
 -- Setting vim notify as default
 vim.notify = require("notify")
+
+-- Auto Session Options
+o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Colors and fonts
 o.termguicolors = true

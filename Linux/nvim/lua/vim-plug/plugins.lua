@@ -8,6 +8,8 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'mireq/luasnip-snippets'
 -- Zig Environment
 Plug('ziglang/zig.vim')
+-- Auto Session
+Plug 'rmagatti/auto-session'
 -- Code Actions Viewer
 Plug 'aznhe21/actions-preview.nvim'
 -- File Manager
