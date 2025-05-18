@@ -6,6 +6,8 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 -- Snippets
 Plug 'mireq/luasnip-snippets'
+-- Zig Environment
+Plug('ziglang/zig.vim')
 -- Code Actions Viewer
 Plug 'aznhe21/actions-preview.nvim'
 -- File Manager
