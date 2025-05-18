@@ -81,7 +81,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     group = formatNvim
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = { "*.py", "*.lua" },
+    pattern = { "*.py", "*.lua", "*.zig" },
     command = [[nmap <Leader>= :silent lua vim.lsp.buf.format()<CR>]],
     group = formatNvim
 })
