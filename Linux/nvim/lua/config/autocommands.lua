@@ -4,8 +4,6 @@ local nvimOptions = vim.api.nvim_create_augroup("Nvim_Options", { clear = true }
 local formatNvim = vim.api.nvim_create_augroup("Format_Nvim", { clear = true })
 local onLeave = vim.api.nvim_create_augroup("On_Leave", { clear = true })
 local expandKey = vim.api.nvim_create_augroup("Expand_Key", { clear = true })
-local expandDoc = vim.api.nvim_create_augroup("Expand_Doc", { clear = true })
-
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
     pattern = "*.sql",
     callback = function()
