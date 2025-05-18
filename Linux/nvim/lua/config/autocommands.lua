@@ -7,9 +7,6 @@ local expandKey = vim.api.nvim_create_augroup("Expand_Key", { clear = true })
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
     pattern = "*.sql",
     callback = function()
-        -- try_lint without arguments runs the linters defined in `linters_by_ft`
-        -- for the current filetype
-        --
         -- You can call `try_lint` with a linter name or a list of names to always
         -- run specific linters, independent of the `linters_by_ft` configuration
         require("lint").try_lint("sqlfluff")
@@ -53,21 +50,6 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     group = runFile
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.py",
-    command = [[:set foldmarker=#FoldStart,#FoldEnd]],
-    group = nvimOptions
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = { "*.sql", "*.lua" },
-    command = [[:set foldmarker=-->\ FoldStart,-->\ FoldEnd]],
-    group = nvimOptions
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.vim",
-    command = [[:set foldmarker=\"FoldStart,\"FoldEnd]],
-    group = nvimOptions
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.sql",
     command = "lua vim.api.nvim_buf_set_option(0, 'commentstring', '--> %s')",
     group = nvimOptions
@@ -86,21 +68,6 @@ vim.api.nvim_create_autocmd({"FileType"}, {
     pattern = { "sql", "mysql", "plsql" },
     command = "lua require('cmp').setup.buffer({ sources = {{ name = 'luasnip', max_item_count = 10 }, { name = 'vim-dadbod-completion', max_item_count = 10 }, { name = 'nvim_lua', max_item_count = 10 }, { name = 'nvim_lsp', max_item_count = 10 }, { name = 'path', max_item_count = 10 }, { name = 'calc', max_item_count = 10 }, { name = 'buffer', max_item_count = 10 }, { name = 'spell', max_item_count = 10 }}})",
     group = nvimOptions
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = { "*.sql", "*.lua" },
-    command = [[:iab tod --> TODO:| :iab rem --> REMOVE:| :iab fi --> FIX:| :iab inp --> INPROGRESS:| :iab que --> QUESTION:| :iab cav --> CAVEAT:| :iab rol /**\  =======================================================*//*<CR>    ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>13k/:<CR>| :iab tit --> TITLE:| :iab lin --> LINK:| :iab abo --> ABOUT:| :iab tem /**\  =======================================================*//*<CR>    AUTHOR: Jordan Walters<CR>DATE:<CR>TITLE:<CR>ABOUT:<CR>ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>16k/:<CR>]],
-    group = expandKey
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.py",
-    command = [[:iab tod # TODO:| :iab rem # REMOVE:| :iab fi # FIX:| :iab inp # INPROGRESS:| :iab que # QUESTION:| :iab cav # CAVEAT:| :iab rol # ROLLUP_KEYS:<CR>#    * INDEX FIELD: Primary Key<CR>#    * MERGE FIELD: Field To Update Row<CR>#    * ROLLUP LOAD TYPE:<CR>#        * merge - Insert/replace regardless of merge field<CR>#        * updateRecords - Insert/replace if new merge field is greater<CR>#        * refresh - Replace table in Redshift with rollup results<CR>#    * TABLE NAME: 'Descriptive Table Name'<CR>#    * PERIODICITY: How Often To Run Query<CR>#    * LOOK BACK WINDOW: Run Query For Last X Hours<CR>#    * BACKFILL: 'Date To Backfill To'<ESC>10k/:<CR>| :iab tit # TITLE:| :iab lin # LINK:| :iab abo # ABOUT:]],
-    group = expandKey
-})
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.py",
-    command = [[:iab doc ''''<BS><CR>:function def:<CR>Parameters:<CR><BS>Returns:<CR><BS><BS>''''<BS><ESC>4k/:<CR>]], -- <ESC>5k/:<CR>
-    group = expandKey
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.sql",
