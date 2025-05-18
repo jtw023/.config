@@ -61,6 +61,11 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
+    pattern = "/home/jordan/bitbucket_repos/jordanw/Datateam/*.sql",
+    command = [[ :set undofile ]],
+    group = nvimOptions
+})
+vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
     pattern = "/home/jordan/bitbucket_repos/jordanw/SQL/*.sql",
     command = [[ :set undofile ]],
     group = nvimOptions
