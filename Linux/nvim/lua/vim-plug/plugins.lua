@@ -1,6 +1,11 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
+-- Snippets Engine
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+-- Snippets
+Plug 'mireq/luasnip-snippets'
 -- Code Actions Viewer
 Plug 'aznhe21/actions-preview.nvim'
 -- File Manager

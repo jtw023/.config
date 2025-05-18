@@ -86,7 +86,7 @@ vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"FileType"}, {
     pattern = { "sql", "mysql", "plsql" },
-    command = "lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }}})",
+    command = "lua require('cmp').setup.buffer({ sources = {{ name = 'luasnip', max_item_count = 10 }, { name = 'vim-dadbod-completion', max_item_count = 10 }, { name = 'nvim_lua', max_item_count = 10 }, { name = 'nvim_lsp', max_item_count = 10 }, { name = 'path', max_item_count = 10 }, { name = 'calc', max_item_count = 10 }, { name = 'buffer', max_item_count = 10 }, { name = 'spell', max_item_count = 10 }}})",
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {

@@ -87,7 +87,7 @@ opts.desc = 'Open Telescope Spell Suggest'
 vim.keymap.set('n', '<Leader>s', ':Telescope spell_suggest<CR>', opts)
 -- Rename all instances in file of word under cursor
 opts.desc = 'Rename All Instances In File Of Word Under Cursor'
-vim.keymap.set('n', '<Leader>r', ':%s/<C-r><C-w>/', opts)
+vim.keymap.set('n', '<Leader>r', ':lua vim.lsp.buf.rename()<CR>', opts)
 -- FoldEnd
 
 -- FoldStart

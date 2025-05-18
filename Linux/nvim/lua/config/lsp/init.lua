@@ -10,6 +10,14 @@ if not status_ok then
     return
 end
 
+local cmp_status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if not cmp_status_ok then
+    notify('cmp broken in lsp/init.lua', 'error')
+    return
+end
+
+local capabilities = cmp_nvim_lsp.default_capabilities()
+
 local on_attach = function(client, bufnr)
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
     bufopts.desc = 'Go to definition(python or lua only)'
@@ -25,11 +33,22 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
--- lsp['sqlls'].setup {
---     on_attach = on_attach,
---     flags = lsp_flags,
---     root_dir = lsp.util.root_pattern('.git'),
--- }
+--> TODO: Ask chat GPT
+--> I have configured zls snippets with lsp['zls'].setup { settings = { zls = { enable_snippets = true } } } in my lspconfig setup. How do I use these snippets?
+lsp['zls'].setup {
+    cmd = { 'zls' },
+    filetypes = { 'zig', 'zir' },
+    capabilities = capabilities,
+    root_dir = lsp.util.root_pattern('zls.json', 'build.zig', '.git'),
+    single_file_support = true,
+    on_attach = on_attach,
+    settings = {
+        zls = {
+            semantic_tokens = "partial",
+            -- enable_snippets = true
+        }
+    }
+}
 
 lsp['arduino_language_server'].setup {
     on_attach = on_attach,
