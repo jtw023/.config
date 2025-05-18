@@ -10,7 +10,8 @@ vim.api.nvim_create_autocmd({"BufWritePost"}, {
         -- You can call `try_lint` with a linter name or a list of names to always
         -- run specific linters, independent of the `linters_by_ft` configuration
         require("lint").try_lint("sqlfluff")
-    end
+    end,
+    group = formatNvim
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.c",
@@ -39,7 +40,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 })
 -- Run SQL file in normal mode
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*",
+    pattern = "*.sql",
     command = [[nmap <S-r> <Leader><S-s>]],
     group = runFile
 })
@@ -66,7 +67,7 @@ vim.api.nvim_create_autocmd({"BufRead", "BufEnter", "BufWinEnter"}, {
 })
 vim.api.nvim_create_autocmd({"FileType"}, {
     pattern = { "sql", "mysql", "plsql" },
-    command = "lua require('cmp').setup.buffer({ sources = {{ name = 'luasnip', max_item_count = 10 }, { name = 'vim-dadbod-completion', max_item_count = 10 }, { name = 'nvim_lua', max_item_count = 10 }, { name = 'nvim_lsp', max_item_count = 10 }, { name = 'path', max_item_count = 10 }, { name = 'calc', max_item_count = 10 }, { name = 'buffer', max_item_count = 10 }, { name = 'spell', max_item_count = 10 }}})",
+    command = "lua require('cmp').setup.buffer({ sources = {{ name = 'luasnip', max_item_count = 10 }, { name = 'vim-dadbod-completion', max_item_count = 10 }, { name = 'nvim_lua', max_item_count = 10 }, { name = 'path', max_item_count = 10 }, { name = 'calc', max_item_count = 10 }, { name = 'buffer', max_item_count = 10 }, { name = 'spell', max_item_count = 10 }}})",
     group = nvimOptions
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
