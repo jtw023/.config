@@ -77,12 +77,28 @@ vim.api.nvim_create_autocmd({"FileType"}, {
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.sql",
-    command = [[nmap <Leader>= :silent !sqlfluff format --config /home/jordan/bitbucket_repos/jordanw/SQL/.sqlfluff % >/dev/null 2>&1<CR>]],
+    callback = function()
+        vim.keymap.set('n', '<Leader>=', function()
+            vim.cmd("silent! write")
+            vim.fn.system({
+                "sqlfluff", "format",
+                "--config", "/home/jordan/bitbucket_repos/jordanw/SQL/.sqlfluff",
+                vim.fn.expand("%")
+            })
+            vim.cmd("edit")
+            vim.cmd("silent! write")
+        end, { buffer = true, silent = true })
+    end,
     group = formatNvim
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = { "*.py", "*.lua", "*.zig" },
-    command = [[nmap <Leader>= :silent lua vim.lsp.buf.format()<CR>]],
+    callback = function()
+        vim.keymap.set('n', '<Leader>=', function()
+            vim.lsp.buf.format()
+            vim.cmd("silent! write")
+        end, { buffer = true, silent = true })
+    end,
     group = formatNvim
 })
 -- vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
