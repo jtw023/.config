@@ -32,10 +32,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'norcalli/nvim-colorizer.lua'
 -- Auto pairs for '(' '[' '{'
 Plug 'm4xshen/autoclose.nvim'
--- Fold lines
-Plug 'anuvyklack/pretty-fold.nvim'
-Plug 'anuvyklack/fold-preview.nvim'
-Plug 'anuvyklack/keymap-amend.nvim'
 -- Null-ls(format)
 Plug 'jose-elias-alvarez/null-ls.nvim'
 -- Colorschemes
