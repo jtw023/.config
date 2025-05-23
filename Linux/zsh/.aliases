@@ -36,9 +36,9 @@ alias stopexpress='expressvpn disconnect && sudo systemctl stop expressvpn'
 alias statsexpress='sudo systemctl status expressvpn'
 
 # Update System
-alias updatepackages='yay -Syu && yay -Fy'
+alias updatepackages='yay -Syu'
 alias updatemirrors='sudo reflector --verbose --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --save /etc/pacman.d/mirrorlist && sudo eos-rankmirrors'
-alias updatekeyrings='sudo pacman -Sy archlinux-keyring && sudo pacman -Sy endeavouros-keyring'
+alias updatekeyrings='sudo pacman --needed -Sy archlinux-keyring && sudo pacman --needed -Sy endeavouros-keyring'
 alias updatesystem='updatekeyrings && updatemirrors && updatepackages'
 
 # Logout command
