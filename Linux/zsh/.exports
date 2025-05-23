@@ -7,6 +7,9 @@ export EDITOR="/usr/bin/nvim"
 # Set Config Home
 export XDG_CONFIG_HOME="/home/jordan/.config/Linux"
 
+# Set manpager
+export MANPAGER='bat -l man -p --theme="Monokai Extended"'
+
 # Export Language Settings
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"

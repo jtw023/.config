@@ -1,7 +1,7 @@
 RANDOMSCRIPTS="$HOME/github_repos/Random-Scripts"
 #
 # Alias cat to bat
-alias cat="/usr/bin/bat -fn --theme 'Solarized (dark)'"
+alias cat="/usr/bin/bat"
 
 # Activate Virtual Environment
 alias bactive="source $HOME/base/bin/activate"
