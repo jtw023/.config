@@ -63,6 +63,13 @@ end
 
 M.on_attach = function(client, bufnr)
     notify(client.name .. " starting...")
+
+    -- Force set formatexpr if the client supports formatting
+    -- This is a strong workaround if it's being unset elsewhere.
+    if client.server_capabilities.documentFormattingProvider or client.server_capabilities.documentRangeFormattingProvider then
+        vim.api.nvim_buf_set_option(bufnr, 'formatexpr', 'v:lua.vim.lsp.formatexpr()')
+    end
+
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)
 end
