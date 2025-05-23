@@ -78,7 +78,7 @@ alias song='youtube-dl -f bestvideo+bestaudio -o "%(title)s.%(ext)s"'
 # Bind nvim to v
 function v() {
     if [ -z "$1" ]; then
-        /usr/bin/nvim .
+        /usr/bin/nvim -c "lua require('telescope.builtin').find_files({ no_recursive_lister = true, hidden = true })"
     else
         /usr/bin/nvim "$1"
     fi
