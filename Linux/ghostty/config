@@ -1287,6 +1287,7 @@ working-directory =
 # permissions in System Preferences -> Privacy & Security -> Accessibility.
 ## Clear all keybindings
 keybind=clear
+keybind = alt+shift+ctrl+b=write_screen_file:open
 keybind = super+a=select_all
 keybind = super+c=copy_to_clipboard
 keybind = super+o=new_tab
@@ -1294,8 +1295,8 @@ keybind = super+v=paste_from_clipboard
 keybind = super+,=reload_config
 keybind = super+e=next_tab
 keybind = super+n=previous_tab
-keybind = super+k=jump_to_prompt:-1
-keybind = super+j=jump_to_prompt:1
+keybind = super+j=jump_to_prompt:-1
+keybind = super+k=jump_to_prompt:1
 keybind = super+up=scroll_page_up
 keybind = super+down=scroll_page_down
 keybind = super+one=goto_tab:1
