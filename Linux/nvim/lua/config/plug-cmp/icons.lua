@@ -106,6 +106,7 @@ else
         kind = {
             Text = " ",
             NVIM = ' ',
+            Codeium = " ",
             LSP = 'ﯟ ',
             Method = " ",
             Function = " ",

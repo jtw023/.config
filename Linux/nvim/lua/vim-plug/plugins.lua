@@ -33,7 +33,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 -- Auto pairs for '(' '[' '{'
 Plug 'm4xshen/autoclose.nvim'
 -- Null-ls(format)
-Plug 'jose-elias-alvarez/null-ls.nvim'
+-- Plug 'jose-elias-alvarez/null-ls.nvim'
 -- Colorschemes
 Plug 'nxvu699134/vn-night.nvim'
 -- Vim dadbod
@@ -76,5 +76,7 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'HiPhish/nvim-ts-rainbow2'
 Plug 'lukas-reineke/indent-blankline.nvim'
+-- Code Assistant
+Plug "Exafunction/windsurf.nvim"
 
 vim.call('plug#end')

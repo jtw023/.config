@@ -79,6 +79,7 @@ cmp.setup {
         end,
     },
     sources = {
+        { name = "codeium", max_item_count = 10 },
         { name = "luasnip", max_item_count = 10 },
         { name = "vim-dadbod-completion", max_item_count = 10 },
         { name = "nvim_lua", max_item_count = 10 },
