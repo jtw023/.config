@@ -490,6 +490,9 @@
         "PathFullMatch": "/var/log/firewalld"
       },
       {
+        "PathFullMatch": "/var/log/reboot-recommendation-trigger.log"
+      },
+      {
         "PathPrefix": "/etc/ImageMagick-7"
       },
       {
