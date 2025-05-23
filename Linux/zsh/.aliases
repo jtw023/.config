@@ -123,7 +123,7 @@ alias ls='lsd -alhr --group-directories-first'
 alias ping='ping -c 3'
 
 # Alias manpages to tldr
-alias man='tldr'
+alias man='wikiman'
 
 # Change directory shortcuts
 alias n='cdi'

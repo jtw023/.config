@@ -94,9 +94,12 @@ function command_not_found_handler {
 
 # Source ZSH Plugins
 source <(fzf --zsh)
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+HL=/usr/share/zsh/plugins/zsh-syntax-highlighting
+[ -f $HL/zsh-syntax-highlighting.zsh ] && source $HL/zsh-syntax-highlighting.zsh
+
+# Include wikiman
+WIKIMAN=/usr/share/wikiman
+[ -f $WIKIMAN/widgets/widget.zsh ] && source $WIKIMAN/widgets/widget.zsh
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
