@@ -92,11 +92,22 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     group = formatNvim
 })
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = { "*.py", "*.lua", "*.zig" },
+    pattern = { "*.lua", "*.zig" },
     callback = function()
         vim.keymap.set('n', '<Leader>=', function()
             vim.lsp.buf.format()
             vim.cmd("silent! write")
+        end, { buffer = true, silent = true })
+    end,
+    group = formatNvim
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = { "*.py" },
+    callback = function()
+        vim.keymap.set('n', '<Leader>=', function()
+            vim.fn.system("/usr/bin/autopep8 --in-place " .. vim.fn.expand("%"))
+            vim.cmd("edit")
+            -- vim.cmd("silent! write")
         end, { buffer = true, silent = true })
     end,
     group = formatNvim
