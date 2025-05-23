@@ -13,6 +13,11 @@ vim.g.mapleader = ' '
 -- -- Paste entire line from system clipboard
 -- opts.desc = 'Paste entire line from system clipboard'
 -- vim.keymap.set({'v', 'n'}, 'p', '"+p', opts)
+-- Auto increment and auto decrement
+opts.desc = 'Auto Increment'
+vim.keymap.set('n', '<C-Up>', '<C-a>', opts)
+opts.desc = 'Auto Decrement'
+vim.keymap.set('n', '<C-Down>', '<C-x>', opts)
 -- Save and source
 opts.desc = 'Save and Source File'
 vim.keymap.set('n', '<Leader>1', ':w <BAR> :so %<CR>', opts)
