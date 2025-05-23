@@ -14,7 +14,6 @@ ls.add_snippets("sql", {
         text('GETDATE()'),
     }),
 })
-
 ls.add_snippets("sql", {
     snippet("date-interval", {
         text("GETDATE() - INTERVAL '"),
@@ -22,7 +21,6 @@ ls.add_snippets("sql", {
         text("'"),
     }),
 })
-
 ls.add_snippets("sql", {
     snippet("select", fmt([[
         SELECT
@@ -38,7 +36,37 @@ ls.add_snippets("sql", {
         insert(5, "10"),
     }))
 })
-
+ls.add_snippets("sql", {
+    snippet("user", fmt([[
+        SELECT
+            pgu.* usename,
+            usesuper
+        FROM pg_user AS pgu
+        WHERE 1 = 1{}
+        ]], {
+        insert(1),
+    }))
+})
+ls.add_snippets("sql", {
+    snippet("error", fmt([[
+        SELECT
+            stl.filename,
+            stl.colname,
+            stl.raw_field_value,
+            stl."type",
+            stl.err_code,
+            stl.err_reason,
+            stl.starttime
+        FROM stl_load_errors AS stl
+        WHERE 1 = 1
+            AND starttime > GETDATE() - INTERVAL '20 minutes'
+            AND filename ILIKE '%{}%'
+        ORDER BY starttime DESC
+        LIMIT 10
+        ]], {
+        insert(1, "filename"),
+    }))
+})
 ls.add_snippets("sql", {
     snippet("one line case statement", fmt([[
         CASE WHEN {} THEN {} END AS {},{}
