@@ -30,17 +30,17 @@ codeium.setup({
         -- Key bindings for managing completions in virtual text mode.
         key_bindings = {
             -- Accept the current completion.
-            accept = "<Leader><Down>",
+            accept = "<D-Left>",
             -- Accept the next word.
             accept_word = false,
             -- Accept the next line.
-            accept_line = "<Right>",
+            accept_line = "<D-Right>",
             -- Clear the virtual text.
             clear = false,
             -- Cycle to the next completion.
-            next = "<M-]>",
+            next = "<D-]>",
             -- Cycle to the previous completion.
-            prev = "<M-[>",
+            prev = "<D-[>",
         }
     }
 })
