@@ -190,3 +190,6 @@ function ex () {
     echo "'$1' is not a valid file"
   fi
 }
+
+## Reflex Media Aliases
+alias ap='export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf)'
