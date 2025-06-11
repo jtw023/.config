@@ -26,18 +26,45 @@ ls.add_snippets("sql", {
         SELECT
             {}
         FROM {} AS {}
-        WHERE 1 = 1{}
-        LIMIT {}
+        WHERE 1 = 1
+        LIMIT 10
         ]], {
         insert(1, "*"),
         insert(2, "table"),
         insert(3, "alias"),
-        insert(4),
-        insert(5, "10"),
     }))
 })
 ls.add_snippets("sql", {
-    snippet("user", fmt([[
+    snippet("select-spectrum", fmt([[
+        SELECT
+            {}
+        FROM system_logs.{} AS {}
+        WHERE 1 = 1
+            AND {}.ts_index > GETDATE() - INTERVAL '1 day'
+        LIMIT 10
+        ]], {
+        insert(1, "*"),
+        insert(2, "table"),
+        insert(3, "alias"),
+        rep(3),
+    }))
+})
+ls.add_snippets("sql", {
+    snippet("select-vysion", fmt([[
+        SELECT
+            {}
+        FROM vysion.vysion_logs AS vl
+        WHERE 1 = 1
+            AND vl.ts_index > GETDATE() - INTERVAL '{}'
+        LIMIT {}
+        ]], {
+        insert(1, "*"),
+        insert(2, "1 day"),
+        insert(3, "10"),
+    }))
+})
+ls.add_snippets("sql", {
+    snippet("select-user", fmt([[
         SELECT
             pgu.* usename,
             usesuper
@@ -48,7 +75,7 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("error", fmt([[
+    snippet("select-error", fmt([[
         SELECT
             stl.filename,
             stl.colname,
@@ -68,17 +95,7 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("one line case statement", fmt([[
-        CASE WHEN {} THEN {} END AS {},{}
-        ]], {
-        insert(1, "condition"),
-        insert(2, "outcome"),
-        insert(3, "alias"),
-        insert(4),
-    }))
-})
-ls.add_snippets("sql", {
-    snippet("conditional case statement", fmt([[
+    snippet("case", fmt([[
         CASE {}
             WHEN {} THEN {}
         END AS {},{}
@@ -91,7 +108,17 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("multiline case statement", fmt([[
+    snippet("case-oneline", fmt([[
+        CASE WHEN {} THEN {} END AS {},{}
+        ]], {
+        insert(1, "condition"),
+        insert(2, "outcome"),
+        insert(3, "alias"),
+        insert(4),
+    }))
+})
+ls.add_snippets("sql", {
+    snippet("case-multiline", fmt([[
         CASE
             WHEN {}
                 THEN {}
@@ -104,7 +131,7 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("create new", fmt([[
+    snippet("create-new", fmt([[
         CREATE TABLE IF NOT EXISTS {} (
             {}
         ) DISTKEY({}) COMPOUND SORTKEY({});
@@ -116,7 +143,7 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("create like", fmt([[
+    snippet("create-like", fmt([[
         CREATE TABLE IF NOT EXISTS {}_bk (LIKE {})
         ]], {
         insert(1, "schema.table"),
@@ -124,21 +151,21 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("drop table", fmt([[
+    snippet("drop", fmt([[
         DROP TABLE IF EXISTS {};
         ]], {
         insert(1, "schema.table"),
     }))
 })
 ls.add_snippets("sql", {
-    snippet("truncate table", fmt([[
+    snippet("truncate", fmt([[
         TRUNCATE {};
         ]], {
         insert(1, "schema.table"),
     }))
 })
 ls.add_snippets("sql", {
-    snippet("alter table", fmt([[
+    snippet("alter", fmt([[
         ALTER TABLE {}
         ADD COLUMN {};
         ]], {
@@ -147,7 +174,7 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("grant permissions", fmt([[
+    snippet("grant", fmt([[
         GRANT SELECT ON {} TO GROUP viz;
         GRANT SELECT ON {} TO GROUP users;
         GRANT SELECT ON {} TO GROUP etl;
@@ -162,7 +189,7 @@ ls.add_snippets("sql", {
     }))
 })
 ls.add_snippets("sql", {
-    snippet("insert from original", fmt([[
+    snippet("insert", fmt([[
         INSERT INTO {}_bk (SELECT * FROM {})
         ]], {
         insert(1, "schema.table"),
