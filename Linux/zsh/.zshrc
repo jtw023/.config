@@ -52,9 +52,6 @@ ${LOLCATIFIED}
 
 zle -N zle-line-init
 
-# Keychain eval
-eval $(keychain --eval --quiet reflex_etl_prod01 reflex_etl_prod02 personal_github reflex_bitbucket reflex_sql_redshift-bastion)
-
 # Command Not Found Functionality
 function command_not_found_handler {
     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m' red='\e[0;31m'
