@@ -1,6 +1,0 @@
-[Desktop Entry]
-Exec=/home/jordan/github_repos/Random-Scripts/walk_stairs_notification.sh
-Icon=application-x-shellscript
-Name=walk_stairs_notification.sh
-Type=Application
-X-KDE-AutostartScript=true
