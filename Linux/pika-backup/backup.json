@@ -484,6 +484,9 @@
         "PathFullMatch": "/var/log/btmp"
       },
       {
+        "PathFullMatch": "/var/log/btmp.1"
+      },
+      {
         "PathFullMatch": "/var/log/endeavour-install.log"
       },
       {
