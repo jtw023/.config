@@ -193,3 +193,4 @@ Render pre processor: 0
 [2025-06-11 10:13:21.133] [5419] (region_latency_tester.cpp:181): Timing out 10 remaining latency test pings
 [2025-06-11 10:13:21.133] [5419] (region_latency_tester.cpp:288): Average RTT for region frankfurt-two is 16
 [2025-06-11 10:27:43.847] [4513] (instrumented_task.cpp:52): polling 27 metrics
+[2025-06-11 10:42:43.855] [4513] (instrumented_task.cpp:52): polling 1 metrics
