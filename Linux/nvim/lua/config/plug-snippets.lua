@@ -77,11 +77,12 @@ ls.add_snippets(nil, {
         }),
         snippet("select", fmt([[
             SELECT
-                {}
+                {}.{}
             FROM {} AS {}
             WHERE 1 = 1
             LIMIT 10
             ]], {
+            rep(3),
             insert(1, "*"),
             insert(2, "table"),
             insert(3, "alias"),
