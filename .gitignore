@@ -16,6 +16,8 @@ MacOS/Slack/*
 !MacOS/Slack/local-settings.json
 !MacOS/Slack/Preferences
 !Linux/
+Linux/discord/*
+!Linux/discord/settings.json
 Linux/Docker Desktop/
 Linux/nvim/autoload/plug.vim.old
 Linux/BraveSoftware/
