@@ -2,7 +2,6 @@ require('vim-plug.plugins')
 require('main.set')
 require('main.keymap')
 
-require('luasnip.sql')
 require('config.plug-snippets')
 require('config.plug-codeactions')
 require('config.plug-codeium')
