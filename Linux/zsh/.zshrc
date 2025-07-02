@@ -16,7 +16,7 @@ unsetopt autocd extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 PROMPT='
-%F{cyan}%n%f%B[%b%F{13}%1~%f%B]%b %F{red} ${vcs_info_msg_0_}%f%B%F{46}-%f%b '
+${VIRTUAL_ENV:+(${VIRTUAL_ENV:t})}%F{cyan}%n%f%B[%b%F{13}%1~%f%B]%b %F{red} ${vcs_info_msg_0_}%f%B%F{46}-%f%b '
 
 # Set prompt
 zle-line-init() {
@@ -40,7 +40,7 @@ ${LOLCATIFIED}
     RPROMPT=''
     zle .reset-prompt
     PROMPT='
-%F{cyan}%n%f%B[%b%F{13}%1~%f%B]%b %F{red} ${vcs_info_msg_0_}%f%B%F{46}-%f%b '
+${VIRTUAL_ENV:+(${VIRTUAL_ENV:t})}%F{cyan}%n%f%B[%b%F{13}%1~%f%B]%b %F{red} ${vcs_info_msg_0_}%f%B%F{46}-%f%b '
 
     if (( ret )); then
         zle .send-break
