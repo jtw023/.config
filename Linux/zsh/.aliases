@@ -156,6 +156,7 @@ alias gm='git merge' # merge named git branch to current git branch
 alias gp="bash $RANDOMSCRIPTS/pull_all_git_repos.sh" # Pull all git repos simultaneously
 alias gpull='git pull' # equalizes local and remote git repo
 alias gpush='git push' # push commits to from local to remote git repo
+alias gpushf='git push origin HEAD --force' # forces push. Only use after rebase
 alias gr='git rebase' # puts feature changes on top of the main branch commits.
 alias grh='git reset --hard @{u}' # roll all tracked files back to state of upstream(useful for main)
 alias grm='git reset' # insert git commit hash to undo commit but keep changes and remove from staging
