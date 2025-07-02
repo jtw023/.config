@@ -99,7 +99,7 @@ alias ss='ssh subpoena-prod'
 alias s1='ssh etl-prod01'
 alias s2='ssh etl-prod02'
 alias s3='ssh etl-prod03'
-alias sc='ssh -Y etl-prod01 "cat ~/clip.txt" | xsel --clipboard --input'
+alias sc='ssh -Y etl-prod01 "cat ~/table_defs.json" | xsel --clipboard --input'
 alias sql='export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf) && aws sso login && ssh bastion.analytics_production.usw2'
 alias sa='ssh etl-autoload'
 
