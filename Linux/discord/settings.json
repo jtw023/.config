@@ -8,7 +8,8 @@
   "WINDOW_BOUNDS": {
     "x": 1719,
     "y": 532,
-    "width": 841,
+    "width": 940,
     "height": 1032
-  }
+  },
+  "offloadAdmControls": false
 }
