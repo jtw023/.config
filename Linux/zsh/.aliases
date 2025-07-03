@@ -9,8 +9,8 @@ alias ractive="source $HOME/bitbucket_repos/reflex_etl/venv/bin/activate"
 
 # Excalidraw
 alias calia="cat $XDG_CONFIG_HOME/zsh/.aliases | grep -A 3 'Excalidraw'"
-alias stopcali="docker stop my-excalidraw-instance"
-alias startcali="docker start my-excalidraw-instance"
+alias startcali="sudo systemctl start docker && docker start my-excalidraw-instance"
+alias stopcali="sudo systemctl stop docker && docker stop my-excalidraw-instance"
 
 # Run previous command as sudo
 function pls() {
