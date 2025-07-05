@@ -3,6 +3,533 @@
     "config_version": 2,
     "run": [
       {
+        "end": "2025-07-04T16:01:36.545887257+02:00",
+        "outcome": {
+          "Completed": {
+            "stats": {
+              "archive": {
+                "duration": 46.450057,
+                "id": "3b8e97cc0e1862b34cf6bb4b2a875f4699dc23f33f2120bff0d694c87ce82735",
+                "name": "81be22-d1ee76f4",
+                "stats": {
+                  "compressed_size": 26645011308,
+                  "deduplicated_size": 548438655,
+                  "nfiles": 219117,
+                  "original_size": 33994267926
+                }
+              }
+            }
+          }
+        },
+        "messages": [
+          {
+            "ParsedErr": {
+              "levelname": "WARNING",
+              "name": "borg.archiver",
+              "message": "/opt/containerd: dir_open: [Errno 13] Permission denied: 'containerd'",
+              "msgid": {
+                "Other": "BackupPermissionError"
+              }
+            }
+          }
+        ],
+        "include": [
+          "",
+          "/etc",
+          "/opt",
+          "/var/log"
+        ],
+        "exclude": [
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                46,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                97,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                98,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                99,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                100,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                101,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                111,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                102,
+                119,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                103,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                104,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                107,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                108,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                109,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                110,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                111,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                112,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                114,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                97,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                101,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                104,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                105,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                107,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                108,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                109,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                115,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                115,
+                121,
+                115,
+                99,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                116,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                117,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                118,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                119,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                120,
+                42
+              ]
+            }
+          },
+          {
+            "Fnmatch": {
+              "Unix": [
+                101,
+                116,
+                99,
+                47,
+                122,
+                42
+              ]
+            }
+          },
+          {
+            "PathPrefix": "/etc/ImageMagick-7"
+          },
+          {
+            "PathPrefix": "/etc/ModemManager"
+          },
+          {
+            "PathPrefix": "/etc/NetworkManager"
+          },
+          {
+            "PathPrefix": "/etc/UPower"
+          },
+          {
+            "PathPrefix": "/etc/X11"
+          },
+          {
+            "PathPrefix": "/var/log/Calamares.log"
+          },
+          {
+            "PathPrefix": "/var/log/btmp"
+          },
+          {
+            "PathPrefix": "/var/log/btmp.1"
+          },
+          {
+            "PathPrefix": "/var/log/endeavour-install.log"
+          },
+          {
+            "PathPrefix": "/var/log/firewalld"
+          },
+          {
+            "PathPrefix": "/var/log/private"
+          },
+          {
+            "PathPrefix": "/var/log/reboot-recommendation-trigger.log"
+          },
+          "Caches",
+          "Trash",
+          "VmsContainers"
+        ]
+      },
+      {
         "end": "2025-07-03T16:01:33.760245527+02:00",
         "outcome": {
           "Completed": {
@@ -28371,19 +28898,19 @@
     ],
     "running": null,
     "last_completed": {
-      "end": "2025-07-03T16:01:33.760245527+02:00",
+      "end": "2025-07-04T16:01:36.545887257+02:00",
       "outcome": {
         "Completed": {
           "stats": {
             "archive": {
-              "duration": 49.216865,
-              "id": "a3a64608c2caec4b54f82766738e27d4ac1fff88a6cff0f5f73b5e84280ae664",
-              "name": "81be22-02e1a10e",
+              "duration": 46.450057,
+              "id": "3b8e97cc0e1862b34cf6bb4b2a875f4699dc23f33f2120bff0d694c87ce82735",
+              "name": "81be22-d1ee76f4",
               "stats": {
-                "compressed_size": 26737887858,
-                "deduplicated_size": 785203142,
-                "nfiles": 219206,
-                "original_size": 34166350950
+                "compressed_size": 26645011308,
+                "deduplicated_size": 548438655,
+                "nfiles": 219117,
+                "original_size": 33994267926
               }
             }
           }
