@@ -12,7 +12,7 @@ end
 
 treesitter.setup {
     -- A list of parser names, or "all"
-    ensure_installed = { "python", "lua", "bash", "vim", "sql", "zig" },
+    ensure_installed = { "python", "lua", "bash", "vim", "sql", "zig", "rust" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,

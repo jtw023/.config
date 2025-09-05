@@ -35,6 +35,8 @@ local lsp_flags = {
 
 --> TODO: Ask chat GPT
 --> I have configured zls snippets with lsp['zls'].setup { settings = { zls = { enable_snippets = true } } } in my lspconfig setup. How do I use these snippets?
+lsp['rust_analyzer'].setup {}
+
 lsp['zls'].setup {
     cmd = { 'zls' },
     filetypes = { 'zig', 'zir' },
@@ -61,6 +63,8 @@ lsp['arduino_language_server'].setup {
         "~/Library/Arduino15/arduino-cli.yaml",
     }
 }
+
+lsp['slint_lsp'].setup {}
 
 lsp['basedpyright'].setup {
     on_attach = on_attach,

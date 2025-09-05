@@ -20,6 +20,6 @@ m.setup({
     }
 })
 mlsp.setup{
-    -- ensure_installed = { "pyright", "lua_ls", "bashls", "sqlls" }
-    ensure_installed = { "basedpyright", "lua_ls", "arduino_language_server" }
+    -- ensure_installed = { "pyright", "lua_ls", "bashls", "sqlls", "rust_analyzer", "arduino_language_server" }
+    ensure_installed = { "basedpyright", "arduino_language_server", "rust_analyzer", "slint_lsp" }
 }
