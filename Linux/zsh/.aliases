@@ -100,13 +100,97 @@ alias zsh="/usr/bin/nvim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 # Run ssh
 alias s='ssh'
-alias ss='ssh subpoena-prod'
-alias s1='ssh etl-prod01'
-alias s2='ssh etl-prod02'
-alias s3='ssh etl-prod03'
+function ss () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh subpoena-prod
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function s1 () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh etl-prod01
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function s2 () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh etl-prod02
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function s3 () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh etl-prod03
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
 alias sc='ssh -Y etl-prod01 "cat ~/table_defs.json" | xsel --clipboard --input'
-alias sql='export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf) && aws sso login && ssh bastion.analytics_production.usw2'
-alias sa='ssh etl-autoload'
+function sql () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh bastion.analytics_production.usw2
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function sa () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh etl-autoload
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
 
 # Show image in terminal
 alias show='viu --height 23'
