@@ -1,11 +1,11 @@
 # Export local path
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/github_repos/Random-Scripts"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/github_repos/Random-Scripts:$HOME/.cargo/bin"
 
 # Set editor to neovim
 export EDITOR="/usr/bin/nvim"
 
 # Set Config Home
-export XDG_CONFIG_HOME="/home/jordan/.config/Linux"
+export XDG_CONFIG_HOME="$HOME/.config/Linux"
 
 # Set manpager
 export MANPAGER='bat -l man -p --theme="Monokai Extended"'
@@ -14,8 +14,3 @@ export MANPAGER='bat -l man -p --theme="Monokai Extended"'
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-
-# Set Gnome Keyring with SSH
-# if [[ -z "$SSH_AUTH_SOCK" || ! -S "$SSH_AUTH_SOCK" ]]; then
-#   export SSH_AUTH_SOCK=$(find /run/user/$UID/keyring -type s -name ssh -print -quit)
-# fi
