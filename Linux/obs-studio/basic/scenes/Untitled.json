@@ -1,12 +1,12 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520159233,
         "name": "Desktop Audio",
         "uuid": "e73b493f-81a7-4596-8a26-d36ee8c98d3b",
         "id": "pulse_output_capture",
         "versioned_id": "pulse_output_capture",
         "settings": {
-            "device_id": "alsa_output.usb-K66_K66_20190805V001-00.analog-stereo.monitor"
+            "device_id": "alsa_output.pci-0000_73_00.6.analog-stereo.monitor"
         },
         "mixers": 255,
         "sync": 0,
@@ -31,7 +31,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520159233,
         "name": "Mic/Aux",
         "uuid": "cf3cbec1-12dd-48e6-8ed0-66ae7484337c",
         "id": "pulse_input_capture",
@@ -71,19 +71,19 @@
     "name": "Untitled",
     "sources": [
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520159233,
             "name": "Scene",
             "uuid": "a6a5a9fe-27cd-47a4-8520-113dcdc7993e",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 24,
+                "id_counter": 29,
                 "custom_size": false,
                 "items": [
                     {
                         "name": "Audio Input Capture (PulseAudio)",
                         "source_uuid": "5d18dac9-da03-41fe-8a96-19e966253089",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -244,6 +244,61 @@
                             "duration": 0
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Laptop Audio",
+                        "source_uuid": "b25aa72e-0805-4848-a4c0-cd8fd0b6f94b",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1720.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 29,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.5925925970077515,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -265,15 +320,18 @@
                 "libobs.show_scene_item.18": [],
                 "libobs.hide_scene_item.18": [],
                 "libobs.show_scene_item.22": [],
-                "libobs.hide_scene_item.22": []
+                "libobs.hide_scene_item.22": [],
+                "libobs.show_scene_item.29": [],
+                "libobs.hide_scene_item.29": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520159233,
             "name": "Audio Input Capture (PulseAudio)",
             "uuid": "5d18dac9-da03-41fe-8a96-19e966253089",
             "id": "pulse_input_capture",
@@ -304,7 +362,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520159233,
             "name": "Audio Output Capture (PulseAudio)",
             "uuid": "7e689201-7d8a-4087-997a-872f705e89b6",
             "id": "pulse_output_capture",
@@ -335,7 +393,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520159233,
             "name": "Screenshare",
             "uuid": "3525e189-682d-4226-8e3f-736f5f2ec249",
             "id": "pipewire-desktop-capture-source",
@@ -355,6 +413,37 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520159233,
+            "name": "Laptop Audio",
+            "uuid": "b25aa72e-0805-4848-a4c0-cd8fd0b6f94b",
+            "id": "pulse_input_capture",
+            "versioned_id": "pulse_input_capture",
+            "settings": {
+                "device_id": "alsa_input.pci-0000_73_00.6.analog-stereo"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 2,
+            "volume": 0.0897892639040947,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
@@ -387,11 +476,12 @@
     ],
     "transitions": [],
     "saved_projectors": [],
+    "canvases": [],
     "current_transition": "Fade",
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": 0,
+    "scaling_level": -20,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {
