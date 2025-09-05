@@ -511,6 +511,9 @@
         "PathPrefix": "/etc/X11"
       },
       {
+        "PathPrefix": "/opt/containerd"
+      },
+      {
         "PathPrefix": "/var/log/private"
       },
       "Caches",
@@ -518,7 +521,7 @@
       "VmsContainers"
     ],
     "schedule": {
-      "enabled": true,
+      "enabled": false,
       "settings": {
         "run_on_battery": false
       },
@@ -529,7 +532,7 @@
       }
     },
     "prune": {
-      "enabled": true,
+      "enabled": false,
       "keep": {
         "hourly": 48,
         "daily": 14,
