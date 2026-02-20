@@ -10,6 +10,9 @@ export XDG_CONFIG_HOME="$HOME/.config/Linux"
 # Set manpager
 export MANPAGER='bat -l man -p --theme="Monokai Extended"'
 
+# Set Browser
+export BROWSER="/usr/bin/zen-browser"
+
 # Export Language Settings
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"

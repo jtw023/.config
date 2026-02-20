@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=AudioVideo;Audio;Mixer;GTK;Settings;X-XFCE-SettingsDialog;X-XFCE-HardwareSettings;
+Comment=Adjust the volume level
+Exec=/bin/zsh -c "sleep 4 && /usr/bin/pavucontrol"
+GenericName=Volume Control
+Icon=multimedia-volume-control
+Keywords=pavucontrol;PulseAudio;Microphone;Volume;Fade;Balance;Headset;Speakers;Headphones;Audio;Mixer;Output;Input;Devices;Playback;Recording;System Sounds;Sound Card;Settings;Preferences;
+Name=Volume Control
+StartupNotify=true
+Type=Application
+Version=1.0

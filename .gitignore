@@ -1,124 +1,92 @@
 # Ignore Everything
-/*
+*
 
-# Ignore all files named .DS_Store or ending with .log
+# Allow Directory Traversal
+!Linux/
+!MacOS/
+!systemd/
+!plasma-workspace/
+!autostart/
+
+# Ignore all files following the pattern
 **/.DS_Store
 **.log
 **Cache
 **WebStorage
 
-# Except These
+# Except These Files
 !.gitignore
-!plasma-workspace
-!autostart
-!MacOS/
-MacOS/Slack/*
-!MacOS/Slack/local-settings.json
-!MacOS/Slack/Preferences
-!Linux/
-Linux/discord/*
-!Linux/discord/settings.json
-Linux/Docker Desktop/
-Linux/nvim/autoload/plug.vim.old
-Linux/BraveSoftware/
-Linux/borg/
-Linux/session/
-Linux/vlc/
-Linux/haruna/watch-later/
-Linux/obs-studio/logs/
-Linux/audacity/
-Linux/obsidian/*
-!Linux/obsidian/Preferences
-Linux/kioslaverc
-Linux/kcalcrc
-Linux/pavucontrol.ini
-Linux/arkrc
-Linux/okularrc
-Linux/breezerc
-Linux/Slack/*
-!Linux/Slack/local-settings.json
-!Linux/Slack/Preferences
 !README.md
-Linux/Trolltech.conf
-Linux/gtk-3.0
-Linux/gtk-4.0
-Linux/gtkrc
-Linux/gtkrc-2.0
-Linux/kconf_updaterc
-Linux/kde.org
-Linux/kdeglobals
-Linux/kglobalshortcutsrc
-Linux/kwinoutputconfig.json
-Linux/plasma-org.kde.plasma.desktop-appletsrc
-Linux/zsh/.zcompdump
-Linux/EOS-greeter.conf
-Linux/KDE
-Linux/QtProject.conf
-Linux/baloofileinformationrc
-Linux/baloofilerc
-Linux/bluedevilglobalrc
-Linux/dconf/user
-Linux/dolphinrc
-Linux/gwenviewrc
-Linux/haruna
-Linux/harunarc
-Linux/kaccessrc
-Linux/kactivitymanagerd-statsrc
-Linux/kactivitymanagerdrc
-Linux/katerc
-Linux/katevirc
-Linux/kcminputrc
-Linux/kcmshell6rc
-Linux/kde.org
-Linux/kded5rc
-Linux/kded6rc
-Linux/kdedefaults
-Linux/kfontinstuirc
-Linux/kinfocenterrc
-Linux/kiorc
-Linux/knfsshare
-Linux/konsolerc
-Linux/konsolesshconfig
-Linux/krunnerrc
-Linux/kscreenlockerrc
-Linux/ksmserverrc
-Linux/ksplashrc
-Linux/ktimezonedrc
-Linux/kwalletrc
-Linux/kwinrc
-Linux/kwinrulesrc
-Linux/kxkbrc
-Linux/libaccounts-glib
-Linux/mimeapps.list
-Linux/okularpartrc
-Linux/plasma-localerc
-Linux/plasma-nm
-Linux/plasma.emojierrc
-Linux/plasmanotifyrc
-Linux/plasmaparc
-Linux/plasmarc
-Linux/plasmashellrc
-Linux/powerdevil.notifyrc
-Linux/powerdevilrc
-Linux/powermanagementprofilesrc
-Linux/pulse
-Linux/reflector-simple-free-params.txt
-Linux/rog
-Linux/saving
-Linux/spectaclerc
-Linux/systemd
-Linux/systemmonitorrc
-Linux/systemsettingsrc
-Linux/trashrc
-Linux/user-dirs.dirs
-Linux/user-dirs.locale
-Linux/xdg-desktop-portal-kderc
-Linux/xsettingsd
-Linux/filetypesrc
 
-# Ignore Plugged Inside Linux and Mac Directories
-MacOS/nvim/autoload/plugged/*
-Linux/nvim/autoload/plugged/*
+# Whitelist SystemD
+!systemd/**
 
-# Ignore KDECONNECT
-Linux/kdeconnect/
+# Whitelist Plasma
+!plasma-workspace/**
+
+# Whitelist Autostart
+!autostart/**
+
+# Whitelist MacOS
+!MacOS/**
+MacOS/nvim/autoload/plugged/
+
+# Whitelist Obsidian
+!Linux/obsidian/
+!Linux/obsidian/Preferences
+
+# Whitelist Audacious
+!Linux/audacious/
+!Linux/audacious/config
+
+# Whitelist Bat
+!Linux/bat/
+!Linux/bat/config
+
+# Whitelist Discord
+!Linux/discord/
+!Linux/discord/settings.json
+
+# Whitelist EasyEffects
+!Linux/easyeffects/
+!Linux/easyeffects/db/
+!Linux/easyeffects/db/easyeffectsrc
+!Linux/easyeffects/db/equalizerrc
+
+# Whitelist GH
+!Linux/gh/
+!Linux/gh/config.yml
+
+# Whitelist Ghostyy
+!Linux/ghostty/
+!Linux/ghostty/config
+
+# Whitelist LosslessCut
+!Linux/LosslessCut/
+!Linux/LosslessCut/config.json
+
+# Whitelist Neovim
+!Linux/nvim/
+!Linux/nvim/**
+Linux/nvim/autoload/plugged/
+
+# Whitelist OBS
+!Linux/obs-studio/
+!Linux/obs-studio/basic/
+!Linux/obs-studio/basic/scenes/
+!Linux/obs-studio/basic/scenes/Untitled.json
+!Linux/obs-studio/basic/profiles/
+!Linux/obs-studio/basic/profiles/Untitled
+!Linux/obs-studio/basic/profiles/Untitled/basic.ini
+
+# Whitelist Pika Backup
+!Linux/pika-backup/
+!Linux/pika-backup/backup.json
+
+# Whitelist Yay
+!Linux/yay/
+!Linux/yay/config.json
+
+# Whitelist ZSH
+!Linux/zsh/
+!Linux/zsh/**

@@ -1,9 +1,0 @@
-[Event/messageCritical]
-Action=Popup|Sound|Taskbar
-
-[Event/messageInformation]
-Action=Popup|Sound|Taskbar
-
-[Event/notification]
-Action=Popup|Sound
-Sound=file:///usr/share/sounds/ocean/stereo/theme-demo.oga

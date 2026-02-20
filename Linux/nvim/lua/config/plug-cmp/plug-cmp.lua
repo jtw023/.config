@@ -89,6 +89,11 @@ cmp.setup {
         { name = "buffer", max_item_count = 4 },
         { name = "spell", max_item_count = 4 },
     },
+    cmp.setup.filetype('codecompanion', {
+        sources = cmp.config.sources({
+            { name = 'codecompanion', max_item_count = 10 },
+        })
+    }),
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
         select = false,

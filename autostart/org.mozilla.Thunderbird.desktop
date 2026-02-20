@@ -2,7 +2,7 @@
 Actions=ComposeMessage;OpenAddressBook;
 Categories=Network;Email;
 Comment=Send and receive mail with Thunderbird
-Exec=thunderbird %u
+Exec=/bin/zsh -c "sleep 3 && /usr/bin/thunderbird"
 GenericName=Mail Client
 Icon=org.mozilla.Thunderbird
 MimeType=message/rfc822;x-scheme-handler/mailto;text/calendar;text/vcard;text/x-vcard;x-scheme-handler/webcal;x-scheme-handler/webcals;x-scheme-handler/mid;

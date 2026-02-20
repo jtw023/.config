@@ -21,7 +21,46 @@ end
 
 telescope.setup {
     defaults = {
+        mappings = {
+            i = {
+                ["<C-T>"] = function(prompt_bufnr)
+                    local actions = require("telescope.actions")
+                    local action_state = require("telescope.actions.state")
+                    local picker = action_state.get_current_picker(prompt_bufnr)
+                    local selections = picker:get_multi_selection()
 
+                    if vim.tbl_isempty(selections) then
+                        actions.select_tab(prompt_bufnr)
+                        return
+                    end
+
+                    actions.close(prompt_bufnr)
+
+                    for _, entry in ipairs(selections) do
+                        vim.cmd("tabnew " .. entry.path)
+                    end
+                end,
+            },
+            n = {
+                ["<C-T>"] = function(prompt_bufnr)
+                    local actions = require("telescope.actions")
+                    local action_state = require("telescope.actions.state")
+                    local picker = action_state.get_current_picker(prompt_bufnr)
+                    local selections = picker:get_multi_selection()
+
+                    if vim.tbl_isempty(selections) then
+                        actions.select_tab(prompt_bufnr)
+                        return
+                    end
+
+                    actions.close(prompt_bufnr)
+
+                    for _, entry in ipairs(selections) do
+                        vim.cmd("tabnew " .. entry.path)
+                    end
+                end,
+            },
+        },
         prompt_prefix = icons.ui.Telescope .. " ",
         selection_caret = " ",
         path_display = { "smart" },

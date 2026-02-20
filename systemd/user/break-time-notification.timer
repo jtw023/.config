@@ -1,0 +1,12 @@
+[Unit]
+Description=Hourly Break Time Notification Timer
+Requires=break-time-notification.service
+After=graphical-session.target
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=4h
+Unit=break-time-notification.service
+
+[Install]
+WantedBy=timers.target

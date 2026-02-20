@@ -6,6 +6,7 @@ alias cat="/usr/bin/bat"
 # Activate Virtual Environment
 alias bactive="source $HOME/base/bin/activate"
 alias ractive="source $HOME/bitbucket_repos/reflex_etl/venv/bin/activate"
+alias dbgactive="source $HOME/.debugpy_virtualenv/debugpy/bin/activate"
 
 # Excalidraw
 alias calia="cat $XDG_CONFIG_HOME/zsh/.aliases | grep -A 3 'Excalidraw'"
@@ -35,16 +36,17 @@ alias stopov3="openvpn3 session-manage --session-path $1 --disconnect"
 
 # Manage ExpressVPN
 alias expressa="cat $XDG_CONFIG_HOME/zsh/.aliases | grep -A 5 'Manage ExpressVPN'"
-alias startexpress='sudo systemctl start expressvpn'
-alias connectexpress='expressvpn connect "USA - Phoenix"'
-alias stopexpress='expressvpn disconnect && sudo systemctl stop expressvpn'
-alias statsexpress='sudo systemctl status expressvpn'
+alias startexpress='sudo systemctl start expressvpn-service && expressvpnctl background enable'
+alias connectexpress='expressvpnctl connect "USA - Phoenix"'
+alias stopexpress='expressvpnctl disconnect && expressvpnctl background disable && sudo systemctl stop expressvpn-service'
+alias statsexpress='sudo systemctl status expressvpn-service'
 
 # Update System
 alias updatepackages='yay -Syu'
 alias updatemirrors='sudo reflector --verbose --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --save /etc/pacman.d/mirrorlist && sudo eos-rankmirrors'
 alias updatekeyrings='sudo pacman --needed -Sy archlinux-keyring && sudo pacman --needed -Sy endeavouros-keyring'
-alias updatesystem='updatekeyrings && updatemirrors && updatepackages'
+alias updateinstalllist='pacman -Qqe > pkglist.txt'
+alias updatesystem='updatekeyrings && updatemirrors && updatepackages && updateinstalllist'
 
 # Logout command
 alias lo="openvpn3 session-manage --config /etc/openvpn/reflex_vpn.ovpn --disconnect && qdbus org.kde.LogoutPrompt /LogoutPrompt promptLogout"
@@ -64,11 +66,12 @@ alias history='history -i'
 
 # Alias to clear terminal
 function cl() {
-    if [ $(date +'%m') -eq '12' ]; then
-        python3 "$RANDOMSCRIPTS/clear_screen_snowfall.py"
-    else
-        bash "$RANDOMSCRIPTS/generate_random.sh"
-    fi
+    python3 "$RANDOMSCRIPTS/clear_screen_effects.py"
+    # if [ $(date +'%m') -eq '12' ]; then
+    #     python3 "$RANDOMSCRIPTS/clear_screen_snowfall.py"
+    # else
+    #     bash "$RANDOMSCRIPTS/generate_random.sh"
+    # fi
 }
 
 # Alias bat to bat-asus-battery
@@ -100,6 +103,22 @@ alias zsh="/usr/bin/nvim $XDG_CONFIG_HOME/zsh/.zshrc"
 
 # Run ssh
 alias s='ssh'
+function sa () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh etl-autoload
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+alias sc='ssh -Y etl-prod01 "cat ~/table_defs.json" | xsel --clipboard --input'
 function ss () {
     local selected_profile
     selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
@@ -111,6 +130,21 @@ function ss () {
             aws sso login
         fi
         ssh subpoena-prod
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function sql () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh bastion.analytics_production.usw2
     else
         echo "AWS_PROFILE not selected"
     fi
@@ -160,8 +194,7 @@ function s3 () {
         echo "AWS_PROFILE not selected"
     fi
 }
-alias sc='ssh -Y etl-prod01 "cat ~/table_defs.json" | xsel --clipboard --input'
-function sql () {
+function ms1 () {
     local selected_profile
     selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
 
@@ -171,12 +204,12 @@ function sql () {
             export AWS_PROFILE=$selected_profile
             aws sso login
         fi
-        ssh bastion.analytics_production.usw2
+        ssh ps-mindstone-prod-01
     else
         echo "AWS_PROFILE not selected"
     fi
 }
-function sa () {
+function ms2 () {
     local selected_profile
     selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
 
@@ -186,7 +219,52 @@ function sa () {
             export AWS_PROFILE=$selected_profile
             aws sso login
         fi
-        ssh etl-autoload
+        ssh ps-mindstone-prod-02
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function u1 () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh ps-ultron-pipeline-prod-01
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function jp () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh ps-jarvis-production-bastion
+    else
+        echo "AWS_PROFILE not selected"
+    fi
+}
+function js () {
+    local selected_profile
+    selected_profile=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf | awk '{print $1}')
+
+    if [ -n "$selected_profile" ]; then
+        echo "AWS_PROFILE is $selected_profile"
+        if [ "$AWS_PROFILE" != "$selected_profile" ]; then
+            export AWS_PROFILE=$selected_profile
+            aws sso login
+        fi
+        ssh jarvis-staging-bastion
     else
         echo "AWS_PROFILE not selected"
     fi
@@ -255,8 +333,9 @@ alias gsc='git switch' # choose a different git branch to switch to
 alias gsl='git status' # show the status of a git directory
 alias gsn='git switch -c' # create and instantly switch to new git branch
 alias gss='git status -s' # show a shorter status of a git directory
-alias gst='git stash' # temporarily stash git changes
-alias gsta='git stash apply' # re-apply stashed git changes
+alias gst='git stash -u'       # Stash work + new files (excludes ignored)
+alias gstp='git stash pop'      # Apply AND delete from the list
+alias gstl='git stash list'     # Quickly see what's in your stash list
 alias gu='git restore --staged' # unstage a staged git file
 alias gw='git when' # see when the last pull or fetch was made(custom git alias)
 

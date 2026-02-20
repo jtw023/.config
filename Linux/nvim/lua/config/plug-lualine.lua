@@ -4,6 +4,19 @@ if not status_ok then
     return
 end
 
+_G.codecompanion_status = _G.codecompanion_status or "💤 LLM: Not Started"
+
+local function cc_status_component()
+    local ok, cc = pcall(require, "codecompanion")
+    if ok and type(cc) == "table" and type(cc.status) == "function" then
+        local s = cc.status()
+        if s and s ~= "" then
+            return tostring(s)
+        end
+    end
+    return _G.codecompanion_status or ""
+end
+
 local colors = {
     fg1 = '#000000',
     fg2 = '#272d38',
@@ -39,14 +52,13 @@ ll.setup({
                 }
             }
         },
-        lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_x = {'fileformat', 'filetype'},
         lualine_y = {'progress'},
-        lualine_z = {'location'}
+        lualine_z = {cc_status_component}
     },
     inactive_sections = {},
     tabline = {},
     extensions = {}
 })
 
--- We don't need to see things like -- INSERT -- anymore
 vim.cmd "set noshowmode"

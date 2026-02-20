@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Office;
 Comment=Obsidian
-Exec=/usr/bin/obsidian %U
+Exec=/bin/zsh -c "sleep 2 && /usr/bin/obsidian"
 Icon=obsidian
 MimeType=x-scheme-handler/obsidian;
 Name=Obsidian

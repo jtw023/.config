@@ -2,7 +2,24 @@ local runFile = vim.api.nvim_create_augroup("Run_File", { clear = true })
 local compileFile = vim.api.nvim_create_augroup("Compile_File", { clear = true })
 local nvimOptions = vim.api.nvim_create_augroup("Nvim_Options", { clear = true })
 local formatNvim = vim.api.nvim_create_augroup("Format_Nvim", { clear = true })
-local onLeave = vim.api.nvim_create_augroup("On_Leave", { clear = true })
+local CodeCompanion = vim.api.nvim_create_augroup("CodeCompanion", { clear = true })
+local expandKey = vim.api.nvim_create_augroup("Expand_Key", { clear = true })
+vim.api.nvim_create_autocmd("User", {
+    pattern = "CodeCompanionRequestStarted",
+    callback = function()
+        _G.codecompanion_status = "⏳ LLM: Thinking..."
+        pcall(vim.cmd, "redrawstatus")
+    end,
+    group = CodeCompanion
+})
+vim.api.nvim_create_autocmd("User", {
+    pattern = "CodeCompanionRequestFinished",
+    callback = function()
+        _G.codecompanion_status = "✔️ LLM: Ready"
+        pcall(vim.cmd, "redrawstatus")
+    end,
+    group = CodeCompanion
+})
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
     pattern = "*.sql",
     callback = function()
@@ -110,6 +127,11 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
         end, { buffer = true, silent = true })
     end,
     group = formatNvim
+})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = { "*.sql", "*.lua" },
+    command = [[:iab tod --> TODO:| :iab rem --> REMOVE:| :iab fi --> FIX:| :iab inp --> INPROGRESS:| :iab que --> QUESTION:| :iab cav --> CAVEAT:| :iab rol /**\  =======================================================*//*<CR>    ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>13k/:<CR>| :iab tit --> TITLE:| :iab lin --> LINK:| :iab abo --> ABOUT:| :iab tem /**\  =======================================================*//*<CR>    AUTHOR: Jordan Walters<CR>DATE:<CR>TITLE:<CR>ABOUT:<CR>ROLLUP_KEYS:<CR>    * INDEX FIELD: Primary Key<CR>* MERGE FIELD: Field To Update Row<CR>* ROLLUP LOAD TYPE:<CR>    * merge - Insert/replace regardless of merge field<CR>* updateRecords - Insert/replace if new merge field is greater<CR>* refresh - Replace table in Redshift with rollup results<ESC>o<ESC>i        * TABLE NAME: 'Descriptive Table Name'<CR>* PERIODICITY: How Often To Run Query<CR>* LOOK BACK WINDOW: Run Query For Last X Hours<CR>* BACKFILL: 'Date To Backfill To'<ESC>o<ESC>i*//*  =======================================================\**/<ESC>16k/:<CR>]],
+    group = expandKey
 })
 -- vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
 --     pattern = "*.md",

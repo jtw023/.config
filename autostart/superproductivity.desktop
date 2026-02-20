@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Office;ProjectManagement;
+Comment=ToDo list and Time Tracking
+# Exec="/opt/Super Productivity/superproductivity" %U
+Exec=/bin/zsh -c "sleep 7 && /usr/bin/superproductivity"
+Icon=superproductivity
+Name=Super Productivity
+StartupWMClass=Super Productivity
+Terminal=false
+Type=Application

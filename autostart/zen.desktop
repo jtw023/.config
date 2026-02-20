@@ -2,7 +2,7 @@
 Actions=new-window;new-private-window;profilemanager;
 Categories=Network;WebBrowser;
 Comment=Experience tranquillity while browsing the web without people tracking you!
-Exec=/opt/zen-browser-bin/zen-bin %u
+Exec=/bin/zsh -c "sleep 1 && /usr/bin/zen-browser"
 Icon=zen-browser
 Keywords=Internet;WWW;Browser;Web;Explorer;
 MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-xpinstall;application/pdf;application/json;
@@ -12,6 +12,7 @@ StartupWMClass=zen
 Terminal=false
 Type=Application
 X-MultipleArgs=false
+# X-GNOME-Autostart-Delay=5
 
 [Desktop Action new-private-window]
 Exec=/opt/zen-browser-bin/zen-bin --private-window %u

@@ -1,6 +1,23 @@
 local Plug = vim.fn['plug#']
-vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
+vim.call('plug#begin', '~/.config/nvim/plugged')
 
+-- Debugger
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'jay-babu/mason-nvim-dap.nvim'
+Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'nvim-neotest/nvim-nio'
+-- Avante
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'folke/snacks.nvim'
+Plug 'stevearc/dressing.nvim'
+-- Plug 'nvim-mini/mini.nvim'
+Plug('olimorris/codecompanion.nvim', { ['tag'] = 'v17.33.0' })
+
+-- Plug('yetone/avante.nvim', { ['branch'] = 'main', ['do'] = 'make', ['source'] = 'true' })
 -- Slint
 Plug 'slint-ui/vim-slint'
 -- Snippets Engine
@@ -74,9 +91,9 @@ Plug 'nvim-lualine/lualine.nvim'
 -- Linting
 Plug 'mfussenegger/nvim-lint'
 -- Treesitter
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
-Plug 'nvim-treesitter/nvim-treesitter-context'
-Plug 'HiPhish/nvim-ts-rainbow2'
+Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master', ['do'] = ':TSUpdate' })
+Plug('nvim-treesitter/nvim-treesitter-context', { ['after'] = 'nvim-treesitter' })
+-- Plug 'HiPhish/nvim-ts-rainbow2'
 Plug 'lukas-reineke/indent-blankline.nvim'
 -- Code Assistant
 Plug "Exafunction/windsurf.nvim"

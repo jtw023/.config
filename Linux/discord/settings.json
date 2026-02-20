@@ -6,10 +6,11 @@
   "IS_MAXIMIZED": false,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
-    "x": 1143,
-    "y": 784,
-    "width": 941,
-    "height": 672
+    "x": 1720,
+    "y": 484,
+    "width": 840,
+    "height": 1080
   },
-  "offloadAdmControls": false
+  "offloadAdmControls": true,
+  "enableHardwareAcceleration": true
 }

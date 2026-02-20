@@ -1,0 +1,42 @@
+[Desktop Entry]
+Actions=kcm-lookandfeel;kcm-users;kcm-screenlocker;kcm-powerdevilprofilesconfig;kcm-kscreen;
+Categories=Qt;KDE;Settings;
+Comment=Configure the system’s behavior and appearance
+Exec=/bin/zsh -c "sleep 8 && /usr/bin/systemsettings kcm_bluetooth"
+GenericName=System Settings
+Icon=preferences-system
+Keywords=systemsettings
+Name=System Settings
+OnlyShowIn=KDE;
+SingleMainWindow=true
+StartupNotify=true
+Type=Application
+X-DBUS-ServiceName=org.kde.systemsettings
+X-DBUS-StartupType=Unique
+X-DocPath=systemsettings/index.html
+X-KDE-Shortcuts=Tools
+
+[Desktop Action kcm-kscreen]
+Exec=systemsettings kcm_kscreen
+Icon=preferences-desktop-display-randr
+Name=Display Configuration
+
+[Desktop Action kcm-lookandfeel]
+Exec=systemsettings kcm_lookandfeel
+Icon=preferences-desktop-theme-global
+Name=Global Theme
+
+[Desktop Action kcm-powerdevilprofilesconfig]
+Exec=systemsettings kcm_powerdevilprofilesconfig
+Icon=preferences-system-power-management
+Name=Power Management
+
+[Desktop Action kcm-screenlocker]
+Exec=systemsettings kcm_screenlocker
+Icon=preferences-desktop-user-password
+Name=Screen Locking
+
+[Desktop Action kcm-users]
+Exec=systemsettings kcm_users
+Icon=preferences-system-users
+Name=Users

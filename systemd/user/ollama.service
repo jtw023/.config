@@ -1,0 +1,19 @@
+[Unit]
+Description=Ollama Service
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+ExecStart=/usr/bin/ollama serve
+Environment="OLLAMA_GPU_LAYERS=30"
+Environment="OLLAMA_ROCM_PATH=/opt/rocm"
+Environment="HOME=/home/jordan/.config/Linux/ollama"
+Environment="OLLAMA_MODELS=/home/jordan/ollama_models"
+Restart=on-failure
+RestartSec=3
+RestartPreventExitStatus=1
+Type=simple
+PrivateTmp=yes
+
+[Install]
+WantedBy=default.target

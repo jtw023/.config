@@ -514,6 +514,12 @@
         "PathPrefix": "/opt/containerd"
       },
       {
+        "PathPrefix": "/opt/expressvpn"
+      },
+      {
+        "PathPrefix": "/var/log/audit"
+      },
+      {
         "PathPrefix": "/var/log/private"
       },
       "Caches",
@@ -521,7 +527,7 @@
       "VmsContainers"
     ],
     "schedule": {
-      "enabled": false,
+      "enabled": true,
       "settings": {
         "run_on_battery": false
       },
@@ -534,11 +540,11 @@
     "prune": {
       "enabled": false,
       "keep": {
-        "hourly": 48,
+        "hourly": 2,
         "daily": 14,
-        "weekly": 4,
-        "monthly": 12,
-        "yearly": 10
+        "weekly": 2,
+        "monthly": 2,
+        "yearly": 0
       }
     },
     "title": "backup",

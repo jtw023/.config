@@ -1,18 +1,10 @@
--- set to 1, nvim will open the preview window after entering the markdown buffer
--- default: 0
-vim.g.mkdp_auto_start = 1
+local status_ok_md, markdown = pcall(require, "render-markdown")
+if not status_ok_md then
+    vim.notify('Render-Markdown broken in config/plug-markdown.lua', 'error')
+    return
+end
 
--- recognized filetypes
--- these filetypes will have MarkdownPreview... commands
-vim.g.mkdp_filetypes = {'markdown'}
-
--- set default theme (dark or light)
--- By default the theme is define according to the preferences of the system
-vim.g.mkdp_theme = 'dark'
-
-vim.cmd([[
-    function OpenMarkdownPreview (url)
-        execute "silent ! osascript $HOME/github_repos/Random-Scripts/safari_fullscreen.scpt"a:url
-    endfunction
-]])
-vim.g.mkdp_browserfunc = 'OpenMarkdownPreview'
+markdown.setup({
+    completions = { lsp = { enabled = true } },
+    file_types = { 'markdown', 'checkhealth', 'codecompanion' },
+})

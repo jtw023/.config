@@ -1,0 +1,11 @@
+[Unit]
+Description=Break Time Notification Script
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/jordan/github_repos/Random-Scripts/walk_stairs_notification.sh
+StandardOutput=append:/home/jordan/.local/share/break_time.log
+StandardError=append:/home/jordan/.local/share/break_time_error.log
+
+[Install]
+WantedBy=graphical-session.target

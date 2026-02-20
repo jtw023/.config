@@ -14,6 +14,27 @@ vim.g.mapleader = ' '
 -- opts.desc = 'Paste entire line from system clipboard'
 -- vim.keymap.set({'v', 'n'}, 'p', '"+p', opts)
 -- Auto increment and auto decrement
+-- Code Assistant
+-- opts.desc = 'Open Avante Ask'
+-- vim.keymap.set({ "n", "v" }, "<Leader>aa", "<Plug>(AvanteAsk)", opts)
+-- opts.desc = 'Open New Avante Ask'
+-- vim.keymap.set({ "n", "v" }, "<Leader>an", "<Plug>(AvanteAskNew)", opts)
+-- opts.desc = 'Open Avante Chat'
+-- vim.keymap.set({ "n", "v" }, "<Leader>ac", "<Plug>(AvanteChat)", opts)
+-- opts.desc = 'Open New Avante Chat'
+-- vim.keymap.set({ "n", "v" }, "<Leader>nc", ":AvanteChatNew<CR>", opts)
+
+opts.desc = 'Code Companion Actions'
+vim.keymap.set({ "n", "v" }, "<Leader>aa", ":CodeCompanionActions<CR>", opts)
+opts.desc = 'Code Companion Chat Toggle'
+vim.keymap.set({ "n", "v" }, "<Leader>ac", ":CodeCompanionChat Toggle<CR>", opts)
+opts.desc = 'Code Companion Chat Add Selection'
+vim.keymap.set("v", "<Leader>av", ":CodeCompanionChat Add<CR>", opts)
+opts.desc = 'Code Companion Inline'
+vim.keymap.set("v", "<Leader>ai", ":CodeCompanion /buffer ", opts)
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
 opts.desc = 'Auto Increment'
 vim.keymap.set('n', '<C-Up>', '<C-a>', opts)
 opts.desc = 'Auto Decrement'
@@ -238,9 +259,31 @@ vim.keymap.set('n', '<Leader>]', ':Gitsigns next_hunk<CR>', opts)
 opts.desc = 'Previous Gitsigns Hunk'
 vim.keymap.set('n', '<Leader>[', ':Gitsigns prev_hunk<CR>', opts)
 opts.desc = 'View Diffsplit'
-vim.keymap.set('n', '<Leader>d', ':w <BAR> :Gvdiff<CR>', opts)
-opts.desc = 'View 3 Way Diffsplit'
-vim.keymap.set('n', '<Leader>m', ':Gvdiffsplit!<CR>', opts)
+vim.keymap.set('n', '<Leader>m', ':w <BAR> :Gvdiff<CR>', opts)
+opts.desc = 'Toggle Breakpoint'
+vim.keymap.set('n', '<Leader>dt', ":lua require'dap'.toggle_breakpoint()<CR>", opts)
+opts.desc = 'Continue Debug'
+vim.keymap.set('n', '<Leader>dc', ":lua require'dap'.continue()<CR>", opts)
+opts.desc = 'Step Into Debug'
+vim.keymap.set('n', '<Leader>di', ":lua require'dap'.step_into()<CR>", opts)
+opts.desc = 'Step Over Debug'
+vim.keymap.set('n', '<Leader>dp', ":lua require'dap'.step_over()<CR>", opts)
+opts.desc = 'Step Out Debug'
+vim.keymap.set('n', '<Leader>do', ":lua require'dap'.step_out()<CR>", opts)
+opts.desc = 'Open Debug Repl'
+vim.keymap.set('n', '<Leader>dr', ":lua require'dap'.repl.open()<CR>", opts)
+opts.desc = 'List Debug Breakpoints'
+vim.keymap.set('n', '<Leader>db', ":lua require'dap'.list_breakpoints()<CR>", opts)
+opts.desc = 'Open Debugger'
+vim.keymap.set('n', '<Leader>dd', function()
+    require('dapui').toggle()
+end, opts)
+opts.desc = 'Quit Debugger'
+vim.keymap.set('n', '<Leader>dq', function()
+    require('dap').terminate()
+    require('dapui').close()
+    require('nvim-dap-virtual-text').toggle()
+end, opts)
 opts.desc = 'Open Git Buffer'
 vim.keymap.set('n', 'gs', ':w <BAR> :Git<CR>', opts)
 opts.desc = 'wq'

@@ -6,6 +6,9 @@ vim.g.python3_host_prog = "/home/jordan/.pyenv/shims/python3"
 -- Setting vim notify as default
 vim.notify = require("notify")
 
+-- Statusbar hightened for Avante
+o.laststatus = 3
+
 -- Auto Session Options
 o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
