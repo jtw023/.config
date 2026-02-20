@@ -3,7 +3,6 @@ if not status_ok_cc then
     vim.notify('CodeCompanion broken in config/plug-codecompanion.lua', 'error')
     return
 end
--- require('mini.diff').setup()
 
 local SYSTEM_PROMPT = [[
 SYSTEM:
@@ -79,21 +78,14 @@ cc.setup({
     adapters = {
         http = {
             openai = function()
-                -- return require("codecompanion.adapters").extend("gemini", {
                 return require("codecompanion.adapters").extend("openai", {
                     env = {
-                        -- name = "ollama_gemini",
-                        -- api_key = "GEMINI_KEY",
-                        -- api_key = "OLLAMA_API_KEY",
                         api_key = "OPENAI_KEY"
-                        -- url = "OLLAMA_URL",
                     },
                     schema = {
                         model = {
-                            -- default = "gemini-3-flash-preview:cloud"
                             default = "gpt-5.2-2025-12-11"
                             -- default = "gpt-5.2-codex"
-                            -- default = "gemini-2.5-flash"
                         },
                         reasoning_effort = {
                             default = "medium"
@@ -108,10 +100,7 @@ cc.setup({
     },
     strategies = {
         chat = {
-            -- adapter = "gemini",
             adapter = "openai",
-            -- name = "gemini_chat",
-            -- model = "gemini-3-flash-preview:cloud",
             show_reasoning = false,
             tools = {
                 opts = {
@@ -121,9 +110,7 @@ cc.setup({
             },
         },
         inline = {
-            -- adapter = "gemini",
             adapter = "openai",
-            -- name = "gemini_inline",
         },
     },
     display = {
