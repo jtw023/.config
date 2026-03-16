@@ -1,3 +1,6 @@
+[EffectsPipelines]
+inactivityTimerEnable=false
+
 [StreamInputs]
 inputDevice=alsa_input.usb-K66_K66_20190805V001-00.analog-stereo
 useDefaultInputDevice=false
@@ -5,7 +8,7 @@ visiblePage=pluginsPage
 
 [StreamOutputs]
 outputDevice=alsa_output.usb-Chord_Electronics_Ltd_Mojo_413-001-01.analog-stereo
-plugins=stereo_tools#0,equalizer#0
+plugins=stereo_tools#0,equalizer#0,crystalizer#0,crystalizer#1
 useDefaultOutputDevice=false
 visiblePage=pluginsPage
 visiblePlugin=equalizer#0
@@ -14,5 +17,6 @@ visiblePlugin=equalizer#0
 signalType=pinkNoise
 
 [Window]
-height=1032
-width=2560
+height=803
+visiblePresetSheetPage=autoloadingPage
+width=2048
