@@ -99,22 +99,41 @@ Example:
 cc.setup({
     adapters = {
         http = {
+            claudecode = function ()
+                return require("codecompanion.adapters").extend("anthropic", {
+                    env = {
+                        api_key = "ClAUDE_KEY"
+                    },
+                    schema = {
+                        max_tokens = {default = 4000},
+                        extended_thinking = {default = true},
+                        thinking_budget = {default = 2000},
+                        reasoning_effort = {default = "medium"},
+                        model = {
+                            default = "claude-sonnet-4-6"
+                        },
+                    },
+                    system_prompt = function(opts)
+                        return SYSTEM_PROMPT .. "\n" .. CODE_REVIEW .. "\n" .. INCREMENTAL_DIFF .. "\n" .. OFFICIAL_DOCUMENTATION .. "\n" .. MODULE_DOCSTRING .. "\n" .. FUNCTION_DOCSTRING
+                    end,
+                })
+            end,
             openai = function()
                 return require("codecompanion.adapters").extend("openai", {
                     env = {
                         api_key = "OPENAI_KEY"
                     },
                     schema = {
+                        max_completion_tokens = {default = 4000},
+                        extended_thinking = {default = true},
+                        thinking_budget = {default = 2000},
+                        reasoning_effort = {default = "medium"},
                         model = {
                             default = "gpt-5.2-2025-12-11"
-                            -- default = "gpt-5.2-codex"
                         },
-                        reasoning_effort = {
-                            default = "medium"
-                        }
                     },
                     system_prompt = function(opts)
-                        return SYSTEM_PROMPT .. "\n" .. CODE_REVIEW .. "\n" .. OFFICIAL_DOCUMENTATION .. "\n" .. MODULE_DOCSTRING .. "\n" .. FUNCTION_DOCSTRING
+                        return SYSTEM_PROMPT .. "\n" .. CODE_REVIEW .. "\n" .. INCREMENTAL_DIFF .. "\n" .. OFFICIAL_DOCUMENTATION .. "\n" .. MODULE_DOCSTRING .. "\n" .. FUNCTION_DOCSTRING
                     end,
                 })
             end,
@@ -122,7 +141,7 @@ cc.setup({
     },
     strategies = {
         chat = {
-            adapter = "openai",
+            adapter = "claudecode",
             show_reasoning = false,
             tools = {
                 opts = {
@@ -132,14 +151,15 @@ cc.setup({
             },
         },
         inline = {
-            adapter = "openai",
+            adapter = "claudecode",
         },
     },
     display = {
         chat = {
             show_settings = true,
-            auto_scroll = true,
-            start_in_insert_mode = true,
+            show_token_usage = true,
+            auto_scroll = false,
+            start_in_insert_mode = false,
         },
         diff = {
             provider = 'inline',

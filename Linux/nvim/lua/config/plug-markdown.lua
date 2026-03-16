@@ -7,4 +7,6 @@ end
 markdown.setup({
     completions = { lsp = { enabled = true } },
     file_types = { 'markdown', 'checkhealth', 'codecompanion' },
+    render_modes = true,
+    anti_conceal = { enabled = false }
 })
