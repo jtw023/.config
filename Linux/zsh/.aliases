@@ -43,9 +43,9 @@ alias statsexpress='sudo systemctl status expressvpn-service'
 
 # Update System
 alias updatepackages='yay -Syu'
-alias updatemirrors='sudo reflector --verbose --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --save /etc/pacman.d/mirrorlist && sudo eos-rankmirrors'
+alias updatemirrors='sudo reflector --verbose --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --fastest 10 --save /etc/pacman.d/mirrorlist && sudo eos-rankmirrors'
 alias updatekeyrings='sudo pacman --needed -Sy archlinux-keyring && sudo pacman --needed -Sy endeavouros-keyring'
-alias updateinstalllist='pacman -Qqe > pkglist.txt'
+alias updateinstalllist='mkdir -p ~/installed_packages && pacman -Qqe > ~/installed_packages/pkglist.txt'
 alias updatesystem='updatekeyrings && updatemirrors && updatepackages && updateinstalllist'
 
 # Logout command
