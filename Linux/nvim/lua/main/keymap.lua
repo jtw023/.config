@@ -21,8 +21,8 @@ vim.g.mapleader = ' '
 -- vim.keymap.set({ "n", "v" }, "<Leader>an", "<Plug>(AvanteAskNew)", opts)
 -- opts.desc = 'Open Avante Chat'
 -- vim.keymap.set({ "n", "v" }, "<Leader>ac", "<Plug>(AvanteChat)", opts)
--- opts.desc = 'Open New Avante Chat'
--- vim.keymap.set({ "n", "v" }, "<Leader>nc", ":AvanteChatNew<CR>", opts)
+opts.desc = 'Show Diagnostics'
+vim.keymap.set("n", "<Leader>-", ":lua vim.diagnostic.open_float()<CR>", opts)
 
 opts.desc = 'Code Companion Actions'
 vim.keymap.set({ "n", "v" }, "<Leader>aa", ":CodeCompanionActions<CR>", opts)
