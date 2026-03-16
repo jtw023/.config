@@ -1,6 +1,7 @@
 {
+    "name": "Untitled",
     "DesktopAudioDevice1": {
-        "prev_ver": 536870916,
+        "prev_ver": 536936448,
         "name": "Desktop Audio",
         "uuid": "e73b493f-81a7-4596-8a26-d36ee8c98d3b",
         "id": "pulse_output_capture",
@@ -31,7 +32,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 536870916,
+        "prev_ver": 536936448,
         "name": "Mic/Aux",
         "uuid": "cf3cbec1-12dd-48e6-8ed0-66ae7484337c",
         "id": "pulse_input_capture",
@@ -61,20 +62,123 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "Record",
-    "current_program_scene": "Record",
-    "scene_order": [
-        {
-            "name": "Record"
-        },
-        {
-            "name": "Captions"
-        }
-    ],
-    "name": "Untitled",
     "sources": [
         {
-            "prev_ver": 536870916,
+            "prev_ver": 536936448,
+            "name": "Audio Output Capture (PulseAudio)",
+            "uuid": "7e689201-7d8a-4087-997a-872f705e89b6",
+            "id": "pulse_output_capture",
+            "versioned_id": "pulse_output_capture",
+            "settings": {
+                "device_id": "alsa_output.usb-K66_K66_20190805V001-00.analog-stereo.monitor"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": true,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "Screenshare",
+            "uuid": "3525e189-682d-4226-8e3f-736f5f2ec249",
+            "id": "pipewire-desktop-capture-source",
+            "versioned_id": "pipewire-desktop-capture-source",
+            "settings": {
+                "RestoreToken": "3cde5504-97bc-41f7-8e12-84e96dba2766"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "Screen Capture (PipeWire)",
+            "uuid": "21cb7f9e-5e3a-4ed1-920b-1e3557162b7b",
+            "id": "pipewire-screen-capture-source",
+            "versioned_id": "pipewire-screen-capture-source",
+            "settings": {
+                "RestoreToken": "2493b191-63f0-4d20-9862-78ab284b226a"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "K66 Mic",
+            "uuid": "538e957e-da8d-4ce5-8109-222f7eea4e03",
+            "id": "pulse_input_capture",
+            "versioned_id": "pulse_input_capture",
+            "settings": {
+                "device_id": "alsa_input.usb-K66_K66_20190805V001-00.analog-stereo"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936448,
             "name": "Record",
             "uuid": "a6a5a9fe-27cd-47a4-8520-113dcdc7993e",
             "id": "scene",
@@ -277,64 +381,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536870916,
-            "name": "Audio Output Capture (PulseAudio)",
-            "uuid": "7e689201-7d8a-4087-997a-872f705e89b6",
-            "id": "pulse_output_capture",
-            "versioned_id": "pulse_output_capture",
-            "settings": {
-                "device_id": "alsa_output.usb-K66_K66_20190805V001-00.analog-stereo.monitor"
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": true,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536870916,
-            "name": "Screenshare",
-            "uuid": "3525e189-682d-4226-8e3f-736f5f2ec249",
-            "id": "pipewire-desktop-capture-source",
-            "versioned_id": "pipewire-desktop-capture-source",
-            "settings": {
-                "RestoreToken": "3cde5504-97bc-41f7-8e12-84e96dba2766"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536870916,
+            "prev_ver": 536936448,
             "name": "Captions",
             "uuid": "637086fe-d729-4f20-98e6-0f0a70a7d72c",
             "id": "scene",
@@ -421,66 +468,23 @@
             "monitoring_type": 0,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
-        },
-        {
-            "prev_ver": 536870916,
-            "name": "Screen Capture (PipeWire)",
-            "uuid": "21cb7f9e-5e3a-4ed1-920b-1e3557162b7b",
-            "id": "pipewire-screen-capture-source",
-            "versioned_id": "pipewire-screen-capture-source",
-            "settings": {
-                "RestoreToken": "2493b191-63f0-4d20-9862-78ab284b226a"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536870916,
-            "name": "K66 Mic",
-            "uuid": "538e957e-da8d-4ce5-8109-222f7eea4e03",
-            "id": "pulse_input_capture",
-            "versioned_id": "pulse_input_capture",
-            "settings": {
-                "device_id": "alsa_input.usb-K66_K66_20190805V001-00.analog-stereo"
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
         }
     ],
     "groups": [],
+    "scene_order": [
+        {
+            "name": "Record"
+        },
+        {
+            "name": "Captions"
+        }
+    ],
+    "current_scene": "Captions",
+    "current_program_scene": "Captions",
+    "canvases": [],
+    "current_transition": "Fade",
+    "transition_duration": 300,
+    "transitions": [],
     "quick_transitions": [
         {
             "name": "Cut",
@@ -504,14 +508,10 @@
             "fade_to_black": true
         }
     ],
-    "transitions": [],
     "saved_projectors": [],
-    "canvases": [],
-    "current_transition": "Fade",
-    "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -13,
+    "scaling_level": -38,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {
@@ -539,9 +539,9 @@
         "x": 1720,
         "y": 1080
     },
-    "version": 2,
     "migration_resolution": {
         "x": 2560,
         "y": 1080
-    }
+    },
+    "version": 2
 }
