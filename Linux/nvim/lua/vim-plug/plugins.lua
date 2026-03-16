@@ -15,7 +15,7 @@ Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'folke/snacks.nvim'
 Plug 'stevearc/dressing.nvim'
 -- Plug 'nvim-mini/mini.nvim'
-Plug('olimorris/codecompanion.nvim', { ['tag'] = 'v17.33.0' })
+Plug('olimorris/codecompanion.nvim')
 
 -- Plug('yetone/avante.nvim', { ['branch'] = 'main', ['do'] = 'make', ['source'] = 'true' })
 -- Slint
